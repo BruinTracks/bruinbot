@@ -1,4 +1,4 @@
-# BruinTracks - AI-Powered Course Scheduling Platform
+# BruinTracks (Formerly BruinBot) - AI-Powered Course Scheduling Platform
 
 A comprehensive course scheduling and academic planning application for UCLA students, featuring AI-powered course recommendations, intelligent schedule optimization, and seamless Google Calendar integration.
 
