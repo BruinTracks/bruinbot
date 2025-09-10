@@ -2,6 +2,7 @@
 
 A comprehensive course scheduling and academic planning application for UCLA students, featuring AI-powered course recommendations, intelligent schedule optimization, and seamless Google Calendar integration.
 
+[![Image Alt Text](thumbnail_url)](https://youtu.be/ay24xvRFV3Q)
 ## 🎯 Overview
 
 BruinTracks helps UCLA students create optimal course schedules by analyzing prerequisites, course availability, and personal preferences. The platform uses advanced algorithms and AI to generate personalized academic plans while considering graduation timelines and course conflicts.
