@@ -2,7 +2,8 @@
 
 A comprehensive course scheduling and academic planning application for UCLA students, featuring AI-powered course recommendations, intelligent schedule optimization, and seamless Google Calendar integration.
 
-# Demo (Click the image below to access our demo!)
+# Demo
+Click the image below to access our demo!
 
 [![Bruintracks Demo](https://i9.ytimg.com/vi_webp/ay24xvRFV3Q/mq2.webp?sqp=CODcg8YG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDkgVihyMA8=&rs=AOn4CLAIyE2ztuY0RPmiNYArUTzYc_RYTw)](https://youtu.be/ay24xvRFV3Q)
 
