@@ -597,17 +597,16 @@ export const WeeklyCalendar = ({ courses }) => {
       <div className="overflow-x-auto">
         <div className="min-w-[800px]">
           {/* header row */}
-          <div className="grid grid-cols-6 gap-y-4 mb-4">
+          <div
+            className="grid gap-y-4 mb-4"
+            style={{
+              gridTemplateColumns: `${DAY_LABEL_WIDTH}px repeat(5, minmax(0, 1fr))`
+            }}
+          >
             {/* gutter column */}
-            <div style={{ width: DAY_LABEL_WIDTH }}></div>
+            <div></div>
             {days.map((d) => (
-              <div
-                key={d}
-                className="text-center"
-                style={{
-                  width: `calc((100% - ${DAY_LABEL_WIDTH}px)/5)`
-                }}
-              >
+              <div key={d} className="text-center">
                 <h3 className="text-lg font-semibold text-blue-400">{d}</h3>
               </div>
             ))}
@@ -618,25 +617,19 @@ export const WeeklyCalendar = ({ courses }) => {
             {timeSlots.map((t) => (
               <div
                 key={t}
-                className="grid grid-cols-6"
-                style={{ minHeight: ROW_HEIGHT }}
+                className="grid"
+                style={{
+                  minHeight: ROW_HEIGHT,
+                  gridTemplateColumns: `${DAY_LABEL_WIDTH}px repeat(5, minmax(0, 1fr))`
+                }}
               >
                 {/* time label */}
-                <div
-                  className="flex items-center justify-end pr-4 border-b border-gray-600"
-                  style={{ width: DAY_LABEL_WIDTH }}
-                >
+                <div className="flex items-center justify-center border-b border-gray-600">
                   <span className="text-sm text-gray-400">{t}</span>
                 </div>
                 {/* five day cells */}
                 {days.map((d) => (
-                  <div
-                    key={`${d}-${t}`}
-                    className="border-b border-gray-600"
-                    style={{
-                      width: `calc((100% - ${DAY_LABEL_WIDTH}px)/5)`
-                    }}
-                  ></div>
+                  <div key={`${d}-${t}`} className="border-b border-gray-600"></div>
                 ))}
               </div>
             ))}

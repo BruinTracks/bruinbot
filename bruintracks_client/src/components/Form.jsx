@@ -1,5 +1,6 @@
 // src/components/MultiStepForm.js
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import '../index.css';
 import '../main.jsx';
 import { motion } from 'framer-motion';
@@ -11,18 +12,6 @@ import { useNavigate } from 'react-router-dom';
 import { handleSignOut } from '../supabaseClient.js';
 import { useAuth } from '../AuthContext.jsx';
 import { supabase } from '../supabaseClient.js';
-
-const majors = [
-  'CS',
-  'CSE',
-  'EE',
-  'Math',
-  'Linguistics',
-  'Film',
-  'DESMA',
-  'English',
-  'History',
-];
 
 const classes = {
   'COM SCI': [
@@ -151,7 +140,7 @@ const Icebreaker = ({
     };
 
     fetchSchools();
-  }, []);
+  }, [school, setSchool]);
 
   return (
     <FormModal handleClick={handleNextClick} validate={validate} handleBackClick={null}>
@@ -634,7 +623,7 @@ const InstructorAutocomplete = ({ selected, setSelected }) => {
       );
       const data = await res.json();
       setResults(data.filter(name => !selected.includes(name)));
-    } catch (e) {
+    } catch {
       setResults([]);
     }
   };
@@ -900,8 +889,7 @@ const AdvancedPreferencesStep = ({
   );
 };
 
-const ClassSelect = ({
-  items,
+export const ClassSelect = ({
   defaultDept = 'COM SCI',
   columns = 4,
   handleNextClick = () => {},
@@ -1086,12 +1074,6 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
         JSON.stringify(processedRequirements, null, 2)
       );
 
-      // Convert transcript object to array of course IDs
-      const completedCourses = Object.keys(data.transcript || {}).map(course => {
-        // Convert from "COM SCI|31" format to "COM SCI 31" format
-        return course.replace('|', ' ');
-      });
-
       const formattedTranscript = Object.fromEntries(
         Object.entries(data.transcript || {}).map(([course, grade]) => {
           const parts = course.split(' ');
@@ -1243,7 +1225,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
           console.log('Generate Schedule button clicked');
           handleGenerateSchedule();
         }}
-        className="mt-4 rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white shadow transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="mt-4 inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 font-semibold text-white shadow transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         Generate Schedule
       </button>
@@ -1415,6 +1397,118 @@ const TranscriptStep = ({
   );
 };
 
+FormModal.propTypes = {
+  children: PropTypes.node,
+  handleClick: PropTypes.func,
+  handleBackClick: PropTypes.func,
+  validate: PropTypes.func,
+  showNextArrow: PropTypes.bool
+};
+
+Icebreaker.propTypes = {
+  name: PropTypes.string,
+  setName: PropTypes.func,
+  school: PropTypes.string,
+  setSchool: PropTypes.func,
+  gradQuarter: PropTypes.string,
+  setGradQuarter: PropTypes.func,
+  gradYear: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([undefined, null])]),
+  setGradYear: PropTypes.func,
+  handleNextClick: PropTypes.func,
+  validate: PropTypes.func
+};
+
+MajorAutocomplete.propTypes = {
+  school: PropTypes.string,
+  major: PropTypes.string,
+  setMajor: PropTypes.func,
+  setMajorName: PropTypes.func
+};
+
+InfoDetail.propTypes = {
+  handleBackClick: PropTypes.func,
+  handleNextClick: PropTypes.func,
+  major: PropTypes.string,
+  setMajor: PropTypes.func,
+  setMajorName: PropTypes.func,
+  wantsDbMajor: PropTypes.bool,
+  setWantsDbMajor: PropTypes.func,
+  doubleMajor: PropTypes.string,
+  setDoubleMajor: PropTypes.func,
+  setDoubleMajorName: PropTypes.func,
+  school: PropTypes.string,
+  validate: PropTypes.func,
+  techBreadth: PropTypes.string,
+  setTechBreadth: PropTypes.func,
+  secondTechBreadth: PropTypes.string,
+  setSecondTechBreadth: PropTypes.func
+};
+
+SchedulePreferences.propTypes = {
+  prefNoDays: PropTypes.arrayOf(PropTypes.string),
+  setPrefNoDays: PropTypes.func,
+  earliestClassTime: PropTypes.string,
+  setEarliestClassTime: PropTypes.func,
+  latestClassTime: PropTypes.string,
+  setLatestClassTime: PropTypes.func,
+  handleNextClick: PropTypes.func,
+  handleBackClick: PropTypes.func,
+  validate: PropTypes.func
+};
+
+InstructorAutocomplete.propTypes = {
+  selected: PropTypes.arrayOf(PropTypes.string),
+  setSelected: PropTypes.func
+};
+
+PreferencesStep.propTypes = {
+  leastCoursesPerTerm: PropTypes.number,
+  setLeastCoursesPerTerm: PropTypes.func,
+  maxCoursesPerTerm: PropTypes.number,
+  setMaxCoursesPerTerm: PropTypes.func,
+  prefInstructors: PropTypes.arrayOf(PropTypes.string),
+  setPrefInstructors: PropTypes.func,
+  prefBuildings: PropTypes.arrayOf(PropTypes.string),
+  setPrefBuildings: PropTypes.func,
+  handleNextClick: PropTypes.func,
+  handleBackClick: PropTypes.func
+};
+
+AdvancedPreferencesStep.propTypes = {
+  allowWarnings: PropTypes.bool,
+  setAllowWarnings: PropTypes.func,
+  allowPrimaryConflicts: PropTypes.bool,
+  setAllowPrimaryConflicts: PropTypes.func,
+  allowSecondaryConflicts: PropTypes.bool,
+  setAllowSecondaryConflicts: PropTypes.func,
+  prefPriority: PropTypes.arrayOf(PropTypes.string),
+  setPrefPriority: PropTypes.func,
+  handleNextClick: PropTypes.func,
+  handleBackClick: PropTypes.func
+};
+
+ClassSelect.propTypes = {
+  defaultDept: PropTypes.string,
+  columns: PropTypes.number,
+  handleNextClick: PropTypes.func,
+  handleBackClick: PropTypes.func
+};
+
+SummaryView.propTypes = {
+  data: PropTypes.object,
+  handleBackClick: PropTypes.func,
+  setStep: PropTypes.func
+};
+
+TranscriptStep.propTypes = {
+  transcript: PropTypes.objectOf(PropTypes.string),
+  setTranscript: PropTypes.func,
+  handleNextClick: PropTypes.func,
+  handleBackClick: PropTypes.func,
+  majorName: PropTypes.string,
+  doubleMajorName: PropTypes.string
+};
+
 export const Form = () => {
   const [step, setStep] = useState(1);
   useEffect(() => {
@@ -1437,9 +1531,6 @@ export const Form = () => {
   const [techBreadth, setTechBreadth] = useState('');
   const [secondTechBreadth, setSecondTechBreadth] = useState('');
 
-  const [endYear, setEndYear] = useState(null);
-  const [endQuarter, setEndQuarter] = useState('');
-
   // Transcript: { 'COM SCI|31': 'A', ... }
   const [transcript, setTranscript] = useState({});
 
@@ -1453,8 +1544,6 @@ export const Form = () => {
     'days',
     'instructor'
   ]);
-  const [prefEarliest, setPrefEarliest] = useState('09:00');
-  const [prefLatest, setPrefLatest] = useState('18:00');
   const [prefNoDays, setPrefNoDays] = useState([]); // e.g. ['F']
   const [prefBuildings, setPrefBuildings] = useState([]); // e.g. ['MS', 'SCI']
   const [prefInstructors, setPrefInstructors] = useState([]); // e.g. ['Smith']
