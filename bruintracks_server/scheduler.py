@@ -654,13 +654,14 @@ def build_schedule(start_y: int, start_q: str,
                         if course not in scheduling_failures:
                             scheduling_failures[course] = "Schedule conflicts with other courses"
             choices = valid or scored
-            # Lexicographic objective: maximize coverage first, then dependency impact, then preferences.
+            # First term only: prioritize student preferences first, then coverage.
+            # Later terms keep unscheduled-first behavior via avail_sort_key.
             best_sc, best_sel, take = max(
                 choices,
                 key=lambda x: (
+                    x[0],
                     len(x[1]),
                     sum(downstream_counts.get(c, 0) for c in x[1].keys()),
-                    x[0],
                 ),
             )
             schedule[term] = best_sel

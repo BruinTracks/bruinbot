@@ -464,14 +464,14 @@ export const ScheduleSummary = ({ scheduleData }) => {
               </p>
             </div>
 
-            {/* Day Preferences */}
+            {/* Unpreferred Day Preferences */}
             <div className="bg-gray-700 p-3 rounded">
-              <p className="text-sm text-gray-400">Preferred Days</p>
+              <p className="text-sm text-gray-400">Unpreferred Days</p>
               <p className="text-white">
                 {Array.isArray(preferences.pref_no_days) &&
                 preferences.pref_no_days.length > 0
                   ? preferences.pref_no_days.join(', ')
-                  : 'No day preferences'}
+                  : 'No unpreferred days'}
               </p>
             </div>
 
