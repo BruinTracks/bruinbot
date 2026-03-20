@@ -44,6 +44,9 @@ ALLOW_WARNINGS            = True
 ALLOW_PRIMARY_CONFLICTS   = True
 ALLOW_SECONDARY_CONFLICTS = True
 
+# Debug payload from last run, returned when explicitly requested.
+LAST_UNSCHEDULED_DEBUG: Dict[str, Dict] = {}
+
 # Preferences defaults (rankable)
 PREF_PRIORITY    = ['time','building','days','instructor']
 PREF_EARLIEST    = datetime.strptime("09:00","%H:%M").time()
@@ -68,6 +71,46 @@ def safe_execute(req, retries:int=3, backoff:float=0.2):
             if i == retries - 1:
                 raise
             time.sleep(backoff)
+
+
+def chunked(items: List, size: int = 200):
+    for i in range(0, len(items), size):
+        yield items[i:i + size]
+
+
+def fetch_in_paged(table_obj, select_clause: str, in_col: str, in_vals: List,
+                   in_chunk_size: int = 300, page_size: int = 1000) -> List[Dict]:
+    rows: List[Dict] = []
+    for vals in chunked(in_vals, in_chunk_size):
+        start = 0
+        while True:
+            req = (
+                table_obj
+                .select(select_clause)
+                .in_(in_col, vals)
+                .range(start, start + page_size - 1)
+            )
+            batch = safe_execute(req).data or []
+            rows.extend(batch)
+            if len(batch) < page_size:
+                break
+            start += page_size
+    return rows
+
+
+def normalize_catalog_number(num: str) -> str:
+    txt = str(num or "").strip().upper()
+    if not txt:
+        return txt
+    trimmed = txt.lstrip('0')
+    return trimmed or txt
+
+
+def normalize_course_key(key: str) -> str:
+    if "|" not in key:
+        return key
+    dept, num = key.split("|", 1)
+    return f"{dept}|{normalize_catalog_number(num)}"
 
 
 def to_dnf(node: Dict) -> List[List[Dict]]:
@@ -130,7 +173,8 @@ def quarter_prefixes(prereq_logic: Dict[str, List[Tuple[str, str, str, str]]],
         if course not in indegree:
             continue
         for rc, typ, _, sev in reqs:
-            if rc in indegree and typ in ('prerequisite', 'corequisite') and (
+            # Corequisites can be taken concurrently and should not block ordering.
+            if rc in indegree and typ == 'prerequisite' and (
                 sev == 'R' or (sev == 'W' and not allow_warnings)):
                 indegree[course] += 1
     avail = sorted(n for n, d in indegree.items() if d == 0)
@@ -144,6 +188,7 @@ def build_schedule(start_y: int, start_q: str,
                    end_y: int, end_q: str,
                    allow_warnings: bool) -> Tuple[Dict[str, object], Optional[str]]:
     global COURSES_TO_SCHEDULE
+    global LAST_UNSCHEDULED_DEBUG
     
     # Separate RESOLVE requirements from regular courses and count them
     resolve_reqs = []
@@ -156,7 +201,11 @@ def build_schedule(start_y: int, start_q: str,
             base_req_name = re.sub(r' #\d+$', '', full_req_name)
             resolve_counts[base_req_name] = resolve_counts.get(base_req_name, 0) + 1
             resolve_reqs.append(base_req_name)  # Store without prefix and number
-    regular_courses = [c for c in COURSES_TO_SCHEDULE if not c.startswith("RESOLVE:")]
+    regular_courses = [
+        normalize_course_key(c)
+        for c in COURSES_TO_SCHEDULE
+        if not c.startswith("RESOLVE:")
+    ]
     
     # First build schedule with regular courses
     original_courses = COURSES_TO_SCHEDULE[:]
@@ -168,8 +217,11 @@ def build_schedule(start_y: int, start_q: str,
     supa = create_client(SUPABASE_URL, SUPABASE_KEY)
 
     term_rows = safe_execute(supa.table("terms").select("term_name,id")).data
-    db_map = {r['term_name'].split()[0]: r['id'] for r in term_rows}
-    idx2db = [db_map.get(lbl.split()[0]) for lbl in terms]
+    season_to_term_ids: Dict[str, Set[int]] = {}
+    for row in term_rows:
+        season = row['term_name'].split()[0]
+        season_to_term_ids.setdefault(season, set()).add(row['id'])
+    idx2db = [season_to_term_ids.get(lbl.split()[0], set()) for lbl in terms]
 
     # Track scheduling failures
     scheduling_failures = {}
@@ -181,7 +233,11 @@ def build_schedule(start_y: int, start_q: str,
     name2sub = {re.sub(r"\s*\(.*\)$", "", s['name']).strip().upper(): s['code'] for s in subs}
 
     # remove passed courses ---------------------------------------------------
-    passed = {c for c, g in TRANSCRIPT.items() if g and meets_min_grade(g, 'D-')}
+    passed = {
+        normalize_course_key(c)
+        for c, g in TRANSCRIPT.items()
+        if g and meets_min_grade(g, 'D-')
+    }
     required: Set[str] = set(COURSES_TO_SCHEDULE) - passed
     transcript = TRANSCRIPT.copy()
 
@@ -194,18 +250,34 @@ def build_schedule(start_y: int, start_q: str,
             dept, num = key.split("|", 1)
             subj_id = sub2id.get(dept)
             if subj_id and num:
-                mapped_pairs.append((subj_id, num))
+                mapped_pairs.append((subj_id, normalize_catalog_number(num)))
 
         if not mapped_pairs:
             return []
 
-        ids, nums = zip(*mapped_pairs)
-        return safe_execute(
-            supa.table("courses")
-                .select("id,subject_id,catalog_number,course_requisites")
-                .in_("subject_id", list(ids))
-                .in_("catalog_number", list(nums))
-        ).data
+        by_subject: Dict[int, Set[str]] = {}
+        for subj_id, num in mapped_pairs:
+            by_subject.setdefault(subj_id, set()).add(num)
+
+        rows = []
+        for subj_id, nums in by_subject.items():
+            nums_list = sorted(nums)
+            for nums_chunk in chunked(nums_list, 150):
+                start = 0
+                while True:
+                    part = safe_execute(
+                        supa.table("courses")
+                            .select("id,subject_id,catalog_number,course_requisites")
+                            .eq("subject_id", subj_id)
+                            .in_("catalog_number", nums_chunk)
+                            .range(start, start + 999)
+                    ).data or []
+                    rows.extend(part)
+                    if len(part) < 1000:
+                        break
+                    start += 1000
+
+        return rows
 
     # ───── 2. Build prerequisite logic --------------------------------------
     prereq_logic: Dict[str, List[Tuple[str, str, str, str]]] = {}
@@ -230,7 +302,7 @@ def build_schedule(start_y: int, start_q: str,
                 code = name2sub.get(dept.upper())
                 if not code:
                     continue
-                ukey = f"{code}|{num.upper()}"
+                ukey = f"{code}|{normalize_catalog_number(num)}"
                 parsed.append((ukey, leaf['relation'], leaf.get('min_grade', 'D-'), leaf.get('severity')))
                 if not meets_min_grade(transcript.get(ukey, 'F'), leaf.get('min_grade', 'F')):
                     missing.append(ukey)
@@ -247,31 +319,51 @@ def build_schedule(start_y: int, start_q: str,
 
     # ───── 3. Fetch sections + meetings -------------------------------------
     all_courses = fetch_courses(list(required))
-    cid2key = {c['id']: f"{id2sub[c['subject_id']]}|{c['catalog_number']}" for c in all_courses}
+    cid2key = {
+        c['id']: f"{id2sub[c['subject_id']]}|{normalize_catalog_number(c['catalog_number'])}"
+        for c in all_courses
+    }
+    fetched_course_keys = set(cid2key.values())
+
+    # Ignore genuinely missing courses (not found in courses table) so they do not
+    # block prerequisite chains or appear in unscheduled output.
+    missing_from_db = {c for c in required if c not in fetched_course_keys}
+    if missing_from_db:
+        required -= missing_from_db
+
     all_course_ids = [c['id'] for c in all_courses]
 
     if all_course_ids:
-        secs = safe_execute(
-            supa.table("sections").select(
-                "id,course_id,term_id,section_code,is_primary,activity," +
-                "enrollment_cap,enrollment_total,waitlist_cap,waitlist_total"
-            ).in_("course_id", all_course_ids)
-        ).data
+        secs = fetch_in_paged(
+            supa.table("sections"),
+            "id,course_id,term_id,section_code,is_primary,activity," +
+            "enrollment_cap,enrollment_total,waitlist_cap,waitlist_total",
+            "course_id",
+            all_course_ids,
+            in_chunk_size=300,
+            page_size=1000,
+        )
     else:
         secs = []
 
     section_ids = [s['id'] for s in secs]
     if section_ids:
-        mt = safe_execute(
-            supa.table("meeting_times").select(
-                "section_id,days_of_week,start_time,end_time,building,room"
-            ).in_("section_id", section_ids)
-        ).data
-
-        si = safe_execute(
-            supa.table("section_instructors").select("section_id,instructor_id")
-                .in_("section_id", section_ids)
-        ).data
+        mt = fetch_in_paged(
+            supa.table("meeting_times"),
+            "section_id,days_of_week,start_time,end_time,building,room",
+            "section_id",
+            section_ids,
+            in_chunk_size=500,
+            page_size=1000,
+        )
+        si = fetch_in_paged(
+            supa.table("section_instructors"),
+            "section_id,instructor_id",
+            "section_id",
+            section_ids,
+            in_chunk_size=500,
+            page_size=1000,
+        )
     else:
         mt = []
         si = []
@@ -296,22 +388,62 @@ def build_schedule(start_y: int, start_q: str,
 
     # ───── 3b. Group sections by course -------------------------------------
     sections_by_course: Dict[str, List[Dict]] = {}
+
+    def is_section_full_capacity(sec: Dict) -> bool:
+        return (
+            sec['enrollment_total'] >= sec['enrollment_cap']
+            and sec['waitlist_total'] >= sec['waitlist_cap']
+        )
+
     for s in secs:
         key = cid2key[s['course_id']]
-        # Skip if section + waitlist both full
-        if s['enrollment_total'] >= s['enrollment_cap'] and s['waitlist_total'] >= s['waitlist_cap']:
-            continue
+        s['is_full_capacity'] = is_section_full_capacity(s)
         s['times'] = mt_map.get(s['id'], [])
         s['instructors'] = si_map.get(s['id'], [])
         sections_by_course.setdefault(key, []).append(s)
 
     # ───── 3c. Pre-compute offering terms per course ------------------------
     offer_terms_by_course: Dict[str, Set[int]] = {}
-    for c, sec_list in sections_by_course.items():
+    for c in required:
+        sec_list = sections_by_course.get(c, [])
         offer_terms_by_course[c] = {sec['term_id'] for sec in sec_list}
         # Track courses with no sections
         if not sec_list:
             scheduling_failures[c] = "No available sections found"
+
+    def section_allowed_in_term(sec: Dict, term_idx: int) -> bool:
+        # Keep full-capacity sections schedulable overall, but never in the first shown term.
+        if term_idx == 0 and sec.get('is_full_capacity'):
+            return False
+        return True
+
+    def term_has_schedulable_section(course: str, term_db_ids: Set[int], term_idx: int) -> bool:
+        if not term_db_ids:
+            return False
+        for sec in sections_by_course.get(course, []):
+            if sec['term_id'] in term_db_ids and section_allowed_in_term(sec, term_idx):
+                return True
+        return False
+
+    # Earliest term each course can be scheduled while respecting first-term full policy.
+    eligible_term_indices_by_course: Dict[str, List[int]] = {}
+    for course in required:
+        eligible_indices = []
+        for idx, db_ids in enumerate(idx2db):
+            if not db_ids:
+                continue
+            if term_has_schedulable_section(course, db_ids, idx):
+                eligible_indices.append(idx)
+        eligible_term_indices_by_course[course] = eligible_indices
+
+        if not eligible_indices and sections_by_course.get(course):
+            first_term_sections = [
+                sec for sec in sections_by_course[course] if sec['term_id'] in idx2db[0]
+            ]
+            if first_term_sections and all(sec.get('is_full_capacity') for sec in first_term_sections):
+                scheduling_failures[course] = "Only full-capacity sections in first term; no later schedulable offering"
+            else:
+                scheduling_failures[course] = "No schedulable sections in planning window"
 
     # ───── 4. Build prereq DAG ---------------------------------------------
     adj = {c: [] for c in required}
@@ -320,7 +452,8 @@ def build_schedule(start_y: int, start_q: str,
         if c not in indegree:
             continue
         for rc, typ, _, sev in reqs:
-            if rc in indegree and typ in ('prerequisite', 'corequisite') and (
+            # Corequisites can be co-scheduled; only prerequisites add DAG edges.
+            if rc in indegree and typ == 'prerequisite' and (
                 sev == 'R' or (sev == 'W' and not allow_warnings)):
                 adj[rc].append(c)
                 indegree[c] += 1
@@ -336,6 +469,44 @@ def build_schedule(start_y: int, start_q: str,
     # ───── 4a. Preference weights ------------------------------------------
     weight_map = {p: len(PREF_PRIORITY) - i for i, p in enumerate(PREF_PRIORITY)}
 
+    def downstream_count(course: str) -> int:
+        seen = set()
+        stack = list(adj.get(course, []))
+        while stack:
+            cur = stack.pop()
+            if cur in seen:
+                continue
+            seen.add(cur)
+            stack.extend(adj.get(cur, []))
+        return len(seen)
+
+    downstream_counts = {c: downstream_count(c) for c in required}
+
+    def score_section(sec: Dict) -> int:
+        score = 0
+        for m in sec['times']:
+            if PREF_EARLIEST <= m['start_time'] <= PREF_LATEST:
+                score += weight_map['time']
+            if PREF_EARLIEST <= m['end_time'] <= PREF_LATEST:
+                score += weight_map['time']
+            if m['building'] in PREF_BUILDINGS:
+                score += weight_map['building']
+            if set(m['days_of_week']).isdisjoint(PREF_NO_DAYS):
+                score += weight_map['days']
+        if any(i in PREF_INSTRUCTORS for i in sec['instructors']):
+            score += weight_map['instructor']
+        return score
+
+    def best_term_preference_score(course: str, term_db_ids: Set[int], term_idx: int) -> int:
+        if not term_db_ids:
+            return 0
+        best = -1
+        for sec in sections_by_course.get(course, []):
+            if sec['term_id'] not in term_db_ids or not section_allowed_in_term(sec, term_idx):
+                continue
+            best = max(best, score_section(sec))
+        return max(best, 0)
+
     # ───── 4b. Scoring helper for the *first* term -------------------------
     def score_and_select(prefix: List[str]) -> Tuple[int, Dict[str, Dict]]:
         total = 0
@@ -345,21 +516,12 @@ def build_schedule(start_y: int, start_q: str,
             best_disc, best_disc_sc = None, -1
 
             for sec in sections_by_course.get(course, []):
-                if sec['term_id'] != idx2db[0]:
+                if sec['term_id'] not in idx2db[0]:
                     continue  # Not offered in the first term
+                if not section_allowed_in_term(sec, 0):
+                    continue
 
-                sc = 0
-                for m in sec['times']:
-                    if PREF_EARLIEST <= m['start_time'] <= PREF_LATEST:
-                        sc += weight_map['time']
-                    if PREF_EARLIEST <= m['end_time'] <= PREF_LATEST:
-                        sc += weight_map['time']
-                    if m['building'] in PREF_BUILDINGS:
-                        sc += weight_map['building']
-                    if set(m['days_of_week']).isdisjoint(PREF_NO_DAYS):
-                        sc += weight_map['days']
-                if any(i in PREF_INSTRUCTORS for i in sec['instructors']):
-                    sc += weight_map['instructor']
+                sc = score_section(sec)
 
                 if sec['is_primary']:
                     if sc > best_sec_sc:
@@ -381,11 +543,32 @@ def build_schedule(start_y: int, start_q: str,
     for t_idx, term in enumerate(terms):
         term_db_id = idx2db[t_idx]
 
-        # Courses whose prereqs are met *and* that are actually offered this term
-        avail = sorted(
-            c for c in remaining
-            if indegree[c] == 0 and term_db_id in offer_terms_by_course.get(c, set())
-        )
+        # Courses whose prereqs are met and can be scheduled this term (coverage first).
+        avail = []
+        for c in remaining:
+            if indegree[c] != 0:
+                continue
+            eligible_indices = eligible_term_indices_by_course.get(c, [])
+            if not eligible_indices:
+                continue
+            if t_idx < eligible_indices[0]:
+                continue
+            if not term_db_id or not term_has_schedulable_section(c, term_db_id, t_idx):
+                continue
+            avail.append(c)
+
+        def avail_sort_key(course: str):
+            eligible_indices = eligible_term_indices_by_course.get(course, [])
+            remaining_terms = [idx for idx in eligible_indices if idx >= t_idx]
+            scarcity = len(remaining_terms) if remaining_terms else 9999
+            return (
+                scarcity,
+                -downstream_counts.get(course, 0),
+                -best_term_preference_score(course, term_db_id, t_idx),
+                course,
+            )
+
+        avail.sort(key=avail_sort_key)
 
         base = R_rem // T_left
         extra = R_rem % T_left
@@ -398,7 +581,14 @@ def build_schedule(start_y: int, start_q: str,
             # Build prerequisite-compatible prefixes, then discard courses without offerings
             prefixes_raw = quarter_prefixes(prereq_logic, target, allow_warnings)
             prefixes = [
-                [c for c in pref if term_db_id in offer_terms_by_course.get(c, set())]
+                [
+                    c
+                    for c in pref
+                    if c in remaining
+                    and indegree.get(c, 0) == 0
+                    and bool(term_db_id.intersection(offer_terms_by_course.get(c, set())))
+                    and term_has_schedulable_section(c, term_db_id, t_idx)
+                ]
                 for pref in prefixes_raw
             ]
             
@@ -407,9 +597,9 @@ def build_schedule(start_y: int, start_q: str,
             
             if not prefixes:
                 # If no valid prefixes found, try to find any combination of available courses
-                prefixes = [[c for c in avail if term_db_id in offer_terms_by_course.get(c, set())][:target]]
+                prefixes = [avail[:target]]
                 if not prefixes[0]:
-                    for course in avail:
+                    for course in remaining:
                         if course not in scheduling_failures:
                             scheduling_failures[course] = "No valid schedule combinations found"
             
@@ -419,8 +609,8 @@ def build_schedule(start_y: int, start_q: str,
                 for sc, sel in [score_and_select(pf)]
             ]
 
-            # Filter out prefixes that ended up empty (no offered courses)
-            scored = [tpl for tpl in scored if tpl[2]] or [scored[0]]
+            # Filter out prefixes that ended up selecting no schedulable courses.
+            scored = [tpl for tpl in scored if tpl[1]] or [scored[0]]
 
             # Conflict checks (identical to original)
             valid = []
@@ -464,7 +654,15 @@ def build_schedule(start_y: int, start_q: str,
                         if course not in scheduling_failures:
                             scheduling_failures[course] = "Schedule conflicts with other courses"
             choices = valid or scored
-            best_sc, best_sel, take = max(choices, key=lambda x: x[0])
+            # Lexicographic objective: maximize coverage first, then dependency impact, then preferences.
+            best_sc, best_sel, take = max(
+                choices,
+                key=lambda x: (
+                    len(x[1]),
+                    sum(downstream_counts.get(c, 0) for c in x[1].keys()),
+                    x[0],
+                ),
+            )
             schedule[term] = best_sel
         else:
             take = avail[:target]
@@ -503,15 +701,59 @@ def build_schedule(start_y: int, start_q: str,
             scheduled_all |= set(ent)
     unscheduled = set(COURSES_TO_SCHEDULE) - scheduled_all
     unscheduled -= passed  # remove previously passed courses
+    unscheduled -= missing_from_db  # explicitly ignore courses absent from DB
 
     note = None
+    debug_unscheduled: Dict[str, Dict] = {}
     if unscheduled:
         # Create detailed explanation for each unscheduled course
         explanations = []
         for course in sorted(unscheduled):
-            reason = scheduling_failures.get(course, "No available sections found")
+            reason = scheduling_failures.get(course)
+            has_sections = bool(sections_by_course.get(course))
+
+            # Guard against stale/overwritten diagnostics: if sections exist,
+            # never report a no-sections reason.
+            if reason == "No available sections found" and has_sections:
+                reason = None
+
+            if not reason:
+                if not has_sections:
+                    alias_keys = []
+                    if "|" in course:
+                        dept, num = course.split("|", 1)
+                        target_num = normalize_catalog_number(num)
+                        for key in sections_by_course.keys():
+                            if "|" not in key:
+                                continue
+                            k_dept, k_num = key.split("|", 1)
+                            if k_dept == dept and normalize_catalog_number(k_num) == target_num:
+                                alias_keys.append(key)
+
+                    if alias_keys:
+                        reason = f"No available sections found for exact key; matching aliases in sections: {sorted(set(alias_keys))[:3]}"
+                    else:
+                        reason = "No available sections found"
+                elif indegree.get(course, 0) > 0:
+                    reason = "Blocked by prerequisite dependency chain"
+                else:
+                    reason = "Could not place within term capacity/preferences"
+
+            debug_unscheduled[course] = {
+                'reason': reason,
+                'in_required_set': course in required,
+                'fetched_course_row': course in offer_terms_by_course,
+                'section_count': len(sections_by_course.get(course, [])),
+                'offered_term_ids': sorted(list(offer_terms_by_course.get(course, set()))),
+                'eligible_term_indices': list(eligible_term_indices_by_course.get(course, [])),
+                'eligible_term_labels': [terms[i] for i in eligible_term_indices_by_course.get(course, [])],
+                'ending_indegree': indegree.get(course, 0),
+            }
+
             explanations.append(f"{course} ({reason})")
         note = "Unable to schedule: " + "; ".join(explanations)
+
+    LAST_UNSCHEDULED_DEBUG = debug_unscheduled
 
     # Restore original COURSES_TO_SCHEDULE
     COURSES_TO_SCHEDULE = original_courses
@@ -680,6 +922,7 @@ if __name__ == "__main__":
     COURSES_TO_SCHEDULE = inp.get('courses_to_schedule', COURSES_TO_SCHEDULE)
     TRANSCRIPT = inp.get('transcript', {})
     prefs = inp.get('preferences', {})
+    include_debug_unscheduled = bool(prefs.get('debug_unscheduled', False))
     ALLOW_WARNINGS = prefs.get('allow_warnings', ALLOW_WARNINGS)
     ALLOW_PRIMARY_CONFLICTS = prefs.get('allow_primary_conflicts', ALLOW_PRIMARY_CONFLICTS)
     ALLOW_SECONDARY_CONFLICTS = prefs.get('allow_secondary_conflicts', ALLOW_SECONDARY_CONFLICTS)
@@ -703,4 +946,6 @@ if __name__ == "__main__":
     result = {'schedule': format_schedule(sched)}
     if note:
         result['note'] = note
+    if include_debug_unscheduled:
+        result['debug_unscheduled'] = LAST_UNSCHEDULED_DEBUG
     print(json.dumps(result, default=str, indent=2))

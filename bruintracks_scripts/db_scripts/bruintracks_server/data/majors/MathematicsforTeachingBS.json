@@ -1,0 +1,181 @@
+{
+  "major_name": "MathematicsforTeachingBS",
+  "major_id": 91,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete six courses. Select Mathematics 31A or 31AL.",
+      "options": [
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31AL - Differential and Integral Calculus Laboratory",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "MATH 61 - Introduction to Discrete Structures"
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy"
+          ]
+        },
+        {
+          "title": "Program in Computing",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming"
+          ]
+        },
+        {
+          "title": "Electives",
+          "description": "Select from Program in Computing 10B through 97.",
+          "options": [
+            {
+              "title": "Chemistry",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change"
+              ]
+            },
+            {
+              "title": "Physics",
+              "courses": [
+                "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                "PHYSICS 5C - Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics"
+              ]
+            },
+            {
+              "title": "Program in Computing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete seven courses as follows:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "description": "Select one course from:",
+          "courses": [
+            "MATH 106 - History of Mathematics",
+            "MATH 115A - Linear Algebra",
+            "MATH 131A - Analysis",
+            "STATS 100B - Introduction to Mathematical Statistics"
+          ],
+          "options": [
+            {
+              "title": "Mathematics 110A or 117",
+              "courses": [
+                "MATH 110A - Algebra",
+                "MATH 117 - Algebra for Applications"
+              ]
+            },
+            {
+              "title": "Mathematics 120A or 123",
+              "courses": [
+                "MATH 120A - Differential Geometry",
+                "MATH 123 - Foundations of Geometry"
+              ]
+            },
+            {
+              "title": "Mathematics 170A or Statistics 100A",
+              "courses": [
+                "MATH 170A - Probability Theory I",
+                "STATS 100A - Introduction to Probability"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mathematics or Statistics Elective",
+          "description": "Select from Mathematics 110B through 191H.",
+          "options": [
+            {
+              "title": "Mathematics"
+            },
+            {
+              "title": "Statistics",
+              "courses": [
+                "STATS 100C - Linear Models"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mathematics 131B through 136",
+          "courses": [
+            "MATH 131B - Analysis",
+            "MATH 131BH - Analysis (Honors)",
+            "MATH 131C - Topics in Analysis",
+            "MATH 132 - Complex Analysis for Applications",
+            "MATH 132H - Complex Analysis (Honors)",
+            "MATH 133 - Introduction to Fourier Analysis",
+            "MATH 134 - Linear and Nonlinear Systems of Differential Equations",
+            "MATH 135 - Ordinary Differential Equations",
+            "MATH 136 - Partial Differential Equations"
+          ]
+        },
+        {
+          "title": "Mathematics 142 through 167",
+          "courses": [
+            "Mathematics 142 through 167"
+          ]
+        },
+        {
+          "title": "Capstone Series",
+          "courses": [
+            "MATH 105A - Mathematics and Pedagogy for Teaching Secondary School Mathematics",
+            "MATH 105B - Mathematics and Pedagogy for Teaching Secondary School Mathematics",
+            "MATH 105C - Mathematics and Pedagogy for Teaching Secondary School Mathematics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Mathematics 61 or 180",
+          "courses": [
+            "MATH 61 - Introduction to Discrete Structures",
+            "MATH 180 - Graph Theory"
+          ]
+        },
+        {
+          "title": "Program in Computing",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming"
+          ]
+        },
+        {
+          "title": "Program in Computing Elective",
+          "courses": [
+            "COMPTNG 10C - Advanced Programming",
+            "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+            "COMPTNG 16A - Python with Applications I",
+            "COMPTNG 20A - Principles of Java Language with Applications",
+            "COMPTNG 40A - Introduction to Programming for Internet"
+          ]
+        },
+        {
+          "title": "Mathematics Electives",
+          "courses": [
+            "Mathematics 149 through 159"
+          ]
+        }
+      ]
+    }
+  ]
+}

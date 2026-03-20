@@ -1,0 +1,211 @@
+{
+  "major_name": "ChemistryBS",
+  "major_id": 35,
+  "json_data": [
+    {
+      "title": "Chemistry Concentration",
+      "description": "Complete 18 courses as follows:",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "description": "Chemistry 20AH or 20BH may be substituted for 20A or 20B respectively.",
+          "options": [
+            {
+              "title": "Chemistry",
+              "description": "Chemistry 20AH or 20BH may be substituted for 20A or 20B respectively.",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change",
+                "CHEM 20L - General Chemistry Laboratory",
+                "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+                "CHEM 30AL - General Chemistry Laboratory II",
+                "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+                "CHEM 30BL - Organic Chemistry Laboratory I",
+                "CHEM 30C - Organic Chemistry III: Reactivity, Synthesis, and Biomolecules",
+                "CHEM 30CL - Organic Chemistry Laboratory II"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "description": "Mathematics 33B is highly recommended.",
+              "courses": [
+                "MATH 31A - Differential and Integral Calculus",
+                "MATH 31B - Integration and Infinite Series",
+                "MATH 32A - Calculus of Several Variables",
+                "MATH 32B - Calculus of Several Variables",
+                "MATH 33A - Linear Algebra and Applications"
+              ]
+            },
+            {
+              "title": "Physics"
+            }
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Complete the following eight courses and Chemistry 136 or 144:",
+          "options": [
+            {
+              "title": "Required",
+              "description": "Select one course from:",
+              "courses": [
+                "CHEM 110A - Physical Chemistry: Chemical Thermodynamics",
+                "CHEM 110B - Topics in Physical Chemistry",
+                "CHEM 113A - Physical Chemistry: Introduction to Quantum Mechanics",
+                "CHEM 114 - Physical Chemistry Laboratory",
+                "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+                "CHEM 153L - Biochemical Methods I",
+                "CHEM 171 - Intermediate Inorganic Chemistry",
+                "CHEM C172 - Advanced Inorganic Chemistry"
+              ]
+            },
+            {
+              "title": "Department Electives"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Physical Chemistry Concentration",
+      "description": "Complete the following 17 courses:",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "description": "Chemistry 20AH or 20BH may be substituted for 20A or 20B respectively.",
+          "options": [
+            {
+              "title": "Chemistry",
+              "description": "Chemistry 20AH or 20BH may be substituted for 20A or 20B respectively.",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change",
+                "CHEM 20L - General Chemistry Laboratory",
+                "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+                "CHEM 30AL - General Chemistry Laboratory II",
+                "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+                "CHEM 30BL - Organic Chemistry Laboratory I"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "courses": [
+                "MATH 31A - Differential and Integral Calculus",
+                "MATH 31B - Integration and Infinite Series",
+                "MATH 32A - Calculus of Several Variables",
+                "MATH 32B - Calculus of Several Variables",
+                "MATH 33A - Linear Algebra and Applications",
+                "MATH 33B - Differential Equations"
+              ]
+            },
+            {
+              "title": "Physics"
+            }
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Complete the following eight courses:",
+          "options": [
+            {
+              "title": "Required",
+              "description": "Chemistry 114H may be substituted for 114.",
+              "courses": [
+                "CHEM 110A - Physical Chemistry: Chemical Thermodynamics",
+                "CHEM 110B - Topics in Physical Chemistry",
+                "CHEM 113A - Physical Chemistry: Introduction to Quantum Mechanics",
+                "CHEM C113B - Quantum Chemistry Methods",
+                "CHEM 114 - Physical Chemistry Laboratory",
+                "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+                "CHEM 171 - Intermediate Inorganic Chemistry",
+                "CHEM C172 - Advanced Inorganic Chemistry"
+              ]
+            },
+            {
+              "title": "Upper-Division Chemistry, Electrical Engineering, or Physics Laboratory"
+            },
+            {
+              "title": "Additional Electives"
+            },
+            {
+              "title": "Research Group"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Undergraduate Seminar",
+          "courses": [
+            "CHEM 193A - Journal Club Seminars: UC LEADS and MARC",
+            "CHEM 193B - Journal Club Seminars: Chemistry and Biochemistry"
+          ]
+        },
+        {
+          "title": "Research",
+          "courses": [
+            "CHEM 196A - Research Apprenticeship in Chemistry and Biochemistry",
+            "CHEM 196B - Research Apprenticeship in Chemistry and Biochemistry",
+            "CHEM 199 - Directed Research in Chemistry and Biochemistry"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Complete the following two courses and one elective:",
+      "options": [
+        {
+          "title": "Program in Computing",
+          "description": "Select one course from:",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming"
+          ],
+          "options": [
+            {
+              "title": "Program in Computing Elective",
+              "courses": [
+                "COMPTNG 10C - Advanced Programming",
+                "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+                "COMPTNG 20A - Principles of Java Language with Applications"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Computational Chemistry",
+          "courses": [
+            "CHEM C113B - Quantum Chemistry Methods",
+            "CHEM C126A - Computational Methods for Chemists",
+            "CHEM C145 - Theoretical and Computational Organic Chemistry",
+            "COM SCI C121 - Probabilistic Models in Computational Genomics"
+          ]
+        },
+        {
+          "title": "Chemistry Concentration",
+          "description": "Select one course from:",
+          "courses": [
+            "CHEM C113B - Quantum Chemistry Methods"
+          ],
+          "options": [
+            {
+              "title": "Computational Chemistry",
+              "courses": [
+                "CHEM 125 - Introduction to Python Programming and Machine Learning",
+                "CHEM C126A - Computational Methods for Chemists",
+                "CHEM C145 - Theoretical and Computational Organic Chemistry",
+                "COM SCI C121 - Probabilistic Models in Computational Genomics",
+                "COM SCI C122 - Algorithms in Computational Genomics"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

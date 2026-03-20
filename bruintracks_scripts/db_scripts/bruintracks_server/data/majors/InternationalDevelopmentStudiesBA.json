@@ -1,0 +1,392 @@
+{
+  "major_name": "InternationalDevelopmentStudiesBA",
+  "major_id": 73,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "INTL DV 1 - Introduction to International Development Studies"
+      ],
+      "options": [
+        {
+          "title": "Economics, Geography, Public Affairs",
+          "courses": [
+            "ECON 1 - Principles of Economics",
+            "ECON 2 - Principles of Economics",
+            "GEOG 4 - Globalization: Regional Development and World Economy",
+            "PUB AFF 30 - Comparative Analysis of Wealth, Policy, and Power",
+            "PUB AFF 40 - Microeconomics for Public Affairs"
+          ]
+        },
+        {
+          "title": "Methods",
+          "courses": [
+            "ECON 41 - Probability and Statistics for Economists",
+            "EDUC 35 - Introduction to Inquiry and Research in Education",
+            "HIST 96W - Introduction to Historical Practice",
+            "POL SCI 6 - Introduction to Data Analysis",
+            "PUB AFF 60 - Using Data to Learn about Society: Introduction to Empirical Research and Statistics",
+            "SOCIOL 20 - Introduction to Sociological Research Methods",
+            "STATS 10 - Introduction to Statistical Reasoning",
+            "STATS 12 - Introduction to Statistical Methods for Geography and Environmental Studies"
+          ]
+        },
+        {
+          "title": "Social Sciences/Area Studies",
+          "options": [
+            {
+              "title": "Anthropology",
+              "courses": [
+                "ANTHRO 3 - Culture and Society"
+              ]
+            },
+            {
+              "title": "Gender Studies",
+              "courses": [
+                "GENDER 10 - Introduction to Gender Studies"
+              ]
+            },
+            {
+              "title": "Geography",
+              "courses": [
+                "GEOG 3 - Cultural Geography",
+                "GEOG 5 - People and Earth's Ecosystems",
+                "GEOG 6 - World Regions: Concepts and Contemporary Issues"
+              ]
+            },
+            {
+              "title": "Global Studies and International and Area Studies",
+              "courses": [
+                "GLBL ST 1 - Introduction to Globalization",
+                "I A STD 1 - Introduction to International and Area Studies",
+                "I A STD 31 - Introduction to Southeast Asia",
+                "I A STD 33 - Introduction to East Asia",
+                "I A STD 50 - Introduction to Latin America"
+              ]
+            },
+            {
+              "title": "History",
+              "courses": [
+                "HIST 8A - Colonial Latin America",
+                "HIST 8B - Modern Latin America",
+                "HIST 8C - Latin American Social History",
+                "HIST 9A - Introduction to Asian Civilizations: History of India",
+                "HIST 9D - Introduction to Asian Civilizations: History of Middle East",
+                "HIST 9E - Introduction to Asian Civilizations: Southeast Asian Crossroads",
+                "HIST 10B - History of Africa, 1800 to Present",
+                "HIST 10BW - Introduction to Civilizations of Africa since 1800",
+                "HIST 11B - History of China, circa 1000 to 2000",
+                "HIST 12B - Inequality: History of Neoliberalism",
+                "HIST 12C - Inequality: Global History of Anti-Colonial Thought and Struggle",
+                "HIST 22 - Contemporary World History, 1760 to Present"
+              ]
+            },
+            {
+              "title": "Political Science",
+              "courses": [
+                "POL SCI 20 - World Politics",
+                "POL SCI 50 - Introduction to Comparative Politics"
+              ]
+            },
+            {
+              "title": "Sociology",
+              "courses": [
+                "SOCIOL 1 - Introductory Sociology"
+              ]
+            },
+            {
+              "title": "Comparative Literature and Spanish",
+              "courses": [
+                "COM LIT 4DW - Literature and Writing: Great Books from World at Large",
+                "SPAN 44 - Latin American Cultures"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select three courses from:",
+      "options": [
+        {
+          "title": "Core",
+          "courses": [
+            "INTL DV 110 - Culture, Power, and Development",
+            "INTL DV M120 - Political Economy of Development",
+            "INTL DV 130 - Theory and History in International Development",
+            "INTL DV 140 - Decolonizing Political Economy: Colonialism and Development"
+          ]
+        },
+        {
+          "title": "Capstone Seminar",
+          "courses": [
+            "INTL DV 191 - Variable Topics Research Seminars: International Development Studies\u2014Senior Seminar"
+          ]
+        },
+        {
+          "title": "Research Methodology",
+          "courses": [
+            "ANTHRO 138P - Field Methods in Cultural Anthropology",
+            "ASIA AM 103 - Social Science Research Methods",
+            "ASIA AM C142A - Ethnocommunications I: Introduction to Creating Community Media",
+            "ASIA AM C142B - Ethnocommunications II: Intermediate Creating Community Media",
+            "CCAS M119 - Chicano/Latino Community Formation: Critical Perspectives and Oral Histories",
+            "CCAS M122 - Planning Issues in Latina/Latino Communities: Preserving and Strengthening Community Assets in Mexican and Salvadoran Los Angeles",
+            "CCAS 123 - Applied Research Methods in Latino Communities",
+            "ECON 103 - Introduction to Econometrics",
+            "POL SCI 170A - Studies in Statistical Analysis of Political Data",
+            "PUB AFF 115 - Using Quantitative Methods to Understand Social Problems and their Potential Solutions",
+            "PUB AFF 116 - Using Qualitative Methods to Understand Social Problems and Their Potential Solutions",
+            "SOCIOL 113 - Statistical and Computer Methods for Social Research",
+            "STATS 112 - Statistics: Window to Understanding Diversity",
+            "URBN PL M122 - Policy, Planning, and Community"
+          ]
+        },
+        {
+          "title": "Social and Critical Theory",
+          "courses": [
+            "ANTHRO 130 - Study of Culture",
+            "ANTHRO 140 - Study of Social Systems",
+            "ANTHRO 143 - Economic Anthropology",
+            "ANTHRO 146 - Urban Anthropology",
+            "ANTHRO 147 - Development Anthropology",
+            "ECON 111 - Theories of Development",
+            "ECON 112 - Policies for Economic Development",
+            "ECON 134 - Environmental Economics",
+            "ENVIRON M125 - Environmentalism: Past, Present, and Future",
+            "ENVIRON M133 - Environmental Sociology",
+            "ENVIRON M161 - Global Environment and World Politics",
+            "GENDER 102 - Power",
+            "GENDER 103 - Knowledge",
+            "GEOG M125 - Environmentalism: Past, Present, and Future",
+            "GEOG M127 - Global Environment and Development: Problems and Issues",
+            "GEOG 130 - Food and Environment",
+            "GEOG 140 - Social Geography",
+            "GEOG 141 - Cultural Geography of Modern World",
+            "GEOG 148 - Political Geography",
+            "GEOG 150 - Economic Geography",
+            "GEOG 151 - Uneven Development Geographies: Prosperity and Impoverishment in Third World",
+            "GEOG 158 - Population Geography",
+            "INTL DV 110 - Culture, Power, and Development",
+            "INTL DV M120 - Political Economy of Development",
+            "INTL DV 130 - Theory and History in International Development",
+            "INTL DV 140 - Decolonizing Political Economy: Colonialism and Development",
+            "INTL DV M150 - Political Economy of Climate Change",
+            "POL SCI M122B - Global Environment and World Politics",
+            "POL SCI 124A - International Political Economy",
+            "POL SCI 167D - Political Institutions and Economic Development",
+            "POL SCI 168 - Comparative Political Analysis",
+            "PUB AFF 110 - Urban Revolution: Space and Society in Global Context",
+            "SOCIOL 101 - Development of Sociological Theory",
+            "SOCIOL 102 - Contemporary Sociological Theory",
+            "SOCIOL M115 - Environmental Sociology",
+            "SOCIOL 122 - Sociology of Violence",
+            "SOCIOL 123 - Social Change",
+            "SOCIOL 182 - Political Sociology",
+            "SOCIOL 183 - Comparative and Historical Sociology",
+            "SOCIOL 191D - Undergraduate Seminar: Sociology of Development",
+            "URBN PL M110 - Inequality and Democracy: Analysis and Praxis of Public Problems",
+            "URBN PL 121 - Urban Policy and Planning",
+            "URBN PL M160 - Environmental Politics and Governance",
+            "URBN PL CM166 - Global Environment and Development: Problems and Issues"
+          ]
+        },
+        {
+          "title": "Regional",
+          "options": [
+            {
+              "title": "East Asia and East Central Asia",
+              "courses": [
+                "ANTHRO 163P - Ideology and Social Change in Contemporary China",
+                "ASIA AM 171A - Critical Issues in U.S.-China Relations",
+                "CHIN 152 - Topics in Contemporary Chinese Literature and Culture",
+                "GENDER M170C - History of Women in China, AD 1000 to Present",
+                "GEOG 175B - Contemporary China",
+                "HIST M170C - History of Women in China, AD 1000 to Present",
+                "HIST 170D - 20th-Century China",
+                "KOREA 154 - Contemporary Korean Culture through Literature and Film",
+                "KOREA 155 - Topics in Korean Cinema",
+                "KOREA 180C - History of Korea since 1876",
+                "POL SCI 159A - Government and Politics of China: Chinese Revolution and Age of Mao Zedong",
+                "POL SCI 159B - Government and Politics of China: China in Age of Reform",
+                "SOCIOL 181A - Sociology of Global China"
+              ]
+            },
+            {
+              "title": "Eastern Europe and West Central Asia",
+              "courses": [
+                "ANTHRO 163Q - Societies of Central Asia",
+                "C&EE ST M125 - Interwar Central European Prose",
+                "C&EE ST CM126 - Cold-War Central European Culture",
+                "GENDER M127 - Women in Russian Literature",
+                "HIST 107C - Armenian History: Armenia in Modern and Contemporary Times, 19th and 20th Centuries",
+                "HIST 120B - East-Central Europe: Short 20th Century, 1918 to 1990",
+                "HIST 120D - Film and History: Central and Eastern Europe, 1945 to 1989",
+                "HIST 127B - History of Russia: Imperial Russia from Peter the Great to Nicholas II",
+                "HIST 127C - History of Russia: Revolutionary Russia and Soviet Union",
+                "POL SCI 156A - Government and Politics of Post-Communist States: Russia",
+                "RUSSN 120 - Literature and Revolution",
+                "RUSSN 121 - Russian Pop Culture",
+                "RUSSN 122 - Siberia",
+                "RUSSN M127 - Women in Russian Literature",
+                "RUSSN 131 - History of Russian Cinema"
+              ]
+            },
+            {
+              "title": "Global North",
+              "courses": [
+                "ASIA AM 134 - Vietnamese American Experience",
+                "CCAS M132 - Border Consciousness",
+                "EDUC M108 - Sociology of Education",
+                "ENGL 106 - Studies in Native American and Indigenous Literatures",
+                "SOCIOL 152 - Comparative Acculturation and Assimilation",
+                "THEATER 107 - Drama of Diversity"
+              ]
+            },
+            {
+              "title": "Latin America and Caribbean Basin",
+              "courses": [
+                "AF AMER M154C - Black Experience in Latin America and Caribbean I",
+                "AF AMER M178 - Sociology of Caribbean",
+                "ANTHRO 161 - Latin American Communities",
+                "ANTHRO 162 - Ethnography of South America",
+                "ART HIS C142B - Latin American Art of 20th Century",
+                "CCAS M125 - U.S./Mexico Relations",
+                "CCAS M126 - Politics of Crisis: Migration, Identity, and Religion",
+                "CCAS M144 - Women's Movement in Latin America",
+                "CCAS CM147 - Transnational Women's Organizing in Americas",
+                "CCAS 169 - Representations of Indigenous Peoples in Americas",
+                "COM HLT 132 - Health, Disease, and Health Services in Latin America",
+                "GENDER 123 - Gender, Race, and Class in Latin American Literature and Film, 1850 to 1950",
+                "GENDER M144 - Women's Movement in Latin America",
+                "GENDER M147C - Transnational Women's Organizing in Americas",
+                "GEOG 172A - Spanish South America",
+                "GEOG 172C - Brazil",
+                "HIST 157B - Indians of Colonial Mexico",
+                "HIST 162A - Modern Brazil",
+                "HNRS M145 - Politics of Crisis: Migration, Identity, and Religion",
+                "POL SCI 154A - Government and Politics in Latin America: States of Middle America",
+                "POL SCI 154B - Government and Politics in Latin America: States of South America",
+                "POL SCI M184A - Black Experience in Latin America and Caribbean I",
+                "PORTGSE 142A - Brazil and Its Culture",
+                "PORTGSE 143A - Colony, Intellectuals, and History",
+                "SOCIOL M178 - Sociology of Caribbean",
+                "SOCIOL 186 - Latin American Societies"
+              ]
+            },
+            {
+              "title": "Middle East and North Africa",
+              "courses": [
+                "ANTHRO M166Q - Culture Area of Maghrib (North Africa)",
+                "ANTHRO 167 - Culture Area of Middle East",
+                "HIST 105C - Survey of Middle East, 500 to Present: 1700 to Present",
+                "HIST M108C - Culture Area of Maghrib (North Africa)",
+                "HIST 109B - History of Israeli-Palestinian Conflict, 1881 to Present",
+                "HIST 111C - Topics in Middle Eastern History: Modern",
+                "HNRS M157 - International Relations of Middle East",
+                "POL SCI 132A - International Relations of Middle East",
+                "POL SCI M132B - International Relations of Middle East",
+                "POL SCI 157 - Government and Politics in the Middle East",
+                "POL SCI 165 - Islam and Politics"
+              ]
+            },
+            {
+              "title": "South and Southeast Asia and Pacific Islands",
+              "courses": [
+                "ANTHRO 168P - Cultures of Pacific",
+                "ASIA AM 122A - Indigeneity, Empire, and Resistance in Pacific Islands",
+                "ASIA AM 122B - Gender and Film in Pacific",
+                "ASIA AM M171D - Critical Issues in U.S.-Philippine Relations",
+                "ASIA AM 171E - Critical Issues in U.S.-Vietnam Relations",
+                "ASIA AM 172C - Transnational Bollywood",
+                "ASIA AM M173 - Topics in Vietnamese Cinema and/or Literature",
+                "GENDER M164A - Women, Violence, Globalization: India, Philippines, Singapore, Vietnam",
+                "GEOG 176A - Southeast Asia",
+                "HIST M144C - Critical Issues in U.S.-Philippine Relations",
+                "HIST 174B - History of British India I",
+                "HIST 174C - Contemporary South Asia",
+                "HIST 175A - Cultural and Political History of Contemporary South Asia",
+                "HIST 175C - Special Topics in Contemporary Indian History",
+                "HIST 176B - History of Southeast Asia: Southeast Asia since 1815",
+                "HIST 176C - Philippine History",
+                "HIST 177B - Comparative Histories of Southeast Asia",
+                "HNRS 184 - India and Pakistan: Historic Roots of Conflict and Prospects for Cooperation",
+                "POL SCI 158 - Southeast Asian Politics",
+                "SEASIAN 135 - Religion and Society in Southeast Asia",
+                "SEASIAN 157 - Gender Issues in Southeast Asia",
+                "VIETMSE CM155 - Topics in Vietnamese Cinema and/or Literature",
+                "VIETMSE 180B - Vietnam: History and Civilization, 1858 to Present"
+              ]
+            },
+            {
+              "title": "Sub-Saharan Africa",
+              "courses": [
+                "ANTHRO 166P - Sub-Saharan Africa",
+                "ART HIS C145A - Architecture and Urbanism in Africa",
+                "ART HIS C145B - Contemporary Arts of Africa",
+                "COM LIT 169 - Continental African Authors",
+                "GEOG 138 - Wildlife Conservation in Eastern and Southern Africa",
+                "HIST 164D - Topics in African History: Africa and Diaspora in Global and Comparative Perspective",
+                "HIST 164E - Topics in African History: Africa, 1945 to Present",
+                "HIST 166B - History of West Africa: West Africa since 1800",
+                "HIST 168B - History of Southern Africa since 1870",
+                "POL SCI 151A - African Politics: Government and Politics of Africa",
+                "POL SCI 151B - African Politics: Political Economy of Africa"
+              ]
+            },
+            {
+              "title": "Disciplinary Electives",
+              "courses": [
+                "ANTHRO M145R - Women and Social Movements",
+                "ANTHRO M148 - (When) Do Leaders Make Differences?",
+                "COM HLT 100 - Introduction to Community Health Sciences",
+                "ECON 121 - International Trade Theory",
+                "ECON 122 - International Finance",
+                "ECON 137 - Introduction to Urban and Regional Economics",
+                "ECON 150 - Labor Economics",
+                "ECON 151 - Topics in Labor Economics",
+                "EDUC 109A - Globalization and Learning",
+                "ENGL 130 - Introduction to Postcolonial Literatures",
+                "ENGL 131 - Studies in Postcolonial Literatures",
+                "ENVIRON 186 - Comparative Sustainability Practices in Local/Global Settings",
+                "FILM TV 106C - History of African, Asian, and Latin American Film",
+                "FILM TV 112 - Film and Social Change",
+                "FILM TV M124 - Sex, Race, and Difference in Transnational Film",
+                "GENDER M154Q - Selected Topics in Gender Systems",
+                "GENDER M154R - Women and Social Movements",
+                "GEOG M131 - Human Impact on Biophysical Environment",
+                "GEOG 139C - Problems in Geography: Culture and Environment in Modern World",
+                "GEOG M142 - (When) Do Leaders Make Differences?",
+                "GLBL ST 102 - Globalization: Markets and Resources",
+                "GLBL ST 103 - Globalization: Governance and Conflict",
+                "GLBL ST 104 - Globalization: Culture and Society",
+                "HIST 131A - Marxist Theory and History",
+                "HNRS M152 - (When) Do Leaders Make Differences?",
+                "POL SCI 116A - Marxism",
+                "POL SCI 123A - International Law",
+                "POL SCI 126 - Peace and War",
+                "POL SCI 137A - International Relations Theory",
+                "POL SCI 150 - Political Violence",
+                "SOCIOL 154 - Race and Ethnicity in Latin America",
+                "SOCIOL 191F - Undergraduate Seminar: Sociology of Globalization"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "INTL DV 198A - Honors Research in International Development Studies",
+        "INTL DV 198B - Honors Research in International Development Studies",
+        "INTL DV 198C - Honors Research in International Development Studies"
+      ]
+    }
+  ]
+}

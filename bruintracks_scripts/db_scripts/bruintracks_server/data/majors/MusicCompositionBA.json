@@ -1,0 +1,117 @@
+{
+  "major_name": "MusicCompositionBA",
+  "major_id": 131,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following courses with grades of C\u2013 or better:",
+      "options": [
+        {
+          "title": "Musicianship",
+          "courses": [
+            "MUSC M6A - Introduction to Global Musicianship",
+            "MUSC M6B - Introduction to Musicianship",
+            "MUSC M6C - Introduction to Musicianship"
+          ]
+        },
+        {
+          "title": "Theory",
+          "courses": [
+            "MUSC 20A - Music Theory I",
+            "MUSC 20B - Music Theory II",
+            "MUSC 20C - Music Theory III"
+          ]
+        },
+        {
+          "title": "Instrumental Studio",
+          "courses": [
+            "Music 60A through 60U"
+          ]
+        },
+        {
+          "title": "Composition Studio",
+          "courses": [
+            "MUSC 66 - Composition Studio"
+          ]
+        },
+        {
+          "title": "Large Conducted Ensembles",
+          "courses": [
+            "MUSC C185A - UCLA Chorale",
+            "MUSC C185B - Chamber Singers",
+            "MUSC C185C - Opera Workshop",
+            "MUSC C185D - Symphony Orchestra",
+            "MUSC C185E - Philharmonia",
+            "MUSC 185F - Symphonic Band",
+            "MUSC C185G - Wind Ensemble",
+            "MUSC 185H - Marching and Varsity Bands"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following courses with grades of C or better:",
+      "options": [
+        {
+          "title": "Theory",
+          "courses": [
+            "MUSC 120A - Music Theory IV",
+            "MUSC 120B - Music Theory V",
+            "MUSC 120C - Music Theory VI"
+          ]
+        },
+        {
+          "title": "History",
+          "courses": [
+            "MUSCLG 125A - History of Western Music: Era of Church and Patron",
+            "MUSCLG 125B - History of Western Music: Era of Empires and Marketplaces",
+            "MUSCLG 125C - History of Western Music: Modern and Postmodern Era"
+          ]
+        },
+        {
+          "title": "Advanced Composition Studio",
+          "courses": [
+            "MUSC 166 - Advanced Composition Studio"
+          ]
+        },
+        {
+          "title": "Advanced Composition Concepts and Techniques",
+          "description": "Select one course from:",
+          "courses": [
+            "MUSC 106A - Orchestration I",
+            "MUSC 106B - Orchestration II",
+            "MUSC 116 - Introduction to Conducting",
+            "MUSC C176 - Electronic Music Composition"
+          ],
+          "options": [
+            {
+              "title": "Music 104A or 104B",
+              "courses": [
+                "MUSC 104A - Modal Counterpoint",
+                "MUSC 104B - Special Topics in Counterpoint"
+              ]
+            },
+            {
+              "title": "Music 124A or 124B or 124C",
+              "courses": [
+                "MUSC 124A - Scoring for Symphony Orchestra",
+                "MUSC 124B - Scoring for Wind Ensemble",
+                "MUSC 124C - Scoring and Arranging for Choral Ensemble"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Electives"
+        },
+        {
+          "title": "Capstone Composition Recital",
+          "courses": [
+            "MUSC 169 - Capstone Composition Recital"
+          ]
+        }
+      ]
+    }
+  ]
+}

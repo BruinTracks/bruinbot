@@ -1,0 +1,191 @@
+{
+  "major_name": "GeneralChemistryBS",
+  "major_id": 60,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following eight courses:",
+      "options": [
+        {
+          "title": "Chemistry and Biochemistry",
+          "description": "Chemistry 20AH or 20BH may be substituted for 20A or 20B respectively.",
+          "courses": [
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+            "CHEM 30BL - Organic Chemistry Laboratory I",
+            "CHEM 30C - Organic Chemistry III: Reactivity, Synthesis, and Biomolecules",
+            "CHEM 30CL - Organic Chemistry Laboratory II"
+          ],
+          "options": [
+            {
+              "title": "Honors Courses",
+              "courses": [
+                "CHEM 20AH - Chemical Structure (Honors)",
+                "CHEM 20BH - Chemical Energetics and Change (Honors)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Life Sciences",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications"
+          ]
+        },
+        {
+          "title": "Physics",
+          "options": [
+            {
+              "title": "Physics 1 Series",
+              "courses": [
+                "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+                "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+              ]
+            },
+            {
+              "title": "Physics 1 Honors Series",
+              "courses": [
+                "PHYSICS 1AH - Physics for Scientists and Engineers: Mechanics (Honors)",
+                "PHYSICS 1BH - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields (Honors)",
+                "PHYSICS 1CH - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity (Honors)",
+                "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+              ]
+            },
+            {
+              "title": "Physics 5 Series",
+              "courses": [
+                "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy",
+                "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                "PHYSICS 5C - Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from:",
+      "courses": [
+        "CHEM 110A - Physical Chemistry: Chemical Thermodynamics",
+        "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+        "CHEM 153L - Biochemical Methods I",
+        "CHEM 171 - Intermediate Inorganic Chemistry"
+      ],
+      "options": [
+        {
+          "title": "Chemistry 192A or 192B",
+          "courses": [
+            "CHEM 192A - Undergraduate Practicum in Chemistry and Biochemistry",
+            "CHEM 192B - Undergraduate Practicum in Chemistry and Biochemistry"
+          ]
+        },
+        {
+          "title": "Chemistry Electives"
+        },
+        {
+          "title": "Atmospheric and Oceanic Sciences or  Earth, Planetary, and Space Sciences",
+          "courses": [
+            "A&O SCI 101 - Fundamentals of Atmospheric Dynamics and Thermodynamics",
+            "A&O SCI 102 - Climate Change and Climate Modeling",
+            "A&O SCI 103 - Physical Oceanography",
+            "A&O SCI 104 - Fundamentals of Air and Water Pollution",
+            "EPS SCI 101 - Earth's Energy: Diminishing Fossil Resources and Prospects for Sustainable Future",
+            "EPS SCI C113 - Biological and Environmental Geochemistry"
+          ]
+        },
+        {
+          "title": "Education",
+          "courses": [
+            "EDUC M102 - Mexican Americans and Schools",
+            "EDUC 105B - Topics in Child Development and Social Policies",
+            "EDUC 106A - Education and Law",
+            "EDUC 107A - Race, Class, and Education Inequality in U.S.",
+            "EDUC 107B - Race and Education: Access, Equity, and Achievement",
+            "EDUC M108 - Sociology of Education",
+            "EDUC 111 - Politics of Education",
+            "EDUC 126 - Language, Literacy, and Academic Development: Educational Considerations for School-Age Multilingual and English Language Learner Students",
+            "EDUC 127 - Educational Psychology: Contexts for Teaching and Learning",
+            "EDUC M131A - Language, Literacy, and Human Development Research Group Seminars",
+            "EDUC 132 - Autism: Mind, Brain, and Education"
+          ]
+        },
+        {
+          "title": "Environmental Health Sciences or Science Education",
+          "courses": [
+            "ENV HLT C152D - Properties and Measurement of Airborne Particles",
+            "ENV HLT C164 - Fate and Transport of Organic Chemicals in Aquatic Environment",
+            "SCI EDU 100XP - Classroom Practices in High School Science"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "description": "Select at least one seminar course from:",
+      "options": [
+        {
+          "title": "Undergraduate Seminar",
+          "courses": [
+            "CHEM 193A - Journal Club Seminars: UC LEADS and MARC",
+            "CHEM 193B - Journal Club Seminars: Chemistry and Biochemistry"
+          ]
+        },
+        {
+          "title": "Research",
+          "courses": [
+            "CHEM 196A - Research Apprenticeship in Chemistry and Biochemistry",
+            "CHEM 196B - Research Apprenticeship in Chemistry and Biochemistry",
+            "CHEM 199 - Directed Research in Chemistry and Biochemistry"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Complete the following two courses and one elective:",
+      "options": [
+        {
+          "title": "Program in Computing",
+          "description": "Select one course from:",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming"
+          ],
+          "options": [
+            {
+              "title": "Program in Computing Elective",
+              "courses": [
+                "COMPTNG 10C - Advanced Programming",
+                "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+                "COMPTNG 20A - Principles of Java Language with Applications"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Computational Chemistry",
+          "courses": [
+            "CHEM C126A - Computational Methods for Chemists",
+            "CHEM C145 - Theoretical and Computational Organic Chemistry",
+            "COM SCI C121 - Probabilistic Models in Computational Genomics"
+          ]
+        }
+      ]
+    }
+  ]
+}

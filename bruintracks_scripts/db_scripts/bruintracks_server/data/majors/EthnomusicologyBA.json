@@ -1,0 +1,135 @@
+{
+  "major_name": "EthnomusicologyBA",
+  "major_id": 128,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following courses with grades of C\u2013 or better:",
+      "options": [
+        {
+          "title": "Musicianship",
+          "courses": [
+            "ETHNMUS M6A - Introduction to Global Musicianship",
+            "ETHNMUS M6B - Introduction to Musicianship",
+            "ETHNMUS M6C - Introduction to Musicianship"
+          ]
+        },
+        {
+          "title": "Musical Cultures of the World",
+          "courses": [
+            "ETHNMUS 20A - Musical Cultures of World: Europe and Americas",
+            "ETHNMUS 20B - Musical Cultures of World: Africa and Near East",
+            "ETHNMUS 20C - Musical Cultures of World: Asia"
+          ]
+        },
+        {
+          "title": "Music Theory",
+          "courses": [
+            "MUSC 20A - Music Theory I",
+            "MUSC 20B - Music Theory II",
+            "MUSC 20C - Music Theory III"
+          ]
+        },
+        {
+          "title": "World Music Performance Organizations, Private Instruction in Music, and World Music Specializations",
+          "options": [
+            {
+              "title": "World Music Performance Organizations",
+              "courses": [
+                "Ethnomusicology 91A through 91Z"
+              ]
+            },
+            {
+              "title": "Private Instruction in Music",
+              "courses": [
+                "ETHNMUS 92 - Private Instruction in Music"
+              ]
+            },
+            {
+              "title": "World Music Specializations",
+              "courses": [
+                "Ethnomusicology 68A through 68Z"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Ethnomusicology 175 or 181",
+          "courses": [
+            "ETHNMUS 175 - Sociology of Music",
+            "ETHNMUS 181 - Anthropology of Music"
+          ]
+        },
+        {
+          "title": "Ethnomusicology 183",
+          "courses": [
+            "ETHNMUS 183 - Study of Ethnomusicology"
+          ]
+        },
+        {
+          "title": "Performance",
+          "options": [
+            {
+              "title": "Advanced World Music Performance Organizations",
+              "courses": [
+                "Ethnomusicology 161A through 161Z"
+              ]
+            },
+            {
+              "title": "Advanced Private Instruction in Music",
+              "courses": [
+                "ETHNMUS 162 - Advanced Private Instruction in Music"
+              ]
+            },
+            {
+              "title": "Advanced World Music Specializations",
+              "courses": [
+                "Ethnomusicology 168A through 168Z"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Electives"
+        },
+        {
+          "title": "Capstone",
+          "description": "Students must fulfill the capstone final project requirement (4 units) through a public recital (performance).  Students must  enroll in Ethnomusicology 199 (2 units) and pass a recital permission  jury. Instrumental  and vocal performers must present a portion of their recital performance, and composers must present excerpts from their recital scores in front of two faculty members. Students also enroll in Ethnomusicology 186 (2 units) during the term in which they perform their recital or their composition(s) are performed.",
+          "options": [
+            {
+              "title": "Performance/Composition Capstone",
+              "courses": [
+                "ETHNMUS 186 - Senior Recital or Project",
+                "ETHNMUS 199 - Directed Research or Senior Project in Ethnomusicology"
+              ]
+            },
+            {
+              "title": "Public Ethnomusicology Capstone",
+              "courses": [
+                "ETHNMUS 195B - Community or Corporate Internships in Public Ethnomusicology"
+              ]
+            },
+            {
+              "title": "Scholarly Research Capstone",
+              "courses": [
+                "ETHNMUS 199 - Directed Research or Senior Project in Ethnomusicology"
+              ]
+            },
+            {
+              "title": "Independent Capstone",
+              "courses": [
+                "ETHNMUS 199 - Directed Research or Senior Project in Ethnomusicology"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

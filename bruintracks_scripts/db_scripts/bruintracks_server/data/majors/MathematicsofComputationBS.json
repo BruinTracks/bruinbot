@@ -1,0 +1,70 @@
+{
+  "major_name": "MathematicsofComputationBS",
+  "major_id": 92,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "MATH 31A - Differential and Integral Calculus",
+        "MATH 31AL - Differential and Integral Calculus Laboratory",
+        "MATH 31B - Integration and Infinite Series",
+        "MATH 32A - Calculus of Several Variables",
+        "MATH 32B - Calculus of Several Variables",
+        "MATH 33A - Linear Algebra and Applications",
+        "MATH 33B - Differential Equations",
+        "MATH 61 - Introduction to Discrete Structures",
+        "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+        "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+        "COMPTNG 10A - Introduction to Programming",
+        "COMPTNG 10B - Intermediate Programming",
+        "COMPTNG 10C - Advanced Programming"
+      ],
+      "options": [
+        {
+          "title": "Elective",
+          "courses": [
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete 11 Mathematics Department courses as follows:",
+      "options": [
+        {
+          "title": "Mathematics",
+          "description": "Select one course from:",
+          "courses": [
+            "MATH 115A - Linear Algebra",
+            "MATH 131A - Analysis",
+            "MATH 151A - Applied Numerical Methods",
+            "MATH 151B - Applied Numerical Methods"
+          ],
+          "options": [
+            {
+              "title": "Mathematics 131B or 132",
+              "courses": [
+                "MATH 131B - Analysis",
+                "MATH 132 - Complex Analysis for Applications"
+              ]
+            },
+            {
+              "title": "Electives",
+              "description": "Select from Mathematics 106 through 199."
+            }
+          ]
+        },
+        {
+          "title": "Computer Science Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program"
+    }
+  ]
+}

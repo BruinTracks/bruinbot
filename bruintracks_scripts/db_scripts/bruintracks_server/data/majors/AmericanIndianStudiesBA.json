@@ -1,0 +1,120 @@
+{
+  "major_name": "AmericanIndianStudiesBA",
+  "major_id": 13,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select two courses from:",
+      "courses": [
+        "AM IND M10 - Introduction to American Indian Studies"
+      ],
+      "options": [
+        {
+          "title": "Electives",
+          "courses": [
+            "ANTHRO 3 - Culture and Society",
+            "GENDER 10 - Introduction to Gender Studies",
+            "POL SCI 40 - Introduction to American Politics",
+            "STATS 12 - Introduction to Statistical Methods for Geography and Environmental Studies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete 10 core courses (40 units) as follows:",
+      "options": [
+        {
+          "title": "Core Courses",
+          "description": "Select two courses from:",
+          "courses": [
+            "AM IND M161 - Comparative American Indian Societies"
+          ],
+          "options": [
+            {
+              "title": "Language",
+              "courses": [
+                "ANTHRO M150 - Language in Culture",
+                "ANTHRO 155 - Native American Languages and Their Speakers",
+                "LING 114 - American Indigenous Linguistics"
+              ]
+            },
+            {
+              "title": "History or Law",
+              "courses": [
+                "AM IND 140 - Federal Indian Law and Policy",
+                "AM IND 158 - Nation Building",
+                "AM IND C170 - California Indian History",
+                "HIST 149A - North American Indian History, Precontact to 1830",
+                "HIST 149B - North American Indian History, 1830 to Present",
+                "HIST 157B - Indians of Colonial Mexico"
+              ]
+            },
+            {
+              "title": "Social Sciences",
+              "courses": [
+                "AM IND C120 - Working in Tribal Communities: Introduction",
+                "AM IND C121 - Working in Tribal Communities: Preparing for Fieldwork",
+                "AM IND C130 - California Indian Strategies for Contemporary Challenges",
+                "AM IND C175 - Cultures of Native Southern California",
+                "AM IND C178 - California Experiences in Native Cultural Resource Management",
+                "ANTHRO 160A - Native North Americans",
+                "ANTHRO 162 - Ethnography of South America"
+              ]
+            },
+            {
+              "title": "Expressive Culture",
+              "courses": [
+                "AM IND 180 - Introduction to and Practicum in Native American Languages",
+                "ART HIS 137 - Arts of Native North America",
+                "ART HIS CM139A - Maya Art and Architecture",
+                "ART HIS C139B - Aztec Art and Architecture",
+                "ENGL 106 - Studies in Native American and Indigenous Literatures",
+                "ETHNMUS 106A - Traditional North American Indian Music",
+                "ETHNMUS 106B - Contemporary North American Indian Music",
+                "THEATER 103F - Native American Theater",
+                "THEATER 107 - Drama of Diversity"
+              ]
+            },
+            {
+              "title": "Methodology",
+              "courses": [
+                "ANTHRO 138P - Field Methods in Cultural Anthropology",
+                "ART HIS 100 - Art Historical Theories and Methodologies",
+                "COM LIT 100 - Introduction to Literary and Critical Theory",
+                "LING 160 - Field Methods",
+                "POL SCI 170A - Studies in Statistical Analysis of Political Data",
+                "SOCIOL 106A - Field Research Methods I",
+                "SOCIOL 113 - Statistical and Computer Methods for Social Research",
+                "WL ARTS 195 - Community or Corporate Internships in World Arts and Cultures"
+              ]
+            },
+            {
+              "title": "Ethnic/Race/Gender Relations or Comparative Indigenous Studies"
+            }
+          ]
+        },
+        {
+          "title": "Experiential Service Learning or Supervised Internship",
+          "courses": [
+            "AM IND C122XP - Working in Tribal Communities: Community-Engaged Learning"
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "AM IND 199C - Individual Studies: Capstone Synthesis"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "AM IND 198A - Honors Research in American Indian Studies",
+        "AM IND 198B - Honors Research in American Indian Studies",
+        "AM IND 198C - Honors Research in American Indian Studies"
+      ]
+    }
+  ]
+}

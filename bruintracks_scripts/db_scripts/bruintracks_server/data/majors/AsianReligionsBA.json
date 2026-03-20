@@ -1,0 +1,65 @@
+{
+  "major_name": "AsianReligionsBA",
+  "major_id": 25,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one intermediate sequence in one Asian language offered by the department (e.g., courses listed or equivalent):",
+      "options": [
+        {
+          "title": "Intermediate Sequence of Asian Language",
+          "courses": [
+            "CHIN 6 - Intermediate Modern Chinese",
+            "CHIN 10 - Intermediate Modern Chinese: Intensive",
+            "FILIPNO 6 - Intermediate Filipino",
+            "HIN-URD 100C - Intermediate Hindi-Urdu",
+            "INDO 6 - Intermediate Indonesian",
+            "JAPAN 6 - Intermediate Modern Japanese",
+            "JAPAN 10 - Intermediate Modern Japanese: Intensive",
+            "KOREA 6 - Intermediate Modern Korean",
+            "KOREA 10 - Intermediate Modern Korean: Intensive",
+            "THAI 6 - Intermediate Thai",
+            "VIETMSE 6 - Intermediate Vietnamese"
+          ]
+        },
+        {
+          "title": "Asian 30 or Introduction to Religions Course",
+          "courses": [
+            "ASIAN 30 - Languages and Cultures of Asia",
+            "ASIAN M60 - Introduction to Buddhism",
+            "ASIAN M60W - Introduction to Buddhism",
+            "ASIAN M61 - Introduction to Zen Buddhism",
+            "CHIN M60 - Introduction to Chinese Religions",
+            "CHIN M60W - Introduction to Chinese Religions",
+            "KOREA M60 - Introduction to Korean Religions",
+            "S ASIAN M60 - Religion in Classical India: Introduction",
+            "SEASIAN M60 - Religious Traditions in Southeast Asia"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete three upper-division language courses in one Asian language offered by the department.",
+      "options": [
+        {
+          "title": "Upper-Division Language Courses"
+        },
+        {
+          "title": "Upper-Division Asian Religions Courses"
+        },
+        {
+          "title": "Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ASIAN 198A - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198B - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198C - Honors Research in Asian Languages and Cultures"
+      ]
+    }
+  ]
+}

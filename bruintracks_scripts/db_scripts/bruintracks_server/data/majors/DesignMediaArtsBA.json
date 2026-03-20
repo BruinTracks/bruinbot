@@ -1,0 +1,57 @@
+{
+  "major_name": "DesignMediaArtsBA",
+  "major_id": 123,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "DESMA 8 - Media Histories",
+        "DESMA 10 - Design Culture",
+        "DESMA 21 - Drawing and Color",
+        "DESMA 22 - Form",
+        "DESMA 24 - Motion",
+        "DESMA 25 - Typography",
+        "DESMA 28 - Interactivity"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select six courses from:",
+      "courses": [
+        "DESMA 101 - Media Arts: Introduction",
+        "DESMA 104 - Design Futures"
+      ],
+      "options": [
+        {
+          "title": "Design|Media Arts Additional Courses",
+          "courses": [
+            "DESMA 110 - Tangible Media",
+            "DESMA 111 - Art and the Internet",
+            "DESMA 125 - Game Design",
+            "DESMA 126 - Game Engine",
+            "DESMA 127 - Interactive Animation",
+            "DESMA 131 - Three-Dimensional Modeling and Motion",
+            "DESMA 140 - Word + Image",
+            "DESMA 153 - Video",
+            "DESMA 163 - Narrative"
+          ]
+        },
+        {
+          "title": "Design|Media Arts Topics",
+          "courses": [
+            "DESMA 160 - Special Topics in Design | Media Arts",
+            "DESMA 171 - Topics in Interactivity and Games",
+            "DESMA 172 - Topics in Video and Animation",
+            "DESMA 173 - Topics in Visual Communication and Image"
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "DESMA 159 - Capstone Senior Project in Design Media Arts"
+          ]
+        }
+      ]
+    }
+  ]
+}

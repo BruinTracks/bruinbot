@@ -1,0 +1,140 @@
+{
+  "major_name": "FinancialActuarialMathematicsBS",
+  "major_id": 58,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Compete six courses. Select Mathematics 31A or 31AL.",
+      "options": [
+        {
+          "title": "Required Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31AL - Differential and Integral Calculus Laboratory",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations"
+          ]
+        },
+        {
+          "title": "Mathematics Elective",
+          "courses": [
+            "MATH 11N - Gateway to Mathematics: Number Theory",
+            "MATH 42 - Introduction to Data-Driven Mathematical Modeling: Life, Universe, and Everything",
+            "MATH 61 - Introduction to Discrete Structures",
+            "MATH 70 - Introduction to Probability"
+          ]
+        },
+        {
+          "title": "Economics",
+          "courses": [
+            "ECON 1 - Principles of Economics",
+            "ECON 2 - Principles of Economics",
+            "ECON 11 - Microeconomic Theory"
+          ]
+        },
+        {
+          "title": "Management",
+          "courses": [
+            "MGMT 1A - Principles of Accounting"
+          ]
+        },
+        {
+          "title": "Program in Computing",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming",
+            "COMPTNG 16A - Python with Applications I"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete 10 mathematics/statistics courses as follows:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "description": "Select one course from:",
+          "courses": [
+            "MATH 115A - Linear Algebra",
+            "MATH 131A - Analysis",
+            "MATH 170E - Introduction to Probability and Statistics 1: Probability",
+            "MATH 170S - Introduction to Probability and Statistics 2: Statistics",
+            "MATH 177 - Theory of Interest and Applications",
+            "MATH 178A - Foundations of Actuarial Mathematics: Life Insurance and Annuities",
+            "MATH 178B - Foundations of Actuarial Mathematics: Additional Topics in Long-Term Actuarial Mathematics",
+            "MATH 178C - Foundations of Actuarial Mathematics: Loss Models",
+            "MATH 179 - Advanced Topic in Financial Mathematics"
+          ],
+          "options": [
+            {
+              "title": "Mathematics 174E or Economics 141 or Statistics C183",
+              "courses": [
+                "MATH 174E - Mathematics of Finance for Mathematics/Economics Students",
+                "ECON 141 - Topics in Microeconomics: Mathematical Finance",
+                "STATS C183 - Statistical Models in Finance"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Electives",
+          "description": "Select from Economics 101 through 199B.",
+          "options": [
+            {
+              "title": "Economics"
+            },
+            {
+              "title": "Mathematics"
+            },
+            {
+              "title": "Statistics",
+              "courses": [
+                "STATS 100C - Linear Models"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Mathematics 61 or 180",
+          "courses": [
+            "MATH 61 - Introduction to Discrete Structures",
+            "MATH 180 - Graph Theory"
+          ]
+        },
+        {
+          "title": "Program in Computing",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming"
+          ]
+        },
+        {
+          "title": "Program in Computing Electives",
+          "courses": [
+            "COMPTNG 10C - Advanced Programming",
+            "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+            "COMPTNG 16A - Python with Applications I",
+            "COMPTNG 20A - Principles of Java Language with Applications",
+            "COMPTNG 40A - Introduction to Programming for Internet"
+          ]
+        },
+        {
+          "title": "Mathematics Electives",
+          "courses": [
+            "Mathematics 149 through 159"
+          ]
+        }
+      ]
+    }
+  ]
+}

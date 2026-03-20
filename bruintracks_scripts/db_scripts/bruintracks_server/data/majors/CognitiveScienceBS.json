@@ -1,0 +1,309 @@
+{
+  "major_name": "CognitiveScienceBS",
+  "major_id": 41,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Chemistry or Linguistics or Physics",
+          "courses": [
+            "CHEM 14A - General Chemistry for Life Scientists I",
+            "CHEM 17 - Chemical Principles",
+            "CHEM 20A - Chemical Structure",
+            "LING 1 - Introduction to Study of Language",
+            "LING 20 - Introduction to Linguistic Analysis",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy",
+            "PHYSICS 10 - Physics",
+            "PHYSICS 11 - Revolutions in Physics"
+          ]
+        },
+        {
+          "title": "Life Sciences of Physiological Science",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "LIFESCI 15 - Life: Concepts and Issues",
+            "PHYSCI 3 - Introduction to Human Physiology"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "description": "Students may select Mathematics 31 or 31AL.",
+          "options": [
+            {
+              "title": "Mathematics 3 series",
+              "courses": [
+                "MATH 3A - Calculus for Life Sciences Students",
+                "MATH 3B - Calculus for Life Sciences Students",
+                "MATH 3C - Ordinary Differential Equations with Linear Algebra for Life Sciences Students"
+              ]
+            },
+            {
+              "title": "Mathematics 31 series",
+              "courses": [
+                "MATH 31A - Differential and Integral Calculus",
+                "MATH 31AL - Differential and Integral Calculus Laboratory",
+                "MATH 31B - Integration and Infinite Series"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Philosophy",
+          "courses": [
+            "PHILOS 7 - Introduction to Philosophy of Mind",
+            "PHILOS 8 - Introduction to Philosophy of Science",
+            "PHILOS 9 - Principles of Critical Reasoning",
+            "PHILOS 23 - Meaning and Communication",
+            "PHILOS 31 - Logic, First Course"
+          ]
+        },
+        {
+          "title": "Program in Computing",
+          "description": "Select two courses from:",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming"
+          ],
+          "options": [
+            {
+              "title": "Additional Computing",
+              "courses": [
+                "COMPTNG 10B - Intermediate Programming",
+                "COMPTNG 10C - Advanced Programming",
+                "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+                "COMPTNG 16A - Python with Applications I",
+                "COMPTNG 16B - Python with Applications II",
+                "COMPTNG 20A - Principles of Java Language with Applications",
+                "COMPTNG 40A - Introduction to Programming for Internet",
+                "PSYCH 20A - MATLAB Programming for Behavioral Sciences",
+                "PSYCH 20B - Advanced Topics in MATLAB Programming for Behavioral Sciences",
+                "PSYCH 30 - Web Programming for Psychology",
+                "STATS 20 - Introduction to Statistical Programming with R",
+                "STATS 21 - Python and Other Technologies for Data Science"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Psychology",
+          "courses": [
+            "PSYCH 10 - Introductory Psychology",
+            "PSYCH 85 - Introduction to Cognitive Science",
+            "PSYCH 100A - Psychological Statistics",
+            "PSYCH 100B - Research Methods in Psychology"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete three courses as follows:",
+      "options": [
+        {
+          "title": "Required Psychology Courses",
+          "description": "Complete the following course:",
+          "options": [
+            {
+              "title": "Psychology 115",
+              "description": "Psychology 115 may be substituted with Psychology M117A, M117B, M117C. Students who complete Psychology M117A, M117B, M117C receive equivalent credit for course 115 and two upper-division cognitive science electives. All three courses must be completed to receive cognitive science elective credit.",
+              "courses": [
+                "PSYCH 115 - Principles of Behavioral Neuroscience"
+              ]
+            },
+            {
+              "title": "Psychology 120A or 120B",
+              "courses": [
+                "PSYCH 120A - Cognitive Psychology",
+                "PSYCH 120B - Sensation and Perception"
+              ]
+            },
+            {
+              "title": "Psychology 124A through 124K",
+              "courses": [
+                "Psychology 124A through 124K"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Additional Required Course",
+          "courses": [
+            "COM SCI 161 - Fundamentals of Artificial Intelligence",
+            "PSYCH 111 - Learning Laboratory",
+            "PSYCH M116A - Behavioral Neuroscience Laboratory",
+            "PSYCH 116B - Human Neuropsychology Laboratory",
+            "PSYCH 121 - Laboratory in Cognitive Psychology",
+            "PSYCH 186A - Cognitive Science Laboratory: Introduction to Theory and Simulation",
+            "PSYCH 186B - Cognitive Science Laboratory: Neural Networks",
+            "PSYCH 186C - Cognitive Science Laboratory: Psychophysical Theories and Methods",
+            "PSYCH 186D - Laboratory in Functional Neuroimaging"
+          ]
+        },
+        {
+          "title": "Upper-Division Electives",
+          "description": "One quarter of Psychology 196B may be applied if course has not been applied toward capstone requirement. Psychology 191CH may by applied only if content is approved by the undergraduate advising office and it has not been applied toward the Psychology 195B or 196B requirement. If Psychology 191CH is applied as an elective, it may not also be applied toward the fieldwork/research requirement.",
+          "options": [
+            {
+              "title": "Courses",
+              "courses": [
+                "PSYCH 110 - Fundamentals of Learning",
+                "PSYCH 111 - Learning Laboratory",
+                "PSYCH 120A - Cognitive Psychology",
+                "PSYCH 120B - Sensation and Perception",
+                "PSYCH 121 - Laboratory in Cognitive Psychology",
+                "PSYCH 130 - Developmental Psychology",
+                "PSYCH 133B - Cognitive Development",
+                "PSYCH 133C - Language Development",
+                "PSYCH 133E - Perceptual Development",
+                "PSYCH 135 - Social Psychology",
+                "PSYCH 137A - Neuroscience of Social Perception",
+                "PSYCH M137B - Nonverbal Communication and Body Language",
+                "PSYCH 137G - Social Cognitive Neuroscience",
+                "PSYCH 137N - Conscious Experience: Social Cognitive Neuroscience Approach",
+                "PSYCH 142H - Advanced Statistical Methods in Psychology (Honors)",
+                "PSYCH 161 - Behavior and Brain Development",
+                "PSYCH M166 - Neurobiology of Bias and Discrimination",
+                "PSYCH 186A - Cognitive Science Laboratory: Introduction to Theory and Simulation",
+                "PSYCH 186B - Cognitive Science Laboratory: Neural Networks",
+                "PSYCH 186C - Cognitive Science Laboratory: Psychophysical Theories and Methods",
+                "PSYCH 186D - Laboratory in Functional Neuroimaging",
+                "PSYCH 196B - Research Apprenticeship in Cognitive Science",
+                "PSYCH 191CH - Departmental Honors Research Seminars",
+                "ANTHRO 124Q - Evolutionary Psychology",
+                "ANTHRO M124R - Evolution of Language",
+                "ANTHRO 136A - Introduction to Psychological Anthropology: Historical Development",
+                "ANTHRO M150 - Language in Culture",
+                "COMM 115 - Interpersonal Dynamics",
+                "COMM 118 - Language and Music",
+                "COMM 119 - Voice and Its Perception",
+                "COMM 122 - Visual Communication",
+                "COMM 126 - Evolution of Interpersonal Communication",
+                "COMM M127 - Animal Communication",
+                "COMM 130 - Science of Language",
+                "COMM 131 - Computer Models of Communicators",
+                "COMM 155 - Artificial Intelligence and New Media",
+                "MSC IND M103 - Music, Mind, and Brain",
+                "NEUROSC 102 - Introduction to Functional Anatomy of Central Nervous System",
+                "NEUROSC M145 - Neural Mechanisms Controlling Movement",
+                "NEUROSC C177 - Drugs of Abuse: Translational Neurobiology",
+                "NEUROSC 180 - Genetic, Molecular, and Genomic Approaches to Neural Development and Disease",
+                "NEUROSC 181 - Cellular and Molecular Mechanisms of Learning and Memory",
+                "NEUROSC 182 - Pharmacology of Drugs of Abuse",
+                "PHILOS 154 - Topics in Value Theory: Rationality and Action",
+                "PHILOS C154B - Topics in Value Theory: Moral Responsibility and Free Will",
+                "PHILOS 170 - Philosophy of Mind",
+                "PHILOS 172 - Philosophy of Language and Communication",
+                "PHILOS 174 - Topics in Theory of Knowledge",
+                "PHILOS 180 - Philosophy of Action",
+                "PHILOS 181 - Philosophy of Perception",
+                "PSYCTRY M182 - Personal Brain Management",
+                "STATS 100A - Introduction to Probability",
+                "STATS 100B - Introduction to Mathematical Statistics",
+                "STATS 100C - Linear Models",
+                "STATS 101B - Introduction to Design and Analysis of Experiment",
+                "STATS 101C - Introduction to Statistical Models and Data Mining",
+                "STATS 115 - Probabilistic Decision Making",
+                "STATS C161 - Introduction to Pattern Recognition and Machine Learning",
+                "STATS C180 - Introduction to Bayesian Statistics"
+              ]
+            },
+            {
+              "title": "Psychology 112A through 116B",
+              "courses": [
+                "Psychology 112A through 116B"
+              ]
+            },
+            {
+              "title": "Psychology 118 through 119Y",
+              "courses": [
+                "Psychology 118 through 119Y"
+              ]
+            },
+            {
+              "title": "Psychology 124A through 124K",
+              "courses": [
+                "Psychology 124A through 124K"
+              ]
+            },
+            {
+              "title": "Computer Science 111 through CM186"
+            },
+            {
+              "title": "Linguistics 103 through 185B",
+              "courses": [
+                "Linguistics 103 through 185B"
+              ]
+            },
+            {
+              "title": "Mathematics 110A through 171",
+              "courses": [
+                "Mathematics 110A through 171"
+              ]
+            },
+            {
+              "title": "Philosophy 124 through 138",
+              "courses": [
+                "Philosophy 124 through 138"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "PSYCH 195B - Corporate Internships in Cognitive Science",
+            "PSYCH 196B - Research Apprenticeship in Cognitive Science",
+            "PSYCH 194C - Research Group Seminars: Cognitive Science"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PSYCH 191AH - Departmental Honors Research Seminars",
+        "PSYCH 191BH - Departmental Honors Research Seminars",
+        "PSYCH 191CH - Departmental Honors Research Seminars"
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select four courses from:",
+      "options": [
+        {
+          "title": "Computing",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming",
+            "COMPTNG 10C - Advanced Programming",
+            "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+            "COMPTNG 16A - Python with Applications I",
+            "COMPTNG 16B - Python with Applications II",
+            "COMPTNG 20A - Principles of Java Language with Applications",
+            "COMPTNG 40A - Introduction to Programming for Internet",
+            "PSYCH 20A - MATLAB Programming for Behavioral Sciences",
+            "PSYCH 20B - Advanced Topics in MATLAB Programming for Behavioral Sciences",
+            "PSYCH 30 - Web Programming for Psychology",
+            "STATS 20 - Introduction to Statistical Programming with R",
+            "STATS 21 - Python and Other Technologies for Data Science"
+          ]
+        },
+        {
+          "title": "Psychology Elective",
+          "courses": [
+            "PSYCH 85 - Introduction to Cognitive Science",
+            "PSYCH 119D - Learning in Biological and Artificial Neural Networks",
+            "PSYCH 121 - Laboratory in Cognitive Psychology",
+            "PSYCH 142H - Advanced Statistical Methods in Psychology (Honors)",
+            "PSYCH 186A - Cognitive Science Laboratory: Introduction to Theory and Simulation",
+            "PSYCH 186B - Cognitive Science Laboratory: Neural Networks",
+            "PSYCH 186C - Cognitive Science Laboratory: Psychophysical Theories and Methods",
+            "PSYCH 186D - Laboratory in Functional Neuroimaging"
+          ]
+        }
+      ]
+    }
+  ]
+}

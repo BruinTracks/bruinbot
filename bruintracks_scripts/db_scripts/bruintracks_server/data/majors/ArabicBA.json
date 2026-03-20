@@ -1,0 +1,111 @@
+{
+  "major_name": "ArabicBA",
+  "major_id": 20,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "ARABIC 1A - Elementary Standard Arabic",
+        "ARABIC 1B - Elementary Standard Arabic",
+        "ARABIC 1C - Elementary Standard Arabic",
+        "ISLM ST M20 - Introduction to Islam",
+        "NR EAST M20 - Visible Language: Study of Writing",
+        "NR EAST 65 - Global Time Travel"
+      ],
+      "options": [
+        {
+          "title": "History 9D or Middle Eastern Studies M50CW",
+          "courses": [
+            "HIST 9D - Introduction to Asian Civilizations: History of Middle East",
+            "M E STD M50CW - Making and Studying Modern Middle East"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one option from:",
+      "options": [
+        {
+          "title": "Arabic",
+          "options": [
+            {
+              "title": "Intermediate Standard Arabic",
+              "courses": [
+                "ARABIC 102A - Intermediate Standard Arabic",
+                "ARABIC 102B - Intermediate Standard Arabic",
+                "ARABIC 102C - Intermediate Standard Arabic"
+              ]
+            },
+            {
+              "title": "Summer Intensive Intermediate Arabic",
+              "courses": [
+                "ARABIC 108 - Summer Intensive Intermediate Arabic"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Arabic or Islamic Studies"
+        },
+        {
+          "title": "Electives",
+          "courses": [
+            "ANTHRO M166Q - Culture Area of Maghrib (North Africa)",
+            "ARABIC 103A - Advanced Arabic",
+            "ARABIC 103B - Advanced Arabic",
+            "ARABIC 103C - Advanced Arabic",
+            "ARABIC CM106 - Qur'an",
+            "ARABIC M107 - Islam in West",
+            "ARABIC M110 - One Thousand and One Nights/Alf Layla Wa-Layla",
+            "ARABIC 111A - Elementary Spoken Egyptian Arabic",
+            "ARABIC 111B - Elementary Spoken Egyptian Arabic",
+            "ARABIC 111C - Elementary Spoken Egyptian Arabic",
+            "ARABIC 112A - Advanced Spoken Egyptian Arabic",
+            "ARABIC 112B - Advanced Spoken Egyptian Arabic",
+            "ARABIC 112C - Advanced Spoken Egyptian Arabic",
+            "ARABIC 115 - Studies in Arabic Dialectology",
+            "ARABIC 120 - Islamic Texts",
+            "ARABIC M123 - Oral Literature and Performance of Arab World",
+            "ARABIC 130 - Classical Arabic Texts",
+            "ARABIC 132 - Philosophical and Kalam Texts",
+            "ARABIC 140 - Readings in Modern Standard Arabic",
+            "ARABIC C141 - Modern Arabic Literature",
+            "ARABIC 142 - Arabic Media",
+            "ARABIC M148 - Contemporary Arab Film and Song",
+            "ARABIC 150 - Classical Arabic Literature in English",
+            "ARABIC M151 - Modern Arabic Literature in English",
+            "ARABIC M155 - Al-Andalus: Literature of Islamic Spain",
+            "ARABIC M171 - Culture Area of Maghrib (North Africa)",
+            "ARABIC 177 - Variable Topics in Arabic",
+            "ARABIC 180 - Linguistics Analysis of Arabic",
+            "ARABIC 181 - Translating Arabic",
+            "ART HIS 119A - Western Islamic Art",
+            "ART HIS 119B - Eastern Islamic Art",
+            "ART HIS C120 - Selected Topics in Islamic Art",
+            "COM LIT 100 - Introduction to Literary and Critical Theory",
+            "HIST 105A - Survey of Middle East, 500 to Present: 500 to 1300",
+            "HIST 105B - Survey of Middle East, 500 to Present: 1300 to 1700",
+            "HIST 105C - Survey of Middle East, 500 to Present: 1700 to Present",
+            "HIST M106 - Premodern Islam",
+            "HIST 108B - History of Islamic Iberia",
+            "HIST 111A - Topics in Middle Eastern History: Premodern",
+            "HIST 111B - Topics in Middle Eastern History: Early Modern",
+            "HIST 111C - Topics in Middle Eastern History: Modern",
+            "ISLM ST CM107 - Islam in West",
+            "ISLM ST M111 - Introduction to Islamic Archaeology",
+            "ISLM ST M112 - Archaeology and Art of Christian and Islamic Egypt",
+            "ISLM ST CM115 - Islam and Other Religions",
+            "ISLM ST 130 - Shi'a in Islamic History",
+            "ISLM ST C151 - Islamic Thought",
+            "POL SCI 132A - International Relations of Middle East",
+            "POL SCI M132B - International Relations of Middle East",
+            "POL SCI 157 - Government and Politics in the Middle East",
+            "POL SCI 165 - Islam and Politics"
+          ]
+        }
+      ]
+    }
+  ]
+}

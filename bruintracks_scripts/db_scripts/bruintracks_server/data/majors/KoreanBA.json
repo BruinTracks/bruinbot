@@ -1,0 +1,118 @@
+{
+  "major_name": "KoreanBA",
+  "major_id": 77,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from the following, or complete an equivalent course:",
+      "options": [
+        {
+          "title": "Intermediate Korean Language Courses",
+          "courses": [
+            "KOREA 6 - Intermediate Modern Korean",
+            "KOREA 6A - Intermediate Korean for Korean Speakers",
+            "KOREA 10 - Intermediate Modern Korean: Intensive"
+          ]
+        },
+        {
+          "title": "Elective",
+          "courses": [
+            "ASIAN 30 - Languages and Cultures of Asia",
+            "KOREA 40 - Korean Wave: Globalization of South Korean Popular Culture",
+            "KOREA 50 - History of Korean Civilization",
+            "KOREA M60 - Introduction to Korean Religions",
+            "KOREA 70 - Images of Korea",
+            "KOREA 80 - Introduction to Korean Cinema"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select five language courses from the following. Courses 101A, 101B, and 101C, or course 101I may be selected.",
+      "options": [
+        {
+          "title": "Korean Language Courses",
+          "courses": [
+            "KOREA 100A - Advanced Modern Korean",
+            "KOREA 100B - Advanced Modern Korean",
+            "KOREA 100C - Advanced Modern Korean",
+            "KOREA 101A - Advanced Readings in Modern Korean",
+            "KOREA 101B - Advanced Readings in Modern Korean",
+            "KOREA 101C - Advanced Readings in Modern Korean",
+            "KOREA 102A - Advanced Korean Conversation",
+            "KOREA 102B - Advanced Korean Conversation",
+            "KOREA 102C - Advanced Korean Conversation",
+            "KOREA 103A - Readings in Sino-Korean Characters",
+            "KOREA 103B - Readings in Sino-Korean Characters",
+            "KOREA 103C - Readings in Sino-Korean Characters",
+            "KOREA 104A - Korean Writing for Advanced Learners",
+            "KOREA 104B - Korean Writing for Advanced Learners",
+            "KOREA 104C - Korean Writing for Advanced Learners",
+            "KOREA C105A - Reading Korean Academic Texts",
+            "KOREA C105B - Reading Korean Academic Texts",
+            "KOREA C105C - Reading Korean Academic Texts",
+            "KOREA 106A - Superior Korean",
+            "KOREA 106B - Superior Korean",
+            "KOREA 106C - Superior Korean",
+            "KOREA 107A - Professional/Academic Korean",
+            "KOREA 107B - Professional/Academic Korean",
+            "KOREA 107C - Professional/Academic Korean",
+            "KOREA CM120 - Structure of Korean",
+            "KOREA 124 - Topics in Korean Language and Culture",
+            "KOREA 165 - Introduction to Korean Buddhist Texts",
+            "KOREA 176 - Introduction to Korean Confucian Texts",
+            "KOREA 178 - Introduction to Modern Korean Historiography"
+          ]
+        },
+        {
+          "title": "Literature",
+          "courses": [
+            "KOREA 130A - Readings in Modern Korean Literature",
+            "KOREA 130B - Readings in Modern Korean Literature",
+            "KOREA C150 - Korean Literature in Translation: Classical",
+            "KOREA C151 - Korean Literature in Translation: Modern"
+          ]
+        },
+        {
+          "title": "Elective Courses on Korea",
+          "courses": [
+            "KOREA CM127 - Contrastive Analysis of Japanese and Korean",
+            "KOREA C149 - Readings of Sino-Korean and Korean Sources of Modern Korea",
+            "KOREA 154 - Contemporary Korean Culture through Literature and Film",
+            "KOREA 155 - Topics in Korean Cinema",
+            "KOREA CM160 - Korean Buddhism",
+            "KOREA 165 - Introduction to Korean Buddhist Texts",
+            "KOREA 172 - Topics in Korean Christianity",
+            "KOREA 175 - Intellectual History of Premodern Korea",
+            "KOREA C177 - Intellectual History of Modern Korea",
+            "KOREA 180A - History of Korea through 1259",
+            "KOREA 180B - History of Korea, 1260 through 1876",
+            "KOREA 180C - History of Korea since 1876",
+            "KOREA 181 - Reading Korean Cultural Landscape",
+            "KOREA 182 - 1894 Kabo Reforms: History at Crossroads of Civilizations",
+            "KOREA 183 - Korean Folklore",
+            "KOREA 184A - Women in History: Premodern Korea",
+            "KOREA 184B - Women in History: Modern Korea",
+            "KOREA 185 - Education and Society in Korea",
+            "KOREA M186 - Korea and Vietnam: Comparative Modern Histories",
+            "KOREA 187 - Popular and Folk Religion in Korea",
+            "KOREA 191A - Variable Topics Research Seminars: Premodern or Early Modern Korea",
+            "KOREA 191B - Variable Topics Research Seminars: Contemporary Korean History"
+          ]
+        },
+        {
+          "title": "Additional Upper-Division Elective Courses within the Department (Outside Korea)"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ASIAN 198A - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198B - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198C - Honors Research in Asian Languages and Cultures"
+      ]
+    }
+  ]
+}

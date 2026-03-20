@@ -1,0 +1,165 @@
+{
+  "major_name": "AsianAmericanStudiesBA",
+  "major_id": 22,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "ASIA AM 10 - History of Asian Americans",
+        "ASIA AM 10W - History of Asian Americans",
+        "ASIA AM 20 - Contemporary Asian American Communities",
+        "ASIA AM 20W - Contemporary Asian American Communities",
+        "ASIA AM 30 - Asian American Literature and Culture",
+        "ASIA AM 30W - Asian American Literature and Culture",
+        "ASIA AM 40 - Asian American Movement",
+        "ASIA AM 40W - Asian American Movement",
+        "ASIA AM 50 - Asian American Women",
+        "ASIA AM 50W - Asian American Women"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Asian American and Pacific Islander Communities and Social Movements",
+          "courses": [
+            "ASIA AM M108 - Policy, Planning, and Community",
+            "ASIA AM 109 - Gender Violence, Policing, and Law",
+            "ASIA AM 110 - American Immigration Policy",
+            "ASIA AM 113 - Asian Americans and Law",
+            "ASIA AM M116 - Asian American Social Movements",
+            "ASIA AM M119XP - Asian American and Pacific Islander Labor Issues",
+            "ASIA AM 130A - Chinese American Experience",
+            "ASIA AM M130B - Chinese Immigrant Literature and Film",
+            "ASIA AM M130C - Chinese Immigration",
+            "ASIA AM 131A - Japanese American Experience",
+            "ASIA AM 131B - Japanese Americans and Incarceration",
+            "ASIA AM 131C - Japanese American Resettlement",
+            "ASIA AM 132A - Korean American Experience",
+            "ASIA AM 133 - Pilipino American Experience",
+            "ASIA AM 134 - Vietnamese American Experience",
+            "ASIA AM 135 - Southeast Asian Refugee Communities in U.S.",
+            "ASIA AM 141AX - Asian American and Pacific Islander Leadership Development Project Part I: Leadership",
+            "ASIA AM 141BX - Asian American and Pacific Islander Leadership Development Project Part II: Field Studies",
+            "ASIA AM 143B - Politics of Race, Ethnicity, Migration, and Multiculturalism in Hawai'i",
+            "ASIA AM M143C - Ethnic Identity and Ethnic Relations in Hawai'i",
+            "ASIA AM 171F - U.S. Empire in Southeast Asia",
+            "ASIA AM 177 - Social Movements in Guam and Pacific",
+            "ASIA AM 187C - Special Courses in Asian American Populations and Communities",
+            "ASIA AM 191C - Topics in Asian American Populations and Communities"
+          ]
+        },
+        {
+          "title": "Global and Transnational Perspectives",
+          "courses": [
+            "ASIA AM 111 - Asian Americans and War",
+            "ASIA AM 123 - Cultures of/against Empire",
+            "ASIA AM 125 - Transpacific Literature and Theory",
+            "ASIA AM 170 - Transnational Perspectives on Asian America",
+            "ASIA AM 171A - Critical Issues in U.S.-China Relations",
+            "ASIA AM 171B - Critical Issues in U.S.-Japan Relations",
+            "ASIA AM 171C - Critical Issues in U.S.-Korea Relations",
+            "ASIA AM M171D - Critical Issues in U.S.-Philippine Relations",
+            "ASIA AM 171E - Critical Issues in U.S.-Vietnam Relations",
+            "ASIA AM 171F - U.S. Empire in Southeast Asia",
+            "ASIA AM M172A - Indian Identity in U.S. and Diaspora",
+            "ASIA AM 172B - Gender in South Asian Communities at Home and Abroad",
+            "ASIA AM 172C - Transnational Bollywood",
+            "ASIA AM M173 - Topics in Vietnamese Cinema and/or Literature",
+            "ASIA AM 174B - Special Courses in Transnationalism and Diasporas",
+            "ASIA AM 175B - Topics in Transnationalism and Diasporas",
+            "ASIA AM 176 - Making Fiction Work: Imagining Philippines and its Elsewheres",
+            "ASIA AM 178 - Critical Refugee Studies",
+            "ASIA AM M179 - Asian Community: Border-Crossing, Diasporic Formation, and Social Transformation"
+          ]
+        },
+        {
+          "title": "Comparative and Intersectional Ethnic Studies",
+          "courses": [
+            "ASIA AM 109 - Gender Violence, Policing, and Law",
+            "ASIA AM 110 - American Immigration Policy",
+            "ASIA AM M112A - Historical Survey of Asian American Literature",
+            "ASIA AM M112B - Contemporary Asian American Literary Issues and Criticism",
+            "ASIA AM 113 - Asian Americans and Law",
+            "ASIA AM M114 - Asian American Education and Schooling",
+            "ASIA AM 115 - Women and Community in Asian American Studies",
+            "ASIA AM M117 - Asian American Personality and Mental Health",
+            "ASIA AM 118 - Asian American Religious History",
+            "ASIA AM 122A - Indigeneity, Empire, and Resistance in Pacific Islands",
+            "ASIA AM M124 - Comparative Racialization and Indigeneity",
+            "ASIA AM 126 - Comparative Race and Indigeneity",
+            "ASIA AM M128 - Participatory Action Research on Youth Organizing for Racial Justice",
+            "ASIA AM M129 - Health Issues for Asian Americans and Pacific Islanders: Myth or Model?",
+            "ASIA AM M161 - Ethnic, Cultural, and Gender Issues in America's Healthcare Systems",
+            "ASIA AM M162 - Class and Gender in Care Work",
+            "ASIA AM M163 - Worker Center Movement: Next Wave Organizing for Justice for Immigrant Workers",
+            "ASIA AM M164 - Women, Violence, Globalization: India, Philippines, Singapore, Vietnam",
+            "ASIA AM M165 - Race, Gender, Class",
+            "ASIA AM M166A - Immigrant Rights, Labor, and Higher Education",
+            "ASIA AM M166B - Research on Immigration Rights, Labor, and Higher Education",
+            "ASIA AM M166C - Research on Immigrant Students and Higher Education",
+            "ASIA AM 167 - Immigration and New Second Generation",
+            "ASIA AM M169 - Constructing Race",
+            "ASIA AM 172B - Gender in South Asian Communities at Home and Abroad",
+            "ASIA AM 174A - Special Courses in Comparative Race, Ethnicity, Gender, and Sexuality",
+            "ASIA AM 175A - Topics in Comparative Race, Ethnicity, Gender, and Sexuality",
+            "ASIA AM M191F - Topics in Asian American Literature"
+          ]
+        },
+        {
+          "title": "Methodology, Creative Production, and Community Engagement",
+          "courses": [
+            "ASIA AM 103 - Social Science Research Methods",
+            "ASIA AM 104A - Field Studies Methods in Asian Pacific Communities",
+            "ASIA AM 104B - Special Internships in Asian Pacific Communities",
+            "ASIA AM 105 - Historical Research Methods",
+            "ASIA AM 107 - Scholarly and Creative Communication in Asian American Studies",
+            "ASIA AM 112C - Asian American Creative Writing",
+            "ASIA AM M119XP - Asian American and Pacific Islander Labor Issues",
+            "ASIA AM 120 - Representation and Resistance: Asian American Independent Cinema",
+            "ASIA AM 121 - Exploring Asian American Theater",
+            "ASIA AM 122B - Gender and Film in Pacific",
+            "ASIA AM 140XP - Power to People: Asian American and Pacific Islander Community-Based Learning",
+            "ASIA AM 141AX - Asian American and Pacific Islander Leadership Development Project Part I: Leadership",
+            "ASIA AM 141BX - Asian American and Pacific Islander Leadership Development Project Part II: Field Studies",
+            "ASIA AM C142A - Ethnocommunications I: Introduction to Creating Community Media",
+            "ASIA AM C142B - Ethnocommunications II: Intermediate Creating Community Media",
+            "ASIA AM C142C - Ethnocommunications III: Advanced Creating Community Media",
+            "ASIA AM M143A - Fieldwork in Asian American and Pacific Islander Communities",
+            "ASIA AM M160 - Culture, Media, and Los Angeles",
+            "ASIA AM M168 - Student-Initiated Retention and Outreach Issues in Higher Education",
+            "ASIA AM 172C - Transnational Bollywood",
+            "ASIA AM 187A - Special Courses in Research Methodologies",
+            "ASIA AM 191A - Topics in Research Methodologies",
+            "ASIA AM 198A - Honors Research in Asian American Studies",
+            "ASIA AM 198B - Honors Research in Asian American Studies",
+            "ASIA AM 198C - Honors Research in Asian American Studies",
+            "ASIA AM 199 - Directed Research or Senior Project in Asian American Studies"
+          ]
+        },
+        {
+          "title": "Additional Upper-Division Courses"
+        },
+        {
+          "title": "Elective Courses"
+        },
+        {
+          "title": "Capstone Project",
+          "courses": [
+            "ASIA AM 185 - Capstone Community-Based Research",
+            "ASIA AM 186 - Capstone Research Seminar"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ASIA AM 198A - Honors Research in Asian American Studies",
+        "ASIA AM 198B - Honors Research in Asian American Studies",
+        "ASIA AM 198C - Honors Research in Asian American Studies"
+      ]
+    }
+  ]
+}

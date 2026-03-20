@@ -1,0 +1,82 @@
+{
+  "major_name": "SpanishandLinguisticsBA",
+  "major_id": 114,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete with grade of B\u2013 or better.",
+      "options": [
+        {
+          "title": "Linguistics 20",
+          "courses": [
+            "LING 20 - Introduction to Linguistic Analysis"
+          ]
+        },
+        {
+          "title": "Spanish 25 or 27",
+          "courses": [
+            "SPAN 25 - Advanced Spanish Composition",
+            "SPAN 27 - Advanced Spanish Composition for Heritage Speakers"
+          ]
+        },
+        {
+          "title": "Spanish M35 or Portuguese M35",
+          "courses": [
+            "SPAN M35 - Spanish, Portuguese, and Nature of Language",
+            "PORTGSE M35 - Spanish, Portuguese, and Nature of Language"
+          ]
+        },
+        {
+          "title": "Spanish 42 or 44",
+          "courses": [
+            "SPAN 42 - Iberian Cultures",
+            "SPAN 44 - Latin American Cultures"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following three courses:",
+      "options": [
+        {
+          "title": "Required Spanish",
+          "courses": [
+            "SPAN 100A - Introduction to Study of Spanish Grammar: Phonology and Morphology",
+            "SPAN 100B - Introduction to Study of Spanish Grammar: Syntax",
+            "SPAN 119 - Introduction to Literary Analysis"
+          ]
+        },
+        {
+          "title": "Required Linguistics",
+          "courses": [
+            "LING 103 - Introduction to General Phonetics",
+            "LING 120A - Phonology I",
+            "LING 120B - Syntax I"
+          ]
+        },
+        {
+          "title": "Linguistics Elective",
+          "courses": [
+            "LING 160 - Field Methods",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II"
+          ]
+        },
+        {
+          "title": "Upper-Division Spanish Electives",
+          "courses": [
+            "SPAN 160 - Topics in Spanish Linguistics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "SPAN 198A - Senior Honors Research in Spanish I",
+        "PORTGSE 198A - Senior Honors Research in Portuguese I"
+      ]
+    }
+  ]
+}

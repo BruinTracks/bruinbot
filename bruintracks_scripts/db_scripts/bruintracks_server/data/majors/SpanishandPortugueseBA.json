@@ -1,0 +1,86 @@
+{
+  "major_name": "SpanishandPortugueseBA",
+  "major_id": 115,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from the following list. Portuguese 27 is recommended.",
+      "options": [
+        {
+          "title": "Portuguese",
+          "courses": [
+            "PORTGSE 25 - Advanced Portuguese",
+            "PORTGSE 26 - Language and Popular Culture",
+            "PORTGSE 27 - Writing Studies: Afro-Luso-Brazilian World"
+          ]
+        },
+        {
+          "title": "Portuguese M35 or Spanish M35",
+          "courses": [
+            "PORTGSE M35 - Spanish, Portuguese, and Nature of Language",
+            "SPAN M35 - Spanish, Portuguese, and Nature of Language"
+          ]
+        },
+        {
+          "title": "Portuguese 46",
+          "courses": [
+            "PORTGSE 46 - Brazil and Portuguese-Speaking World"
+          ]
+        },
+        {
+          "title": "Spanish 25 or 27",
+          "courses": [
+            "SPAN 25 - Advanced Spanish Composition",
+            "SPAN 27 - Advanced Spanish Composition for Heritage Speakers"
+          ]
+        },
+        {
+          "title": "Spanish 42 or 44",
+          "courses": [
+            "SPAN 42 - Iberian Cultures",
+            "SPAN 44 - Latin American Cultures"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Spanish Grammar",
+          "courses": [
+            "SPAN 100A - Introduction to Study of Spanish Grammar: Phonology and Morphology",
+            "SPAN 100B - Introduction to Study of Spanish Grammar: Syntax"
+          ]
+        },
+        {
+          "title": "Portuguese Grammar",
+          "courses": [
+            "PORTGSE 100A - Phonology and Morphology",
+            "PORTGSE 100B - Syntax"
+          ]
+        },
+        {
+          "title": "Literature",
+          "courses": [
+            "SPAN 119 - Introduction to Literary Analysis",
+            "SPAN 120 - Literature in Historical Context",
+            "PORTGSE 130A - Introduction to Literature in Portuguese",
+            "PORTGSE 130B - Introduction to Literature in Portuguese"
+          ]
+        },
+        {
+          "title": "Upper-Division Elective Courses"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PORTGSE 198A - Senior Honors Research in Portuguese I",
+        "SPAN 198A - Senior Honors Research in Spanish I"
+      ]
+    }
+  ]
+}

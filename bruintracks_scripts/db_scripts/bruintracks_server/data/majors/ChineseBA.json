@@ -1,0 +1,124 @@
+{
+  "major_name": "ChineseBA",
+  "major_id": 38,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from the following, or complete an equivalent course:",
+      "options": [
+        {
+          "title": "Intermediate Modern Chinese",
+          "courses": [
+            "CHIN 6 - Intermediate Modern Chinese",
+            "CHIN 6A - Intermediate Modern Chinese for Advanced Students",
+            "CHIN 10 - Intermediate Modern Chinese: Intensive"
+          ]
+        },
+        {
+          "title": "Elective",
+          "courses": [
+            "ASIAN 30 - Languages and Cultures of Asia",
+            "CHIN 50 - Chinese Civilization",
+            "CHIN M60 - Introduction to Chinese Religions",
+            "CHIN M60W - Introduction to Chinese Religions",
+            "CHIN 70 - Introduction to Traditional Chinese Literature",
+            "CHIN 70W - Classics of Chinese Literature"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select five language courses from either modern Chinese or from premodern Chinese from the following. At least two language courses must be in the premodern language or texts.",
+      "options": [
+        {
+          "title": "Chinese Language",
+          "description": "Select from:",
+          "options": [
+            {
+              "title": "Modern Chinese",
+              "courses": [
+                "CHIN 100A - Advanced Modern Chinese",
+                "CHIN 100B - Advanced Modern Chinese",
+                "CHIN 100C - Advanced Modern Chinese",
+                "CHIN 100I - Advanced Modern Chinese: Intensive",
+                "CHIN 101A - Advanced Readings in Modern Chinese",
+                "CHIN 101B - Advanced Readings in Modern Chinese",
+                "CHIN 102A - Advanced Chinese for International Business",
+                "CHIN C107A - Academic/Professional Chinese",
+                "CHIN C120 - Introduction to Chinese Linguistics",
+                "CHIN 130A - Readings in Modern Chinese Literature",
+                "CHIN 130B - Readings in Modern Chinese Literature",
+                "CHIN 135 - Chinese-Language Film and Culture"
+              ]
+            },
+            {
+              "title": "Premodern Chinese",
+              "courses": [
+                "CHIN 110A - Introduction to Classical Chinese",
+                "CHIN 110B - Introduction to Classical Chinese",
+                "CHIN 110C - Introduction to Classical Chinese",
+                "CHIN 140A - Readings in Classical Chinese Literature: Poetry",
+                "CHIN 140B - Readings in Classical Chinese Literature: Prose",
+                "CHIN 140C - Readings in Classical Chinese Literature: Fiction",
+                "CHIN 140D - Readings in Classical Chinese Literature: Philosophical Texts",
+                "CHIN 165 - Introduction to Chinese Buddhist Texts"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Literature",
+          "courses": [
+            "CHIN 130A - Readings in Modern Chinese Literature",
+            "CHIN 130B - Readings in Modern Chinese Literature",
+            "CHIN 131 - World Sinophone Literature: Theories and Texts",
+            "CHIN 135 - Chinese-Language Film and Culture",
+            "CHIN 140A - Readings in Classical Chinese Literature: Poetry",
+            "CHIN 140B - Readings in Classical Chinese Literature: Prose",
+            "CHIN 140C - Readings in Classical Chinese Literature: Fiction",
+            "CHIN 140D - Readings in Classical Chinese Literature: Philosophical Texts",
+            "CHIN C150A - Lyrical Traditions",
+            "CHIN C150B - Chinese Literature in Translation: Traditional Narrative and Fiction",
+            "CHIN 151 - Chinese Literature in Translation: Modern Literature",
+            "CHIN 152 - Topics in Contemporary Chinese Literature and Culture",
+            "CHIN M153 - Chinese Immigrant Literature and Film"
+          ]
+        },
+        {
+          "title": "Elective Courses on China",
+          "courses": [
+            "CHIN C138 - Travel Writing in Premodern China",
+            "CHIN 139 - Gardens in China",
+            "CHIN 154 - Introduction to Chinese Cinema",
+            "CHIN 155 - Topics in Chinese Cinema",
+            "CHIN C156 - Variable Topics in Culture and Society in Taiwan",
+            "CHIN CM160 - Chinese Buddhism",
+            "CHIN 165 - Introduction to Chinese Buddhist Texts",
+            "CHIN 174 - Chinese Strategic Thought",
+            "CHIN C175 - Introduction to Chinese Thought",
+            "CHIN 176 - Neo-Confucianism",
+            "CHIN 180 - Chinese Mythology and Supernatural",
+            "CHIN 184 - Crime, Law, and Punishment in Traditional China",
+            "CHIN 185 - Food and Love in Chinese Culture",
+            "CHIN 186 - Archaeology in China",
+            "CHIN 187 - Chinese Etymology and Calligraphy",
+            "CHIN 191A - Variable Topics Research Seminars: Classical China",
+            "CHIN 191B - Variable Topics Research Seminars: 20th-Century China and Taiwan"
+          ]
+        },
+        {
+          "title": "Additional Upper-Division Elective Courses within the Department (Outside China)."
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ASIAN 198A - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198B - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198C - Honors Research in Asian Languages and Cultures"
+      ]
+    }
+  ]
+}

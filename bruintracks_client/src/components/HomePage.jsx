@@ -987,7 +987,7 @@ export const HomePage = () => {
           ) : (
             <>
               <h2 className="text-2xl font-semibold text-gray-300 mb-6">
-                Welcome to BruinTracks
+                Welcome to bruinbot
               </h2>
               <p className="text-gray-400 mb-8">
                 Generate your personalized course schedule to help plan your academic journey

@@ -1,0 +1,44 @@
+{
+  "major_name": "PoliticalScienceBA",
+  "major_id": 104,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select four courses from:",
+      "options": [
+        {
+          "title": "Political Science",
+          "courses": [
+            "POL SCI 10 - Introduction to Political Theory",
+            "POL SCI 20 - World Politics",
+            "POL SCI 30 - Politics and Strategy",
+            "POL SCI 40 - Introduction to American Politics",
+            "POL SCI 50 - Introduction to Comparative Politics"
+          ]
+        },
+        {
+          "title": "Statistics",
+          "description": "Statistics 10 or 12 may be substituted for course 6.",
+          "courses": [
+            "POL SCI 6 - Introduction to Data Analysis"
+          ],
+          "options": [
+            {
+              "title": "Substitutions",
+              "courses": [
+                "STATS 10 - Introduction to Statistical Reasoning",
+                "STATS 12 - Introduction to Statistical Methods for Geography and Environmental Studies"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major"
+    },
+    {
+      "title": "Honors Program"
+    }
+  ]
+}

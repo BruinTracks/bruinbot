@@ -1,0 +1,122 @@
+{
+  "major_name": "BiophysicsBS",
+  "major_id": 32,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following seven courses:",
+      "options": [
+        {
+          "title": "Physics",
+          "description": "Students may substitute courses from the Physics 1 honors series for the Physics 1 series.",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism",
+            "PHYSICS 17 - Modern Physics",
+            "PHYSICS 32 - Mathematical Methods"
+          ],
+          "options": [
+            {
+              "title": "Physics 1 Honors series",
+              "courses": [
+                "PHYSICS 1AH - Physics for Scientists and Engineers: Mechanics (Honors)",
+                "PHYSICS 1BH - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields (Honors)",
+                "PHYSICS 1CH - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity (Honors)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chemistry",
+          "courses": [
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change"
+          ]
+        },
+        {
+          "title": "Life Sciences",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31AL - Differential and Integral Calculus Laboratory",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations"
+          ]
+        },
+        {
+          "title": "Recommended",
+          "courses": [
+            "PHYSICS 18L - Modern Physics Laboratory"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following nine courses:",
+      "options": [
+        {
+          "title": "Required Physics",
+          "courses": [
+            "PHYSICS 105A - Analytic Mechanics",
+            "PHYSICS 110A - Electricity and Magnetism",
+            "PHYSICS 110B - Electricity and Magnetism",
+            "PHYSICS 112 - Thermal Physics",
+            "PHYSICS 115A - Quantum Mechanics",
+            "PHYSICS 115B - Quantum Mechanics",
+            "PHYSICS M180G - Soft Matter Laboratory",
+            "PHYSICS C187A - Biological Physics I: Life at Rest",
+            "PHYSICS C187B - Biological Physics II: Life in Motion"
+          ]
+        },
+        {
+          "title": "Upper-Division Electives",
+          "options": [
+            {
+              "title": "Group A (Physics of Neuroscience)",
+              "courses": [
+                "NEUROSC M101A - Neuroscience: From Molecules to Mind\u2014Cellular and Systems Neuroscience",
+                "PHYSICS 170A - Electronics for Physics Measurement",
+                "PHYSICS C186 - Neurophysics: Brain-Mind Problem"
+              ]
+            },
+            {
+              "title": "Group B (Biological Physics)",
+              "courses": [
+                "PHYSICS 144 - Polymer Physics",
+                "PHYSICS 170A - Electronics for Physics Measurement",
+                "MECH&AE C286 - Applied Optics"
+              ]
+            },
+            {
+              "title": "Group C (Molecular and Cellular Biophysics)",
+              "courses": [
+                "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+                "CHEM 153L - Biochemical Methods I",
+                "MCD BIO 100 - Introduction to Cell Biology",
+                "MCD BIO 165A - Biology of Cells"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PHYSICS 199 - Directed Research or Senior Project in Physics"
+      ]
+    }
+  ]
+}

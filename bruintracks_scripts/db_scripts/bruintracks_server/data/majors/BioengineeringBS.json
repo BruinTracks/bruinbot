@@ -1,0 +1,165 @@
+{
+  "major_name": "BioengineeringBS",
+  "major_id": 2,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following course:",
+      "options": [
+        {
+          "title": "Bioengineering",
+          "courses": [
+            "BIOENGR 10 - Introduction to Bioengineering"
+          ]
+        },
+        {
+          "title": "Chemistry",
+          "courses": [
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30AL - General Chemistry Laboratory II",
+            "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy"
+          ]
+        },
+        {
+          "title": "Computer Programming or Computer Science",
+          "courses": [
+            "C&EE M20 - Introduction to Computer Programming with MATLAB",
+            "COM SCI 31 - Introduction to Computer Science I",
+            "MECH&AE M20 - Introduction to Computer Programming with MATLAB"
+          ]
+        },
+        {
+          "title": "Life Sciences",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "LIFESCI 7C - Physiology and Human Biology"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations"
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following eight courses:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "BIOENGR 100 - Bioengineering Fundamentals",
+            "BIOENGR 110 - Biotransport and Bioreaction Processes",
+            "BIOENGR 120 - Biomedical Transducers",
+            "BIOENGR 122 - Introduction to Medical Imaging",
+            "BIOENGR 167L - Bioengineering Laboratory",
+            "BIOENGR 175 - Machine Learning and Data-Driven Modeling in Bioengineering",
+            "BIOENGR 176 - Principles of Biocompatibility",
+            "BIOENGR 180 - System Integration in Biology, Engineering, and Medicine I"
+          ]
+        },
+        {
+          "title": "Technical Breadth"
+        },
+        {
+          "title": "Capstone Design",
+          "courses": [
+            "BIOENGR 177A - Bioengineering Capstone Design I",
+            "BIOENGR 177B - Bioengineering Capstone Design II"
+          ]
+        },
+        {
+          "title": "Major Field Electives",
+          "courses": [
+            "BIOENGR C101 - Engineering Principles for Drug Delivery",
+            "BIOENGR C102 - Human Physiological Systems for Bioengineering I",
+            "BIOENGR C104 - Physical Chemistry of Biomacromolecules",
+            "BIOENGR C105 - Engineering of Bioconjugates",
+            "BIOENGR C106 - Topics in Bioelectricity for Bioengineers",
+            "BIOENGR C107 - Polymer Chemistry for Bioengineers",
+            "BIOENGR 121 - Introduction to Microcontrollers",
+            "BIOENGR 122 - Introduction to Medical Imaging",
+            "BIOENGR C131 - Nanopore Sensing",
+            "BIOENGR 132 - Nanogenerators for Bioengineering",
+            "BIOENGR C135 - Orthopaedic Biomechanical Engineering",
+            "BIOENGR C139A - Biomolecular Materials Science I",
+            "BIOENGR C139B - Biomolecular Materials Science II",
+            "BIOENGR CM140 - Introduction to Biomechanics",
+            "BIOENGR CM145 - Molecular Biotechnology for Engineers",
+            "BIOENGR C147 - Applied Tissue Engineering: Clinical and Industrial Perspective",
+            "BIOENGR M153 - Introduction to Microscale and Nanoscale Manufacturing",
+            "BIOENGR C155 - Fluid-Particle and Fluid-Structure Interactions in Microflows",
+            "BIOENGR 170 - Cell Engineering and Laboratory",
+            "BIOENGR CM178 - Introduction to Biomaterials",
+            "BIOENGR C179 - Biomaterials-Tissue Interactions",
+            "BIOENGR 180L - System Integration in Biology, Engineering, and Medicine I Laboratory",
+            "BIOENGR M182 - Dynamic Biosystem Modeling and Simulation Methodology",
+            "BIOENGR C183 - Targeted Drug Delivery and Controlled Drug Release",
+            "BIOENGR C185 - Introduction to Tissue Engineering",
+            "BIOENGR CM186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "BIOENGR CM187 - Research Communication in Computational and Systems Biology",
+            "BIOENGR 199 - Directed Research in Bioengineering"
+          ]
+        },
+        {
+          "title": "Alternative Elective and Technical Breadth",
+          "description": "The materials science and engineering courses may be used to satisfy the technical breadth requirement.",
+          "options": [
+            {
+              "title": "Biomaterials and Regenerative Medicine",
+              "courses": [
+                "BIOENGR C104 - Physical Chemistry of Biomacromolecules",
+                "BIOENGR C105 - Engineering of Bioconjugates",
+                "BIOENGR CM140 - Introduction to Biomechanics",
+                "BIOENGR C147 - Applied Tissue Engineering: Clinical and Industrial Perspective",
+                "BIOENGR C183 - Targeted Drug Delivery and Controlled Drug Release",
+                "BIOENGR C185 - Introduction to Tissue Engineering",
+                "BIOENGR 199 - Directed Research in Bioengineering",
+                "MAT SCI 104 - Science of Engineering Materials",
+                "MAT SCI 110 - Introduction to Materials Characterization A (Crystal Structure, Nanostructures, and X-Ray Scattering)",
+                "MAT SCI C111 - Introduction to Materials Characterization B (Electron Microscopy)",
+                "MAT SCI 120 - Physics of Materials",
+                "MAT SCI 130 - Phase Relations in Solids",
+                "MAT SCI 132 - Structure and Properties of Metallic Alloys",
+                "MAT SCI 143A - Mechanical Behavior of Materials",
+                "MAT SCI 150 - Introduction to Polymers",
+                "MAT SCI 151 - Structure and Properties of Composite Materials",
+                "MAT SCI 160 - Introduction to Ceramics and Glasses",
+                "MAT SCI 161 - Processing of Ceramics and Glasses"
+              ]
+            },
+            {
+              "title": "Biomedical Devices",
+              "courses": [
+                "BIOENGR C131 - Nanopore Sensing",
+                "BIOENGR M153 - Introduction to Microscale and Nanoscale Manufacturing",
+                "BIOENGR 199 - Directed Research in Bioengineering",
+                "EC ENGR 102 - Systems and Signals",
+                "MECH&AE C187L - Nanoscale Fabrication, Characterization, and Biodetection Laboratory"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "major_name": "PortugueseandBrazilianStudiesBA",
+  "major_id": 105,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course. Portuguese 27 is recommended.",
+      "options": [
+        {
+          "title": "Portuguese 25 or 26 or 27",
+          "courses": [
+            "PORTGSE 25 - Advanced Portuguese",
+            "PORTGSE 26 - Language and Popular Culture",
+            "PORTGSE 27 - Writing Studies: Afro-Luso-Brazilian World"
+          ]
+        },
+        {
+          "title": "Portuguese 46",
+          "courses": [
+            "PORTGSE 46 - Brazil and Portuguese-Speaking World"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Grammar",
+          "courses": [
+            "PORTGSE 100A - Phonology and Morphology",
+            "PORTGSE 100B - Syntax"
+          ]
+        },
+        {
+          "title": "Literature",
+          "courses": [
+            "PORTGSE 130A - Introduction to Literature in Portuguese",
+            "PORTGSE 130B - Introduction to Literature in Portuguese"
+          ]
+        },
+        {
+          "title": "Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PORTGSE 198A - Senior Honors Research in Portuguese I",
+        "PORTGSE 198B - Senior Honors Research in Portuguese II"
+      ]
+    }
+  ]
+}

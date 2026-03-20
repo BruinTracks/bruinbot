@@ -1,0 +1,75 @@
+{
+  "major_name": "EconomicsBA",
+  "major_id": 48,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete two courses as follows:",
+      "courses": [
+        "ECON 1 - Principles of Economics",
+        "ECON 2 - Principles of Economics",
+        "ECON 11 - Microeconomic Theory",
+        "ECON 41 - Probability and Statistics for Economists"
+      ],
+      "options": [
+        {
+          "title": "Mathematics",
+          "description": "Select one course from:",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus"
+          ],
+          "options": [
+            {
+              "title": "Mathematics 31B or 31E",
+              "courses": [
+                "MATH 31B - Integration and Infinite Series",
+                "MATH 31E - Calculus for Economics Students"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete six Economics Department upper-division elective courses or listed Management courses.",
+      "courses": [
+        "ECON 101 - Microeconomic Theory",
+        "ECON 102 - Macroeconomic Theory",
+        "ECON 103 - Introduction to Econometrics",
+        "ECON 103L - Econometrics Laboratory",
+        "ECON 104 - Data Science for Economists",
+        "ECON 104L - Data Science for Economists Laboratory"
+      ],
+      "options": [
+        {
+          "title": "Upper-Division Electives",
+          "description": "Select from upper-division economics courses.",
+          "options": [
+            {
+              "title": "Upper-Division Economics Courses"
+            },
+            {
+              "title": "Management",
+              "courses": [
+                "MGMT 120A - Intermediate Financial Accounting I",
+                "MGMT 120B - Intermediate Financial Accounting II",
+                "MGMT 122 - Management Accounting",
+                "MGMT 127A - Tax Principles and Policy",
+                "MGMT 130A - Basic Managerial Finance",
+                "MGMT 180 - Special Topics in Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ECON 198A - Honors Research in Economics I",
+        "ECON 198B - Honors Research in Economics II"
+      ]
+    }
+  ]
+}

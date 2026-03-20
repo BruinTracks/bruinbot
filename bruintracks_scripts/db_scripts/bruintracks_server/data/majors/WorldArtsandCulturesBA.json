@@ -1,0 +1,48 @@
+{
+  "major_name": "WorldArtsandCulturesBA",
+  "major_id": 125,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "WL ARTS 1 - Introduction to World Arts and Cultures",
+        "WL ARTS 2 - Lower-Division Seminar",
+        "WL ARTS 20 - Culture: Introduction",
+        "WL ARTS 24 - World Arts, Local Lives",
+        "WL ARTS 33 - Colonialisms and Resistance"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from the following:",
+      "options": [
+        {
+          "title": "Art as Action",
+          "courses": [
+            "WL ARTS 100A - Art as Social Action",
+            "WL ARTS 100B - Art as Moral Action"
+          ]
+        },
+        {
+          "title": "Required Courses",
+          "courses": [
+            "WL ARTS 102 - Upper-Division Seminar",
+            "WL ARTS 104 - Representations: Theories and Practices",
+            "WL ARTS 124 - Introduction to Field-Based Research Methods",
+            "WL ARTS 185 - Junior-Year Proposal"
+          ]
+        },
+        {
+          "title": "Electives"
+        },
+        {
+          "title": "Senior Praxis Project",
+          "courses": [
+            "WL ARTS 186A - Senior Praxis Projects in World Arts and Cultures",
+            "WL ARTS 186B - Senior Praxis Projects in World Arts and Cultures"
+          ]
+        }
+      ]
+    }
+  ]
+}

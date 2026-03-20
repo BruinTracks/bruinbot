@@ -1,0 +1,77 @@
+{
+  "major_name": "NordicStudiesBA",
+  "major_id": 99,
+  "json_data": [
+    {
+      "title": "The Major",
+      "description": "Select nine courses from the following five tracks, with at least one course in four of the tracks:",
+      "options": [
+        {
+          "title": "Tracks",
+          "tracks": [
+            {
+              "courses": [
+                "ELTS 150 - European Folk and Fairy Tales",
+                "ELTS 151 - Valkyries and Dragonslayers: V\u00f6lsung/Nibelung Tradition",
+                "SCAND C131 - Introduction to Viking Age",
+                "SCAND C133A - Saga",
+                "SCAND 134 - Scandinavian Mythology",
+                "SCAND C137 - Old Norse Literature and Society",
+                "SCAND 138 - Vikings"
+              ],
+              "heading": "Early Nordic Literatures and Cultures"
+            },
+            {
+              "courses": [
+                "SCAND C141A - Theory of Scandinavian Novel",
+                "SCAND 141C - Short Story in Scandinavia",
+                "SCAND 142A - Introduction to Nordic Theater and Drama",
+                "SCAND 143C - Scandinavian Crime Literature",
+                "SCAND C145A - Henrik Ibsen",
+                "SCAND C145B - Knut Hamsun",
+                "SCAND C146A - August Strindberg",
+                "SCAND 147A - Hans Christian Andersen",
+                "SCAND C147B - Soren Kierkegaard"
+              ],
+              "heading": "Theory, Genres, and Authors"
+            },
+            {
+              "courses": [
+                "SCAND C155 - Modern Breakthrough",
+                "SCAND 156 - Scandinavian Literature of 20th Century",
+                "SCAND 157 - Contemporary Nordic Literature"
+              ],
+              "heading": "Literary Periods"
+            },
+            {
+              "courses": [
+                "SCAND 161 - Introduction to Nordic Cinema",
+                "SCAND C163A - Introduction to Danish Cinema",
+                "SCAND C166A - Ingmar Bergman",
+                "SCAND C166C - Carl Dreyer"
+              ],
+              "heading": "Scandinavian Cinema"
+            },
+            {
+              "courses": [
+                "ELTS 167 - European Identities in Classic Hollywood and Los Angeles, 1924-1950",
+                "SCAND C171 - Introduction to Scandinavian Folklore",
+                "SCAND 173A - Popular Culture in Scandinavia",
+                "SCAND C174A - Minority Cultures in Scandinavia",
+                "SCAND 174B - Queer Scandinavia",
+                "SCAND C180 - Literature and Scandinavian Society"
+              ],
+              "heading": "Cultural Studies"
+            }
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "ELTS 187 - Capstone Seminar"
+          ]
+        }
+      ]
+    }
+  ]
+}

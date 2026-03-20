@@ -1,0 +1,378 @@
+{
+  "major_name": "ChemicalEngineeringBS",
+  "major_id": 3,
+  "json_data": [
+    {
+      "title": "Chemical Engineering Core Option",
+      "description": "Complete 18 courses as follows. Students may select either Civil Engineering M20 or Mechanical and Aerospace Engineering M20.",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "courses": [
+            "CH ENGR 10 - Introduction to Chemical and Biomolecular Engineering",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30AL - General Chemistry Laboratory II",
+            "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+            "C&EE M20 - Introduction to Computer Programming with MATLAB",
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "MECH&AE M20 - Introduction to Computer Programming with MATLAB",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics"
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Select three courses (12 units) from an approved list available in the Office of Academic and Student Affairs.",
+          "courses": [
+            "CH ENGR 45 - Biomolecular Engineering Fundamentals",
+            "CH ENGR 100 - Fundamentals of Chemical and Biomolecular Engineering",
+            "CH ENGR 101A - Transport Phenomena I",
+            "CH ENGR 101B - Transport Phenomena II: Heat Transfer",
+            "CH ENGR 101C - Mass Transfer",
+            "CH ENGR 102A - Thermodynamics I",
+            "CH ENGR 102B - Thermodynamics II",
+            "CH ENGR 103 - Separation Processes",
+            "CH ENGR 104A - Chemical and Biomolecular Engineering Laboratory I",
+            "CH ENGR 104B - Chemical and Biomolecular Engineering Laboratory II",
+            "CH ENGR 106 - Chemical Reaction Engineering",
+            "CH ENGR 107 - Process Dynamics and Control",
+            "CH ENGR 109 - Numerical and Mathematical Methods in Chemical and Biological Engineering"
+          ],
+          "options": [
+            {
+              "title": "Technical Breadth"
+            },
+            {
+              "title": "Capstone Analysis and Design",
+              "courses": [
+                "CH ENGR 108A - Process Economics and Analysis",
+                "CH ENGR 108B - Chemical Process Computer-Aided Design and Analysis"
+              ]
+            },
+            {
+              "title": "Chemical Engineering Electives",
+              "courses": [
+                "CH ENGR 110 - Intermediate Engineering Thermodynamics",
+                "CH ENGR C111 - Cryogenics and Low-Temperature Processes",
+                "CH ENGR C112 - Polymer Processes",
+                "CH ENGR 113 - Air Pollution Engineering",
+                "CH ENGR CM114 - Electrochemical Processes",
+                "CH ENGR C115 - Biochemical Reaction Engineering",
+                "CH ENGR C116 - Surface and Interface Engineering",
+                "CH ENGR C118 - Multimedia Environmental Assessment",
+                "CH ENGR C119 - Pollution Prevention for Chemical Processes",
+                "CH ENGR C121 - Membrane Science and Technology",
+                "CH ENGR C125 - Bioseparations and Bioprocess Engineering",
+                "CH ENGR C128 - Hydrogen",
+                "CH ENGR C135 - Advanced Process Control",
+                "CH ENGR C140 - Fundamentals of Aerosol Technology"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Biomedical Engineering Option",
+      "description": "Complete 18 courses as follows. Students may select either Civil Engineering M20 or Mechanical and Aerospace Engineering M20.",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "courses": [
+            "CH ENGR 10 - Introduction to Chemical and Biomolecular Engineering",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30AL - General Chemistry Laboratory II",
+            "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+            "C&EE M20 - Introduction to Computer Programming with MATLAB",
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "MECH&AE M20 - Introduction to Computer Programming with MATLAB",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics"
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Select three courses (12 units) from an approved list available in the Office of Academic and Student Affairs.",
+          "courses": [
+            "CH ENGR 45 - Biomolecular Engineering Fundamentals",
+            "CH ENGR 100 - Fundamentals of Chemical and Biomolecular Engineering",
+            "CH ENGR 101A - Transport Phenomena I",
+            "CH ENGR 101B - Transport Phenomena II: Heat Transfer",
+            "CH ENGR 101C - Mass Transfer",
+            "CH ENGR 102A - Thermodynamics I",
+            "CH ENGR 102B - Thermodynamics II",
+            "CH ENGR 103 - Separation Processes",
+            "CH ENGR 104A - Chemical and Biomolecular Engineering Laboratory I",
+            "CH ENGR 104B - Chemical and Biomolecular Engineering Laboratory II",
+            "CH ENGR 106 - Chemical Reaction Engineering",
+            "CH ENGR 107 - Process Dynamics and Control",
+            "CH ENGR 109 - Numerical and Mathematical Methods in Chemical and Biological Engineering",
+            "CH ENGR CM145 - Molecular Biotechnology for Engineers"
+          ],
+          "options": [
+            {
+              "title": "Technical Breadth"
+            },
+            {
+              "title": "Capstone Analysis and Design",
+              "courses": [
+                "CH ENGR 108A - Process Economics and Analysis",
+                "CH ENGR 108B - Chemical Process Computer-Aided Design and Analysis"
+              ]
+            },
+            {
+              "title": "Biomedical Elective",
+              "courses": [
+                "BIOENGR C105 - Engineering of Bioconjugates",
+                "BIOENGR C183 - Targeted Drug Delivery and Controlled Drug Release",
+                "CH ENGR C112 - Polymer Processes",
+                "CHEM C105 - Introduction to Chemistry of Biology",
+                "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+                "CHEM C159 - Mechanisms of Gene Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Biomolecular Engineering Option",
+      "description": "Complete 18 courses as follows. Students may select either Civil Engineering M20 or Mechanical and Aerospace Engineering M20.",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "courses": [
+            "CH ENGR 10 - Introduction to Chemical and Biomolecular Engineering",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30AL - General Chemistry Laboratory II",
+            "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+            "C&EE M20 - Introduction to Computer Programming with MATLAB",
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "MECH&AE M20 - Introduction to Computer Programming with MATLAB",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics"
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Select three courses (12 units) from an approved list available in the Office of Academic and Student Affairs.",
+          "courses": [
+            "CH ENGR 45 - Biomolecular Engineering Fundamentals",
+            "CH ENGR 100 - Fundamentals of Chemical and Biomolecular Engineering",
+            "CH ENGR 101A - Transport Phenomena I",
+            "CH ENGR 101B - Transport Phenomena II: Heat Transfer",
+            "CH ENGR 101C - Mass Transfer",
+            "CH ENGR 102A - Thermodynamics I",
+            "CH ENGR 102B - Thermodynamics II",
+            "CH ENGR 104A - Chemical and Biomolecular Engineering Laboratory I",
+            "CH ENGR 104D - Molecular Biotechnology Laboratory: From Gene to Product",
+            "CH ENGR 107 - Process Dynamics and Control",
+            "CH ENGR 109 - Numerical and Mathematical Methods in Chemical and Biological Engineering",
+            "CH ENGR C115 - Biochemical Reaction Engineering",
+            "CH ENGR C125 - Bioseparations and Bioprocess Engineering",
+            "CH ENGR CM145 - Molecular Biotechnology for Engineers"
+          ],
+          "options": [
+            {
+              "title": "Technical Breadth"
+            },
+            {
+              "title": "Capstone Analysis and Design",
+              "courses": [
+                "CH ENGR 108A - Process Economics and Analysis",
+                "CH ENGR 108B - Chemical Process Computer-Aided Design and Analysis"
+              ]
+            },
+            {
+              "title": "Biomolecular Elective",
+              "courses": [
+                "BIOENGR C105 - Engineering of Bioconjugates",
+                "BIOENGR C183 - Targeted Drug Delivery and Controlled Drug Release",
+                "CH ENGR C112 - Polymer Processes",
+                "CHEM C105 - Introduction to Chemistry of Biology",
+                "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+                "CHEM C159 - Mechanisms of Gene Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Environmental Engineering Option",
+      "description": "Complete 18 courses as follows. Students may select either Civil Engineering M20 or Mechanical and Aerospace Engineering M20.",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "courses": [
+            "CH ENGR 10 - Introduction to Chemical and Biomolecular Engineering",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30AL - General Chemistry Laboratory II",
+            "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+            "C&EE M20 - Introduction to Computer Programming with MATLAB",
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "MECH&AE M20 - Introduction to Computer Programming with MATLAB",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics"
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Select three courses (12 units) from an approved list available in the Office of Academic and Student Affairs.",
+          "courses": [
+            "CH ENGR 45 - Biomolecular Engineering Fundamentals",
+            "CH ENGR 100 - Fundamentals of Chemical and Biomolecular Engineering",
+            "CH ENGR 101A - Transport Phenomena I",
+            "CH ENGR 101B - Transport Phenomena II: Heat Transfer",
+            "CH ENGR 101C - Mass Transfer",
+            "CH ENGR 102A - Thermodynamics I",
+            "CH ENGR 102B - Thermodynamics II",
+            "CH ENGR 103 - Separation Processes",
+            "CH ENGR 104A - Chemical and Biomolecular Engineering Laboratory I",
+            "CH ENGR 104B - Chemical and Biomolecular Engineering Laboratory II",
+            "CH ENGR 106 - Chemical Reaction Engineering",
+            "CH ENGR 107 - Process Dynamics and Control",
+            "CH ENGR 109 - Numerical and Mathematical Methods in Chemical and Biological Engineering"
+          ],
+          "options": [
+            {
+              "title": "Technical Breadth"
+            },
+            {
+              "title": "Capstone Analysis and Design",
+              "courses": [
+                "CH ENGR 108A - Process Economics and Analysis",
+                "CH ENGR 108B - Chemical Process Computer-Aided Design and Analysis"
+              ]
+            },
+            {
+              "title": "Electives",
+              "courses": [
+                "CH ENGR 113 - Air Pollution Engineering",
+                "CH ENGR C118 - Multimedia Environmental Assessment",
+                "CH ENGR C119 - Pollution Prevention for Chemical Processes",
+                "CH ENGR C121 - Membrane Science and Technology",
+                "CH ENGR C128 - Hydrogen",
+                "CH ENGR C135 - Advanced Process Control",
+                "CH ENGR C140 - Fundamentals of Aerosol Technology"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Semiconductor Manufacturing Engineering Option",
+      "description": "Complete the following 18 courses.",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "courses": [
+            "CH ENGR 10 - Introduction to Chemical and Biomolecular Engineering",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30AL - General Chemistry Laboratory II",
+            "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+            "C&EE M20 - Introduction to Computer Programming with MATLAB",
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "MECH&AE M20 - Introduction to Computer Programming with MATLAB",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics"
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Select three courses (12 units) from an approved list available in the Office of Academic and Student Affairs.",
+          "courses": [
+            "CH ENGR 45 - Biomolecular Engineering Fundamentals",
+            "CH ENGR 100 - Fundamentals of Chemical and Biomolecular Engineering",
+            "CH ENGR 101A - Transport Phenomena I",
+            "CH ENGR 101B - Transport Phenomena II: Heat Transfer",
+            "CH ENGR 101C - Mass Transfer",
+            "CH ENGR 102A - Thermodynamics I",
+            "CH ENGR 102B - Thermodynamics II",
+            "CH ENGR 103 - Separation Processes",
+            "CH ENGR 104A - Chemical and Biomolecular Engineering Laboratory I",
+            "CH ENGR 104C - Semiconductor Processing",
+            "CH ENGR 104CL - Semiconductor Processing Laboratory",
+            "CH ENGR 106 - Chemical Reaction Engineering",
+            "CH ENGR 107 - Process Dynamics and Control",
+            "CH ENGR 109 - Numerical and Mathematical Methods in Chemical and Biological Engineering",
+            "CH ENGR C116 - Surface and Interface Engineering"
+          ],
+          "options": [
+            {
+              "title": "Technical Breadth"
+            },
+            {
+              "title": "Capstone Analysis and Design",
+              "courses": [
+                "CH ENGR 108A - Process Economics and Analysis",
+                "CH ENGR 108B - Chemical Process Computer-Aided Design and Analysis"
+              ]
+            },
+            {
+              "title": "Elective",
+              "courses": [
+                "MAT SCI 104 - Science of Engineering Materials",
+                "MAT SCI 120 - Physics of Materials",
+                "MAT SCI 121 - Materials Science of Semiconductors",
+                "MAT SCI 122 - Principles of Electronic Materials Processing",
+                "MAT SCI 150 - Introduction to Polymers"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "major_name": "MechanicalEngineeringBS",
+  "major_id": 10,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "CHEM 20A - Chemical Structure",
+        "CHEM 20B - Chemical Energetics and Change",
+        "CHEM 20L - General Chemistry Laboratory",
+        "MATH 31A - Differential and Integral Calculus",
+        "MATH 31B - Integration and Infinite Series",
+        "MATH 32A - Calculus of Several Variables",
+        "MATH 32B - Calculus of Several Variables",
+        "MATH 33A - Linear Algebra and Applications",
+        "MECH&AE 82 - Mathematics of Engineering",
+        "MECH&AE 94 - Introduction to Computer-Aided Design and Drafting",
+        "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+        "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+        "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+        "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+        "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+      ],
+      "options": [
+        {
+          "title": "Mechanical and Aerospace Engineering M20 or Computer Science 31",
+          "courses": [
+            "COM SCI 31 - Introduction to Computer Science I",
+            "MECH&AE M20 - Introduction to Computer Programming with MATLAB"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete 13 courses as follows:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "description": "Select one course from:",
+          "courses": [
+            "EC ENGR 110L - Circuit Measurements Laboratory",
+            "MECH&AE 101 - Statics and Strength of Materials",
+            "MECH&AE 102 - Dynamics of Particles and Rigid Bodies",
+            "MECH&AE 103 - Elementary Fluid Mechanics",
+            "MECH&AE 105A - Introduction to Engineering Thermodynamics",
+            "MECH&AE 105D - Transport Phenomena",
+            "MECH&AE 107 - Introduction to Modeling and Analysis of Dynamic Systems",
+            "MECH&AE 156A - Advanced Strength of Materials",
+            "MECH&AE 157 - Basic Mechanical and Aerospace Engineering Laboratory",
+            "MECH&AE 162A - Introduction to Mechanisms and Mechanical Systems",
+            "MECH&AE 171A - Introduction to Feedback and Control Systems: Dynamic Systems Control I"
+          ],
+          "options": [
+            {
+              "title": "Mechanical and Aerospace Engineering 131A or 133A",
+              "courses": [
+                "MECH&AE 131A - Intermediate Heat Transfer",
+                "MECH&AE 133A - Engineering Thermodynamics"
+              ]
+            },
+            {
+              "title": "Mechanical and Aerospace Engineering 183A or M183B",
+              "courses": [
+                "MECH&AE 183A - Introduction to Manufacturing Processes",
+                "MECH&AE M183B - Introduction to Microscale and Nanoscale Manufacturing"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Departmental Breadth Courses",
+          "courses": [
+            "EC ENGR 100 - Electrical and Electronic Circuits",
+            "MAT SCI 104 - Science of Engineering Materials"
+          ]
+        },
+        {
+          "title": "Technical Breadth Courses"
+        },
+        {
+          "title": "Capstone Design",
+          "courses": [
+            "MECH&AE 162D - Mechanical Engineering Design I",
+            "MECH&AE 162E - Mechanical Engineering Design II"
+          ]
+        },
+        {
+          "title": "Major Field Electives",
+          "courses": [
+            "MECH&AE 131A - Intermediate Heat Transfer",
+            "MECH&AE C131G - Microscopic Energy Transport",
+            "MECH&AE 133A - Engineering Thermodynamics",
+            "MECH&AE 135 - Fundamentals of Nuclear Science and Engineering",
+            "MECH&AE C136 - Energy and Environment",
+            "MECH&AE C137 - Design and Analysis of Smart Grids",
+            "MECH&AE C138 - Introduction to Statistical Thermodynamics",
+            "MECH&AE CM140 - Introduction to Biomechanics",
+            "MECH&AE 150A - Intermediate Fluid Mechanics",
+            "MECH&AE 150B - Aerodynamics",
+            "MECH&AE 150C - Combustion Systems",
+            "MECH&AE C150G - Fluid Dynamics of Biological Systems",
+            "MECH&AE C150P - Aircraft Propulsion Systems",
+            "MECH&AE C150R - Rocket Propulsion Systems",
+            "MECH&AE 154B - Design of Aerospace Structures",
+            "MECH&AE 154S - Flight Mechanics, Stability, and Control of Aircraft",
+            "MECH&AE 155 - Intermediate Dynamics",
+            "MECH&AE C156B - Mechanical Design for Power Transmission",
+            "MECH&AE 157A - Aerospace Design Laboratory",
+            "MECH&AE 161A - Introduction to Astronautics",
+            "MECH&AE 161B - Introduction to Space Technology",
+            "MECH&AE 161C - Spacecraft Design",
+            "MECH&AE C162B - Compliant Mechanism Design",
+            "MECH&AE C163A - Kinematics of Robotic Systems",
+            "MECH&AE C163B - Dynamics of Robotic Systems",
+            "MECH&AE C163C - Control of Robotic Systems",
+            "MECH&AE 166C - Design of Composite Structures",
+            "MECH&AE M168 - Introduction to Finite Element Methods",
+            "MECH&AE 169A - Introduction to Mechanical Vibrations",
+            "MECH&AE 171B - Digital Control of Physical Systems",
+            "MECH&AE 172 - Control System Design Laboratory",
+            "MECH&AE 174 - Probability and Its Applications to Risk, Reliability, and Quality Control",
+            "MECH&AE C175A - Probability and Stochastic Processes in Dynamical Systems",
+            "MECH&AE 181A - Complex Analysis and Integral Transforms",
+            "MECH&AE 182B - Mathematics of Engineering",
+            "MECH&AE 182C - Numerical Methods for Engineering Applications",
+            "MECH&AE 183A - Introduction to Manufacturing Processes",
+            "MECH&AE M183B - Introduction to Microscale and Nanoscale Manufacturing",
+            "MECH&AE C183C - Rapid Prototyping and Manufacturing",
+            "MECH&AE 185 - Introduction to Radio Frequency Identification and Its Application in Manufacturing and Supply Chain",
+            "MECH&AE C186 - Applied Optics",
+            "MECH&AE C187L - Nanoscale Fabrication, Characterization, and Biodetection Laboratory"
+          ]
+        }
+      ]
+    }
+  ]
+}

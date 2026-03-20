@@ -1,0 +1,140 @@
+{
+  "major_name": "CommunicationBA",
+  "major_id": 42,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following two courses:",
+      "options": [
+        {
+          "title": "Communication",
+          "courses": [
+            "COMM 1 - Principles of Oral Communication",
+            "COMM 10 - Introduction to Communication"
+          ]
+        },
+        {
+          "title": "Anthropology 4 or Linguistics 1 or Philosophy 23",
+          "courses": [
+            "ANTHRO 4 - Culture and Communication",
+            "LING 1 - Introduction to Study of Language",
+            "PHILOS 23 - Meaning and Communication"
+          ]
+        },
+        {
+          "title": "Economics 41 or Statistics 10",
+          "courses": [
+            "ECON 41 - Probability and Statistics for Economists",
+            "STATS 10 - Introduction to Statistical Reasoning"
+          ]
+        },
+        {
+          "title": "Electives",
+          "courses": [
+            "POL SCI 40 - Introduction to American Politics",
+            "PSYCH 10 - Introductory Psychology",
+            "SOCIOL 1 - Introductory Sociology",
+            "ECON 1 - Principles of Economics",
+            "ECON 5 - Economics for Everyone",
+            "POL SCI 30 - Politics and Strategy"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete a total of eight courses from the following four areas, including at least one core course in each area:",
+      "courses": [
+        "COMM 100 - Communication Science",
+        "COMM 150 - Methodologies in Communication Research"
+      ],
+      "options": [
+        {
+          "title": "Areas",
+          "description": "Only one course of Psychology 135 or Sociology 132 may be applied.",
+          "options": [
+            {
+              "title": "Communication Technology and Digital Systems"
+            },
+            {
+              "title": "Interpersonal Communication",
+              "description": "Only one course of Psychology 135 or Sociology 132 may be applied."
+            },
+            {
+              "title": "Mass Communication and Media Institutions"
+            },
+            {
+              "title": "Political and Legal Communication",
+              "description": "Only one course of Political Science 141B or Sociology 133 may be applied."
+            },
+            {
+              "title": "Required Practicum",
+              "courses": [
+                "COMM 101 - Freedom of Communication",
+                "COMM 102 - Principles of Argumentation",
+                "COMM 109 - Entrepreneurial Communication",
+                "COMM 111 - Conflict and Communication",
+                "COMM M117 - Negotiation",
+                "COMM 155 - Artificial Intelligence and New Media",
+                "COMM 160 - Political Communication",
+                "COMM M176 - Visual Communication and Social Advocacy",
+                "COMM 188E - Variable Topics: Practicum",
+                "COMM 191E - Variable Topics Research Seminars: Practicum"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "COMM 198A - Honors Research in Communication Studies",
+        "COMM 198B - Honors Research in Communication Studies",
+        "COMM 198C - Honors Research in Communication Studies"
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one set of courses from:",
+      "options": [
+        {
+          "title": "Program in Computing or Computer Science",
+          "options": [
+            {
+              "title": "Program in Computing",
+              "courses": [
+                "COMPTNG 10A - Introduction to Programming",
+                "COMPTNG 10B - Intermediate Programming"
+              ]
+            },
+            {
+              "title": "Computer Science",
+              "courses": [
+                "COM SCI 31 - Introduction to Computer Science I",
+                "COM SCI 32 - Introduction to Computer Science II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Additional Courses",
+          "courses": [
+            "COMM 122 - Visual Communication",
+            "COMM 131 - Computer Models of Communicators",
+            "COMM 151 - Computer-Mediated Communication",
+            "COMM 153 - Introduction to Data Science",
+            "COMM 155 - Artificial Intelligence and New Media",
+            "COMM 156 - Social Networking",
+            "COMM 159 - Artificial Intelligence and Society",
+            "COMPTNG 10C - Advanced Programming",
+            "COMPTNG 16A - Python with Applications I",
+            "COMPTNG 16B - Python with Applications II",
+            "COMPTNG 20A - Principles of Java Language with Applications",
+            "COMPTNG 40A - Introduction to Programming for Internet"
+          ]
+        }
+      ]
+    }
+  ]
+}

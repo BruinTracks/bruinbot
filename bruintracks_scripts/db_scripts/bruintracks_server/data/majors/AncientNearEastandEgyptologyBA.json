@@ -1,0 +1,139 @@
+{
+  "major_name": "AncientNearEastandEgyptologyBA",
+  "major_id": 15,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "AN N EA 10W - Jerusalem: Holy City",
+        "AN N EA 12W - Jerusalem: Holy City",
+        "AN N EA 14W - Medicine, Magic, and Science in Ancient Times",
+        "AN N EA 15 - Women and Power in Ancient World",
+        "AN N EA 15W - Women and Power in Ancient World",
+        "AN N EA M60 - Achaemenid Civilization and Empire of Alexander",
+        "M E STD M50A - First Civilizations",
+        "M E STD M50B - Origins of Judaism, Christianity, and Islam",
+        "NR EAST M20 - Visible Language: Study of Writing"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from four of the following five areas (total of four courses):",
+      "options": [
+        {
+          "title": "Required Core Courses:",
+          "options": [
+            {
+              "title": "Archaeology and Art",
+              "courses": [
+                "AN N EA CM101A - Art and Architecture of Ancient Egypt, Predynastic Period to New Kingdom",
+                "AN N EA CM101B - Art and Architecture of Ancient Egypt, New Kingdom to Greco-Roman Period",
+                "AN N EA M101C - Ancient Egyptian Temple and City of Thebes",
+                "AN N EA M105 - Archaeology of Egypt and Sudan",
+                "AN N EA 160 - Origins of Agriculture",
+                "AN N EA 161 - Archaeology of Prehistoric Mesopotamia",
+                "AN N EA 162 - Archaeology, Identity, and Bible",
+                "AN N EA CM163 - Archaeology of Iran",
+                "AN N EA C165 - Egyptian Archaeology",
+                "AN N EA M166 - Art and Death in Ancient Egypt",
+                "AN N EA CM169 - Introduction to Archaeological Sciences",
+                "ISLM ST M111 - Introduction to Islamic Archaeology",
+                "ISLM ST M112 - Archaeology and Art of Christian and Islamic Egypt"
+              ]
+            },
+            {
+              "title": "History",
+              "courses": [
+                "AN N EA M103A - History of Ancient Egypt",
+                "AN N EA M103B - History of Ancient Egypt",
+                "AN N EA M104A - History of Ancient Mesopotamia and Syria",
+                "AN N EA M104B - Sumerians",
+                "AN N EA M104C - Babylonians",
+                "AN N EA M104D - Assyrians",
+                "AN N EA M110A - Iranian Civilization: History of Achaemenid Empire",
+                "AN N EA M110B - Iranian Civilization: History of Arsacid (Parthian) Empire",
+                "AN N EA M110C - Iranian Civilization: History of Early Sasanian Empire\u2014From Ardashir I to Rise of Peroz (circa 224-459 CE)",
+                "JEWISH M182A - Ancient Jewish History"
+              ]
+            },
+            {
+              "title": "Languages",
+              "courses": [
+                "AN N EA 120A - Elementary Ancient Egyptian",
+                "AN N EA 120B - Elementary Ancient Egyptian",
+                "AN N EA 120C - Elementary Ancient Egyptian",
+                "AN N EA 140A - Elementary Sumerian",
+                "AN N EA 140B - Elementary Sumerian",
+                "AN N EA 140C - Elementary Sumerian",
+                "AN N EA M168A - Elementary Hittite",
+                "HEBREW 110A - Introduction to Biblical Hebrew: Phonology, Morphology, and Structure of Biblical Hebrew",
+                "HEBREW 110B - Introduction to Biblical Hebrew: Readings of Biblical Prose Texts",
+                "HEBREW 110C - Readings in Biblical Hebrew",
+                "SEMITIC M140A - Elementary Akkadian",
+                "SEMITIC 140B - Elementary Akkadian"
+              ]
+            },
+            {
+              "title": "Literature",
+              "courses": [
+                "AN N EA 150A - Heroes, Gods, and Monsters: Literature and Epic in Mesopotamia",
+                "AN N EA 150B - Survey of Ancient Near Eastern Literatures in English: Egypt",
+                "JEWISH M150A - Hebrew Literature in English: Literary Traditions of Ancient Israel\u2014Bible and Apocrypha",
+                "JEWISH 170 - Dead Sea Scrolls and Early Judaism"
+              ]
+            },
+            {
+              "title": "Religion",
+              "courses": [
+                "AN N EA M130 - Ancient Egyptian Religion",
+                "AN N EA M135 - Religion in Ancient Israel",
+                "AN N EA M167 - Magic in Ancient World",
+                "AN N EA M170 - Bible and Its Interpreters",
+                "AN N EA M185D - Religions of Ancient Near East",
+                "IRANIAN 170 - Religion in Ancient Iran",
+                "JEWISH M155 - Angels, Demons, and End of World: Magic, Mysticism, and Apocalypse in Jewish Traditions"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Required Elective Courses",
+          "courses": [
+            "AN N EA 121A - Intermediate Ancient Egyptian Readings",
+            "AN N EA 121B - Intermediate Ancient Egyptian Readings",
+            "AN N EA 121C - Intermediate Ancient Egyptian Readings",
+            "AN N EA C123A - Coptic",
+            "AN N EA C123B - Coptic",
+            "AN N EA 124 - Middle Egyptian Technical Literature",
+            "AN N EA 125A - Digital Cultural Mapping Core Course A: Place, Time, and Digital World",
+            "AN N EA M125B - Digital Cultural Mapping Core Course B: Google Earth, Geographic Information Systems, Hypercities, and Timelines",
+            "AN N EA M125C - Digital Cultural Mapping Core Course C: Summer Research",
+            "AN N EA 175 - Conceptions of Race in Ancient Egypt",
+            "AN N EA C177 - Variable Topics in Ancient Near East",
+            "AN N EA M179 - Cultural Heritage and Identity Representation: Creating Fowler and Virtual Exhibit",
+            "ANTHRO 110 - Principles of Archaeology",
+            "ANTHRO CM110Q - Introduction to Archaeological Sciences",
+            "ANTHRO 111 - Theory in Anthropological Archaeology",
+            "ANTHRO 112R - Cities Past and Present",
+            "ANTHRO 130 - Study of Culture",
+            "ANTHRO M150 - Language in Culture",
+            "ENGL 111A - Hebrew Bible in Translation",
+            "ENGL 111B - Christian Biblical Texts in Translation",
+            "ENGL 111C - Topics in Biblical Literature",
+            "GREEK 130 - Readings in New Testament",
+            "HEBREW 125 - Hebrew Bible with Medieval Commentaries",
+            "HEBREW 130 - Rabbinic Texts",
+            "HEBREW 135 - Medieval Hebrew Texts",
+            "HEBREW 188FL - Special Studies: Readings in Hebrew",
+            "RELIGN M186A - History of Early Christians",
+            "RELIGN M186B - Religious Environment of Early Christians",
+            "RELIGN M186C - Jesus of Nazareth in Historical Research",
+            "SEMITIC 130 - Biblical Aramaic",
+            "SEMITIC 141 - Advanced Akkadian",
+            "SEMITIC 142 - Akkadian Literary Texts"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "major_name": "AmericanLiteratureandCultureBA",
+  "major_id": 14,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "English Composition 3",
+          "courses": [
+            "ENGCOMP 3 - English Composition, Rhetoric, and Language"
+          ]
+        },
+        {
+          "title": "English 4 series",
+          "courses": [
+            "ENGL 4W - Critical Reading and Writing",
+            "ENGL 4HW - Critical Reading and Writing (Honors)",
+            "ENGL 4WX - Critical Reading and Writing (Community-Engaged Learning)"
+          ]
+        },
+        {
+          "title": "English 11",
+          "courses": [
+            "ENGL 11 - Introduction to American Cultures"
+          ]
+        },
+        {
+          "title": "English 87",
+          "courses": [
+            "ENGL 87 - Topics in American Cultures"
+          ]
+        },
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select seven American literature English courses, at least two in the time period before 1848 and two in the time period after 1848, from the following three areas with a minimum of two selected from each area:",
+      "options": [
+        {
+          "title": "American Literature English Courses",
+          "description": "The following courses may be selected when treating American topics:",
+          "options": [
+            {
+              "title": "Origins\u2014Beginnings, Events, and Trajectories: Studying the Making of America in Its Myriad Beginnings and Manifestations",
+              "description": "The following courses may be selected when treating American topics:"
+            },
+            {
+              "title": "Identities: Places, Communities, and Environments: Studying People, Collectives and Movements across the Diverse Geographies of the Americas",
+              "description": "The following courses may be selected when treating American topics:"
+            },
+            {
+              "title": "Media: Aesthetics, Genres, and Technologies",
+              "description": "The following courses may be selected when treating American topics:"
+            }
+          ]
+        },
+        {
+          "title": "Seminar",
+          "description": "The following courses may be selected when treating American topics:",
+          "options": [
+            {
+              "title": "Courses",
+              "courses": [
+                "ENGL M105XP - Seminar: Chicana/Chicano and/or Latina/Latino Literature\u2014Community-Engaged Learning",
+                "ENGL 183A - Topics in Colonial American Literature",
+                "ENGL 183B - Topics in 19th-Century American Literature",
+                "ENGL 183C - Topics in 20th- and 21st-Century American Literature",
+                "ENGL M191A - Topics in African American Literature",
+                "ENGL M191B - Topics in Chicana/Chicano and/or Latina/Latino Literature",
+                "ENGL M191C - Topics in Asian American Literature"
+              ]
+            },
+            {
+              "title": "Additional Courses when Treating American Topics",
+              "courses": [
+                "ENGL 180 - Topics in Literature and Language",
+                "ENGL 181A - Topics in Genre Studies",
+                "ENGL 181B - Topics in Interdisciplinary Studies",
+                "ENGL 182E - Topics in 19th-Century Literature",
+                "ENGL 182F - Topics in 20th- and 21st-Century Literature",
+                "ENGL 184 - Capstone Seminar: English",
+                "ENGL M191D - Topics in Queer Literatures and Cultures",
+                "ENGL M191E - Topics in Gender and Sexuality"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "American Culture Courses from Other Departments"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Theory",
+          "courses": [
+            "English 120 through 128"
+          ]
+        },
+        {
+          "title": "Honors Research",
+          "courses": [
+            "ENGL 191H - Honors Research Seminars: English",
+            "ENGL 198A - Honors Research in English",
+            "ENGL 198B - Honors Research in English"
+          ]
+        }
+      ]
+    }
+  ]
+}

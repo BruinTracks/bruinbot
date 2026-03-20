@@ -1,0 +1,92 @@
+{
+  "major_name": "AsianHumanitiesBA",
+  "major_id": 23,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one intermediate sequence in one Asian language offered by the department (e.g., courses listed or equivalent):",
+      "options": [
+        {
+          "title": "Intermediate Sequence of Asian Language",
+          "courses": [
+            "CHIN 6 - Intermediate Modern Chinese",
+            "CHIN 10 - Intermediate Modern Chinese: Intensive",
+            "FILIPNO 6 - Intermediate Filipino",
+            "HIN-URD 100C - Intermediate Hindi-Urdu",
+            "INDO 6 - Intermediate Indonesian",
+            "JAPAN 6 - Intermediate Modern Japanese",
+            "JAPAN 10 - Intermediate Modern Japanese: Intensive",
+            "KOREA 6 - Intermediate Modern Korean",
+            "KOREA 10 - Intermediate Modern Korean: Intensive",
+            "THAI 6 - Intermediate Thai",
+            "VIETMSE 6 - Intermediate Vietnamese"
+          ]
+        },
+        {
+          "title": "Asian 30, Civilization, Introduction to Religions, or Culture",
+          "description": "E.g., courses listed here.",
+          "options": [
+            {
+              "title": "Asian 30",
+              "courses": [
+                "ASIAN 30 - Languages and Cultures of Asia"
+              ]
+            },
+            {
+              "title": "Civilization",
+              "courses": [
+                "CHIN 50 - Chinese Civilization",
+                "JAPAN 50 - Japanese Civilization",
+                "JAPAN 70 - Images of Japan: Literature and Film",
+                "KOREA 50 - History of Korean Civilization"
+              ]
+            },
+            {
+              "title": "Introduction to Religion",
+              "courses": [
+                "ASIAN M60 - Introduction to Buddhism",
+                "ASIAN M60W - Introduction to Buddhism",
+                "ASIAN M61 - Introduction to Zen Buddhism",
+                "CHIN M60 - Introduction to Chinese Religions",
+                "CHIN M60W - Introduction to Chinese Religions",
+                "KOREA M60 - Introduction to Korean Religions",
+                "S ASIAN M60 - Religion in Classical India: Introduction",
+                "SEASIAN M60 - Religious Traditions in Southeast Asia"
+              ]
+            },
+            {
+              "title": "Culture",
+              "courses": [
+                "JAPAN 75 - Anime",
+                "JAPAN 80 - How Does It Move? Action and Moving Image in Modern Japan",
+                "KOREA 40 - Korean Wave: Globalization of South Korean Popular Culture",
+                "KOREA 70 - Images of Korea",
+                "KOREA 80 - Introduction to Korean Cinema"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete three upper-division language courses in one Asian language offered by the department.",
+      "options": [
+        {
+          "title": "Upper-Division Language Courses"
+        },
+        {
+          "title": "Upper-Division Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ASIAN 198A - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198B - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198C - Honors Research in Asian Languages and Cultures"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "major_name": "ArchitecturalStudiesBA",
+  "major_id": 120,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "ARCH&UD 10A - Histories of Architecture and Urbanism I",
+        "ARCH&UD 10B - Histories of Architecture and Urbanism II",
+        "ARCH&UD 30 - Introduction to Architectural Studies"
+      ]
+    },
+    {
+      "title": "The Major",
+      "courses": [
+        "ARCH&UD 121 - Studio I",
+        "ARCH&UD 122 - Studio II",
+        "ARCH&UD 123 - Studio III",
+        "ARCH&UD 131 - Issues in Contemporary Design",
+        "ARCH&UD 132 - Histories of Housing and Domesticity: 19th Century to the Present",
+        "ARCH&UD 133 - Spatial Justice and the City",
+        "ARCH&UD 141 - Technology I: Projections",
+        "ARCH&UD 142 - Technology II: Building Materials and Methods",
+        "ARCH&UD 143 - Technology III: Digital Technology"
+      ]
+    }
+  ]
+}

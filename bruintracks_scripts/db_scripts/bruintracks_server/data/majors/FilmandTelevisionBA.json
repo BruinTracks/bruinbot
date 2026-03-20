@@ -1,0 +1,124 @@
+{
+  "major_name": "FilmandTelevisionBA",
+  "major_id": 138,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following six courses:",
+      "options": [
+        {
+          "title": "Film and Television",
+          "courses": [
+            "FILM TV 4 - Introduction to Art and Technique of Filmmaking",
+            "FILM TV 6A - History of American Motion Picture",
+            "FILM TV 10A - American Television History",
+            "FILM TV 33 - Introductory Screenwriting",
+            "FILM TV 51 - Digital Media Studies",
+            "FILM TV 84A - Overview of Contemporary Film Industry"
+          ]
+        },
+        {
+          "title": "Theater",
+          "courses": [
+            "THEATER 10 - Introduction to Theater",
+            "THEATER 15 - Introduction to Directing",
+            "THEATER 20 - Acting Fundamentals",
+            "THEATER 28A - Acting, Voice, and Movement Workshop I",
+            "THEATER 28B - Acting, Voice, and Movement Workshop I",
+            "THEATER 28C - Acting, Voice, and Movement Workshop I",
+            "THEATER 30 - Dramatic Writing"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete seven courses, including either Film and Television 106B or 106C.",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "FILM TV 101A - Junior Symposium",
+            "FILM TV 106B - History of European Motion Picture",
+            "FILM TV 106C - History of African, Asian, and Latin American Film",
+            "FILM TV 134 - Intermediate Screenwriting Workshop",
+            "FILM TV 150 - Cinematography",
+            "FILM TV 154 - Film Editing",
+            "FILM TV 155 - Introduction to Digital Media and Tools",
+            "FILM TV 163 - Directing Cameras"
+          ]
+        },
+        {
+          "title": "Cinema and Media Studies Elective",
+          "courses": [
+            "FILM TV 107 - Experimental Film",
+            "FILM TV 108 - History of Documentary Film",
+            "FILM TV 109 - Advanced Topics in Documentary: New Documentary Forms",
+            "FILM TV M111 - Women and Film",
+            "FILM TV 112 - Film and Social Change",
+            "FILM TV 113 - Film Authors",
+            "FILM TV 114 - Film Genres",
+            "FILM TV M117 - Chicanos in Film/Video",
+            "FILM TV 122N - History of Animation in American Film and Television"
+          ]
+        },
+        {
+          "title": "Capstone Departmentally Sponsored Internship",
+          "courses": [
+            "FILM TV 195 - Corporate Internships in Film, Television, and Digital Media"
+          ]
+        },
+        {
+          "title": "Senior Concentration of Advanced Film Coursework",
+          "description": "Consult with faculty.",
+          "options": [
+            {
+              "title": "Animation",
+              "courses": [
+                "FILM TV C181A - Introduction to Animation",
+                "FILM TV C181B - Writing for Animation",
+                "FILM TV C181C - Animation Workshop"
+              ]
+            },
+            {
+              "title": "Cinema and Media Studies"
+            },
+            {
+              "title": "Production/Cinematography",
+              "courses": [
+                "FILM TV C118 - Intermediate Cinematography",
+                "FILM TV 153 - Motion Picture Lighting",
+                "FILM TV C157 - Lighting for Film and Television",
+                "FILM TV C158 - Digital Workflow",
+                "FILM TV 178 - Film and Television Production Laboratory"
+              ]
+            },
+            {
+              "title": "Production/Documentary",
+              "courses": [
+                "FILM TV C186A - Advanced Documentary Workshop",
+                "FILM TV C186B - Advanced Documentary Workshop",
+                "FILM TV C186C - Advanced Documentary Workshop"
+              ]
+            },
+            {
+              "title": "Production/Narrative Directing",
+              "courses": [
+                "FILM TV 175A - Undergraduate Film Production",
+                "FILM TV 175B - Undergraduate Film Production"
+              ]
+            },
+            {
+              "title": "Screenwriting",
+              "courses": [
+                "FILM TV 135A - Advanced Screenwriting Workshop",
+                "FILM TV 135B - Advanced Screenwriting Workshop",
+                "FILM TV 135C - Advanced Screenwriting Workshop"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

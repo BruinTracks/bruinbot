@@ -1,0 +1,134 @@
+{
+  "major_name": "LinguisticsBA",
+  "major_id": 81,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select two courses from the following list. Only one course from Psychology 10 or 100A may be applied.",
+      "courses": [
+        "LING 20 - Introduction to Linguistic Analysis"
+      ],
+      "options": [
+        {
+          "title": "Electives",
+          "courses": [
+            "ANTHRO 4 - Culture and Communication",
+            "PHILOS 31 - Logic, First Course",
+            "PSYCH 10 - Introductory Psychology",
+            "PSYCH 100A - Psychological Statistics"
+          ]
+        },
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select two courses from:",
+      "courses": [
+        "LING 103 - Introduction to General Phonetics",
+        "LING 120A - Phonology I",
+        "LING 120B - Syntax I",
+        "LING 120C - Semantics I"
+      ],
+      "options": [
+        {
+          "title": "Additional Linguistics Electives",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 110 - Introduction to Historical Linguistics",
+            "LING 130 - Language Development",
+            "LING 132 - Language Processing"
+          ]
+        },
+        {
+          "title": "Linguistics 165 series",
+          "description": "Students may substitute courses 200A, 200B, and 200C for 165A, 165B, and 165C respectively if they receive grades of A in 120A, 120B, and 120C respectively and have consent of instructor.",
+          "courses": [
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II",
+            "LING 165C - Semantics II"
+          ],
+          "options": [
+            {
+              "title": "Substitutions",
+              "courses": [
+                "LING 200A - Phonological Theory I",
+                "LING 200B - Syntactic Theory I",
+                "LING 200C - Semantic Theory I"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Upper-Division Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "options": [
+        {
+          "title": "Linguistics 198A and 198B",
+          "courses": [
+            "LING 198A - Honors Research in Linguistics I",
+            "LING 198B - Honors Research in Linguistics II"
+          ]
+        },
+        {
+          "title": "Linguistics 199",
+          "courses": [
+            "LING 199 - Directed Research or Senior Project in Linguistics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Introduction to Computing",
+          "options": [
+            {
+              "title": "Program in Computing",
+              "courses": [
+                "COMPTNG 10A - Introduction to Programming",
+                "COMPTNG 10B - Intermediate Programming",
+                "COMPTNG 10C - Advanced Programming"
+              ]
+            },
+            {
+              "title": "Computer Science",
+              "courses": [
+                "COM SCI 31 - Introduction to Computer Science I",
+                "COM SCI 32 - Introduction to Computer Science II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistics 185A and Mathematics 61",
+          "courses": [
+            "LING 185A - Computational Linguistics I",
+            "MATH 61 - Introduction to Discrete Structures"
+          ]
+        },
+        {
+          "title": "Additional Linguistics Elective",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 127 - Syntactic Typology and Universals",
+            "LING 132 - Language Processing",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II",
+            "LING 165C - Semantics II",
+            "LING 180 - Mathematical Structures in Language I",
+            "LING 185B - Computational Linguistics II"
+          ]
+        }
+      ]
+    }
+  ]
+}

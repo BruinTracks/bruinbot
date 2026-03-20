@@ -1243,7 +1243,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
           console.log('Generate Schedule button clicked');
           handleGenerateSchedule();
         }}
-        className="mt-4 rounded-lg bg-[#071a45] px-5 py-3 font-semibold text-white shadow transition hover:bg-[#0b255f] focus:outline-none focus:ring-2 focus:ring-[#264f9a]"
+        className="mt-4 rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white shadow transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
       >
         Generate Schedule
       </button>

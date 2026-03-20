@@ -1,0 +1,108 @@
+{
+  "major_name": "IranianStudiesBA",
+  "major_id": 74,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete courses from one series below or equivalent:",
+      "options": [
+        {
+          "title": "Persian",
+          "options": [
+            {
+              "title": "Elementary Persian",
+              "courses": [
+                "IRANIAN 1A - Elementary Persian",
+                "IRANIAN 1B - Elementary Persian",
+                "IRANIAN 1C - Elementary Persian"
+              ]
+            },
+            {
+              "title": "Accelerated Elementary Persian",
+              "courses": [
+                "IRANIAN 20A - Accelerated Elementary Persian",
+                "IRANIAN 20B - Accelerated Elementary Persian",
+                "IRANIAN 20C - Accelerated Elementary Persian"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Iranian 55 or M60",
+          "courses": [
+            "IRANIAN 55 - Gender and Sexuality in Arts and Literatures of Iran and Middle East",
+            "IRANIAN M60 - Achaemenid Civilization and Empire of Alexander"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete seven courses as follows:",
+      "options": [
+        {
+          "title": "Iranian Language and Civilization",
+          "description": "Select three courses from:",
+          "options": [
+            {
+              "title": "Required",
+              "courses": [
+                "IRANIAN 102A - Intermediate Persian",
+                "IRANIAN 102B - Intermediate Persian",
+                "IRANIAN 102C - Intermediate Persian",
+                "IRANIAN 103A - Advanced Persian: Introduction to Classical Persian Poetry",
+                "IRANIAN 103B - Advanced Persian: Introduction to Classical Persian Prose",
+                "IRANIAN 103C - Advanced Persian: Introduction to Contemporary Persian Poetry and Prose",
+                "IRANIAN 120 - Comparative Study of Six Major Persian Poets",
+                "IRANIAN 140 - Persian Belles Lettres (Adabiyyat)",
+                "IRANIAN 141 - Persian Analytical Prose",
+                "IRANIAN 142 - Persian Popular Ethics"
+              ]
+            },
+            {
+              "title": "Additional Iranian Language and Civilization Courses",
+              "courses": [
+                "AN N EA CM163 - Archaeology of Iran",
+                "IRANIAN M110A - Iranian Civilization: History of Achaemenid Empire",
+                "IRANIAN M110B - Iranian Civilization: History of Arsacid (Parthian) Empire",
+                "IRANIAN M110C - Iranian Civilization: History of Early Sasanian Empire\u2014From Ardashir I to Rise of Peroz (circa 224-459 CE)",
+                "IRANIAN 161A - Elementary Middle Iranian",
+                "IRANIAN 161B - Elementary Middle Iranian",
+                "IRANIAN 161C - Elementary Middle Iranian",
+                "IRANIAN CM163 - Archaeology of Iran",
+                "IRANIAN 164 - Ancient Cities of Iran: Archaeological Survey of Historic Cities and Sites of Iran from 4000 BC to 1900 AD",
+                "IRANIAN 169 - Civilization of Pre-Islamic Iran",
+                "IRANIAN 170 - Religion in Ancient Iran"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Electives",
+          "courses": [
+            "ART HIS 119A - Western Islamic Art",
+            "ART HIS 119B - Eastern Islamic Art",
+            "ART HIS C120 - Selected Topics in Islamic Art",
+            "HIST 105A - Survey of Middle East, 500 to Present: 500 to 1300",
+            "HIST 105B - Survey of Middle East, 500 to Present: 1300 to 1700",
+            "HIST 105C - Survey of Middle East, 500 to Present: 1700 to Present",
+            "IRANIAN 104 - Philosophical Texts",
+            "IRANIAN M105A - Bah\u00e1'\u00ed Faith in Iran: Historical and Sociological Survey",
+            "IRANIAN M105B - Bah\u00e1'\u00ed Faith in Iran: Survey of Bah\u00e1'\u00ed Scriptures and Thought",
+            "IRANIAN M115A - Elementary Azeri",
+            "IRANIAN M115B - Elementary Azeri",
+            "IRANIAN M115C - Elementary Azeri",
+            "IRANIAN 130 - Intellectual History of Jews of Persia",
+            "IRANIAN 131 - Introduction to Judeo-Persian: Literature and Culture",
+            "IRANIAN 132 - Intermediate Judeo-Persian Literature and Culture",
+            "IRANIAN 150A - Survey of Persian Literature in English",
+            "IRANIAN 150B - Survey of Persian Literature in English",
+            "IRANIAN M178 - Introduction to History and Culture of Iranian Jews",
+            "IRANIAN 187 - Variable Topics in Iranian Studies",
+            "POL SCI 157 - Government and Politics in the Middle East"
+          ]
+        }
+      ]
+    }
+  ]
+}

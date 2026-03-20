@@ -1,0 +1,128 @@
+{
+  "major_name": "GeographyEnvironmentalStudiesBA",
+  "major_id": 62,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Geography 1 or 2",
+          "courses": [
+            "GEOG 1 - Earth's Physical Environment",
+            "GEOG 2 - Biodiversity in Changing World"
+          ]
+        },
+        {
+          "title": "Geography 3, 4, or 6",
+          "courses": [
+            "GEOG 3 - Cultural Geography",
+            "GEOG 4 - Globalization: Regional Development and World Economy",
+            "GEOG 6 - World Regions: Concepts and Contemporary Issues"
+          ]
+        },
+        {
+          "title": "Geography 5, 7, and Statistics 12",
+          "courses": [
+            "GEOG 5 - People and Earth's Ecosystems",
+            "GEOG 7 - Introduction to Geographic Information Systems",
+            "STATS 12 - Introduction to Statistical Methods for Geography and Environmental Studies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select six courses from:",
+      "options": [
+        {
+          "title": "Environmental Studies and Natural Systems Core",
+          "courses": [
+            "GEOG 101 - Principles of Geomorphology",
+            "GEOG M102 - Soils and Environment",
+            "GEOG M103 - Soil and Water Conservation",
+            "GEOG 106 - World Vegetation",
+            "GEOG 107 - Forest Ecosystems",
+            "GEOG 108 - Analytical Animal Geography",
+            "GEOG 109 - Biogeography of Plant and Animal Invasions",
+            "GEOG M110 - Ecosystem Ecology",
+            "GEOG 116 - Climatology",
+            "GEOG 117 - Tropical Climatology",
+            "GEOG M118 - Applied Climatology: Principles of Climate Impact on Natural Environment",
+            "GEOG 120 - Hydrology",
+            "GEOG M125 - Environmentalism: Past, Present, and Future",
+            "GEOG M126 - Environmental Change",
+            "GEOG M127 - Global Environment and Development: Problems and Issues",
+            "GEOG 130 - Food and Environment",
+            "GEOG M131 - Human Impact on Biophysical Environment",
+            "GEOG 133 - Humid Tropics",
+            "GEOG 135 - Africa and African Diaspora in Americas",
+            "GEOG 136 - Health and Global Environment",
+            "GEOG 138 - Wildlife Conservation in Eastern and Southern Africa",
+            "GEOG 139B - Problems in Geography: Biogeography",
+            "GEOG 139C - Problems in Geography: Culture and Environment in Modern World"
+          ]
+        },
+        {
+          "title": "Human Systems Core",
+          "courses": [
+            "GEOG 140 - Social Geography",
+            "GEOG 141 - Cultural Geography of Modern World",
+            "GEOG M142 - (When) Do Leaders Make Differences?",
+            "GEOG M144 - Feminist Geography",
+            "GEOG 145 - Slavery and Human Trafficking",
+            "GEOG 148 - Political Geography",
+            "GEOG 150 - Economic Geography",
+            "GEOG 151 - Uneven Development Geographies: Prosperity and Impoverishment in Third World",
+            "GEOG M153 - Transportation Geography",
+            "GEOG 158 - Population Geography",
+            "GEOG 159 - Population in Interacting World",
+            "GEOG 160 - Urban Geography",
+            "GEOG 161 - Cities and Social Difference",
+            "GEOG 162 - Ethnicity in American Cities",
+            "GEOG 169A - Problems in Geography: Urban and Regional Development Studies",
+            "GEOG 173A - Cities of Europe"
+          ]
+        },
+        {
+          "title": "Procedures",
+          "courses": [
+            "GEOG 180 - Cartography",
+            "GEOG 181A - Intermediate Geographic Information Systems",
+            "GEOG 181B - Advanced Geographic Information Systems",
+            "GEOG 181C - Geographic Information Systems Programming and Development",
+            "GEOG 182A - Introduction to Remote Sensing",
+            "GEOG 182B - Remote Sensing: Digital Image Processing and Analysis",
+            "GEOG 182C - Advanced Remote Sensing",
+            "GEOG 184 - Environmental Modeling",
+            "GEOG 185 - Field Methods in Physical Geography",
+            "GEOG M186 - Introduction to Spatial Statistics"
+          ]
+        },
+        {
+          "title": "Regions",
+          "courses": [
+            "GEOG 145 - Slavery and Human Trafficking",
+            "GEOG 171A - North America",
+            "GEOG 171B - California",
+            "GEOG 171C - Metropolitan Los Angeles",
+            "GEOG 172A - Spanish South America",
+            "GEOG 172C - Brazil",
+            "GEOG 173A - Cities of Europe",
+            "GEOG 174A - The Mediterranean World",
+            "GEOG 175A - Japan in World: Culture, Place, and Global Connections",
+            "GEOG 175B - Contemporary China",
+            "GEOG 176A - Southeast Asia"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "GEOG 198A - Honors Research in Geography I",
+        "GEOG 198B - Honors Research in Geography II"
+      ]
+    }
+  ]
+}

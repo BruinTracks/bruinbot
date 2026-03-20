@@ -1,0 +1,109 @@
+{
+  "major_name": "EngineeringGeologyBS",
+  "major_id": 49,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select three courses from:",
+      "options": [
+        {
+          "title": "Earth, Planetary, and Space Sciences",
+          "description": "Earth, Planetary, and Space Sciences 1 may be substituted with a course from the following range or listed course:",
+          "courses": [
+            "EPS SCI 1 - Introduction to Earth Science",
+            "EPS SCI 51 - Mineralogy: Earth and Planetary Materials",
+            "EPS SCI 61 - Geologic Maps",
+            "EPS SCI M71 - Introduction to Computing for Geoscientists"
+          ],
+          "options": [
+            {
+              "title": "Earth, Planetary, and Space Sciences 1 Substitution",
+              "courses": [
+                "CLUSTER 70A - Evolution of Cosmos and Life"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chemistry and Biochemistry",
+          "courses": [
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory"
+          ]
+        },
+        {
+          "title": "Civil and Environmental Engineering",
+          "courses": [
+            "C&EE M20 - Introduction to Computer Programming with MATLAB"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "description": "Completion of Mathematics 32B is recommended.",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications"
+          ],
+          "options": [
+            {
+              "title": "Recommended",
+              "courses": [
+                "MATH 32B - Calculus of Several Variables"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following six courses:",
+      "options": [
+        {
+          "title": "Earth, Planetary, and Space Sciences",
+          "courses": [
+            "EPS SCI 103A - Igneous Petrology",
+            "EPS SCI 103B - Sedimentary Petrology",
+            "EPS SCI 111 - Stratigraphic and Field Geology",
+            "EPS SCI 112 - Structural Geology",
+            "EPS SCI 136A - Applied Geophysics",
+            "EPS SCI 139 - Engineering and Environmental Geology"
+          ]
+        },
+        {
+          "title": "Civil Engineering",
+          "courses": [
+            "C&EE 108 - Introduction to Mechanics of Deformable Solids",
+            "C&EE 120 - Principles of Soil Mechanics",
+            "C&EE 121 - Design of Foundations and Earth Structures",
+            "C&EE 125 - Fundamentals of Earthquake Engineering",
+            "C&EE 129L - Engineering Geomatics",
+            "C&EE 150 - Introduction to Hydrology",
+            "C&EE 151 - Introduction to Water Resources Engineering",
+            "C&EE C158 - Coastal Engineering"
+          ]
+        },
+        {
+          "title": "Capstone Field Research",
+          "courses": [
+            "EPS SCI 121 - Advanced Field Geology",
+            "EPS SCI 121F - Advanced Field Geology: Fieldwork"
+          ]
+        }
+      ]
+    }
+  ]
+}

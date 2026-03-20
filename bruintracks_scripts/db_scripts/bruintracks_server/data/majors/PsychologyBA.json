@@ -1,0 +1,131 @@
+{
+  "major_name": "PsychologyBA",
+  "major_id": 107,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Chemistry or Physics",
+          "courses": [
+            "CHEM 14A - General Chemistry for Life Scientists I",
+            "CHEM 17 - Chemical Principles",
+            "CHEM 20A - Chemical Structure",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy",
+            "PHYSICS 10 - Physics",
+            "PHYSICS 11 - Revolutions in Physics"
+          ]
+        },
+        {
+          "title": "Life Sciences or Physiological Science",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "LIFESCI 15 - Life: Concepts and Issues",
+            "PHYSCI 3 - Introduction to Human Physiology"
+          ]
+        },
+        {
+          "title": "Philosophy",
+          "courses": [
+            "PHILOS 1 - Beginnings of Western Philosophy",
+            "PHILOS 2 - Introduction to Philosophy of Religion",
+            "PHILOS 3 - Historical Introduction to Philosophy",
+            "PHILOS 4 - Philosophical Analysis of Contemporary Moral Issues",
+            "PHILOS 5 - Philosophy in Literature",
+            "PHILOS 6 - Introduction to Political Philosophy",
+            "PHILOS 7 - Introduction to Philosophy of Mind",
+            "PHILOS 8 - Introduction to Philosophy of Science",
+            "PHILOS 9 - Principles of Critical Reasoning",
+            "PHILOS 21 - Skepticism and Rationality",
+            "PHILOS 22 - Introduction to Ethical Theory",
+            "PHILOS 22W - Introduction to Ethical Theory",
+            "PHILOS 23 - Meaning and Communication",
+            "PHILOS 31 - Logic, First Course"
+          ]
+        },
+        {
+          "title": "Program in Computing or Statistics",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "STATS 10 - Introduction to Statistical Reasoning"
+          ]
+        },
+        {
+          "title": "Psychology",
+          "courses": [
+            "PSYCH 10 - Introductory Psychology",
+            "PSYCH 100A - Psychological Statistics",
+            "PSYCH 100B - Research Methods in Psychology"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five core courses, with at least two from each category and a fifth course from either category:",
+      "options": [
+        {
+          "title": "Core Courses",
+          "description": "Select from the following list or options:",
+          "options": [
+            {
+              "title": "Category A",
+              "description": "Psychology 115 may be substituted with Psychology M117A, M117B, M117C. Students who complete Psychology M117A, M117B, M117C receive equivalent credit for course 115 and two upper-division psychology electives. All three courses must be completed to receive psychology elective credit.",
+              "courses": [
+                "PSYCH 110 - Fundamentals of Learning",
+                "PSYCH 115 - Principles of Behavioral Neuroscience",
+                "PSYCH 120A - Cognitive Psychology",
+                "PSYCH 120B - Sensation and Perception"
+              ]
+            },
+            {
+              "title": "Category B",
+              "description": "Psychology 130 may be substituted with one course from 133A through 133I or 161.",
+              "courses": [
+                "PSYCH 127A - Clinical Psychological Science",
+                "PSYCH 127B - Clinical Psychological Science: Biological Bases",
+                "PSYCH 127C - Clinical Psychological Science: Developmental Perspectives",
+                "PSYCH 130 - Developmental Psychology",
+                "PSYCH 135 - Social Psychology",
+                "PSYCH 150 - Introduction to Health Psychology"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Laboratory/Fieldwork",
+          "courses": [
+            "PSYCH 101 - General Psychology Laboratory",
+            "PSYCH 111 - Learning Laboratory",
+            "PSYCH M116A - Behavioral Neuroscience Laboratory",
+            "PSYCH 116B - Human Neuropsychology Laboratory",
+            "PSYCH 121 - Laboratory in Cognitive Psychology",
+            "PSYCH 126 - Clinical Psychology Laboratory",
+            "PSYCH 131 - Research in Developmental Psychology",
+            "PSYCH 136A - Social Psychology Laboratory",
+            "PSYCH 136B - Nonexperimental Methods in Social Psychology",
+            "PSYCH M136C - Experiments in Racial and Ethnic Politics",
+            "PSYCH 151 - Research Methods in Health Psychology",
+            "PSYCH 186A - Cognitive Science Laboratory: Introduction to Theory and Simulation",
+            "PSYCH 186B - Cognitive Science Laboratory: Neural Networks",
+            "PSYCH 186C - Cognitive Science Laboratory: Psychophysical Theories and Methods",
+            "PSYCH 186D - Laboratory in Functional Neuroimaging"
+          ]
+        },
+        {
+          "title": "Upper-Division Psychology Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PSYCH 191AH - Departmental Honors Research Seminars",
+        "PSYCH 191BH - Departmental Honors Research Seminars",
+        "PSYCH 191CH - Departmental Honors Research Seminars"
+      ]
+    }
+  ]
+}

@@ -253,7 +253,7 @@ export const Banner = () => {
                       text-2xl font-semibold w-full md:w-auto
                     "
                   >
-                    <span>Get Started with BruinTracks</span>
+                    <span>Get Started with Bruinbot!</span>
                     <ArrowRightCircle size={32} />
                   </GoogleAuthButton>
                 </motion.div>

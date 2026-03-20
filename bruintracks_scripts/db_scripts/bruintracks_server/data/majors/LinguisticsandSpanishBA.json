@@ -1,0 +1,129 @@
+{
+  "major_name": "LinguisticsandSpanishBA",
+  "major_id": 88,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "LING 20 - Introduction to Linguistic Analysis",
+        "SPAN M35 - Spanish, Portuguese, and Nature of Language"
+      ],
+      "options": [
+        {
+          "title": "Spanish 25 or 27",
+          "courses": [
+            "SPAN 25 - Advanced Spanish Composition",
+            "SPAN 27 - Advanced Spanish Composition for Heritage Speakers"
+          ]
+        },
+        {
+          "title": "Spanish 42 or 44",
+          "courses": [
+            "SPAN 42 - Iberian Cultures",
+            "SPAN 44 - Latin American Cultures"
+          ]
+        },
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five courses. Only one course from Linguistics 165A or 165B may be applied.",
+      "options": [
+        {
+          "title": "Linguistics",
+          "courses": [
+            "LING 103 - Introduction to General Phonetics",
+            "LING 110 - Introduction to Historical Linguistics",
+            "LING 120A - Phonology I",
+            "LING 120B - Syntax I",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II"
+          ]
+        },
+        {
+          "title": "Linguistics Elective"
+        },
+        {
+          "title": "Spanish",
+          "courses": [
+            "SPAN 100A - Introduction to Study of Spanish Grammar: Phonology and Morphology",
+            "SPAN 100B - Introduction to Study of Spanish Grammar: Syntax",
+            "SPAN 119 - Introduction to Literary Analysis",
+            "SPAN 160 - Topics in Spanish Linguistics"
+          ]
+        },
+        {
+          "title": "Spanish Elective"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "options": [
+        {
+          "title": "Linguistics 198A and 198B",
+          "courses": [
+            "LING 198A - Honors Research in Linguistics I",
+            "LING 198B - Honors Research in Linguistics II"
+          ]
+        },
+        {
+          "title": "Linguistics 199",
+          "courses": [
+            "LING 199 - Directed Research or Senior Project in Linguistics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Introduction to Computing",
+          "options": [
+            {
+              "title": "Program in Computing",
+              "courses": [
+                "COMPTNG 10A - Introduction to Programming",
+                "COMPTNG 10B - Intermediate Programming",
+                "COMPTNG 10C - Advanced Programming"
+              ]
+            },
+            {
+              "title": "Computer Science",
+              "courses": [
+                "COM SCI 31 - Introduction to Computer Science I",
+                "COM SCI 32 - Introduction to Computer Science II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistics 185A and Mathematics 61",
+          "courses": [
+            "LING 185A - Computational Linguistics I",
+            "MATH 61 - Introduction to Discrete Structures"
+          ]
+        },
+        {
+          "title": "Linguistics Elective",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 127 - Syntactic Typology and Universals",
+            "LING 132 - Language Processing",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II",
+            "LING 165C - Semantics II",
+            "LING 180 - Mathematical Structures in Language I",
+            "LING 185B - Computational Linguistics II"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "major_name": "RussianStudiesBA",
+  "major_id": 109,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from the following or demonstrate equivalent proficiency:",
+      "options": [
+        {
+          "title": "Intermediate Russian",
+          "courses": [
+            "RUSSN 6 - Intermediate Russian",
+            "RUSSN 20 - Intensive Intermediate Russian"
+          ]
+        },
+        {
+          "title": "Elective",
+          "courses": [
+            "RUSSN 25 - Great Russian Novel",
+            "RUSSN 25W - Great Russian Novel",
+            "RUSSN 90A - Introduction to Russian Civilization",
+            "RUSSN 90B - Russian Civilization in 20th Century",
+            "RUSSN 90BW - Russian Civilization in 20th Century"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select three courses from the following list. Consult with the undergraduate adviser for appropriate placement.",
+      "options": [
+        {
+          "title": "Russian Language",
+          "courses": [
+            "RUSSN 100A - Literacy in Russian",
+            "RUSSN 100B - Literacy in Russian",
+            "RUSSN 100C - Literacy in Russian",
+            "RUSSN 101A - Third-Year Russian",
+            "RUSSN 101B - Third-Year Russian",
+            "RUSSN 101C - Third-Year Russian",
+            "RUSSN 102A - Topics in Advanced/Superior Russian",
+            "RUSSN 102B - Topics in Advanced/Superior Russian",
+            "RUSSN 102C - Topics in Advanced/Superior Russian",
+            "RUSSN 103A - Russian for Native and Near-Native Speakers: Russian National Identity",
+            "RUSSN 103B - Russian for Native and Near-Native Speakers: Literature and Film",
+            "RUSSN 103C - Russian for Native and Near-Native Speakers: Special Topics",
+            "RUSSN 107A - Russian for Social and Cultural Studies",
+            "RUSSN 107B - Russian for Social and Cultural Studies",
+            "RUSSN 107C - Russian for Social and Cultural Studies",
+            "RUSSN 108 - Russian for Business: Language and Culture"
+          ]
+        },
+        {
+          "title": "Additional Russian Language and/or Literature",
+          "courses": [
+            "RUSSN 102A - Topics in Advanced/Superior Russian",
+            "RUSSN 102B - Topics in Advanced/Superior Russian",
+            "RUSSN 102C - Topics in Advanced/Superior Russian",
+            "RUSSN 103A - Russian for Native and Near-Native Speakers: Russian National Identity",
+            "RUSSN 103B - Russian for Native and Near-Native Speakers: Literature and Film",
+            "RUSSN 103C - Russian for Native and Near-Native Speakers: Special Topics",
+            "RUSSN 107A - Russian for Social and Cultural Studies",
+            "RUSSN 107B - Russian for Social and Cultural Studies",
+            "RUSSN 107C - Russian for Social and Cultural Studies",
+            "RUSSN 108 - Russian for Business: Language and Culture",
+            "RUSSN M118 - History of Russia, Origins to Rise of Muscovy",
+            "RUSSN 119 - Golden Age and Great Realists",
+            "RUSSN 120 - Literature and Revolution",
+            "RUSSN 121 - Russian Pop Culture",
+            "RUSSN 122 - Siberia",
+            "RUSSN C124C - Studies in Russian Literature: Chekhov",
+            "RUSSN C124D - Studies in Russian Literature: Dostoevsky",
+            "RUSSN CM124G - Studies in Russian Literature: Gogol",
+            "RUSSN C124N - Studies in Russian Literature: Nabokov",
+            "RUSSN C124P - Studies in Russian Literature: Pushkin",
+            "RUSSN C124T - Studies in Russian Literature: Tolstoy",
+            "RUSSN 129 - Animation and Music Video"
+          ]
+        },
+        {
+          "title": "Related Fields",
+          "courses": [
+            "HIST M127A - History of Russia, Origins to Rise of Muscovy",
+            "HIST 127B - History of Russia: Imperial Russia from Peter the Great to Nicholas II",
+            "HIST 127C - History of Russia: Revolutionary Russia and Soviet Union",
+            "HIST 127D - History of Russia: Culture and Society in Imperial Russia",
+            "POL SCI 156A - Government and Politics of Post-Communist States: Russia",
+            "SLAVC CM114 - Teaching and Learning of Heritage Languages"
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "SLAVC 191TA - Senior Capstone Thesis in Slavic Languages and Literatures",
+            "SLAVC 191TB - Senior Capstone Thesis in Slavic Languages and Literatures",
+            "SLAVC 191TC - Senior Capstone Thesis in Slavic Languages and Literatures"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "SLAVC 198A - Honors Research in Slavic, East European, and Eurasian Languages and Cultures",
+        "SLAVC 198B - Honors Research in Slavic, East European, and Eurasian Languages and Cultures",
+        "SLAVC 198C - Honors Research in Slavic, East European, and Eurasian Languages and Cultures"
+      ]
+    }
+  ]
+}

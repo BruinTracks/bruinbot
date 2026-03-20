@@ -1,0 +1,127 @@
+{
+  "major_name": "ComputerEngineeringBS",
+  "major_id": 5,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "COM SCI 31 - Introduction to Computer Science I",
+        "COM SCI 32 - Introduction to Computer Science II",
+        "COM SCI 33 - Introduction to Computer Organization",
+        "COM SCI 35L - Software Construction",
+        "COM SCI M51A - Logic Design of Digital Systems",
+        "EC ENGR 3 - Introduction to Electrical Engineering",
+        "EC ENGR M16 - Logic Design of Digital Systems",
+        "ENGR 1IT - Introduction to Engineering Design: Internet of Things",
+        "MATH 31A - Differential and Integral Calculus",
+        "MATH 31B - Integration and Infinite Series",
+        "MATH 32A - Calculus of Several Variables",
+        "MATH 32B - Calculus of Several Variables",
+        "MATH 33A - Linear Algebra and Applications",
+        "MATH 33B - Differential Equations",
+        "MATH 61 - Introduction to Discrete Structures",
+        "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+        "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+        "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity"
+      ],
+      "options": [
+        {
+          "title": "Computer Science 1 or Electrical and Computer Engineering 1",
+          "courses": [
+            "COM SCI 1 - Freshman Computer Science Seminar",
+            "EC ENGR 1 - Undergraduate Seminar"
+          ]
+        },
+        {
+          "title": "Physics 4AL or 4BL",
+          "courses": [
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five courses as follows:",
+      "options": [
+        {
+          "title": "Computer Science",
+          "description": "Select one course from:",
+          "courses": [
+            "COM SCI 111 - Operating Systems Principles",
+            "COM SCI 180 - Introduction to Algorithms and Complexity"
+          ],
+          "options": [
+            {
+              "title": "Computer Science 118 or Electrical and Computer Engineering 132B",
+              "courses": [
+                "COM SCI 118 - Computer Network Fundamentals",
+                "EC ENGR 132B - Data Communications and Telecommunication Networks"
+              ]
+            },
+            {
+              "title": "Computer Science M151B or Electrical and Computer Engineering M116C",
+              "courses": [
+                "COM SCI M151B - Computer Systems Architecture",
+                "EC ENGR M116C - Computer Systems Architecture"
+              ]
+            },
+            {
+              "title": "Computer Science M152A or Electrical and Computer Engineering M116L",
+              "courses": [
+                "COM SCI M152A - Introductory Digital Design Laboratory",
+                "EC ENGR M116L - Introductory Digital Design Laboratory"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Electrical and Computer Engineering",
+          "courses": [
+            "EC ENGR 100 - Electrical and Electronic Circuits",
+            "EC ENGR 102 - Systems and Signals",
+            "EC ENGR 113 - Digital Signal Processing",
+            "EC ENGR 115C - Digital Electronic Circuits"
+          ]
+        },
+        {
+          "title": "Probability",
+          "courses": [
+            "C&EE 110 - Introduction to Probability and Statistics for Engineers",
+            "EC ENGR 131A - Probability and Statistics",
+            "MATH 170A - Probability Theory I",
+            "MATH 170E - Introduction to Probability and Statistics 1: Probability",
+            "STATS 100A - Introduction to Probability"
+          ]
+        },
+        {
+          "title": "Electives"
+        },
+        {
+          "title": "Technical Breadth"
+        },
+        {
+          "title": "Capstone Design",
+          "options": [
+            {
+              "title": "Systems Design",
+              "courses": [
+                "EC ENGR 180DA - Systems Design",
+                "EC ENGR 180DW - Systems Design"
+              ]
+            },
+            {
+              "title": "Design of Robotic Systems",
+              "courses": [
+                "EC ENGR 183DA - Design of Robotic Systems I",
+                "EC ENGR 183DB - Design of Robotic Systems II"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

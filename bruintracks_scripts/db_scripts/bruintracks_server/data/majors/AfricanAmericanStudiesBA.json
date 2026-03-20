@@ -1,0 +1,138 @@
+{
+  "major_name": "AfricanAmericanStudiesBA",
+  "major_id": 11,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "AF AMER 1 - Introduction to Black Studies"
+      ],
+      "options": [
+        {
+          "title": "Elective",
+          "courses": [
+            "AF AMER 2A - Africa and Middle East",
+            "AF AMER 2B - Race and U.S. Military Intervention in Africa",
+            "AF AMER 2C - Black Folks Kung Fu Fightin': Black America, Martial Arts, and Popular Culture",
+            "AF AMER M5 - Social Organization of Black Communities",
+            "AF AMER 6 - Trends in Black Intellectual Thought",
+            "AF AMER M116A - African American Musical Heritage",
+            "AF AMER M116B - African American Musical Heritage"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select eight courses total, four in one area of concentration and two additional courses from each of the two remaining areas:",
+      "options": [
+        {
+          "title": "Areas of Concentration",
+          "options": [
+            {
+              "title": "Cultural Production",
+              "courses": [
+                "AF AMER M102 - Culture, Media, and Los Angeles",
+                "AF AMER M103A - African American Theater History: Slavery to Mid-1800s",
+                "AF AMER M103B - African American Theater History: Minstrel Stage to Rise of American Musical",
+                "AF AMER M103E - Modern African American Drama: Harlem Renaissance to Black Arts Movement",
+                "AF AMER M104A - Early African American Literature",
+                "AF AMER M104B - African American Literature from Harlem Renaissance to 1960s",
+                "AF AMER M104C - African American Literature of 1960s and 1970s",
+                "AF AMER M104D - Contemporary African American Literature",
+                "AF AMER M104E - Topics in African American Literature and Culture",
+                "AF AMER M107 - Cultural History of Rap",
+                "AF AMER 108 - Jazz and Political Imagination",
+                "AF AMER M109 - Women in Jazz",
+                "AF AMER M111 - Ellingtonia",
+                "AF AMER CM135A - African American Art before 1900",
+                "AF AMER CM135B - African American Art, 1900 to 1963",
+                "AF AMER M150D - Recent African American Urban History: Funk Music and Politics of Black Popular Culture",
+                "AF AMER M170A - Diasporic Nonfiction: Media Engagements with Memory and Displacement I",
+                "AF AMER M170B - Diasporic Nonfiction: Media Engagements with Memory and Displacement II",
+                "AF AMER M179A - Topics in African American Literature"
+              ]
+            },
+            {
+              "title": "Political Economy",
+              "courses": [
+                "AF AMER 105C - Africa, African Americans, and History of Capitalism",
+                "AF AMER 105D - African American-Caribbean Relations: Difference, Solidarity, and Empire",
+                "AF AMER 106A - Africa and World",
+                "AF AMER 110A - Race, Science, and Society",
+                "AF AMER 110B - Reproducing While Black: Politics of Black Reproduction",
+                "AF AMER 110C - Black Health Matters: Wellness, Health, and Self-Care",
+                "AF AMER CM110D - Posthumans",
+                "AF AMER M115 - We Gone Be Alright: Developing Next Generation of Black Organizers",
+                "AF AMER M142 - Race, Gender, and Punishment",
+                "AF AMER M144 - Ethnic Politics: African American Politics",
+                "AF AMER M148 - Politics of Struggle: Race, Solidarity, and Resistance",
+                "AF AMER M154C - Black Experience in Latin America and Caribbean I",
+                "AF AMER M154D - Black Experience in Latin America and Caribbean II",
+                "AF AMER M158A - Comparative Slavery Systems",
+                "AF AMER M159P - Constructing Race",
+                "AF AMER M167 - Worker Center Movement: Next Wave Organizing for Justice for Immigrant Workers",
+                "AF AMER 175 - Racial and Ethnic Disparities in Healthcare",
+                "AF AMER 176 - Race, Racism, and Law",
+                "AF AMER M178 - Sociology of Caribbean",
+                "AF AMER 188B - Race and Public Policy",
+                "AF AMER 195 - Community or Corporate Internships in Afro-American Studies"
+              ]
+            },
+            {
+              "title": "Power and Ideology",
+              "courses": [
+                "AF AMER 105A - Ideology and Black Consciousness",
+                "AF AMER 105B - Issues in Pan-African Biography and Autobiography",
+                "AF AMER 105C - Africa, African Americans, and History of Capitalism",
+                "AF AMER 105D - African American-Caribbean Relations: Difference, Solidarity, and Empire",
+                "AF AMER 106A - Africa and World",
+                "AF AMER 106B - Militarism, International Security, and African American Political Thought",
+                "AF AMER 110B - Reproducing While Black: Politics of Black Reproduction",
+                "AF AMER 110C - Black Health Matters: Wellness, Health, and Self-Care",
+                "AF AMER CM113B - Legislative Theater for Race and Gender Justice",
+                "AF AMER M114C - African American Political Thought",
+                "AF AMER M120 - Race, Inequality, and Public Policy",
+                "AF AMER M124 - Comparative Racialization and Indigeneity",
+                "AF AMER 140 - Radical Black Imaginaries: Politics, Identity, and Struggle",
+                "AF AMER M141 - African American Women's History",
+                "AF AMER M142 - Race, Gender, and Punishment",
+                "AF AMER M144 - Ethnic Politics: African American Politics",
+                "AF AMER M148 - Politics of Struggle: Race, Solidarity, and Resistance",
+                "AF AMER M154C - Black Experience in Latin America and Caribbean I",
+                "AF AMER M154D - Black Experience in Latin America and Caribbean II",
+                "AF AMER M158A - Comparative Slavery Systems",
+                "AF AMER M158E - African American Nationalism in First Half of 20th Century",
+                "AF AMER M159P - Constructing Race",
+                "AF AMER M172 - Afro-American Woman in U.S.",
+                "AF AMER M173 - Nonviolence and Social Movements",
+                "AF AMER 174 - Intraracial Differences in 20th-Century Black America",
+                "AF AMER 175 - Racial and Ethnic Disparities in Healthcare",
+                "AF AMER 176 - Race, Racism, and Law",
+                "AF AMER 177 - African Americans in Higher Education",
+                "AF AMER M178 - Sociology of Caribbean",
+                "AF AMER 188B - Race and Public Policy"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Additional Upper-Division Electives",
+          "courses": [
+            "Upper-division African American studies excluding 188SA, 188SB, 188SC, 189, 189HC, and 195."
+          ]
+        },
+        {
+          "title": "Senior Capstone Seminar",
+          "courses": [
+            "AF AMER C191 - Variable Topics Research Seminars: Afro-American Studies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program"
+    }
+  ]
+}

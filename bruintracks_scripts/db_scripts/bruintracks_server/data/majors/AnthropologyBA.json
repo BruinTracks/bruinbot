@@ -1,0 +1,105 @@
+{
+  "major_name": "AnthropologyBA",
+  "major_id": 17,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "ANTHRO 1 - Human Evolution",
+        "ANTHRO 2 - Archaeology: Introduction",
+        "ANTHRO 3 - Culture and Society",
+        "ANTHRO 4 - Culture and Communication"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select two courses in the sociocultural anthropology field and one in each of the other three fields.",
+      "options": [
+        {
+          "title": "Fields",
+          "description": "Select two courses from:",
+          "options": [
+            {
+              "title": "Sociocultural Anthropology",
+              "courses": [
+                "Anthropology 130 through 149"
+              ]
+            },
+            {
+              "title": "Archaeology",
+              "courses": [
+                "Anthropology 110 through 119"
+              ]
+            },
+            {
+              "title": "Biological Anthropology",
+              "courses": [
+                "Anthropology 120 through 129"
+              ]
+            },
+            {
+              "title": "Linguistic Anthropology",
+              "courses": [
+                "Anthropology 150 through 159"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Regional Cultures",
+          "courses": [
+            "Anthropology 160 through 169"
+          ]
+        },
+        {
+          "title": "History/Theory",
+          "courses": [
+            "ANTHRO 100 - History of Anthropology",
+            "ANTHRO 110 - Principles of Archaeology",
+            "ANTHRO 111 - Theory in Anthropological Archaeology",
+            "ANTHRO 120 - Survey of Biological Anthropology",
+            "ANTHRO 124Q - Evolutionary Psychology",
+            "ANTHRO 130 - Study of Culture",
+            "ANTHRO 131 - Critical Social Theory",
+            "ANTHRO 136A - Introduction to Psychological Anthropology: Historical Development",
+            "ANTHRO 140 - Study of Social Systems",
+            "ANTHRO M150 - Language in Culture"
+          ]
+        },
+        {
+          "title": "Methodology",
+          "courses": [
+            "ANTHRO 110 - Principles of Archaeology",
+            "ANTHRO CM110Q - Introduction to Archaeological Sciences",
+            "ANTHRO C117 - Selected Laboratory Topics in Archaeology",
+            "ANTHRO 126P - Paleopathology",
+            "ANTHRO 135 - Visual Anthropology: Documentary Photography",
+            "ANTHRO 138P - Field Methods in Cultural Anthropology",
+            "ANTHRO M138Q - Fieldwork in Asian American and Pacific Islander Communities",
+            "ANTHRO 151 - Ethnography of Everyday Speech",
+            "ANTHRO 195CE - Community and Corporate Internships in Anthropology"
+          ]
+        },
+        {
+          "title": "Anthropology Electives"
+        },
+        {
+          "title": "Honors Seminars",
+          "courses": [
+            "ANTHRO 89 - Honors Seminars",
+            "ANTHRO 189 - Advanced Honors Seminars"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ANTHRO 191HA - Beginning Seminar",
+        "ANTHRO 191HB - Field Methods",
+        "ANTHRO 191HC - Data Analysis",
+        "ANTHRO 191HD - Writing for Anthropology"
+      ]
+    }
+  ]
+}

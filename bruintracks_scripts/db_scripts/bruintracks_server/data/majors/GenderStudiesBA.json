@@ -1,0 +1,54 @@
+{
+  "major_name": "GenderStudiesBA",
+  "major_id": 59,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "GENDER 10 - Introduction to Gender Studies"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following three courses:",
+      "options": [
+        {
+          "title": "Core Courses",
+          "courses": [
+            "GENDER 102 - Power",
+            "GENDER 103 - Knowledge",
+            "GENDER 104 - Bodies"
+          ]
+        },
+        {
+          "title": "Elective Courses",
+          "description": "One upper-division tutorial (minimum of 4 units) selected from course 195, 197, or 199 may be applied toward the elective requirement (this limit does not apply to course 198A or 198B).",
+          "options": [
+            {
+              "title": "Tutorial",
+              "courses": [
+                "GENDER 195 - Community or Corporate Internships in Gender Studies",
+                "GENDER 197 - Individual Studies in Gender Studies",
+                "GENDER 199 - Directed Research in Gender Studies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Capstone Seminar",
+          "courses": [
+            "GENDER 187 - Senior Research Seminar: Gender Studies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "GENDER 198A - Honors Research in Gender Studies",
+        "GENDER 198B - Honors Research in Gender Studies",
+        "GENDER 198C - Honors Research in Gender Studies"
+      ]
+    }
+  ]
+}

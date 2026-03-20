@@ -1,0 +1,96 @@
+{
+  "major_name": "ComputerScienceBS",
+  "major_id": 6,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "COM SCI 1 - Freshman Computer Science Seminar",
+        "COM SCI 31 - Introduction to Computer Science I",
+        "COM SCI 32 - Introduction to Computer Science II",
+        "COM SCI 33 - Introduction to Computer Organization",
+        "COM SCI 35L - Software Construction",
+        "MATH 31A - Differential and Integral Calculus",
+        "MATH 31B - Integration and Infinite Series",
+        "MATH 32A - Calculus of Several Variables",
+        "MATH 32B - Calculus of Several Variables",
+        "MATH 33A - Linear Algebra and Applications",
+        "MATH 33B - Differential Equations",
+        "MATH 61 - Introduction to Discrete Structures",
+        "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+        "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+        "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity"
+      ],
+      "options": [
+        {
+          "title": "Computer Science M51A or Electrical and Computer Engineering M16",
+          "courses": [
+            "COM SCI M51A - Logic Design of Digital Systems",
+            "EC ENGR M16 - Logic Design of Digital Systems"
+          ]
+        },
+        {
+          "title": "Physics 4AL or 4BL",
+          "courses": [
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from:",
+      "courses": [
+        "COM SCI 111 - Operating Systems Principles",
+        "COM SCI 118 - Computer Network Fundamentals",
+        "COM SCI 131 - Programming Languages",
+        "COM SCI 180 - Introduction to Algorithms and Complexity",
+        "COM SCI 181 - Theory of Computing"
+      ],
+      "options": [
+        {
+          "title": "Computer Science M151B or Electrical and Computer Engineering M116C",
+          "courses": [
+            "COM SCI M151B - Computer Systems Architecture",
+            "EC ENGR M116C - Computer Systems Architecture"
+          ]
+        },
+        {
+          "title": "Computer Science M152A or Electrical and Computer Engineering M116L",
+          "courses": [
+            "COM SCI M152A - Introductory Digital Design Laboratory",
+            "EC ENGR M116L - Introductory Digital Design Laboratory"
+          ]
+        },
+        {
+          "title": "Probability",
+          "courses": [
+            "C&EE 110 - Introduction to Probability and Statistics for Engineers",
+            "EC ENGR 131A - Probability and Statistics",
+            "MATH 170A - Probability Theory I",
+            "MATH 170E - Introduction to Probability and Statistics 1: Probability",
+            "STATS 100A - Introduction to Probability"
+          ]
+        },
+        {
+          "title": "Capstone Software Engineering or Design",
+          "courses": [
+            "COM SCI 130 - Software Engineering",
+            "COM SCI 152B - Digital Design Project Laboratory"
+          ]
+        },
+        {
+          "title": "Computer Science Electives"
+        },
+        {
+          "title": "Science and Technology"
+        },
+        {
+          "title": "Technical Breadth"
+        }
+      ]
+    }
+  ]
+}

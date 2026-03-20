@@ -1,0 +1,213 @@
+{
+  "major_name": "NeuroscienceBS",
+  "major_id": 98,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Life Sciences Core Curriculum",
+          "description": "Select one series from:",
+          "options": [
+            {
+              "title": "Chemistry"
+            },
+            {
+              "title": "Life Sciences",
+              "courses": [
+                "LIFESCI 7A - Cell and Molecular Biology",
+                "LIFESCI 7B - Genetics, Evolution, and Ecology",
+                "LIFESCI 7C - Physiology and Human Biology",
+                "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "description": "Select Life Sciences 40 or Statistics 13."
+            },
+            {
+              "title": "Physics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following five courses. Neuroscience M101A must be complete with a grade of C\u2013 or better. Physiological Science 111A and Psychology 115 cannot be substituted for Neuroscience M101A.",
+      "options": [
+        {
+          "title": "Required Core",
+          "courses": [
+            "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+            "NEUROSC M101A - Neuroscience: From Molecules to Mind\u2014Cellular and Systems Neuroscience",
+            "NEUROSC M101B - Neuroscience: From Molecules to Mind\u2014Molecular and Developmental Neuroscience",
+            "NEUROSC M101C - Neuroscience: From Molecules to Mind\u2014Behavioral and Cognitive Neuroscience",
+            "NEUROSC 102 - Introduction to Functional Anatomy of Central Nervous System"
+          ]
+        },
+        {
+          "title": "Elective Options",
+          "options": [
+            {
+              "title": "Behavioral and Cognitive Neuroscience",
+              "courses": [
+                "DIS STD M139 - Perspectives on Autism and Neurodiversity",
+                "MSC IND M103 - Music, Mind, and Brain",
+                "NEUROSC M119L - Human Neuropsychology",
+                "NEUROSC CM123 - Neurobiology of Sleep",
+                "NEUROSC 140 - Brain Injury and Recovery of Function",
+                "NEUROSC 142 - Neurophilosophy: Introduction and Assessment from Neuroscience Perspective",
+                "NEUROSC M161 - Personal Brain Management",
+                "NEUROSC M170 - Music, Mind, and Brain",
+                "NEUROSC C172 - Neuroimaging and Brain Mapping",
+                "NEUROSC M176 - Auditory Neuroscience of Speech Perception and Vocal Communication",
+                "NEUROSC C177 - Drugs of Abuse: Translational Neurobiology",
+                "NEUROSC 178 - Human Electroencephalography and Evoked Potentials in Research and Clinical Diagnosis",
+                "NEUROSC 179 - Clinical Neuroscience: New Concepts in Neurological Disorders",
+                "NEUROSC M187 - Neurobiology of Bias and Discrimination",
+                "NEUROSC 191A - Variable Topics Research Seminars: Neuroscience\u2014Behavioral and Cognitive Neuroscience",
+                "PHYSCI M106 - Neurobiology of Bias and Discrimination",
+                "PHYSCI CM123 - Neurobiology of Sleep",
+                "PHYSCI C130 - Sex Differences in Physiology and Disease",
+                "PHYSCI C144 - Neural Control of Physiological Systems",
+                "PHYSCI 175 - Why Fido Can't Speak: Biological Evolution of Language",
+                "PHYSCI M176 - Auditory Neuroscience of Speech Perception and Vocal Communication",
+                "PSYCTRY 174 - Brain and Behavioral Health: Childhood and Adolescence",
+                "PSYCTRY 176 - Brain and Behavioral Health: Adulthood and Aging",
+                "PSYCTRY M182 - Personal Brain Management",
+                "PSYCH 110 - Fundamentals of Learning",
+                "PSYCH 112A - Basic Processes of Motivated Behavior",
+                "PSYCH 112B - Psychobiology of Fear and Anxiety",
+                "PSYCH 112C - Psychobiology of Anxiety and Depression",
+                "PSYCH 112E - Decision Making and Brain",
+                "PSYCH 118 - Comparative Psychobiology",
+                "PSYCH 119A - Neuropsychopharmacology of Emotion and Cognition",
+                "PSYCH 119B - How Brains Learn to Construct Models of Environment",
+                "PSYCH 119C - Cognitive Neuroscience",
+                "PSYCH 119F - Neural Basis of Behavior",
+                "PSYCH 119I - Integration of Face and Brain",
+                "PSYCH 119J - Brain Bugs: Understanding Brain through Its Flaws",
+                "PSYCH M119L - Human Neuropsychology",
+                "PSYCH 119M - Neural Circuits of Learning and Memory",
+                "PSYCH M119O - Psychology of Aging",
+                "PSYCH 119U - Neural Correlates of Psychotic Disorders",
+                "PSYCH M119X - Biology and Behavioral Neuroscience of Aging",
+                "PSYCH 120A - Cognitive Psychology",
+                "PSYCH 120B - Sensation and Perception",
+                "PSYCH 124A - Language as Cognitive Science",
+                "PSYCH 124B - Fundamentals of User Experience",
+                "PSYCH 124C - Human Memory",
+                "PSYCH 124D - Consciousness: Current Debates",
+                "PSYCH 124K - Ethical, Legal, and Societal Implications of Cognitive Neuroscience",
+                "PSYCH 127B - Clinical Psychological Science: Biological Bases",
+                "PSYCH 137A - Neuroscience of Social Perception",
+                "PSYCH M139 - Perspectives on Autism and Neurodiversity",
+                "PSYCH 161 - Behavior and Brain Development",
+                "PSYCH 164 - Puberty and Sleep",
+                "PSYCH M166 - Neurobiology of Bias and Discrimination"
+              ]
+            },
+            {
+              "title": "Molecular, Cell, and Developmental Neuroscience",
+              "courses": [
+                "NEUROSC M145 - Neural Mechanisms Controlling Movement",
+                "NEUROSC C177 - Drugs of Abuse: Translational Neurobiology",
+                "NEUROSC 180 - Genetic, Molecular, and Genomic Approaches to Neural Development and Disease",
+                "NEUROSC 181 - Cellular and Molecular Mechanisms of Learning and Memory",
+                "NEUROSC 182 - Pharmacology of Drugs of Abuse",
+                "NEUROSC 186 - Neural Stem Cells: Biology, Diseases, and Therapies",
+                "NEUROSC M187 - Neurobiology of Bias and Discrimination",
+                "NEUROSC 191C - Variable Topics Research Seminars: Neuroscience\u2014Molecular, Cell, and Developmental Neuroscience",
+                "PHYSICS C186 - Neurophysics: Brain-Mind Problem",
+                "PHYSCI M106 - Neurobiology of Bias and Discrimination",
+                "PHYSCI 121 - Disease Mechanisms and Therapies",
+                "PHYSCI C126 - Biological Clocks",
+                "PHYSCI C127 - Neuroendocrinology of Reproduction",
+                "PHYSCI M145 - Neural Mechanisms Controlling Movement",
+                "PHYSCI 146 - Principles of Nervous System Development",
+                "PHYSCI 147 - Neurobiology of Learning and Memory",
+                "PHYSCI 174 - Cell Biophysics in Physiology and Disease",
+                "PHYSCI 175 - Why Fido Can't Speak: Biological Evolution of Language",
+                "PSYCH 119A - Neuropsychopharmacology of Emotion and Cognition",
+                "PSYCH 162 - Psychology of Addiction",
+                "PSYCH M166 - Neurobiology of Bias and Discrimination"
+              ]
+            },
+            {
+              "title": "Systems and Integrative Neuroscience",
+              "courses": [
+                "NEUROSC M119N - Visual System",
+                "NEUROSC CM123 - Neurobiology of Sleep",
+                "NEUROSC M145 - Neural Mechanisms Controlling Movement",
+                "NEUROSC C151 - Computational Neuroscience for Interdisciplinary Scientists",
+                "NEUROSC M176 - Auditory Neuroscience of Speech Perception and Vocal Communication",
+                "NEUROSC C177 - Drugs of Abuse: Translational Neurobiology",
+                "NEUROSC M187 - Neurobiology of Bias and Discrimination",
+                "NEUROSC 191B - Variable Topics Research Seminars: Neuroscience\u2014Systems and Integrative Neuroscience",
+                "PHYSICS C186 - Neurophysics: Brain-Mind Problem",
+                "PHYSCI M106 - Neurobiology of Bias and Discrimination",
+                "PHYSCI CM123 - Neurobiology of Sleep",
+                "PHYSCI C126 - Biological Clocks",
+                "PHYSCI C127 - Neuroendocrinology of Reproduction",
+                "PHYSCI C130 - Sex Differences in Physiology and Disease",
+                "PHYSCI M135 - Dynamical Systems Modeling of Physiological Processes",
+                "PHYSCI 138 - Neuromuscular Physiology and Adaptation",
+                "PHYSCI C144 - Neural Control of Physiological Systems",
+                "PHYSCI M145 - Neural Mechanisms Controlling Movement",
+                "PHYSCI 146 - Principles of Nervous System Development",
+                "PHYSCI 147 - Neurobiology of Learning and Memory",
+                "PHYSCI 173 - Anatomy and Physiology of Sense Organs",
+                "PHYSCI M176 - Auditory Neuroscience of Speech Perception and Vocal Communication",
+                "PHYSCI 177 - Neuroethology",
+                "PSYCH 112B - Psychobiology of Fear and Anxiety",
+                "PSYCH 112C - Psychobiology of Anxiety and Depression",
+                "PSYCH 119A - Neuropsychopharmacology of Emotion and Cognition",
+                "PSYCH 119I - Integration of Face and Brain",
+                "PSYCH 119J - Brain Bugs: Understanding Brain through Its Flaws",
+                "PSYCH 119M - Neural Circuits of Learning and Memory",
+                "PSYCH M119N - Visual System",
+                "PSYCH 119Q - Psychobiology of Sleep and Dreams",
+                "PSYCH M119X - Biology and Behavioral Neuroscience of Aging",
+                "PSYCH 119Y - Psychobiology of Sexual Behavior",
+                "PSYCH 120B - Sensation and Perception",
+                "PSYCH 124C - Human Memory",
+                "PSYCH 137A - Neuroscience of Social Perception",
+                "PSYCH 162 - Psychology of Addiction",
+                "PSYCH 164 - Puberty and Sleep",
+                "PSYCH M166 - Neurobiology of Bias and Discrimination"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Capstone Research Options",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Neuroscience 101L, M116A, Psychology M116A, or 116B",
+              "courses": [
+                "NEUROSC 101L - Neuroscience Laboratory",
+                "NEUROSC M116A - Behavioral Neuroscience Laboratory",
+                "PSYCH M116A - Behavioral Neuroscience Laboratory",
+                "PSYCH 116B - Human Neuropsychology Laboratory"
+              ]
+            },
+            {
+              "title": "DOPA-Team and Project Brainstorm",
+              "description": "Complete the following two courses:"
+            },
+            {
+              "title": "Neuroscience 198A and 198B, or 199A and 199B.",
+              "description": "Complete the following two courses:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program"
+    }
+  ]
+}

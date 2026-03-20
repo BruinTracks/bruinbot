@@ -1,0 +1,184 @@
+{
+  "major_name": "ComputationalandSystemsBiologyBS",
+  "major_id": 44,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Chemistry",
+          "options": [
+            {
+              "title": "Chemistry 14 series",
+              "courses": [
+                "CHEM 14A - General Chemistry for Life Scientists I",
+                "CHEM 14B - General Chemistry for Life Scientists II",
+                "CHEM 14BL - General and Organic Chemistry Laboratory I"
+              ]
+            },
+            {
+              "title": "Chemistry 20 series",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change",
+                "CHEM 20L - General Chemistry Laboratory"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Computer Science or Program in Computing",
+          "courses": [
+            "COM SCI 31 - Introduction to Computer Science I",
+            "COMPTNG 10A - Introduction to Programming"
+          ]
+        },
+        {
+          "title": "Life Sciences",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "LIFESCI 7B - Genetics, Evolution, and Ecology",
+            "LIFESCI 7C - Physiology and Human Biology"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "description": "Students may select Computational and Systems Biology M32 or Mathematics M32T.",
+          "options": [
+            {
+              "title": "Life Sciences",
+              "courses": [
+                "C&S BIO M32 - Essential Calculus for Mathematical Biologists",
+                "LIFESCI 30A - Mathematics for Life Scientists",
+                "LIFESCI 30B - Mathematics for Life Scientists",
+                "LIFESCI 40 - Statistics of Biological Systems",
+                "MATH M32T - Essential Calculus for Mathematical Biologists",
+                "MATH 33A - Linear Algebra and Applications",
+                "MATH 33B - Differential Equations"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "courses": [
+                "MATH 31A - Differential and Integral Calculus",
+                "MATH 31AL - Differential and Integral Calculus Laboratory",
+                "MATH 31B - Integration and Infinite Series",
+                "MATH 33A - Linear Algebra and Applications",
+                "MATH 33B - Differential Equations",
+                "STATS 10 - Introduction to Statistical Reasoning"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Physics",
+          "options": [
+            {
+              "title": "Physics 1 series",
+              "courses": [
+                "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+                "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity"
+              ]
+            },
+            {
+              "title": "Physics 1 Honors series",
+              "courses": [
+                "PHYSICS 1AH - Physics for Scientists and Engineers: Mechanics (Honors)",
+                "PHYSICS 1BH - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields (Honors)",
+                "PHYSICS 1CH - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity (Honors)"
+              ]
+            },
+            {
+              "title": "Physics 5 series",
+              "courses": [
+                "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy",
+                "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                "PHYSICS 5C - Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Additional Courses by Track",
+          "description": "Select Computer Science 32, or Programs in Computing 10B and 10C:",
+          "options": [
+            {
+              "title": "Bioinformatics",
+              "courses": [
+                "COM SCI 32 - Introduction to Computer Science II",
+                "COMPTNG 10B - Intermediate Programming",
+                "COMPTNG 10C - Advanced Programming"
+              ]
+            },
+            {
+              "title": "Biological Data Science",
+              "courses": [
+                "COM SCI 32 - Introduction to Computer Science II"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete three required courses, one probability course, one statistics course, and two capstone courses as follows:",
+      "options": [
+        {
+          "title": "Methodology Core",
+          "description": "Select one course from:",
+          "courses": [
+            "C&S BIO M150 - Biological Modeling: Mathematical and Computational Approaches",
+            "C&S BIO M184 - Introduction to Computational and Systems Biology",
+            "C&S BIO 185 - Thesis Research Opportunities in Computational and Systems Biology"
+          ],
+          "options": [
+            {
+              "title": "Probability",
+              "courses": [
+                "EC ENGR 131A - Probability and Statistics",
+                "MATH 170E - Introduction to Probability and Statistics 1: Probability",
+                "STATS 100A - Introduction to Probability"
+              ]
+            },
+            {
+              "title": "Statistics",
+              "courses": [
+                "BIOSTAT 100 - Introduction to Biostatistics",
+                "STATS 100B - Introduction to Mathematical Statistics"
+              ]
+            },
+            {
+              "title": "Capstone",
+              "description": "Complete the following two courses:"
+            }
+          ]
+        },
+        {
+          "title": "Tracks",
+          "description": "Note: Computer Science 32 or Program in Computing 10B and 10C, and Computational and Systems Biology M32 (same as Life Sciences M32 or Mathematics M32T) or Mathematics 32A are completed in the pre-major.",
+          "tracks": [
+            {
+              "description": "Select one course from:",
+              "heading": "Bioinformatics (at least 20 units)"
+            },
+            {
+              "description": "Select three courses (at least 20 units) from the following. Only one course from Computer Science CM124 or M226 may be applied. Only one course from Computer Science M146, Mathematics 156, or Statistics C161 may be applied. Only one course from Computer Science 180 or Mathematics 182 may be applied.",
+              "heading": "Biological Data Sciences (at least 20 units)"
+            },
+            {
+              "description": "Select three courses from the following list. Only one course from Computational and Systems Biology M186 or Computer Science M182 may be applied. Only one course from Mathematics 134 or 135 may be applied.",
+              "heading": "Dynamical Modeling (at least 20 units)"
+            },
+            {
+              "description": "Only one course from Molecular, Cell, and Developmental Biology 100 or 165A may be applied.",
+              "heading": "Life Science Course List (for all three tracks)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "major_name": "EuropeanStudiesBA",
+  "major_id": 57,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "I A STD 1 - Introduction to International and Area Studies"
+      ],
+      "options": [
+        {
+          "title": "Area Studies",
+          "courses": [
+            "C&EE ST 91 - Culture and Society in Central and Eastern Europe",
+            "COM LIT 1C - World Literature: Age of Enlightenment to 20th Century",
+            "COM LIT 2CW - Survey of Literature: Age of Enlightenment to 20th Century",
+            "COM LIT 4CW - Literature and Writing: Age of Enlightenment to 20th Century",
+            "ENGL 88G - Lower-Division Seminar: Special Topics in English\u201420th-Century British Literature",
+            "FRNCH 12 - Introduction to Study of French and Francophone Literature",
+            "FRNCH 14 - Introduction to French Culture and Civilization in English",
+            "FRNCH 14W - Introduction to French Culture and Civilization in English",
+            "FRNCH 41 - French Cinema and Culture",
+            "FRNCH 60 - French and Francophone Novel",
+            "GERMAN 50B - Great Works of German Literature in Translation: Romanticism to Present",
+            "GERMAN 59 - Holocaust in Film and Literature",
+            "GERMAN 61A - Modern Metropolis: Berlin",
+            "HIST 1C - Introduction to Western Civilization: Circa 1715 to Present",
+            "HIST 97C - Introduction to Historical Practice: Variable Topics in European History",
+            "I A STD 40 - Introduction to Europe",
+            "ITALIAN 42B - Italy through Ages in English: Modern and Contemporary Italy",
+            "ITALIAN 46 - Italian Cinema and Culture in English",
+            "ITALIAN 50B - Masterpieces of Italian Literature in English: Enlightenment to Postmodernity",
+            "PORTGSE 40A - Portuguese, Brazilian, and African Literature in Translation: Portuguese and Portuguese-African Literature",
+            "ROMANIA 90 - Introduction to Romanian Civilization",
+            "RUSSN 25 - Great Russian Novel",
+            "RUSSN 25W - Great Russian Novel",
+            "RUSSN 30 - Russian Literature and World Cinema",
+            "RUSSN 31 - Introduction to Russian Film",
+            "RUSSN 32 - Russia and Asia: Cultural Dialogues",
+            "RUSSN 90B - Russian Civilization in 20th Century",
+            "RUSSN 90BW - Russian Civilization in 20th Century",
+            "SCAND 50 - Introduction to Scandinavian Literatures and Cultures",
+            "SCAND 50W - Introduction to Scandinavian Literatures and Cultures",
+            "SLAVC 90 - Introduction to Slavic Civilization",
+            "SPAN 42 - Iberian Cultures"
+          ]
+        },
+        {
+          "title": "International Politics and Markets",
+          "courses": [
+            "ECON 1 - Principles of Economics",
+            "ECON 2 - Principles of Economics",
+            "GEOG 4 - Globalization: Regional Development and World Economy",
+            "GEOG 6 - World Regions: Concepts and Contemporary Issues",
+            "POL SCI 50 - Introduction to Comparative Politics",
+            "SOCIOL 1 - Introductory Sociology"
+          ]
+        },
+        {
+          "title": "International Societies and Cultures",
+          "courses": [
+            "ANTHRO 3 - Culture and Society",
+            "COM LIT 1D - Great Books from World at Large",
+            "COM LIT 2DW - Survey of Literature: Great Books from World at Large",
+            "COM LIT 4DW - Literature and Writing: Great Books from World at Large",
+            "ETHNMUS 5 - Music Around World",
+            "ETHNMUS M25 - Global Pop",
+            "GEOG 3 - Cultural Geography",
+            "HIST 2B - Social Knowledge and Social Power",
+            "HIST 22 - Contemporary World History, 1760 to Present",
+            "WL ARTS 20 - Culture: Introduction",
+            "WL ARTS 33 - Colonialisms and Resistance"
+          ]
+        },
+        {
+          "title": "Foreign Language",
+          "courses": [
+            "CZCH 102C - Advanced Czech",
+            "DUTCH 103C - Intermediate Dutch",
+            "FRNCH 6 - Intermediate French",
+            "GERMAN 6 - Intermediate German",
+            "HNGAR 102C - Advanced Hungarian",
+            "ITALIAN 6 - Intermediate Italian",
+            "POLSH 102C - Advanced Polish",
+            "PORTGSE 3 - Intermediate Portuguese",
+            "ROMANIA 102C - Advanced Romanian",
+            "RUSSN 6 - Intermediate Russian",
+            "SCAND 5 - Intermediate Swedish",
+            "SRB CRO 102C - Advanced Serbian/Croatian",
+            "SPAN 5 - Intermediate Spanish",
+            "UKRN 102C - Advanced Ukrainian",
+            "YIDDSH 102C - Intermediate Yiddish"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select seven courses from the humanities and arts and social sciences groups as follows:",
+      "options": [
+        {
+          "title": "Area Studies",
+          "description": "Select three courses from:",
+          "options": [
+            {
+              "title": "Humanities and Arts Group 1",
+              "courses": [
+                "ART HIS 127B - European Art of 19th Century",
+                "ART HIS M127C - Cultural and Intellectual History of Modern Europe, 19th Century",
+                "C&EE ST M125 - Interwar Central European Prose",
+                "C&EE ST CM126 - Cold-War Central European Culture",
+                "COM LIT C163 - Crisis of Consciousness in Modern Literature",
+                "COM LIT C164 - Modern European Novel",
+                "DUTCH 113 - Modern Dutch and Flemish Literature in Translation",
+                "DUTCH 131 - Introduction to Modern Dutch Literature",
+                "ENGL 115B - British Popular Literature",
+                "ENGL 164A - Earlier 19th-Century Poetry",
+                "ENGL 164B - 19th-Century Critical Prose",
+                "ENGL 164C - 19th-Century Novel",
+                "ETHNMUS 133 - European Musics: Politics, Identities, Nationalisms",
+                "FILM TV 106B - History of European Motion Picture",
+                "FRNCH 114C - Survey of French Literature: 19th and 20th Centuries",
+                "FRNCH 119 - Studies in 19th-Century French Culture and Literature",
+                "FRNCH 120 - Studies in 20th-Century French Culture and Literature",
+                "FRNCH 138 - Contemporary French Theory",
+                "FRNCH 139 - Paris: Study of French Capital",
+                "FRNCH 141 - French Cinema",
+                "GERMAN 102 - War, Politics, Art",
+                "GERMAN 103 - German Film in Cultural Context: Early German Film",
+                "GERMAN 104 - German Film in Cultural Context, 1945 to Present",
+                "GERMAN 110 - Special Topics in Modern Literature and Culture",
+                "GERMAN 112 - Feminist Issues in German Literature and Culture",
+                "GERMAN 173 - Advanced Study of Modern Literature",
+                "GERMAN 174 - Advanced Study of Contemporary Literature and Culture",
+                "ITALIAN 102C - Italian Cultural Experience in English",
+                "ITALIAN 120 - Modern and Contemporary Literature",
+                "ITALIAN 121 - Literature and Film",
+                "ITALIAN 150 - Modern Fiction in Translation",
+                "ITALIAN M158 - Women, Gender, and Sexuality in Italian Culture",
+                "POLSH 152B - Survey of Polish Literature: Reimagining a Nation",
+                "POLSH 152C - Survey of Polish Literature: Dreaming, Mocking, and Writing \"as if\"",
+                "RUSSN 107B - Russian for Social and Cultural Studies",
+                "RUSSN 120 - Literature and Revolution",
+                "RUSSN 121 - Russian Pop Culture",
+                "RUSSN 122 - Siberia",
+                "RUSSN 125 - Russian Novel in Its European Setting",
+                "RUSSN 126 - Russian Theater: Plays and Performance",
+                "RUSSN M127 - Women in Russian Literature",
+                "RUSSN 128 - Russian Science Fiction",
+                "RUSSN 130A - Russian Poetry: Introduction to Analysis of Russian Poetry",
+                "RUSSN 130B - Russian Poetry: Poetry of Russian Neoclassicism, Romanticism, and Realism",
+                "RUSSN 130C - Russian Poetry: Russian Poetry in the 20th Century",
+                "RUSSN 131 - History of Russian Cinema",
+                "RUSSN M132 - Comparative Media Studies",
+                "RUSSN 140A - Russian Prose Fiction: Introduction to Analysis of Russian Narrative Prose",
+                "RUSSN 140B - Russian Prose Fiction: Russian Romantic Prose",
+                "RUSSN 140C - Russian Prose Fiction: Great Realists",
+                "RUSSN 140D - Russian Prose Fiction: 20th-Century Modernism",
+                "RUSSN 150 - Russian Folk Literature",
+                "SCAND C141A - Theory of Scandinavian Novel",
+                "SCAND 141C - Short Story in Scandinavia",
+                "SCAND C155 - Modern Breakthrough",
+                "SCAND 156 - Scandinavian Literature of 20th Century",
+                "SCAND 157 - Contemporary Nordic Literature",
+                "SCAND 161 - Introduction to Nordic Cinema",
+                "SCAND C163A - Introduction to Danish Cinema",
+                "SCAND C163B - Introduction to Swedish Cinema",
+                "SCAND C163C - Introduction to Norwegian Cinema",
+                "SCAND 173A - Popular Culture in Scandinavia",
+                "SCAND C174A - Minority Cultures in Scandinavia",
+                "SCAND 174B - Queer Scandinavia",
+                "SCAND C180 - Literature and Scandinavian Society",
+                "YIDDSH 131A - Modern Yiddish Poetry",
+                "YIDDSH 131B - Modern Yiddish Prose and Drama"
+              ]
+            },
+            {
+              "title": "Social Sciences Group 1",
+              "courses": [
+                "ECON 181 - Development of Economic Institutions in Western Europe",
+                "GEOG 173A - Cities of Europe",
+                "GEOG 174A - The Mediterranean World",
+                "HIST 120A - East-Central Europe: Long 19th Century, 1780 to 1914",
+                "HIST 120B - East-Central Europe: Short 20th Century, 1918 to 1990",
+                "HIST 120C - East-Central Europe in Transition, 1988 to 1993",
+                "HIST 121D - History of Modern Europe: Bourgeois Century, 1815 to 1914",
+                "HIST 121E - History of Modern Europe: Era of Total War, 1914 to 1945",
+                "HIST 121F - History of Modern Europe: World War II and Its Aftermath, 1939 to Present",
+                "HIST 122F - Cultural and Intellectual History of Modern Europe, 20th Century",
+                "HIST 123B - War and Diplomacy in Europe, 1815 to 1945",
+                "HIST 123C - War and Diplomacy in Europe, Cold War",
+                "HIST 124B - History of France: France, 1715 to 1871",
+                "HIST 124C - History of France: Making of Modern France, 1871 to Present",
+                "HIST 125B - Global German History in an Age of Empire, 1770s to 1914",
+                "HIST 125C - 20th-Century Germany",
+                "HIST 125D - History of Low Countries",
+                "HIST 127B - History of Russia: Imperial Russia from Peter the Great to Nicholas II",
+                "HIST 127C - History of Russia: Revolutionary Russia and Soviet Union",
+                "HIST 127D - History of Russia: Culture and Society in Imperial Russia",
+                "HIST 129B - Social History of Spain and Portugal: Rebellion and Revolution in Modern Spain and Portugal, 1789 to Present",
+                "HIST 131A - Marxist Theory and History",
+                "HIST 131B - Marxist Theory and History",
+                "HIST 134B - Economic History of Europe, 1780 to 1914",
+                "HIST 134C - Economic History of Europe, 20th Century",
+                "HIST 135C - Europe and World: Imperialism and Postcolonialism, 1870 to Present",
+                "HIST 136B - History of Britain: Making of Modern Britain, 1715 to 1867",
+                "HIST 136C - History of Britain: Modern Britain since 1832",
+                "HIST 183A - Third Reich and Jews",
+                "HIST 183B - Third Reich and Jews",
+                "HNRS 173A - Liberty, Government, and Society in European Thought",
+                "POL SCI 153A - Comparative Government and Politics of Western Europe: West European Government and Politics",
+                "POL SCI 156A - Government and Politics of Post-Communist States: Russia"
+              ]
+            },
+            {
+              "title": "Additional Elective"
+            },
+            {
+              "title": "Substitutions"
+            }
+          ]
+        },
+        {
+          "title": "International Themes",
+          "description": "Select two courses from:",
+          "options": [
+            {
+              "title": "International Politics and Markets",
+              "courses": [
+                "ANTHRO 143 - Economic Anthropology",
+                "ECON 111 - Theories of Development",
+                "ECON 112 - Policies for Economic Development",
+                "ECON 121 - International Trade Theory",
+                "ECON 122 - International Finance",
+                "ENVIRON 134 - Environmental Economics with Data Analysis",
+                "GEOG M127 - Global Environment and Development: Problems and Issues",
+                "GEOG 148 - Political Geography",
+                "GEOG 150 - Economic Geography",
+                "INTL DV 130 - Theory and History in International Development",
+                "MGMT 109 - International Business Law",
+                "MGMT 127C - International Taxation",
+                "POL SCI M122B - Global Environment and World Politics",
+                "POL SCI 123A - International Law",
+                "POL SCI 124A - International Political Economy",
+                "POL SCI 125A - Arms Control and International Security",
+                "POL SCI 126 - Peace and War",
+                "POL SCI 129 - Diplomacy and War",
+                "POL SCI 134 - Foreign Policy Decision Making and Tools of Statecraft",
+                "POL SCI 137A - International Relations Theory",
+                "POL SCI 150 - Political Violence",
+                "POL SCI 166 - Comparative Constitutional Design",
+                "POL SCI M167C - Political Economy of Development",
+                "POL SCI 167D - Political Institutions and Economic Development",
+                "POL SCI 168 - Comparative Political Analysis",
+                "SOCIOL 182 - Political Sociology",
+                "SOCIOL 183 - Comparative and Historical Sociology",
+                "URBN PL M165 - Environmentalism: Past, Present, and Future"
+              ]
+            },
+            {
+              "title": "International Societies and Cultures",
+              "courses": [
+                "ANTHRO 130 - Study of Culture",
+                "ANTHRO 140 - Study of Social Systems",
+                "ANTHRO 146 - Urban Anthropology",
+                "ANTHRO 147 - Development Anthropology",
+                "ART HIS C160 - Art and Empire",
+                "COMM 179 - Images of U.S.",
+                "COM LIT 100 - Introduction to Literary and Critical Theory",
+                "ENVIRON M133 - Environmental Sociology",
+                "FILM TV 112 - Film and Social Change",
+                "GEOG M131 - Human Impact on Biophysical Environment",
+                "GEOG 139C - Problems in Geography: Culture and Environment in Modern World",
+                "GEOG 140 - Social Geography",
+                "GEOG 141 - Cultural Geography of Modern World",
+                "GEOG 158 - Population Geography",
+                "GEOG 161 - Cities and Social Difference",
+                "HIST M186B - Global Feminism, 1850 to Present",
+                "HNRS M152 - (When) Do Leaders Make Differences?",
+                "INTL DV 110 - Culture, Power, and Development",
+                "SOCIOL 116 - Social Demography",
+                "SOCIOL 151 - Comparative Immigration",
+                "SOCIOL 154 - Race and Ethnicity in Latin America",
+                "SOCIOL 191D - Undergraduate Seminar: Sociology of Development",
+                "SOCIOL 191F - Undergraduate Seminar: Sociology of Globalization"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "I A STD 191 - Variable Topics Senior Research Seminars: International and Area Studies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "I A STD 198A - Honors Research in International and Area Studies",
+        "I A STD 198B - Honors Research in International and Area Studies",
+        "I A STD 198C - Honors Research in International and Area Studies"
+      ]
+    }
+  ]
+}

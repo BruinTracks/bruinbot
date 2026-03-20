@@ -1,0 +1,170 @@
+{
+  "major_name": "AnthropologyBS",
+  "major_id": 16,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following four courses:",
+      "options": [
+        {
+          "title": "Anthropology",
+          "courses": [
+            "ANTHRO 1 - Human Evolution",
+            "ANTHRO 2 - Archaeology: Introduction",
+            "ANTHRO 3 - Culture and Society",
+            "ANTHRO 4 - Culture and Communication"
+          ]
+        },
+        {
+          "title": "Chemistry and Biochemistry",
+          "options": [
+            {
+              "title": "Chemistry 14 series",
+              "courses": [
+                "CHEM 14A - General Chemistry for Life Scientists I",
+                "CHEM 14B - General Chemistry for Life Scientists II",
+                "CHEM 14BL - General and Organic Chemistry Laboratory I",
+                "CHEM 14C - Structure of Organic Molecules"
+              ]
+            },
+            {
+              "title": "Chemistry 20 and 30 series",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change",
+                "CHEM 20L - General Chemistry Laboratory",
+                "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+                "CHEM 30AL - General Chemistry Laboratory II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Life Sciences",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "LIFESCI 7B - Genetics, Evolution, and Ecology",
+            "LIFESCI 7C - Physiology and Human Biology",
+            "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "description": "Students may select Life Sciences 40 or Statistics 13.",
+          "options": [
+            {
+              "title": "Life Sciences 30 series",
+              "courses": [
+                "LIFESCI 30A - Mathematics for Life Scientists",
+                "LIFESCI 30B - Mathematics for Life Scientists",
+                "LIFESCI 40 - Statistics of Biological Systems",
+                "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+              ]
+            },
+            {
+              "title": "Mathematics 3 series",
+              "courses": [
+                "MATH 3A - Calculus for Life Sciences Students",
+                "MATH 3B - Calculus for Life Sciences Students",
+                "MATH 3C - Ordinary Differential Equations with Linear Algebra for Life Sciences Students",
+                "STATS 12 - Introduction to Statistical Methods for Geography and Environmental Studies"
+              ]
+            },
+            {
+              "title": "Mathematics 31 series",
+              "courses": [
+                "MATH 31A - Differential and Integral Calculus",
+                "MATH 31B - Integration and Infinite Series",
+                "STATS 12 - Introduction to Statistical Methods for Geography and Environmental Studies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy",
+            "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+            "PHYSICS 5C - Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select two courses in the sociocultural anthropology field and one in each of the other three fields:",
+      "options": [
+        {
+          "title": "Fields",
+          "description": "Select two courses from:",
+          "options": [
+            {
+              "title": "Sociocultural Anthropology",
+              "courses": [
+                "Anthropology 130 through 149"
+              ]
+            },
+            {
+              "title": "Archaeology",
+              "courses": [
+                "Anthropology 110 through 119"
+              ]
+            },
+            {
+              "title": "Biological Anthropology",
+              "courses": [
+                "Anthropology 120 through 129"
+              ]
+            },
+            {
+              "title": "Linguistic Anthropology",
+              "courses": [
+                "Anthropology 150 through 159"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Regional Cultures",
+          "courses": [
+            "Anthropology 160 through 169"
+          ]
+        },
+        {
+          "title": "History/Theory",
+          "courses": [
+            "ANTHRO 100 - History of Anthropology",
+            "ANTHRO 110 - Principles of Archaeology",
+            "ANTHRO 111 - Theory in Anthropological Archaeology",
+            "ANTHRO 120 - Survey of Biological Anthropology",
+            "ANTHRO 124Q - Evolutionary Psychology",
+            "ANTHRO 130 - Study of Culture",
+            "ANTHRO 131 - Critical Social Theory",
+            "ANTHRO 136A - Introduction to Psychological Anthropology: Historical Development",
+            "ANTHRO 140 - Study of Social Systems",
+            "ANTHRO M150 - Language in Culture"
+          ]
+        },
+        {
+          "title": "Anthropology Electives"
+        },
+        {
+          "title": "Honors Seminars",
+          "courses": [
+            "ANTHRO 89 - Honors Seminars",
+            "ANTHRO 189 - Advanced Honors Seminars"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ANTHRO 191HA - Beginning Seminar",
+        "ANTHRO 191HB - Field Methods",
+        "ANTHRO 191HC - Data Analysis",
+        "ANTHRO 191HD - Writing for Anthropology"
+      ]
+    }
+  ]
+}

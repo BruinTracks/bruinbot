@@ -1,0 +1,56 @@
+{
+  "major_name": "PhysiologicalScienceBS",
+  "major_id": 103,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Life Sciences Core Curriculum",
+          "description": "Select one series from:",
+          "options": [
+            {
+              "title": "Chemistry"
+            },
+            {
+              "title": "Life Sciences",
+              "courses": [
+                "LIFESCI 7A - Cell and Molecular Biology",
+                "LIFESCI 7B - Genetics, Evolution, and Ecology",
+                "LIFESCI 7C - Physiology and Human Biology",
+                "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "description": "Students may select either Life Sciences 40 or Statistics 13."
+            },
+            {
+              "title": "Physics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete a total of five upper-division physiological science electives. Eight units of course 199 or 4 units each (8 units total) of courses 198A and 198B, for students in the departmental honors program, may be applied toward the elective requirement.",
+      "courses": [
+        "PHYSCI 107 - Systems Anatomy",
+        "PHYSCI 111A - Foundations in Physiological Science",
+        "PHYSCI 111B - Foundations in Physiological Science",
+        "PHYSCI 111L - Physiological Science Laboratory",
+        "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism"
+      ],
+      "options": [
+        {
+          "title": "Upper-Division Physiological Science Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "major_name": "GlobalJazzStudiesBA",
+  "major_id": 129,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course (5 units) from:",
+      "options": [
+        {
+          "title": "Musical Cultures of the World",
+          "courses": [
+            "ETHNMUS 20B - Musical Cultures of World: Africa and Near East",
+            "ETHNMUS 20C - Musical Cultures of World: Asia"
+          ]
+        },
+        {
+          "title": "Music and Dance of Ghana and African American Music Ensemble",
+          "courses": [
+            "ETHNMUS 91E - World Music Performance Organizations: Music and Dance of Ghana",
+            "ETHNMUS 91P - World Music Performance Organizations: African American Music Ensemble"
+          ]
+        },
+        {
+          "title": "World Music Specializations and Performance Organizations",
+          "options": [
+            {
+              "title": "World Music Specializations",
+              "courses": [
+                "Ethnomusicology 68A though 68O"
+              ]
+            },
+            {
+              "title": "World Music Performance Organizations",
+              "courses": [
+                "Ethnomusicology 91A through 91Z (except 91E and 91P)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "African American Musical Heritage",
+          "courses": [
+            "GJ STDS M110A - African American Musical Heritage",
+            "GJ STDS M110B - African American Musical Heritage"
+          ]
+        },
+        {
+          "title": "Jazz Performance",
+          "courses": [
+            "Global Jazz Studies 71A through 71I"
+          ]
+        },
+        {
+          "title": "Musicianship",
+          "courses": [
+            "MUSC M6A - Introduction to Global Musicianship",
+            "MUSC M6B - Introduction to Musicianship",
+            "MUSC M6C - Introduction to Musicianship"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Students must enroll in a studio class and at least one combo or ensemble each quarter.",
+      "options": [
+        {
+          "title": "Performance (24 units)",
+          "description": "Complete 12 units from Global Jazz Studies 171A through 171I:",
+          "options": [
+            {
+              "title": "Studio Coursework",
+              "courses": [
+                "Global Jazz Studies 171A through 171I"
+              ]
+            },
+            {
+              "title": "Small Jazz Combo",
+              "courses": [
+                "GJ STDS 175 - Jazz Combo"
+              ]
+            },
+            {
+              "title": "Large Jazz Ensemble",
+              "courses": [
+                "Global Jazz Studies 176A through 176G"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Musicianship and Theory (24 units)",
+          "courses": [
+            "GJ STDS 122A - Jazz Styles and Analysis: Early Jazz to Swing Era",
+            "GJ STDS 122B - Jazz Styles and Analysis: Bebop to Avant-garde",
+            "GJ STDS 122C - Jazz Styles and Analysis: Jazz since Sixties",
+            "GJ STDS 127A - Jazz Keyboard Harmony I",
+            "GJ STDS 127B - Jazz Keyboard Harmony II",
+            "GJ STDS 127C - Jazz Keyboard Harmony III",
+            "GJ STDS 129A - Jazz Theory and Improvisation I",
+            "GJ STDS 129B - Jazz Theory and Improvisation II",
+            "GJ STDS 129C - Jazz Theory and Improvisation III"
+          ]
+        },
+        {
+          "title": "Scholarly Foundations (20 units)",
+          "description": "Select one course (at least 4 units) from:",
+          "courses": [
+            "GJ STDS 101 - Cross-Cultural Perspectives in Jazz",
+            "GJ STDS 125 - Jazz Arranging and Orchestration"
+          ],
+          "options": [
+            {
+              "title": "African American Studies",
+              "courses": [
+                "AF AMER 108 - Jazz and Political Imagination",
+                "AF AMER M150D - Recent African American Urban History: Funk Music and Politics of Black Popular Culture",
+                "AF AMER M158C - Introduction to Afro-American History"
+              ]
+            },
+            {
+              "title": "Global Jazz Studies",
+              "courses": [
+                "GJ STDS M109 - Women in Jazz",
+                "GJ STDS M119 - Cultural History of Rap",
+                "GJ STDS M130 - Culture of Jazz Aesthetics",
+                "GJ STDS M131 - Development of Latin Jazz",
+                "GJ STDS 165 - Selected Topics in Composition",
+                "GJ STDS 188 - Special Topics in Global Jazz Studies",
+                "GJ STDS 199 - Directed Research or Senior Project in Global Jazz Studies"
+              ]
+            },
+            {
+              "title": "Music Industry",
+              "courses": [
+                "MSC IND 2 - Music Industry Fundamentals",
+                "MSC IND 104A - Music and Law",
+                "MSC IND 107A - Engineering and Production Fundamentals",
+                "MSC IND 115A - Art of Music Production I"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Capstone Seminar and Project (4 units)",
+          "courses": [
+            "GJ STDS 186A - Capstone Seminar",
+            "GJ STDS 186B - Capstone"
+          ]
+        }
+      ]
+    }
+  ]
+}

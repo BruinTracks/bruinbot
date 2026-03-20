@@ -98,7 +98,7 @@ export const SavedSchedules = () => {
 
   if (loading) {
     return (
-      <div className="bg-gray-900 min-h-screen text-white flex flex-col items-center pt-10">
+      <div className="bg-gray-900 min-h-screen w-screen text-white flex flex-col pt-10">
         <div className="flex justify-center items-center h-64">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400"></div>
         </div>
@@ -109,8 +109,8 @@ export const SavedSchedules = () => {
   const currentSchedule = schedules[currentIndex]?.schedule?.schedule;
 
   return (
-    <div className="bg-gray-900 min-h-screen text-white flex flex-col items-center pt-10">
-      <div className="max-w-7xl mx-auto px-4 w-full">
+    <div className="bg-gray-900 min-h-screen w-screen text-white flex flex-col pt-10">
+      <div className="w-full px-4 md:px-8 lg:px-10">
         <div className="flex justify-between items-center mb-8">
           <motion.h1
             className="text-3xl font-bold"

@@ -1,0 +1,80 @@
+{
+  "major_name": "ComparativeLiteratureBA",
+  "major_id": 43,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select two courses from the following. With approval of the director of undergraduate studies, a comparable and appropriate lower-division course in another department may be substituted for one of the courses.",
+      "options": [
+        {
+          "title": "Comparative Literature",
+          "options": [
+            {
+              "title": "Comparative Literature 1 series",
+              "courses": [
+                "COM LIT 1A - World Literature: Antiquity to Middle Ages",
+                "COM LIT 1B - World Literature: Middle Ages to 17th Century",
+                "COM LIT 1C - World Literature: Age of Enlightenment to 20th Century",
+                "COM LIT 1D - Great Books from World at Large",
+                "COM LIT 1E - Social Media and Storytelling: Comparing Cultures"
+              ]
+            },
+            {
+              "title": "Comparative Literature 2 series",
+              "courses": [
+                "COM LIT 2AW - Survey of Literature: Antiquity to Middle Ages",
+                "COM LIT 2BW - Survey of Literature: Middle Ages to 17th Century",
+                "COM LIT 2CW - Survey of Literature: Age of Enlightenment to 20th Century"
+              ]
+            },
+            {
+              "title": "Comparative Literature 4 series",
+              "courses": [
+                "COM LIT 4AW - Literature and Writing: Antiquity to Middle Ages",
+                "COM LIT 4BW - Literature and Writing: Middle Ages to 17th Century",
+                "COM LIT 4CW - Literature and Writing: Age of Enlightenment to 20th Century",
+                "COM LIT 4DW - Literature and Writing: Great Books from World at Large"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "College Writing Requirement"
+        },
+        {
+          "title": "Literary Proficiency"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five courses, including Comparative Literature 100.",
+      "options": [
+        {
+          "title": "Comparative Literature",
+          "description": "Select four courses from Comparative Literature M101 through 197.",
+          "courses": [
+            "COM LIT 100 - Introduction to Literary and Critical Theory"
+          ],
+          "options": [
+            {
+              "title": "Comparative Literature 101 through 197"
+            }
+          ]
+        },
+        {
+          "title": "Upper-Division Literature in Primary Language"
+        },
+        {
+          "title": "Upper-Division Literature in Secondary Language"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "COM LIT 198 - Honors Research in Comparative Literature"
+      ]
+    }
+  ]
+}

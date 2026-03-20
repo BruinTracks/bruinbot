@@ -1,0 +1,129 @@
+{
+  "major_name": "LinguisticsandAsianLanguagesandCulturesBA",
+  "major_id": 83,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course, as appropriate, from:",
+      "courses": [
+        "ANTHRO 4 - Culture and Communication",
+        "LING 20 - Introduction to Linguistic Analysis"
+      ],
+      "options": [
+        {
+          "title": "Civilization",
+          "courses": [
+            "CHIN 50 - Chinese Civilization",
+            "JAPAN 50 - Japanese Civilization",
+            "KOREA 50 - History of Korean Civilization"
+          ]
+        },
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five courses. Only one course from Linguistics 165A or 165B may be applied.",
+      "options": [
+        {
+          "title": "Required Linguistics Courses",
+          "courses": [
+            "LING 103 - Introduction to General Phonetics",
+            "LING 110 - Introduction to Historical Linguistics",
+            "LING 120A - Phonology I",
+            "LING 120B - Syntax I",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II"
+          ]
+        },
+        {
+          "title": "Upper-Division Elective"
+        },
+        {
+          "title": "Tracks",
+          "description": "Select one series from Chinese 100A, 100B, and 100C, or 100D, 100E, and 100F, or 100I:",
+          "tracks": [
+            {
+              "description": "Select one series from Chinese 100A, 100B, and 100C, or 100D, 100E, and 100F, or 100I:",
+              "heading": "Chinese"
+            },
+            {
+              "description": "Select Japanese 100A, 100B, and 100C, or 100S:",
+              "heading": "Japanese"
+            },
+            {
+              "description": "Complete the following three courses:",
+              "heading": "Korean"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "options": [
+        {
+          "title": "Linguistics 198A and 198B",
+          "courses": [
+            "LING 198A - Honors Research in Linguistics I",
+            "LING 198B - Honors Research in Linguistics II"
+          ]
+        },
+        {
+          "title": "Linguistics 199",
+          "courses": [
+            "LING 199 - Directed Research or Senior Project in Linguistics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Introduction to Computing",
+          "options": [
+            {
+              "title": "Program in Computing",
+              "courses": [
+                "COMPTNG 10A - Introduction to Programming",
+                "COMPTNG 10B - Intermediate Programming",
+                "COMPTNG 10C - Advanced Programming"
+              ]
+            },
+            {
+              "title": "Computer Science",
+              "courses": [
+                "COM SCI 31 - Introduction to Computer Science I",
+                "COM SCI 32 - Introduction to Computer Science II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistics 185A and Mathematics 61",
+          "courses": [
+            "LING 185A - Computational Linguistics I",
+            "MATH 61 - Introduction to Discrete Structures"
+          ]
+        },
+        {
+          "title": "Additional Linguistics Elective",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 127 - Syntactic Typology and Universals",
+            "LING 132 - Language Processing",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II",
+            "LING 165C - Semantics II",
+            "LING 180 - Mathematical Structures in Language I",
+            "LING 185B - Computational Linguistics II"
+          ]
+        }
+      ]
+    }
+  ]
+}

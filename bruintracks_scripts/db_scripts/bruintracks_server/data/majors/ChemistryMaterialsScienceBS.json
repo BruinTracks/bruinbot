@@ -1,0 +1,286 @@
+{
+  "major_name": "ChemistryMaterialsScienceBS",
+  "major_id": 36,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following five courses:",
+      "options": [
+        {
+          "title": "Chemistry and Biochemistry",
+          "description": "Chemistry 20AH or 20BH may be substituted for 20A or 20B respectively.",
+          "courses": [
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30AL - General Chemistry Laboratory II"
+          ],
+          "options": [
+            {
+              "title": "Honors Courses",
+              "courses": [
+                "CHEM 20AH - Chemical Structure (Honors)",
+                "CHEM 20BH - Chemical Energetics and Change (Honors)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "description": "Mathematics 33B is highly recommended.",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications"
+          ],
+          "options": [
+            {
+              "title": "Differential Equations",
+              "courses": [
+                "MATH 33B - Differential Equations"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete four required courses, one course from Chemistry C172, C180, or C181, and 4 elective units as follows:",
+      "options": [
+        {
+          "title": "Chemistry",
+          "description": "Complete the following four courses:",
+          "options": [
+            {
+              "title": "Required",
+              "courses": [
+                "CHEM 110A - Physical Chemistry: Chemical Thermodynamics",
+                "CHEM 113A - Physical Chemistry: Introduction to Quantum Mechanics",
+                "CHEM 171 - Intermediate Inorganic Chemistry",
+                "CHEM 185 - Materials Chemistry Laboratory"
+              ]
+            },
+            {
+              "title": "Chemistry C172 or C180 or C181",
+              "courses": [
+                "CHEM C172 - Advanced Inorganic Chemistry",
+                "CHEM C180 - Solid-State Chemistry",
+                "CHEM C181 - Polymer Chemistry"
+              ]
+            },
+            {
+              "title": "Chemistry Elective",
+              "courses": [
+                "CHEM 110B - Topics in Physical Chemistry",
+                "CHEM C113B - Quantum Chemistry Methods",
+                "CHEM C172 - Advanced Inorganic Chemistry",
+                "CHEM C174 - Inorganic and Metalorganic Laboratory Methods",
+                "CHEM C175 - Inorganic Reaction Mechanisms",
+                "CHEM C176 - Group Theory and Applications to Inorganic Chemistry",
+                "CHEM C180 - Solid-State Chemistry",
+                "CHEM C181 - Polymer Chemistry"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Materials Science and Engineering",
+          "description": "Complete the following five courses:",
+          "options": [
+            {
+              "title": "Required",
+              "courses": [
+                "MAT SCI 104 - Science of Engineering Materials",
+                "MAT SCI 110 - Introduction to Materials Characterization A (Crystal Structure, Nanostructures, and X-Ray Scattering)",
+                "MAT SCI 110L - Introduction to Materials Characterization A Laboratory",
+                "MAT SCI 120 - Physics of Materials",
+                "MAT SCI 131 - Diffusion and Diffusion-Controlled Reactions"
+              ]
+            },
+            {
+              "title": "Materials Science and Engineering 121 or 150 or 160",
+              "courses": [
+                "MAT SCI 121 - Materials Science of Semiconductors",
+                "MAT SCI 150 - Introduction to Polymers",
+                "MAT SCI 160 - Introduction to Ceramics and Glasses"
+              ]
+            },
+            {
+              "title": "Materials Science Elective",
+              "courses": [
+                "MAT SCI C111 - Introduction to Materials Characterization B (Electron Microscopy)",
+                "MAT SCI 121 - Materials Science of Semiconductors",
+                "MAT SCI 122 - Principles of Electronic Materials Processing",
+                "MAT SCI 132 - Structure and Properties of Metallic Alloys",
+                "MAT SCI 150 - Introduction to Polymers",
+                "MAT SCI 160 - Introduction to Ceramics and Glasses",
+                "MAT SCI 162 - Electronic Ceramics",
+                "MAT SCI CM180 - Introduction to Biomaterials"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Laboratory",
+          "courses": [
+            "CHEM 114 - Physical Chemistry Laboratory",
+            "CHEM 184 - Chemical Instrumentation",
+            "MAT SCI 121L - Materials Science of Semiconductors Laboratory",
+            "MAT SCI 131L - Diffusion and Diffusion-Controlled Reactions Laboratory",
+            "MAT SCI 161L - Laboratory in Ceramics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Organic Materials Concentration",
+      "description": "Complete 18 courses as follows:",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "description": "Complete the following nine courses:",
+          "options": [
+            {
+              "title": "Chemistry",
+              "description": "Chemistry 20AH or 20BH may be substituted for 20A or 20B respectively.",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change",
+                "CHEM 20L - General Chemistry Laboratory",
+                "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+                "CHEM 30AL - General Chemistry Laboratory II",
+                "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+                "CHEM 30BL - Organic Chemistry Laboratory I",
+                "CHEM 30C - Organic Chemistry III: Reactivity, Synthesis, and Biomolecules",
+                "CHEM 30CL - Organic Chemistry Laboratory II"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "courses": [
+                "MATH 31A - Differential and Integral Calculus",
+                "MATH 31B - Integration and Infinite Series",
+                "MATH 32A - Calculus of Several Variables",
+                "MATH 32B - Calculus of Several Variables",
+                "MATH 33B - Differential Equations"
+              ]
+            },
+            {
+              "title": "Physics",
+              "courses": [
+                "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+                "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Complete the following five courses and 4 elective units:",
+          "options": [
+            {
+              "title": "Chemistry and Biochemistry",
+              "description": "Complete 4 units from:",
+              "courses": [
+                "CHEM 110A - Physical Chemistry: Chemical Thermodynamics",
+                "CHEM 113A - Physical Chemistry: Introduction to Quantum Mechanics",
+                "CHEM 136 - Organic Structural Methods",
+                "CHEM 171 - Intermediate Inorganic Chemistry",
+                "CHEM 185 - Materials Chemistry Laboratory"
+              ]
+            },
+            {
+              "title": "Materials Science and Engineering",
+              "description": "Complete 4 units from:",
+              "courses": [
+                "MAT SCI 104 - Science of Engineering Materials",
+                "MAT SCI 110 - Introduction to Materials Characterization A (Crystal Structure, Nanostructures, and X-Ray Scattering)",
+                "MAT SCI 110L - Introduction to Materials Characterization A Laboratory",
+                "MAT SCI 120 - Physics of Materials",
+                "MAT SCI 150 - Introduction to Polymers"
+              ]
+            },
+            {
+              "title": "Laboratory",
+              "courses": [
+                "CHEM 114 - Physical Chemistry Laboratory",
+                "CHEM 184 - Chemical Instrumentation",
+                "MAT SCI 121L - Materials Science of Semiconductors Laboratory",
+                "MAT SCI 131L - Diffusion and Diffusion-Controlled Reactions Laboratory",
+                "MAT SCI 161L - Laboratory in Ceramics"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Undergraduate Seminar",
+          "courses": [
+            "CHEM 193A - Journal Club Seminars: UC LEADS and MARC",
+            "CHEM 193B - Journal Club Seminars: Chemistry and Biochemistry"
+          ]
+        },
+        {
+          "title": "Research",
+          "courses": [
+            "CHEM 196A - Research Apprenticeship in Chemistry and Biochemistry",
+            "CHEM 196B - Research Apprenticeship in Chemistry and Biochemistry",
+            "CHEM 199 - Directed Research in Chemistry and Biochemistry"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Complete the following two courses and one elective:",
+      "options": [
+        {
+          "title": "Program in Computing",
+          "description": "Select one course from:",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming"
+          ],
+          "options": [
+            {
+              "title": "Program in Computing Elective",
+              "courses": [
+                "COMPTNG 10C - Advanced Programming",
+                "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+                "COMPTNG 20A - Principles of Java Language with Applications"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Computational Chemistry",
+          "courses": [
+            "CHEM C126A - Computational Methods for Chemists",
+            "CHEM C145 - Theoretical and Computational Organic Chemistry",
+            "COM SCI C121 - Probabilistic Models in Computational Genomics"
+          ]
+        }
+      ]
+    }
+  ]
+}

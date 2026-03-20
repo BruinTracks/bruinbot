@@ -1,0 +1,138 @@
+{
+  "major_name": "MathematicsEconomicsBS",
+  "major_id": 94,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete any one Writing II course.",
+      "courses": [
+        "MATH 31A - Differential and Integral Calculus",
+        "MATH 31AL - Differential and Integral Calculus Laboratory",
+        "MATH 31B - Integration and Infinite Series",
+        "MATH 32A - Calculus of Several Variables",
+        "MATH 32B - Calculus of Several Variables",
+        "MATH 33A - Linear Algebra and Applications",
+        "MATH 33B - Differential Equations",
+        "MATH 61 - Introduction to Discrete Structures",
+        "ECON 1 - Principles of Economics",
+        "ECON 2 - Principles of Economics",
+        "ECON 11 - Microeconomic Theory",
+        "COMPTNG 10A - Introduction to Programming"
+      ],
+      "options": [
+        {
+          "title": "Writing II"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete eight courses as follows:",
+      "options": [
+        {
+          "title": "Mathematics",
+          "description": "Select one course from:",
+          "courses": [
+            "MATH 115A - Linear Algebra",
+            "MATH 131A - Analysis",
+            "MATH 131B - Analysis",
+            "MATH 164 - Optimization",
+            "MATH 170E - Introduction to Probability and Statistics 1: Probability",
+            "MATH 170S - Introduction to Probability and Statistics 2: Statistics"
+          ],
+          "options": [
+            {
+              "title": "Mathematics 174E or Economics 141 or Statistics C183",
+              "courses": [
+                "MATH 174E - Mathematics of Finance for Mathematics/Economics Students",
+                "ECON 141 - Topics in Microeconomics: Mathematical Finance",
+                "STATS C183 - Statistical Models in Finance"
+              ]
+            },
+            {
+              "title": "Mathematics Elective",
+              "courses": [
+                "MATH 134 - Linear and Nonlinear Systems of Differential Equations",
+                "MATH 135 - Ordinary Differential Equations",
+                "MATH 136 - Partial Differential Equations",
+                "MATH 171 - Stochastic Processes"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Economics",
+          "description": "Select two courses from Economics 106E through 199B.",
+          "courses": [
+            "ECON 101 - Microeconomic Theory",
+            "ECON 102 - Macroeconomic Theory",
+            "ECON 103 - Introduction to Econometrics",
+            "ECON 103L - Econometrics Laboratory"
+          ],
+          "options": [
+            {
+              "title": "Economics Electives"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "description": "Complete the following three courses:",
+      "options": [
+        {
+          "title": "Mathematics Honors Courses",
+          "courses": [
+            "MATH 115AH - Linear Algebra (Honors)",
+            "MATH 131AH - Analysis (Honors)",
+            "MATH 131BH - Analysis (Honors)"
+          ]
+        },
+        {
+          "title": "Economics Honors Research",
+          "courses": [
+            "ECON 198A - Honors Research in Economics I",
+            "ECON 198B - Honors Research in Economics II"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Mathematics 61 or 180",
+          "courses": [
+            "MATH 61 - Introduction to Discrete Structures",
+            "MATH 180 - Graph Theory"
+          ]
+        },
+        {
+          "title": "Program in Computing",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming"
+          ]
+        },
+        {
+          "title": "Program in Computing Electives",
+          "courses": [
+            "COMPTNG 10C - Advanced Programming",
+            "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+            "COMPTNG 16A - Python with Applications I",
+            "COMPTNG 20A - Principles of Java Language with Applications",
+            "COMPTNG 40A - Introduction to Programming for Internet"
+          ]
+        },
+        {
+          "title": "Mathematics Electives",
+          "courses": [
+            "Mathematics 149 through 159"
+          ]
+        }
+      ]
+    }
+  ]
+}

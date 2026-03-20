@@ -1,0 +1,110 @@
+{
+  "major_name": "MusicologyBA",
+  "major_id": 135,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following eight courses:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "MUSCLG 1 - Issues and Methods in Musicology",
+            "MUSCLG M6A - Introduction to Global Musicianship",
+            "MUSCLG M6B - Introduction to Musicianship",
+            "MUSCLG M6C - Introduction to Musicianship",
+            "MUSCLG 12W - Writing about Music",
+            "MUSC 20A - Music Theory I",
+            "MUSC 20B - Music Theory II",
+            "MUSC 20C - Music Theory III"
+          ]
+        },
+        {
+          "title": "Performance Organizations",
+          "options": [
+            {
+              "title": "Ethnomusicology"
+            },
+            {
+              "title": "Global Jazz Studies",
+              "courses": [
+                "GJ STDS 176A - Large Jazz Ensembles: Contemporary Jazz Ensemble",
+                "GJ STDS 176B - Large Jazz Ensembles: Charles Mingus Ensemble",
+                "GJ STDS 176C - Large Jazz Ensembles: UCLA Jazz Orchestra",
+                "GJ STDS 176D - Large Jazz Ensembles: UCLA Afro Latin Jazz Orchestra",
+                "GJ STDS 176E - Large Jazz Ensembles: Ellingtonia Jazz Orchestra",
+                "GJ STDS 176F - Large Jazz Ensembles: World Jazz and Intercultural Improvisation Ensemble",
+                "GJ STDS 176G - Large Jazz Ensembles: Afro-Cuban Ensemble",
+                "GJ STDS 176H - Large Jazz Ensembles: Commercial Music Studio Ensemble"
+              ]
+            },
+            {
+              "title": "Music",
+              "courses": [
+                "MUSC C175A - Chamber Ensembles: Brass",
+                "MUSC C175B - Chamber Ensembles: Guitar",
+                "MUSC C175C - Chamber Ensembles: Piano",
+                "MUSC C175D - Chamber Ensembles: Percussion",
+                "MUSC C175E - Chamber Ensembles: Strings",
+                "MUSC C175F - Chamber Ensembles: Woodwinds",
+                "MUSC C175G - Chamber Ensembles: Flux Contemporary",
+                "MUSC C185A - UCLA Chorale",
+                "MUSC C185B - Chamber Singers",
+                "MUSC C185C - Opera Workshop",
+                "MUSC C185D - Symphony Orchestra",
+                "MUSC C185E - Philharmonia",
+                "MUSC 185F - Symphonic Band",
+                "MUSC C185G - Wind Ensemble",
+                "MUSC 185H - Marching and Varsity Bands"
+              ]
+            },
+            {
+              "title": "Musicology",
+              "courses": [
+                "MUSCLG CM90T - Early Music Ensemble"
+              ]
+            },
+            {
+              "title": "Music Industry",
+              "courses": [
+                "MSC IND 111A - Rock/Pop Studio Ensemble I"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Lower-Division Humanities Elective"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "In a given year, the department may designate individual Musicology seminars in the range 160-185, 188, or 191 as equivalent to 126 and 127.",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "MUSCLG 125A - History of Western Music: Era of Church and Patron",
+            "MUSCLG 125B - History of Western Music: Era of Empires and Marketplaces",
+            "MUSCLG 125C - History of Western Music: Modern and Postmodern Era",
+            "MUSCLG 126 - Musics, Cultures, and Their Interpretation",
+            "MUSCLG 127 - Music, Sound, and Structure",
+            "MUSCLG 128 - History of Popular Music",
+            "MUSCLG 193C - Music History Journal Club Seminars for Majors"
+          ]
+        },
+        {
+          "title": "Upper-Division Elective"
+        },
+        {
+          "title": "Capstone Sequence",
+          "courses": [
+            "MUSCLG 187A - Capstone Seminar I: Developing the Project",
+            "MUSCLG 187B - Capstone Seminar II: Creating the Project",
+            "MUSCLG 187C - Capstone Seminar III: Presenting the Project"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "major_name": "JapaneseBA",
+  "major_id": 75,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from the following, or complete an equivalent course:",
+      "options": [
+        {
+          "title": "Intermediate Modern Japanese",
+          "courses": [
+            "JAPAN 6 - Intermediate Modern Japanese",
+            "JAPAN 10 - Intermediate Modern Japanese: Intensive"
+          ]
+        },
+        {
+          "title": "Elective",
+          "courses": [
+            "ASIAN 30 - Languages and Cultures of Asia",
+            "JAPAN 50 - Japanese Civilization",
+            "JAPAN 70 - Images of Japan: Literature and Film",
+            "JAPAN 75 - Anime",
+            "JAPAN 80 - How Does It Move? Action and Moving Image in Modern Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select five language courses in modern or premodern language or texts selected from the following. Courses 100A, 100B, and 100C, or course 100S may be selected. Courses 101A, 101B, and 101C, or course 101S may be selected.",
+      "options": [
+        {
+          "title": "Language Courses in Modern or Premodern Language or Texts",
+          "courses": [
+            "JAPAN 100A - Advanced Modern Japanese",
+            "JAPAN 100B - Advanced Modern Japanese",
+            "JAPAN 100C - Advanced Modern Japanese",
+            "JAPAN 100R - Third-Year Advanced Reading in Modern Japanese",
+            "JAPAN 100S - Advanced Modern Japanese: Intensive",
+            "JAPAN 101A - Fourth-Year Japanese: Advanced Reading",
+            "JAPAN 101B - Fourth-Year Japanese: Advanced Reading",
+            "JAPAN 101C - Fourth-Year Japanese: Advanced Reading",
+            "JAPAN 101S - Fourth-Year Japanese: Advanced Reading\u2014Intensive",
+            "JAPAN 103A - Fourth-Year Japanese: Advanced Speaking I",
+            "JAPAN 103B - Fourth-Year Japanese: Advanced Speaking II",
+            "JAPAN 104 - Business Japanese",
+            "JAPAN 105A - Advanced Reading and Writing for Japanese-Heritage Speakers",
+            "JAPAN 105B - Advanced Reading and Writing for Japanese-Heritage Speakers",
+            "JAPAN 110A - Introduction to Classical Japanese: Basic Grammar",
+            "JAPAN 110B - Introduction to Classical Japanese: Reading Proficiency",
+            "JAPAN M120 - Introduction to Japanese Linguistics",
+            "JAPAN CM123 - Structure of Japanese",
+            "JAPAN 130A - Readings in Modern Japanese Literature",
+            "JAPAN 130B - Readings in Modern Japanese Literature",
+            "JAPAN 140A - Readings in Classical Japanese Literature: Heian",
+            "JAPAN 140B - Readings in Classical Japanese Literature: Medieval",
+            "JAPAN 140C - Readings in Classical Japanese Literature: Edo",
+            "JAPAN C149 - Introduction to Kambun and Other Literary Styles",
+            "JAPAN 165 - Introduction to Japanese Buddhist Texts"
+          ]
+        },
+        {
+          "title": "Literature",
+          "courses": [
+            "JAPAN C150 - Topics in Japanese Literature and Philosophy",
+            "JAPAN 151 - Japanese Literature in Translation: Modern",
+            "JAPAN 154 - Postwar Japanese Culture through Literature",
+            "JAPAN M156 - Literature and Technology",
+            "JAPAN 157 - Classical Japanese Drama: Great Tradition",
+            "JAPAN C159 - Variable Topics in Culture and Society in Japan",
+            "JAPAN 170 - Japanese Tales of Supernatural",
+            "JAPAN 172 - Fiction and Plays of Floating World",
+            "JAPAN 174 - Classical Japanese Poetry",
+            "JAPAN 191A - Variable Topics Research Seminars: Classical Japan"
+          ]
+        },
+        {
+          "title": "Elective Courses on Japan",
+          "courses": [
+            "JAPAN C112 - Japanese Urban History and Culture",
+            "JAPAN CM122 - Japanese Phonology and Morphology",
+            "JAPAN CM123 - Structure of Japanese",
+            "JAPAN CM127 - Contrastive Analysis of Japanese and Korean",
+            "JAPAN 155 - Topics in Japanese Cinema",
+            "JAPAN CM160 - Japanese Buddhism",
+            "JAPAN 161 - Religious Life in Modern Japan",
+            "JAPAN 165 - Introduction to Japanese Buddhist Texts",
+            "JAPAN C171 - Topics in Japanese Studies",
+            "JAPAN C182 - Japanese Folklore",
+            "JAPAN 191B - Variable Topics Research Seminars: Modern Japan",
+            "JAPAN 191C - Variable Topics Research Seminars: Personalities in Japanese Civilization"
+          ]
+        },
+        {
+          "title": "Additional Upper-Division Elective Courses within the Department (Outside Japan)"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ASIAN 198A - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198B - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198C - Honors Research in Asian Languages and Cultures"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "major_name": "LinguisticsandComputerScienceBA",
+  "major_id": 84,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Completion of the third term in one foreign language.",
+      "courses": [
+        "LING 20 - Introduction to Linguistic Analysis",
+        "COM SCI 31 - Introduction to Computer Science I",
+        "COM SCI 32 - Introduction to Computer Science II",
+        "COM SCI 33 - Introduction to Computer Organization",
+        "COM SCI 35L - Software Construction",
+        "MATH 31A - Differential and Integral Calculus",
+        "MATH 31AL - Differential and Integral Calculus Laboratory",
+        "MATH 31B - Integration and Infinite Series",
+        "MATH 61 - Introduction to Discrete Structures",
+        "MATH 70 - Introduction to Probability"
+      ],
+      "options": [
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete six courses as follows:",
+      "options": [
+        {
+          "title": "Required Linguistics Courses",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Linguistics 102 or 103",
+              "courses": [
+                "LING 102 - Introduction to Applied Phonetics",
+                "LING 103 - Introduction to General Phonetics"
+              ]
+            },
+            {
+              "title": "Linguistics 119A or 120A",
+              "courses": [
+                "LING 119A - Applied Phonology",
+                "LING 120A - Phonology I"
+              ]
+            },
+            {
+              "title": "Linguistics 120B",
+              "courses": [
+                "LING 120B - Syntax I"
+              ]
+            },
+            {
+              "title": "Linguistics 120C",
+              "courses": [
+                "LING 120C - Semantics I"
+              ]
+            },
+            {
+              "title": "Linguistics 165A or 165B or 165C",
+              "courses": [
+                "LING 165A - Phonology II",
+                "LING 165B - Syntax II",
+                "LING 165C - Semantics II"
+              ]
+            },
+            {
+              "title": "Linguistics 185A",
+              "courses": [
+                "LING 185A - Computational Linguistics I"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistics Elective",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 127 - Syntactic Typology and Universals",
+            "LING 132 - Language Processing",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II",
+            "LING 165C - Semantics II",
+            "LING 180 - Mathematical Structures in Language I",
+            "LING 185B - Computational Linguistics II"
+          ]
+        },
+        {
+          "title": "Computer Science",
+          "description": "Select one course from:",
+          "courses": [
+            "COM SCI 131 - Programming Languages",
+            "COM SCI 180 - Introduction to Algorithms and Complexity",
+            "COM SCI 181 - Theory of Computing"
+          ],
+          "options": [
+            {
+              "title": "Computer Science 132 or 161",
+              "courses": [
+                "COM SCI 132 - Compiler Construction",
+                "COM SCI 161 - Fundamentals of Artificial Intelligence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "options": [
+        {
+          "title": "Linguistics 198A and 198B",
+          "courses": [
+            "LING 198A - Honors Research in Linguistics I",
+            "LING 198B - Honors Research in Linguistics II"
+          ]
+        },
+        {
+          "title": "Linguistics 199",
+          "courses": [
+            "LING 199 - Directed Research or Senior Project in Linguistics"
+          ]
+        }
+      ]
+    }
+  ]
+}
