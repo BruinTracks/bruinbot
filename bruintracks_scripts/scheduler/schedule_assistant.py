@@ -178,7 +178,8 @@ def execute_operations(editor: ScheduleEditor, operations: List[Dict]) -> Tuple[
                 return False, "\n".join(messages), None
                 
         except Exception as e:
-            return False, f"Error executing operation: {str(e)}", None
+            debug_print(f"Error executing operation: {e}")
+            return False, "Error executing operation due to a data lookup failure.", None
     
     return success, "\n".join(messages), editor.schedule if success else None
 

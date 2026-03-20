@@ -13,7 +13,7 @@ def debug_print(*args, **kwargs):
 # ───── CONFIGURATION ─────
 load_dotenv()
 SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_ANON_KEY")
+SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY") or os.getenv("SUPABASE_ANON_KEY")
 
 class ScheduleEditor:
     def __init__(self, schedule: Dict, transcript: Dict[str, str], preferences: Dict):
@@ -31,6 +31,30 @@ class ScheduleEditor:
         # Cache for course data
         self._course_cache = {}
         self._prereq_cache = {}
+        self._subject_code_to_id = {}
+        self._subject_name_to_code = {}
+        self._load_subject_mappings()
+
+    def _normalize_subject_name(self, name: str) -> str:
+        """Normalize subject names for stable lookup from prerequisite text."""
+        return " ".join((name or "").upper().strip().split())
+
+    def _load_subject_mappings(self) -> None:
+        """Load subject mappings once to avoid repeated network lookups."""
+        rows = self.supabase.table("subjects").select("id,code,name").execute().data or []
+        for row in rows:
+            code = row.get("code")
+            if not code:
+                continue
+            self._subject_code_to_id[code] = row.get("id")
+
+            raw_name = row.get("name") or ""
+            clean_name = self._normalize_subject_name(raw_name.split("(")[0])
+            if clean_name:
+                self._subject_name_to_code[clean_name] = code
+
+            # Also map the code to itself so prerequisites written as codes resolve.
+            self._subject_name_to_code[self._normalize_subject_name(code)] = code
         
     def _get_course_data(self, course_id: str) -> Optional[Dict]:
         """Fetch course data from Supabase or cache."""
@@ -49,17 +73,23 @@ class ScheduleEditor:
             subject_code, number = course_id.split('|')
             debug_print(f"Looking up: Subject={subject_code}, Number={number}")
             
-            # First, get the subject ID from the subjects table
-            subject_result = self.supabase.table("subjects").select("id").eq("code", subject_code).execute()
-            if not subject_result.data:
+            # Resolve subject ID from preloaded cache for reliability/speed.
+            subject_id = self._subject_code_to_id.get(subject_code)
+            if not subject_id:
                 debug_print(f"❌ Subject {subject_code} not found in database")
                 return None
-            
-            subject_id = subject_result.data[0]['id']
+
             debug_print(f"Found subject ID: {subject_id}")
             
-            # Now get the course data using the numeric subject ID
-            result = self.supabase.table("courses").select("*").eq("subject_id", subject_id).eq("catalog_number", number).execute()
+            # Only fetch fields needed for prerequisite validation.
+            # Some rows can fail JSON serialization when selecting all columns.
+            result = (
+                self.supabase.table("courses")
+                .select("id,subject_id,catalog_number,course_requisites")
+                .eq("subject_id", subject_id)
+                .eq("catalog_number", number)
+                .execute()
+            )
             
             if result.data:
                 debug_print("✓ Found course data in database")
@@ -70,6 +100,9 @@ class ScheduleEditor:
             return None
         except ValueError:
             debug_print(f"❌ Invalid course ID format: {course_id}")
+            return None
+        except Exception as e:
+            debug_print(f"❌ Error fetching course data for {course_id}: {e}")
             return None
 
     def _get_prerequisites(self, course_id: str) -> List[List[Tuple[str, str, str, str]]]:
@@ -82,17 +115,19 @@ class ScheduleEditor:
         
         course_data = self._get_course_data(course_id)
         debug_print(f"Course data: {json.dumps(course_data, indent=2)}")
-        
+
         if not course_data:
             debug_print("❌ No course data found")
+            self._prereq_cache[course_id] = []
             return []
-        
+
         if not course_data.get("course_requisites"):
             debug_print("❌ No prerequisites defined in course data")
+            self._prereq_cache[course_id] = []
             return []
-        
+
         debug_print(f"Raw prerequisite data: {json.dumps(course_data['course_requisites'], indent=2)}")
-        
+
         def to_dnf(node: Dict) -> List[List[Dict]]:
             if 'and' in node:
                 prods = to_dnf(node['and'][0])
@@ -105,7 +140,7 @@ class ScheduleEditor:
                     res.extend(to_dnf(child))
                 return res
             return [[node]]
-        
+
         prereqs = []
         for clause in to_dnf(course_data["course_requisites"]):
             debug_print(f"\nProcessing prerequisite clause: {json.dumps(clause, indent=2)}")
@@ -114,23 +149,19 @@ class ScheduleEditor:
                 if 'course' not in req:
                     debug_print(f"Skipping non-course requirement: {json.dumps(req, indent=2)}")
                     continue
-                    
-                # Extract department and number using right-most split
-                # This handles department names with spaces (e.g., "COM SCI 31")
+
                 course_parts = req['course'].strip().rsplit(' ', 1)
                 if len(course_parts) != 2:
                     debug_print(f"Warning: Invalid course format in prerequisites: {req['course']}")
                     continue
-                    
+
                 dept, num = course_parts
-                debug_print(f"Looking up subject code for department: {dept}")
-                # Look up the subject code for the department name
-                subject_result = self.supabase.table("subjects").select("code").ilike("name", f"{dept}%").execute()
-                if not subject_result.data:
+                dept_key = self._normalize_subject_name(dept)
+                subject_code = self._subject_name_to_code.get(dept_key)
+                if not subject_code:
                     debug_print(f"Warning: Could not find subject code for department: {dept}")
                     continue
-                    
-                subject_code = subject_result.data[0]['code']
+
                 debug_print(f"Found subject code: {subject_code}")
                 prereq_clause.append((
                     f"{subject_code}|{num}",
@@ -139,11 +170,11 @@ class ScheduleEditor:
                     req.get('severity', 'R')
                 ))
                 debug_print(f"Added prerequisite: {subject_code}|{num}")
-                
+
             if prereq_clause:
                 prereqs.append(prereq_clause)
                 debug_print(f"Added clause: {prereq_clause}")
-                
+
         self._prereq_cache[course_id] = prereqs
         debug_print(f"\nFinal prerequisites for {course_id}: {prereqs}")
         return prereqs

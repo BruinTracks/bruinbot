@@ -187,8 +187,19 @@ def build_schedule(start_y: int, start_q: str,
 
     # ───── 1. Fetch course rows ---------------------------------------------
     def fetch_courses(keys: List[str]):
-        pairs = [k.split("|", 1) for k in keys]
-        ids, nums = zip(*[(sub2id[d], n) for d, n in pairs])
+        mapped_pairs: List[Tuple[int, str]] = []
+        for key in keys:
+            if "|" not in key:
+                continue
+            dept, num = key.split("|", 1)
+            subj_id = sub2id.get(dept)
+            if subj_id and num:
+                mapped_pairs.append((subj_id, num))
+
+        if not mapped_pairs:
+            return []
+
+        ids, nums = zip(*mapped_pairs)
         return safe_execute(
             supa.table("courses")
                 .select("id,subject_id,catalog_number,course_requisites")
@@ -237,24 +248,33 @@ def build_schedule(start_y: int, start_q: str,
     # ───── 3. Fetch sections + meetings -------------------------------------
     all_courses = fetch_courses(list(required))
     cid2key = {c['id']: f"{id2sub[c['subject_id']]}|{c['catalog_number']}" for c in all_courses}
+    all_course_ids = [c['id'] for c in all_courses]
 
-    secs = safe_execute(
-        supa.table("sections").select(
-            "id,course_id,term_id,section_code,is_primary,activity," +
-            "enrollment_cap,enrollment_total,waitlist_cap,waitlist_total"
-        ).in_("course_id", [c['id'] for c in all_courses])
-    ).data
+    if all_course_ids:
+        secs = safe_execute(
+            supa.table("sections").select(
+                "id,course_id,term_id,section_code,is_primary,activity," +
+                "enrollment_cap,enrollment_total,waitlist_cap,waitlist_total"
+            ).in_("course_id", all_course_ids)
+        ).data
+    else:
+        secs = []
 
-    mt = safe_execute(
-        supa.table("meeting_times").select(
-            "section_id,days_of_week,start_time,end_time,building,room"
-        ).in_("section_id", [s['id'] for s in secs])
-    ).data
+    section_ids = [s['id'] for s in secs]
+    if section_ids:
+        mt = safe_execute(
+            supa.table("meeting_times").select(
+                "section_id,days_of_week,start_time,end_time,building,room"
+            ).in_("section_id", section_ids)
+        ).data
 
-    si = safe_execute(
-        supa.table("section_instructors").select("section_id,instructor_id")
-            .in_("section_id", [s['id'] for s in secs])
-    ).data
+        si = safe_execute(
+            supa.table("section_instructors").select("section_id,instructor_id")
+                .in_("section_id", section_ids)
+        ).data
+    else:
+        mt = []
+        si = []
 
     # ───── 3a. Map meeting times & instructors ------------------------------
     mt_map, si_map = {}, {}
@@ -264,9 +284,12 @@ def build_schedule(start_y: int, start_q: str,
         mt_map.setdefault(m['section_id'], []).append(m)
 
     instr_ids = {r['instructor_id'] for r in si}
-    instr_rows = safe_execute(
-        supa.table("instructors").select("id,name").in_("id", list(instr_ids))
-    ).data
+    if instr_ids:
+        instr_rows = safe_execute(
+            supa.table("instructors").select("id,name").in_("id", list(instr_ids))
+        ).data
+    else:
+        instr_rows = []
     id2instr = {r['id']: r['name'] for r in instr_rows}
     for r in si:
         si_map.setdefault(r['section_id'], []).append(id2instr[r['instructor_id']])
