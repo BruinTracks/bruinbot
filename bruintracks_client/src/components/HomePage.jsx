@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from 'react';
 import '../index.css';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { Chatbox } from './Chatbox';
-import { FullCoursePlan } from './FullCoursePlan.jsx';
 import { handleSignOut } from '../supabaseClient.js';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext.jsx';
@@ -329,7 +329,6 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
 };
 
 export const QuarterSchedule = ({ quarter, courses, isFirstTerm }) => {
-  console.log(`Rendering QuarterSchedule for ${quarter}:`, courses);
 
   // If courses is not an array or object, return null
   if (!courses || (typeof courses !== 'object' && !Array.isArray(courses))) {
@@ -375,7 +374,6 @@ export const QuarterSchedule = ({ quarter, courses, isFirstTerm }) => {
 };
 
 export const ScheduleSummary = ({ scheduleData }) => {
-  console.log("Rendering ScheduleSummary with data:", scheduleData);
 
   const totalCourses = Object.values(scheduleData).reduce((acc, quarter) => {
     if (Array.isArray(quarter)) {
@@ -396,8 +394,7 @@ export const ScheduleSummary = ({ scheduleData }) => {
 
       const data = JSON.parse(storedSchedule);
       return data.preferences || null; // ← use data.preferences, not data.schedule.preferences
-    } catch (error) {
-      console.error("Error getting preferences:", error);
+    } catch {
       return null;
     }
   };
@@ -693,16 +690,13 @@ export const HomePage = () => {
   const navigate = useNavigate();
   const { session } = useAuth();
   const [scheduleData, setScheduleData] = useState(null);
-  const [unscheduledCourses, setUnscheduledCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isGeneratingSchedule, setIsGeneratingSchedule] = useState(false);
   const [leastCoursesPerTerm, setLeastCoursesPerTerm] = useState(3);
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [isScheduleEditorOpen, setIsScheduleEditorOpen] = useState(false);
 
   const handleChatButtonClick = () => {
-    console.log('Chat button clicked');
     setIsChatOpen(true);
   };
 
@@ -711,17 +705,10 @@ export const HomePage = () => {
   };
 
   const handleScheduleEditorClick = () => {
-    console.log('Schedule editor button clicked');
     setIsScheduleEditorOpen(true);
   };
 
-  // Clean course name by replacing "|" with a space
-  const cleanCourseName = (name) => {
-    return name.replace(/\|/g, ' ');
-  };
-
   useEffect(() => {
-    console.log("HomePage component mounted");    
     // Helper function to convert quarter string to sortable number
     const quarterToSortValue = (quarterStr) => {
       const [quarter, yearStr] = quarterStr.split(' ');
@@ -748,7 +735,6 @@ export const HomePage = () => {
     };
 
     const loadScheduleData = async () => {
-      console.log("Starting to fetch most recent schedule from Supabase...");
       
       // Check if we're generating a schedule
       const storedSchedule = localStorage.getItem('scheduleData');
@@ -760,13 +746,12 @@ export const HomePage = () => {
             setLoading(true);
             return;
           }
-        } catch (error) {
-          console.error("Error parsing stored schedule:", error);
+        } catch {
+          setIsGeneratingSchedule(false);
         }
       }
       
       if (!session?.user?.id) {
-        console.log("No user session found");
         setLoading(false);
         return;
       }
@@ -782,25 +767,21 @@ export const HomePage = () => {
           .single();
 
         if (error) {
-          console.error("Error fetching schedule:", error);
           setLoading(false);
           return;
         }
 
         if (!data) {
-          console.log("No schedule found for user");
           setLoading(false);
           return;
         }
 
-        console.log("Successfully fetched schedule data:", data);
         
         // Extract schedule data and note from the response
         const note = data.schedule?.note;
         const actualSchedule = data.schedule.schedule;
 
         if (!actualSchedule) {
-          console.error("Schedule data is missing the 'schedule' property:", data);
           setLoading(false);
           return;
         }
@@ -814,7 +795,6 @@ export const HomePage = () => {
         }
 
         // Get the actual schedule object
-        console.log("Actual schedule data:", actualSchedule);
 
         // Validate and clean the schedule data
         const cleanedSchedule = {};
@@ -824,7 +804,6 @@ export const HomePage = () => {
             !courses ||
             (typeof courses !== 'object' && !Array.isArray(courses))
           ) {
-            console.warn(`Invalid courses data for quarter ${quarter}:`, courses);
             return;
           }
 
@@ -867,23 +846,13 @@ export const HomePage = () => {
 
         // Sort the quarters
         const sortedSchedule = sortQuarters(cleanedSchedule);
-        console.log("Sorted and cleaned schedule data:", sortedSchedule);
         setScheduleData(sortedSchedule);
 
         if (note) {
-          console.log("Found note in schedule data:", note);
-          // Parse the note to get unscheduled courses
-          const unscheduled = note
-            .replace('Unable to schedule: ', '')
-            .split('; ')
-            .map((course) => course.trim());
-
-          console.log("Parsed unscheduled courses:", unscheduled);
-          setUnscheduledCourses(unscheduled);
+          // intentionally not rendered in UI
         }
-      } catch (error) {
-        console.error("Error loading schedule:", error);
-        console.error("Error stack:", error.stack);
+      } catch {
+        setScheduleData(null);
       } finally {
         setLoading(false);
         setIsGeneratingSchedule(false);
@@ -892,71 +861,6 @@ export const HomePage = () => {
 
     loadScheduleData();
   }, [session, leastCoursesPerTerm]);
-
-  // Add a debug button to reload schedule data
-  const reloadSchedule = () => {
-    console.log("Manually reloading schedule data...");
-    setLoading(true);
-    const storedSchedule = localStorage.getItem('scheduleData');
-    console.log("Current localStorage data:", storedSchedule);
-    if (storedSchedule) {
-      try {
-        const data = JSON.parse(storedSchedule);
-        console.log("Reloaded schedule data:", data);
-
-        // Mirror the same loading logic: clean and set
-        if (data.schedule && data.schedule.schedule) {
-          const actualSchedule = data.schedule.schedule;
-          const cleanedSchedule = {};
-          Object.entries(actualSchedule).forEach(([quarter, courses]) => {
-            if (
-              !courses ||
-              (typeof courses !== 'object' && !Array.isArray(courses))
-            ) {
-              return;
-            }
-            if (Array.isArray(courses)) {
-              const validCourses = courses.filter(
-                (c) =>
-                  c && typeof c === 'string' && c.trim() !== '' && c !== 'FILLER'
-              );
-              while (validCourses.length < leastCoursesPerTerm) {
-                validCourses.push('FILLER');
-              }
-              cleanedSchedule[quarter] = validCourses;
-            } else {
-              cleanedSchedule[quarter] = {};
-              Object.entries(courses).forEach(([courseId, courseData]) => {
-                if (courseData && typeof courseData === 'object') {
-                  cleanedSchedule[quarter][courseId] = courseData;
-                }
-              });
-              while (
-                Object.keys(cleanedSchedule[quarter]).length <
-                leastCoursesPerTerm
-              ) {
-                const fillerId = `FILLER_${
-                  Object.keys(cleanedSchedule[quarter]).length + 1
-                }`;
-                cleanedSchedule[quarter][fillerId] = 'FILLER';
-              }
-            }
-          });
-          setScheduleData(cleanedSchedule);
-        }
-
-        if (data.schedule && data.schedule.note) {
-          const unscheduled = data.schedule.note
-            .replace('Unable to schedule: ', '')
-            .split(', ');
-          setUnscheduledCourses(unscheduled);
-        }
-      } catch (error) {
-        console.error("Error reloading schedule:", error);
-      }
-    }
-    setLoading(false);
-  };
 
   const onSignOut = () => {
     handleSignOut();
@@ -1054,7 +958,7 @@ export const HomePage = () => {
 
         {/* Quarter Schedules */}
         {scheduleData && Object.entries(scheduleData)
-          .filter(([_, courses]) => {
+          .filter(([, courses]) => {
             if (Array.isArray(courses)) {
               return courses.length > 0;
             }
@@ -1068,44 +972,6 @@ export const HomePage = () => {
               isFirstTerm={index === 0}
             />
           ))}
-
-        {/* Unscheduled Courses */}
-        {unscheduledCourses.length > 0 && (
-          <motion.div
-            className="mt-8 bg-gray-700 rounded-lg shadow-md p-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Unscheduled Courses
-            </h2>
-            <p className="text-gray-400 mb-4">
-              The following courses could not be scheduled:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {unscheduledCourses.map((course, idx) => {
-                // Parse the course and its reason
-                const [courseCode, reason] = course.split(' (');
-                const cleanReason = reason
-                  ? reason.slice(0, -1)
-                  : 'No reason provided';
-
-                return (
-                  <motion.div
-                    key={idx}
-                    className="bg-gray-800 rounded p-4"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <h3 className="text-lg font-semibold text-blue-400 mb-2">
-                      {cleanCourseName(courseCode)}
-                    </h3>
-                    <p className="text-gray-300 text-sm">{cleanReason}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-        )}
 
         {/* Floating Chat Buttons */}
         <div className="fixed bottom-6 right-5 flex justify-between w-full px-6">

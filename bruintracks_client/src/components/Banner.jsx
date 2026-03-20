@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
@@ -6,26 +6,19 @@ import headerImg from '../assets/headerImg.png'; // Bear image
 import GoogleAuthButton from './GoogleAuthButton';
 import { motion } from 'framer-motion';
 
+const ROTATING_PHRASES = ['8 AMs.', 'Friday Classes.', 'Stress.'];
+const TYPING_PAUSE_MS = 2000;
+
 export const Banner = () => {
   const navigate = useNavigate();
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ['8 AMs.', 'Friday Classes.', 'Stress.'];
   const [text, setText] = useState('');
-  const period = 2000;
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => clearInterval(ticker);
-  }, [text]);
-
-  const tick = () => {
-    const i = loopNum % toRotate.length;
-    const fullText = toRotate[i];
+  const tick = useCallback(() => {
+    const i = loopNum % ROTATING_PHRASES.length;
+    const fullText = ROTATING_PHRASES[i];
     const updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
@@ -38,13 +31,21 @@ export const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setDelta(period);
+      setDelta(TYPING_PAUSE_MS);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
-      setLoopNum(loopNum + 1);
+      setLoopNum((prev) => prev + 1);
       setDelta(500);
     }
-  };
+  }, [isDeleting, loopNum, text]);
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => clearInterval(ticker);
+  }, [delta, tick]);
 
   const handleClick = () => {
     navigate('/Form');

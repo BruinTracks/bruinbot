@@ -1,4 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useEffect, useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import { supabase } from './supabaseClient';
 
 const AuthContext = createContext();
@@ -19,9 +21,6 @@ export const AuthProvider = ({ children }) => {
 
     return () => listener.subscription.unsubscribe();
   }, []);
-  console.log("SESSION INFO")
-  console.log(session)
-  console.log(loading)
   return (
     <AuthContext.Provider value={{ session, loading }}>
       {children}
@@ -30,3 +29,7 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+
+AuthProvider.propTypes = {
+  children: PropTypes.node
+};

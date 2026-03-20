@@ -83,7 +83,6 @@ const GoogleCalendarButton = ({ scheduleData }) => {
       });
 
     } catch (err) {
-      console.error(err);
       alert(err.message || 'Failed to create event links');
     } finally {
       setIsLoading(false);

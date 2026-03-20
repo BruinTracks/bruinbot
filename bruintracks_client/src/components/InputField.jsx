@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 export const InputField = ({ setValue, ...props }) => {
   return (
@@ -16,4 +16,9 @@ export const InputField = ({ setValue, ...props }) => {
       }
     ></input>
   );
+};
+
+InputField.propTypes = {
+  setValue: PropTypes.func.isRequired,
+  type: PropTypes.string,
 };

@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useAuth } from '../AuthContext.jsx';
 import { motion } from 'framer-motion';
 
@@ -38,10 +39,6 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
       const storedData = localStorage.getItem('scheduleData');
       const transcriptData = storedData ? JSON.parse(storedData).transcript : {};
 
-      console.log("\n=== Schedule Edit Request ===");
-      console.log("User Message:", userMessage);
-      console.log("Current Schedule:", JSON.stringify(scheduleData, null, 2));
-      console.log("Transcript Data:", JSON.stringify(transcriptData, null, 2));
 
       // Send request to backend
       const response = await fetch('http://localhost:3000/api/schedule/edit', {
@@ -63,16 +60,11 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
 
       const data = await response.json();
       
-      console.log("\n=== Schedule Edit Response ===");
-      console.log("Success:", data.success);
-      console.log("Message:", data.message);
       
       // Update schedule in localStorage if new schedule is returned
       if (data.schedule) {
-        console.log("Received Updated Schedule:", JSON.stringify(data.schedule, null, 2));
         
        // const storedData = JSON.parse(localStorage.getItem('scheduleData'));
-       //console.log("Current localStorage Schedule:", JSON.stringify(storedData.schedule.schedule, null, 2));
         
         // Clean up the schedule by handling FILLER courses
         const cleanedSchedule = {};
@@ -94,19 +86,15 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
           }
         });
         
-        console.log("Cleaned Schedule:", JSON.stringify(cleanedSchedule, null, 2));
         
         //storedData.schedule.schedule = cleanedSchedule;
         //localStorage.setItem('scheduleData', JSON.stringify(storedData));
         
-        //console.log("Updated localStorage Schedule:", JSON.stringify(storedData.schedule.schedule, null, 2));
-        //console.log("Reloading page to reflect changes...");
         
         // Trigger a page reload to reflect the schedule changes
         //window.location.reload();
         onScheduleUpdate(cleanedSchedule);
       }
-      console.log("=============================\n");
 
       // Add assistant response to chat
       setMessages(prev => [...prev, { 
@@ -114,8 +102,7 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
         content: data.message
       }]);
 
-    } catch (error) {
-      console.error('Error:', error);
+    } catch {
       setMessages(prev => [...prev, {
         role: 'assistant',
         content: 'Sorry, I encountered an error. Please try again.'
@@ -180,3 +167,8 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
     </div>
   );
 }; 
+
+ScheduleEditChat.propTypes = {
+  scheduleData: PropTypes.object,
+  onScheduleUpdate: PropTypes.func.isRequired,
+};

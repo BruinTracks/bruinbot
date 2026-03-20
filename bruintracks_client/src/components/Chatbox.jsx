@@ -1,10 +1,9 @@
 import { Button } from './Button';
-import { InputField } from './InputField';
 import { motion } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../AuthContext';
 
-export const Chatbox = ({ scheduleData }) => {
+export const Chatbox = () => {
   const { session } = useAuth();
   const [messages, setMessages] = useState(() => {
     const savedMessages = localStorage.getItem('chatHistory');
@@ -96,7 +95,6 @@ export const Chatbox = ({ scheduleData }) => {
         setMessages(prev => [...prev, { role: 'assistant', content: data.answer }]);
       }
     } catch (err) {
-      console.error('Chat error:', err);
       setMessages(prev => [...prev, { 
         role: 'assistant', 
         content: err.message === 'No authentication token found. Please sign in again.' 

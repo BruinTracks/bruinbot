@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext.jsx';
@@ -8,6 +8,29 @@ import { WeeklyCalendar } from './HomePage.jsx';
 import { QuarterSchedule } from './HomePage.jsx';
 import { ArrowLeftCircle, ArrowRightCircle } from 'react-bootstrap-icons';
 
+const quarterToSortValue = (quarterStr) => {
+  const [quarter, yearStr] = quarterStr.split(' ');
+  const year = parseInt(yearStr, 10);
+  if (quarter === 'Fall') {
+    return year * 10;
+  }
+  if (quarter === 'Winter') {
+    return (year - 1) * 10 + 1;
+  }
+  if (quarter === 'Spring') {
+    return (year - 1) * 10 + 2;
+  }
+  return (year - 1) * 10 + 3;
+};
+
+const sortQuarters = (schedule) => {
+  if (!schedule) return schedule;
+  const sortedEntries = Object.entries(schedule).sort((a, b) => {
+    return quarterToSortValue(a[0]) - quarterToSortValue(b[0]);
+  });
+  return Object.fromEntries(sortedEntries);
+};
+
 export const SavedSchedules = () => {
   const navigate = useNavigate();
   const { session } = useAuth();
@@ -15,49 +38,11 @@ export const SavedSchedules = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  // Helper function to convert quarter string to sortable number
-  const quarterToSortValue = (quarterStr) => {
-    const [quarter, yearStr] = quarterStr.split(' ');
-    const year = parseInt(yearStr);
-    // Adjust year for Fall quarter since it comes before Winter/Spring of next year
-    // e.g., Fall 2024 should come before Winter 2025
-    if (quarter === 'Fall') {
-      return year * 10;
-    } else if (quarter === 'Winter') {
-      return (year - 1) * 10 + 1;
-    } else if (quarter === 'Spring') {
-      return (year - 1) * 10 + 2;
-    } else { // Summer
-      return (year - 1) * 10 + 3;
-    }
-  };
-
-  // Helper function to sort quarters within a schedule
-  const sortQuarters = (schedule) => {
-    if (!schedule) return schedule;
-    const sortedEntries = Object.entries(schedule).sort((a, b) => {
-      return quarterToSortValue(a[0]) - quarterToSortValue(b[0]);
-    });
-    return Object.fromEntries(sortedEntries);
-  };
-
   useEffect(() => {
     const fetchSchedules = async () => {
       if (!session?.user?.id) return;
 
       try {
-        console.log("Fetching schedules for user ID:", session.user.id);
-        
-        // First, let's check if the user exists in profiles
-        const { data: profileData, error: profileError } = await supabase
-          .from('profiles')
-          .select('profile_id')
-          .eq('profile_id', session.user.id)
-          .single();
-          
-        console.log("Profile data:", profileData);
-        if (profileError) console.error("Profile error:", profileError);
-
         // Now fetch schedules
         const { data, error } = await supabase
           .from('schedules')
@@ -76,10 +61,9 @@ export const SavedSchedules = () => {
           }
         })) || [];
 
-        console.log("Sorted schedules data:", sortedSchedules);
         setSchedules(sortedSchedules);
-      } catch (error) {
-        console.error('Error fetching schedules:', error);
+      } catch {
+        setSchedules([]);
       } finally {
         setLoading(false);
       }
@@ -170,7 +154,7 @@ export const SavedSchedules = () => {
 
                 {/* Quarter Schedules */}
                 {Object.entries(currentSchedule)
-                  .filter(([_, courses]) => {
+                  .filter(([, courses]) => {
                     if (Array.isArray(courses)) {
                       return courses.length > 0 && courses[0] !== 'FILLER';
                     }

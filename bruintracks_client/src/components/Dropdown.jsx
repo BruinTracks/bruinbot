@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import '../index.css';
 import '../main.jsx';
 import { motion } from 'framer-motion';
@@ -153,4 +154,11 @@ export const Dropdown = ({
       )}
     </div>
   );
+};
+
+Dropdown.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onSelect: PropTypes.func.isRequired,
+  defaultOption: PropTypes.string,
+  placeholder: PropTypes.string
 };

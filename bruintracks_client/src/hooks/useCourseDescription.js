@@ -63,7 +63,6 @@ export const useCourseDescription = (courseName) => {
         setDescription(descriptionData?.description || 'No description available');
         setError(null);
       } catch (err) {
-        console.error('Error fetching course description:', err);
         setError(err.message);
         setDescription(null);
       } finally {

@@ -517,6 +517,14 @@ export const getCoursesToSchedule = async (req, res) => {
         JSON.stringify(schedulingResult, null, 2),
       );
 
+      const scheduleNote = schedulingResult?.note;
+      if (
+        typeof scheduleNote === "string" &&
+        scheduleNote.startsWith("Unable to schedule:")
+      ) {
+        console.log(`\n⚠️ ${scheduleNote}`);
+      }
+
       // Return both the course list and scheduling result
       res.json({
         ...finalList,

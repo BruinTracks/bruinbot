@@ -122,20 +122,17 @@ const Icebreaker = ({
   useEffect(() => {
     const fetchSchools = async () => {
       try {
-        console.log('Fetching schools...');
         const response = await fetch('http://localhost:3000/schools');
         if (!response.ok) {
           throw new Error('Failed to fetch schools');
         }
         const data = await response.json();
-        console.log('Fetched schools:', data);
         setSchoolOptions(data);
         if (!school && data.length > 0) {
-          console.log('Setting default school to:', data[0]);
           setSchool(data[0]);
         }
-      } catch (error) {
-        console.error('Error fetching schools:', error);
+      } catch {
+        setSchoolOptions([]);
       }
     };
 
@@ -912,7 +909,6 @@ export const ClassSelect = ({
   };
 
   useEffect(() => {
-    console.log('testing');
     fetch('http://localhost:3000/get_courses', {
       method: 'POST',
       headers: {
@@ -928,7 +924,6 @@ export const ClassSelect = ({
       });
   }, []);
 
-  console.log(myClasses);
 
   return (
     <FormModal handleClick={handleNextClick} handleBackClick={handleBackClick}>
@@ -977,8 +972,6 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
   const navigate = useNavigate();
 
   const handleCreateProfile = async () => {
-    console.log('hello world');
-    console.log(session);
     if (!session || !session.user) {
       return;
     }
@@ -1002,7 +995,6 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       ]);
 
       if (error) {
-        console.error(error);
         return;
       }
     }
@@ -1013,8 +1005,6 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
   const handleGenerateSchedule = async () => {
     try {
       handleCreateProfile();
-      console.log("Starting schedule generation...");
-      console.log("Current session:", session); // Debug log
 
       // Set isGenerating flag in localStorage and navigate to loading page
       localStorage.setItem('scheduleData', JSON.stringify({ isGenerating: true }));
@@ -1025,66 +1015,33 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       if (data.doubleMajorName) {
         selectedMajors.push(data.doubleMajorName);
       }
-      console.log('Selected majors:', selectedMajors);
 
       // Check for session
       if (!session || !session.access_token) {
-        console.error('No active session found');
         // Redirect to login if no session
         navigate('/');
         return;
       }
-      console.log('Got session:', session);
 
       // Fetch major requisites from Supabase
-      console.log('Fetching major requisites...');
       const { data: majorRequisites, error: supabaseError } = await supabase
         .from('major_requisites')
         .select('json_data')
         .in('major_name', selectedMajors);
 
       if (supabaseError) {
-        console.error('Error fetching major requisites:', supabaseError);
         return;
       }
 
       if (!majorRequisites || majorRequisites.length === 0) {
-        console.log(
-          'No major requisites found for selected majors:',
-          selectedMajors
-        );
         return;
       }
 
-      console.log(
-        'Raw JSON data from Supabase:',
-        JSON.stringify(majorRequisites, null, 2)
-      );
-
       // Process the JSON data from each major
       const processedRequirements = majorRequisites.map(req => {
-        console.log(
-          'Processing requirement:',
-          JSON.stringify(req.json_data, null, 2)
-        );
         return req.json_data;
       });
-      console.log(
-        'Processed requirements:',
-        JSON.stringify(processedRequirements, null, 2)
-      );
 
-      const formattedTranscript = Object.fromEntries(
-        Object.entries(data.transcript || {}).map(([course, grade]) => {
-          const parts = course.split(' ');
-          const catalogNumber = parts.pop();
-          const subject = parts.join(' ');
-          return [`${subject}|${catalogNumber}`, grade];
-        })
-      );
-      console.log("Completed courses:", formattedTranscript);
-
-      console.log('Calling get-courses-to-schedule endpoint...');
       // Call the get-courses-to-schedule endpoint
       const response = await fetch('http://localhost:3000/courses/get-courses-to-schedule', {
         method: 'POST',
@@ -1116,25 +1073,21 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       });
 
       if (!response.ok) {
-        const errorText = await response.text();
-        console.error('Error response from server:', errorText);
+        await response.text();
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const scheduleData = await response.json();
-      console.log('Schedule data received:', JSON.stringify(scheduleData, null, 2));
 
       // Store schedule data in localStorage with isGenerating set to false
       localStorage.setItem('scheduleData', JSON.stringify({
         ...scheduleData,
         isGenerating: false
       }));
-      console.log('Schedule data stored in localStorage');
 
       // Reload the page to show the new schedule
       window.location.reload();
-    } catch (error) {
-      console.error('Error in handleGenerateSchedule:', error);
+    } catch {
       // Clear isGenerating flag on error
       localStorage.setItem('scheduleData', JSON.stringify({ isGenerating: false }));
       // Navigate back to form on error
@@ -1222,10 +1175,10 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       </div>
       <button
         onClick={() => {
-          console.log('Generate Schedule button clicked');
           handleGenerateSchedule();
         }}
-        className="mt-4 inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 font-semibold text-white shadow transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-4 inline-flex items-center justify-center rounded-lg !bg-[#0b1f4f] px-5 py-3 font-semibold !text-white shadow transition hover:!bg-[#12387a] focus:outline-none focus:ring-2 focus:ring-[#1f4ca8]"
+        style={{ backgroundColor: '#0b1f4f', color: '#fff' }}
       >
         Generate Schedule
       </button>
@@ -1283,8 +1236,8 @@ const TranscriptStep = ({
         }
         const courses = await response.json();
         setAvailableCourses(courses);
-      } catch (error) {
-        console.error('Error fetching courses:', error);
+      } catch {
+        setAvailableCourses([]);
       } finally {
         setLoading(false);
       }

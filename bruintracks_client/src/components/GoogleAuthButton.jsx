@@ -1,4 +1,5 @@
 // src/GoogleAuthButton.jsx
+import PropTypes from 'prop-types';
 import { supabase } from '../supabaseClient';
 
 const GoogleAuthButton = ({ children }) => {
@@ -7,9 +8,7 @@ const GoogleAuthButton = ({ children }) => {
       provider: 'google',
     });
 
-    if (error) {
-      console.error('Google sign-in error:', error.message);
-    }
+    if (error) return;
   };
 
   return (
@@ -17,6 +16,10 @@ const GoogleAuthButton = ({ children }) => {
       {children}
     </button>
   );
+};
+
+GoogleAuthButton.propTypes = {
+  children: PropTypes.node,
 };
 
 export default GoogleAuthButton;

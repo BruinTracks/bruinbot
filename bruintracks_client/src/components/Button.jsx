@@ -1,5 +1,5 @@
 // src/components/ui/Button.jsx
-import React from 'react';
+import PropTypes from 'prop-types';
 
 export function Button({ children, className, ...props }) {
   return (
@@ -11,3 +11,8 @@ export function Button({ children, className, ...props }) {
     </button>
   );
 }
+
+Button.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string
+};
