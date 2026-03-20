@@ -51,6 +51,17 @@ const classes = {
   ]
 };
 
+const FORM_ROW_CLASS =
+  'mx-auto w-full max-w-[24rem] flex flex-col items-center gap-2';
+const FORM_LABEL_CLASS = 'text-xl text-center';
+const FORM_CONTROL_CLASS =
+  'h-12 w-full rounded-lg border border-gray-300 bg-white px-3 text-base text-gray-900 text-center placeholder:text-center shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200';
+const FORM_MENU_CLASS =
+  'absolute left-0 top-[calc(100%+0.25rem)] z-50 max-h-56 w-full overflow-y-auto rounded-lg border border-gray-300 bg-white shadow-lg';
+const FORM_TITLE_ALIGN_CLASS = 'w-full text-center';
+const FORM_CHECKBOX_ROW_CLASS =
+  'mx-auto flex w-full max-w-[34rem] items-center justify-center gap-4';
+
 const FormModal = ({
   children,
   handleClick,
@@ -64,9 +75,9 @@ const FormModal = ({
     <motion.div
       className="bg-gray-100 rounded-xl border border-gray-700"
       style={{ width: '50%', paddingTop: '2%', paddingBottom: '2%' }}
-      whileHover={{ scale: 0.95, opacity: 1 }}
+      whileHover={{ scale: 0.98, opacity: 1 }}
       initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 0.75, scale: 1 }}
+      animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0 }}
     >
       <div className="text-black flex flex-col items-center p-8 mt-5 space-y-4">
@@ -144,11 +155,12 @@ const Icebreaker = ({
 
   return (
     <FormModal handleClick={handleNextClick} validate={validate} handleBackClick={null}>
-      <p className="text-4xl font-bold mt-4">But first,</p>
-      <p className="text-4xl font-light mb-4">tell us about yourself!</p>
-      <br />
-      <div className="flex flex-row justify-center items-center">
-        <label className="text-xl mr-5">Name:</label>
+      <div className={FORM_TITLE_ALIGN_CLASS}>
+        <p className="text-4xl font-bold mt-4">But first,</p>
+        <p className="text-4xl font-light mb-4">tell us about yourself!</p>
+      </div>
+      <div className={FORM_ROW_CLASS}>
+        <label className={FORM_LABEL_CLASS}>Name:</label>
         <InputField
           type="text"
           defaultValue={name}
@@ -157,8 +169,8 @@ const Icebreaker = ({
           placeholder="Jane Doe"
         />
       </div>
-      <div className="flex flex-row justify-center items-center">
-        <label className="text-xl mr-5">School:</label>
+      <div className={FORM_ROW_CLASS}>
+        <label className={FORM_LABEL_CLASS}>School:</label>
         <Dropdown
           options={schoolOptions}
           onSelect={setSchool}
@@ -166,18 +178,18 @@ const Icebreaker = ({
           placeholder="Select a school"
         />
       </div>
-      <div className="flex flex-row justify-center items-center">
-        <label className="text-xl mr-5">Grad year:</label>
+      <div className={FORM_ROW_CLASS}>
+        <label className={FORM_LABEL_CLASS}>Grad year:</label>
         <InputField
           type="number"
           defaultValue={gradYear || null}
           setValue={setGradYear}
           required
-          placeholder="2027"
+          placeholder="2030"
         />
       </div>
-      <div className="flex flex-row justify-center items-center">
-        <label className="text-xl mr-5">Grad quarter:</label>
+      <div className={FORM_ROW_CLASS}>
+        <label className={FORM_LABEL_CLASS}>Grad quarter:</label>
         <Dropdown
           options={['Fall', 'Winter', 'Spring']}
           onSelect={setGradQuarter}
@@ -193,6 +205,7 @@ const MajorAutocomplete = ({ school, major, setMajor, setMajorName }) => {
   const [query, setQuery] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
   const [schoolId, setSchoolId] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   useEffect(() => {
     if (!school) return;
@@ -235,6 +248,50 @@ const MajorAutocomplete = ({ school, major, setMajor, setMajorName }) => {
     opt.full_name.toLowerCase().includes(query.toLowerCase())
   );
 
+  useEffect(() => {
+    if (!showDropdown) {
+      setActiveIndex(-1);
+      return;
+    }
+    setActiveIndex(filtered.length ? 0 : -1);
+  }, [showDropdown, filtered.length]);
+
+  const onKeyDown = e => {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      setShowDropdown(false);
+      return;
+    }
+
+    if (!filtered.length) {
+      return;
+    }
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setShowDropdown(true);
+      setActiveIndex(prev => (prev + 1) % filtered.length);
+      return;
+    }
+
+    if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setShowDropdown(true);
+      setActiveIndex(prev => (prev <= 0 ? filtered.length - 1 : prev - 1));
+      return;
+    }
+
+    if (e.key === 'Enter' && showDropdown) {
+      e.preventDefault();
+      if (activeIndex >= 0 && activeIndex < filtered.length) {
+        const selected = filtered[activeIndex];
+        setMajor(selected.full_name);
+        setMajorName && setMajorName(selected.major_name);
+        setShowDropdown(false);
+      }
+    }
+  };
+
   return (
     <div className="relative w-full">
       <input
@@ -247,20 +304,28 @@ const MajorAutocomplete = ({ school, major, setMajor, setMajorName }) => {
         }}
         onFocus={() => setShowDropdown(true)}
         onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
-        className="border rounded p-2 w-full"
+        onKeyDown={onKeyDown}
+        className={FORM_CONTROL_CLASS}
         placeholder="Search majors..."
+        aria-haspopup="listbox"
+        aria-expanded={showDropdown}
       />
       {showDropdown && filtered.length > 0 && (
-        <div className="absolute bg-white border border-gray-300 rounded shadow-lg w-full z-50 max-h-60 overflow-y-auto mt-1">
-          {filtered.map(opt => (
+        <div className={FORM_MENU_CLASS} role="listbox">
+          {filtered.map((opt, index) => (
             <div
               key={opt.major_name}
-              className="p-2 hover:bg-blue-100 cursor-pointer text-black"
+              className={`cursor-pointer px-3 py-2 text-sm text-black text-center ${
+                index === activeIndex ? 'bg-blue-100' : 'hover:bg-blue-100'
+              }`}
               onClick={() => {
                 setMajor(opt.full_name);
                 setMajorName && setMajorName(opt.major_name);
                 setShowDropdown(false);
               }}
+              onMouseEnter={() => setActiveIndex(index)}
+              role="option"
+              aria-selected={index === activeIndex}
             >
               {opt.full_name}
             </div>
@@ -388,89 +453,92 @@ const InfoDetail = ({
       handleBackClick={handleBackClick}
       validate={validate}
     >
-      <p className="text-4xl font-bold mb-4">Tell us more!</p>
-      <br />
-      <div className="flex flex-row justify-center items-center mt-4">
-        <label className="text-xl mr-5">Major:</label>
-        <div className="flex-1">
-          <MajorAutocomplete
-            school={school}
-            major={major}
-            setMajor={setMajor}
-            setMajorName={setMajorName}
-          />
-        </div>
+      <div className={FORM_TITLE_ALIGN_CLASS}>
+        <p className="text-4xl font-bold mb-2">Tell us more!</p>
       </div>
-      {isEngineeringSchool(school) && (
-        <div className="flex flex-row justify-center items-center mt-4">
-          <label className="text-xl mr-5">Technical Breadth Area:</label>
-          <div className="flex-1">
-            <Dropdown
-              options={getTechBreadthOptions(major)}
-              onSelect={setTechBreadth}
-              defaultOption={techBreadth}
-              placeholder="Select a technical breadth area"
+      <div className="w-full flex flex-col gap-3">
+        <div className={FORM_ROW_CLASS}>
+          <label className={FORM_LABEL_CLASS}>Major:</label>
+          <div className="w-full">
+            <MajorAutocomplete
+              school={school}
+              major={major}
+              setMajor={setMajor}
+              setMajorName={setMajorName}
             />
           </div>
         </div>
-      )}
-      <div className="flex flex-row justify-center items-center">
-        <label className="text-xl mr-5">Double major?</label>
-        <Dropdown
-          options={['Yep', 'No, thanks']}
-          onSelect={showDbMajor}
-          defaultOption={
-            wantsDbMajor != null ? (wantsDbMajor ? 'Yep' : 'No, thanks') : undefined
-          }
-        />
-      </div>
-      {dbMajorSelect && (
-        <>
-          <div className="flex flex-row justify-center items-center">
-            <label className="text-xl mr-5">Second School:</label>
-            <Dropdown
-              options={[
-                'Arts & Architecture',
-                'The College',
-                'Education & Information Studies',
-                'Engineering',
-                'Music',
-                'Nursing',
-                'Public Affairs',
-                'Theater, Film & Television'
-              ]}
-              onSelect={setSecondSchool}
-              defaultOption={secondSchool}
-            />
-          </div>
-          <div className="flex flex-row justify-center items-center">
-            <label className="text-xl mr-5">Second Major:</label>
-            <div className="flex-1">
-              <MajorAutocomplete
-                school={secondSchool}
-                major={doubleMajor}
-                setMajor={setDoubleMajor}
-                setMajorName={setDoubleMajorName}
+        {isEngineeringSchool(school) && (
+          <div className={FORM_ROW_CLASS}>
+            <label className={FORM_LABEL_CLASS}>Technical Breadth Area:</label>
+            <div className="w-full">
+              <Dropdown
+                options={getTechBreadthOptions(major)}
+                onSelect={setTechBreadth}
+                defaultOption={techBreadth}
+                placeholder="Select a technical breadth area"
               />
             </div>
           </div>
-          {isEngineeringSchool(secondSchool) && (
-            <div className="flex flex-row justify-center items-center mt-4">
-              <label className="text-xl mr-5">
-                Second Major Technical Breadth Area:
-              </label>
-              <div className="flex-1">
-                <Dropdown
-                  options={getTechBreadthOptions(doubleMajor)}
-                  onSelect={setSecondTechBreadth}
-                  defaultOption={secondTechBreadth}
-                  placeholder="Select a technical breadth area"
+        )}
+        <div className={FORM_ROW_CLASS}>
+          <label className={FORM_LABEL_CLASS}>Double major?</label>
+          <Dropdown
+            options={['Yep', 'No, thanks']}
+            onSelect={showDbMajor}
+            defaultOption={
+              wantsDbMajor != null ? (wantsDbMajor ? 'Yep' : 'No, thanks') : undefined
+            }
+          />
+        </div>
+        {dbMajorSelect && (
+          <>
+            <div className={FORM_ROW_CLASS}>
+              <label className={FORM_LABEL_CLASS}>Second School:</label>
+              <Dropdown
+                options={[
+                  'Arts & Architecture',
+                  'The College',
+                  'Education & Information Studies',
+                  'Engineering',
+                  'Music',
+                  'Nursing',
+                  'Public Affairs',
+                  'Theater, Film & Television'
+                ]}
+                onSelect={setSecondSchool}
+                defaultOption={secondSchool}
+              />
+            </div>
+            <div className={FORM_ROW_CLASS}>
+              <label className={FORM_LABEL_CLASS}>Second Major:</label>
+              <div className="w-full">
+                <MajorAutocomplete
+                  school={secondSchool}
+                  major={doubleMajor}
+                  setMajor={setDoubleMajor}
+                  setMajorName={setDoubleMajorName}
                 />
               </div>
             </div>
-          )}
-        </>
-      )}
+            {isEngineeringSchool(secondSchool) && (
+              <div className={FORM_ROW_CLASS}>
+                <label className={FORM_LABEL_CLASS}>
+                  Second Major Technical Breadth Area:
+                </label>
+                <div className="w-full">
+                  <Dropdown
+                    options={getTechBreadthOptions(doubleMajor)}
+                    onSelect={setSecondTechBreadth}
+                    defaultOption={secondTechBreadth}
+                    placeholder="Select a technical breadth area"
+                  />
+                </div>
+              </div>
+            )}
+          </>
+        )}
+      </div>
       {techBreadthError && (
         <div className="text-red-600 font-semibold mt-4">
           {techBreadthError}
@@ -504,8 +572,8 @@ const SchedulePreferences = ({
   return (
     <FormModal handleClick={handleNextClick} handleBackClick={handleBackClick} validate={validate}>
       <div className="p-4">
-        <div className="flex flex-row justify-center items-center mb-4">
-          <label className="text-xl mr-5">Prefer no class days on:</label>
+        <div className={`${FORM_ROW_CLASS} mb-4`}>
+          <label className={FORM_LABEL_CLASS}>Prefer no class days on:</label>
           <div className="flex flex-row gap-2">
             {daysOfWeek.map((day, idx) => (
               <button
@@ -524,8 +592,8 @@ const SchedulePreferences = ({
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-center items-center">
-        <label className="text-xl mr-5">Earliest start time:</label>
+      <div className={FORM_ROW_CLASS}>
+        <label className={FORM_LABEL_CLASS}>Earliest start time:</label>
         <InputField
           type="time"
           defaultValue={earliestClassTime}
@@ -534,8 +602,8 @@ const SchedulePreferences = ({
           placeholder="HH:MM"
         />
       </div>
-      <div className="flex flex-row justify-center items-center">
-        <label className="text-xl mr-5">Latest end time:</label>
+      <div className={FORM_ROW_CLASS}>
+        <label className={FORM_LABEL_CLASS}>Latest end time:</label>
         <InputField
           type="time"
           defaultValue={latestClassTime}
@@ -552,6 +620,7 @@ const InstructorAutocomplete = ({ selected, setSelected }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
   const timeoutRef = useRef();
 
   const fetchInstructors = async q => {
@@ -583,10 +652,52 @@ const InstructorAutocomplete = ({ selected, setSelected }) => {
     setQuery('');
     setResults([]);
     setShowDropdown(false);
+    setActiveIndex(-1);
   };
 
   const onRemove = name => {
     setSelected(selected.filter(n => n !== name));
+  };
+
+  useEffect(() => {
+    if (!showDropdown) {
+      setActiveIndex(-1);
+      return;
+    }
+    setActiveIndex(results.length ? 0 : -1);
+  }, [showDropdown, results.length]);
+
+  const onKeyDown = e => {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      setShowDropdown(false);
+      return;
+    }
+
+    if (!results.length) {
+      return;
+    }
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setShowDropdown(true);
+      setActiveIndex(prev => (prev + 1) % results.length);
+      return;
+    }
+
+    if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setShowDropdown(true);
+      setActiveIndex(prev => (prev <= 0 ? results.length - 1 : prev - 1));
+      return;
+    }
+
+    if (e.key === 'Enter' && showDropdown) {
+      e.preventDefault();
+      if (activeIndex >= 0 && activeIndex < results.length) {
+        onSelect(results[activeIndex]);
+      }
+    }
   };
 
   return (
@@ -606,16 +717,24 @@ const InstructorAutocomplete = ({ selected, setSelected }) => {
         value={query}
         onChange={onChange}
         onFocus={() => setShowDropdown(true)}
-        className="border rounded p-1 w-full"
+        onKeyDown={onKeyDown}
+        className={FORM_CONTROL_CLASS}
         placeholder="Search instructors..."
+        aria-haspopup="listbox"
+        aria-expanded={showDropdown}
       />
       {showDropdown && results.length > 0 && (
-        <div className="absolute bg-white border w-full z-10 max-h-40 overflow-y-auto">
-          {results.map(name => (
+        <div className={FORM_MENU_CLASS} role="listbox">
+          {results.map((name, index) => (
             <div
               key={name}
-              className="p-2 hover:bg-blue-100 cursor-pointer"
+              className={`cursor-pointer px-3 py-2 text-sm text-black text-center ${
+                index === activeIndex ? 'bg-blue-100' : 'hover:bg-blue-100'
+              }`}
               onClick={() => onSelect(name)}
+              onMouseEnter={() => setActiveIndex(index)}
+              role="option"
+              aria-selected={index === activeIndex}
             >
               {name}
             </div>
@@ -653,35 +772,35 @@ const PreferencesStep = ({
   return (
     <FormModal handleClick={isValid ? handleNextClick : () => {}} handleBackClick={handleBackClick}>
       <div className="p-4 flex flex-col gap-6">
-        <div className="flex flex-row items-center gap-4">
-          <label className="text-xl w-64">Least courses per term:</label>
+        <div className={FORM_ROW_CLASS}>
+          <label className={FORM_LABEL_CLASS}>Least courses per term:</label>
           <input
             type="number"
             min={1}
             value={leastCoursesPerTerm}
             onChange={e => setLeastCoursesPerTerm(Number(e.target.value))}
-            className="border rounded p-1 w-24"
+            className={`${FORM_CONTROL_CLASS} max-w-28`}
           />
         </div>
-        <div className="flex flex-row items-center gap-4">
-          <label className="text-xl w-64">Max courses per term:</label>
+        <div className={FORM_ROW_CLASS}>
+          <label className={FORM_LABEL_CLASS}>Max courses per term:</label>
           <input
             type="number"
             min={1}
             value={maxCoursesPerTerm}
             onChange={e => setMaxCoursesPerTerm(Number(e.target.value))}
-            className="border rounded p-1 w-24"
+            className={`${FORM_CONTROL_CLASS} max-w-28`}
           />
         </div>
         {errorMsg && <div className="text-red-600 font-semibold">{errorMsg}</div>}
-        <div className="flex flex-row items-center gap-4">
-          <label className="text-xl w-64">Preferred instructors:</label>
-          <div className="flex-1">
+        <div className={FORM_ROW_CLASS}>
+          <label className={FORM_LABEL_CLASS}>Preferred instructors:</label>
+          <div className="w-full">
             <InstructorAutocomplete selected={prefInstructors} setSelected={setPrefInstructors} />
           </div>
         </div>
-        <div className="flex flex-row items-center gap-4">
-          <label className="text-xl w-64">Preferred buildings:</label>
+        <div className={FORM_ROW_CLASS}>
+          <label className={FORM_LABEL_CLASS}>Preferred buildings:</label>
           <input
             type="text"
             value={prefBuildings.join(', ')}
@@ -693,7 +812,7 @@ const PreferencesStep = ({
                   .filter(Boolean)
               )
             }
-            className="border rounded p-1 flex-1"
+            className={`${FORM_CONTROL_CLASS} w-full`}
             placeholder="e.g. MS, SCI"
           />
         </div>
@@ -731,8 +850,8 @@ const AdvancedPreferencesStep = ({
   return (
     <FormModal handleClick={handleNextClick} handleBackClick={handleBackClick}>
       <div className="p-4 flex flex-col gap-6">
-        <div className="flex flex-row items-center gap-4">
-          <label className="text-xl w-64">Ignore unenforced requisites</label>
+        <div className={FORM_CHECKBOX_ROW_CLASS}>
+          <label className="text-xl text-center">Ignore unenforced requisites</label>
           <input
             type="checkbox"
             checked={allowWarnings}
@@ -740,8 +859,8 @@ const AdvancedPreferencesStep = ({
             className="w-6 h-6 accent-blue-900"
           />
         </div>
-        <div className="flex flex-row items-center gap-4">
-          <label className="text-xl w-64">Allow lecture conflicts</label>
+        <div className={FORM_CHECKBOX_ROW_CLASS}>
+          <label className="text-xl text-center">Allow lecture conflicts</label>
           <input
             type="checkbox"
             checked={allowPrimaryConflicts}
@@ -749,8 +868,8 @@ const AdvancedPreferencesStep = ({
             className="w-6 h-6 accent-blue-900"
           />
         </div>
-        <div className="flex flex-row items-center gap-4">
-          <label className="text-xl w-64">Allow discussion conflicts</label>
+        <div className={FORM_CHECKBOX_ROW_CLASS}>
+          <label className="text-xl text-center">Allow discussion conflicts</label>
           <input
             type="checkbox"
             checked={allowSecondaryConflicts}
@@ -759,7 +878,7 @@ const AdvancedPreferencesStep = ({
           />
         </div>
         <div className="flex flex-col gap-2 mt-4">
-          <label className="text-xl mb-2">Rank your preferences (drag to reorder):</label>
+          <label className="text-xl mb-2 text-center">Rank your preferences (drag to reorder):</label>
           {prefPriority.map((item, idx) => (
             <div
               key={item}
@@ -1047,7 +1166,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       handleBackClick={handleBackClick}
       showNextArrow={false}
     >
-      <p className="text-4xl font-bold mb-4">Registration Summary</p>
+      <p className="w-full text-center text-4xl font-bold mb-4">Registration Summary</p>
       <div className="flex flex-col">
         <motion.div
           className="flex flex-col bg-gray-300 rounded-xl p-5 mb-5"
@@ -1124,7 +1243,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
           console.log('Generate Schedule button clicked');
           handleGenerateSchedule();
         }}
-        className="mt-4 bg-blue-900 text-black px-4 py-2 rounded-lg shadow hover:bg-blue-800"
+        className="mt-4 rounded-lg bg-[#071a45] px-5 py-3 font-semibold text-white shadow transition hover:bg-[#0b255f] focus:outline-none focus:ring-2 focus:ring-[#264f9a]"
       >
         Generate Schedule
       </button>
@@ -1211,15 +1330,23 @@ const TranscriptStep = ({
     setTranscript({ ...transcript, [course]: grade });
   };
 
+  const getSubjectFromCourse = course => {
+    const parts = String(course).trim().split(/\s+/);
+    if (parts.length <= 1) {
+      return String(course).trim();
+    }
+    return parts.slice(0, -1).join(' ');
+  };
+
   const subjects = [
     'All',
-    ...new Set(availableCourses.map(course => course.split(' ')[0]))
+    ...new Set(availableCourses.map(getSubjectFromCourse))
   ];
 
   const filteredCourses =
     selectedSubject === 'All'
       ? availableCourses
-      : availableCourses.filter(course => course.startsWith(selectedSubject));
+      : availableCourses.filter(course => getSubjectFromCourse(course) === selectedSubject);
 
   if (loading) {
     return (
@@ -1234,15 +1361,15 @@ const TranscriptStep = ({
   return (
     <FormModal handleClick={handleNextClick} handleBackClick={handleBackClick}>
       <div className="p-4">
-        <div className="mb-4">
+        <div className="mb-4 text-center">
           <strong>Select completed courses and assign a grade:</strong>
         </div>
-        <div className="mb-4">
-          <label className="text-xl mr-5">Filter by subject:</label>
+        <div className={`${FORM_ROW_CLASS} mb-4`}>
+          <label className={FORM_LABEL_CLASS}>Filter by subject:</label>
           <select
             value={selectedSubject}
             onChange={e => setSelectedSubject(e.target.value)}
-            className="border rounded p-1"
+            className={`${FORM_CONTROL_CLASS} max-w-56`}
           >
             {subjects.map(subject => (
               <option key={subject} value={subject}>
@@ -1269,7 +1396,7 @@ const TranscriptStep = ({
                       value={transcript[course] || 'A'}
                       onClick={e => e.stopPropagation()}
                       onChange={e => setGrade(course, e.target.value)}
-                      className="border rounded p-1 bg-blue-900 text-white"
+                      className="h-9 rounded-md border border-[#183778] bg-[#0b1f4f] px-2 text-sm text-white text-center focus:border-[#1f4ca8] focus:ring-2 focus:ring-[#1f4ca8]"
                     >
                       {gradeOptions.map(g => (
                         <option key={g} value={g}>
@@ -1362,14 +1489,26 @@ export const Form = () => {
     navigate('/');
   };
 
+  const totalSteps = 7;
+  const progressPercent = Math.min(100, Math.max(0, (step / totalSteps) * 100));
+
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-gray-900 relative">
+    <div className="relative flex h-screen w-screen justify-center items-start overflow-y-auto bg-gray-900 pt-20 pb-6">
       <button
         onClick={onSignOut}
         className="absolute top-6 right-8 text-white bg-blue-900 px-4 py-2 rounded-lg shadow hover:bg-blue-700 z-50"
       >
         SIGN OUT
       </button>
+      <div className="absolute top-6 left-1/2 z-40 w-[min(90vw,34rem)] -translate-x-1/2">
+        <div className="mb-1 flex items-center justify-between text-xs font-medium tracking-wide text-white/85">
+          <span>Step {step} of {totalSteps}</span>
+          <span>{Math.round(progressPercent)}%</span>
+        </div>
+        <div className="h-2 overflow-hidden rounded-full bg-white/20">
+          <div className="h-full rounded-full bg-white transition-all duration-300" style={{ width: `${progressPercent}%` }} />
+        </div>
+      </div>
       {step === 1 && (
         <Icebreaker
           handleNextClick={handleNextClick}
