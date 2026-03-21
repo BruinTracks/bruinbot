@@ -4,7 +4,6 @@ import { spawn } from "child_process";
 import path from "path";
 dotenv.config();
 import { fileURLToPath } from "url";
-import { createClient } from "@supabase/supabase-js";
 import supabase from "./supabase_client.js";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -136,13 +135,20 @@ export const getCoursesToSchedule = async (req, res) => {
       Object.entries(req.body).map(([key, value]) => `${key}: ${typeof value}`),
     );
 
-    const { jsonData, transcript, grad_year, grad_quarter, preferences } =
-      req.body;
+    const {
+      jsonData,
+      transcript,
+      grad_year,
+      grad_quarter,
+      school,
+      preferences,
+    } = req.body;
     console.log("Destructured values:", {
       grad_year,
       grad_quarter,
       hasJsonData: !!jsonData,
       hasTranscript: !!transcript,
+      school,
       hasPreferences: !!preferences,
     });
 
@@ -401,6 +407,7 @@ export const getCoursesToSchedule = async (req, res) => {
       start_quarter: "Spring",
       end_year: parseInt(grad_year),
       end_quarter: grad_quarter || "Spring",
+      school: school || null,
       courses_to_schedule: Array.from(allCourses),
       transcript: formattedTranscript,
       preferences,

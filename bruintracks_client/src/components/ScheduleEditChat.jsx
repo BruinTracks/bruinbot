@@ -8,7 +8,8 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: 'Hi! I can help you modify your schedule. What would you like to change?'
+      content:
+        'Hi! I can help you modify your schedule. I can also swap GE courses based on your interests. What would you like to change?'
     }
   ]);
   const [input, setInput] = useState('');
@@ -37,7 +38,10 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
     try {
       // Get transcript data from localStorage
       const storedData = localStorage.getItem('scheduleData');
-      const transcriptData = storedData ? JSON.parse(storedData).transcript : {};
+      const parsedStored = storedData ? JSON.parse(storedData) : {};
+      const transcriptData = parsedStored?.transcript || {};
+      const preferenceData = parsedStored?.preferences || {};
+      const school = parsedStored?.school || null;
 
 
       // Send request to backend
@@ -50,7 +54,9 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
         body: JSON.stringify({
           question: userMessage,
           scheduleData: scheduleData,
-          transcript: transcriptData
+          transcript: transcriptData,
+          preferences: preferenceData,
+          school
         })
       });
 

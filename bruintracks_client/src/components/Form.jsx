@@ -51,6 +51,14 @@ const FORM_TITLE_ALIGN_CLASS = 'w-full text-center';
 const FORM_CHECKBOX_ROW_CLASS =
   'mx-auto flex w-full max-w-[34rem] items-center justify-center gap-4';
 
+const normalizeSchoolLabel = (schoolName) => {
+  const value = String(schoolName || '').trim();
+  if (value.toLowerCase() === 'the college') {
+    return 'Letters & Sciences';
+  }
+  return value;
+};
+
 const FormModal = ({
   children,
   handleClick,
@@ -127,9 +135,12 @@ const Icebreaker = ({
           throw new Error('Failed to fetch schools');
         }
         const data = await response.json();
-        setSchoolOptions(data);
+        const normalized = Array.from(
+          new Set((data || []).map(normalizeSchoolLabel).filter(Boolean))
+        );
+        setSchoolOptions(normalized);
         if (!school && data.length > 0) {
-          setSchool(data[0]);
+          setSchool(normalized[0]);
         }
       } catch {
         setSchoolOptions([]);
@@ -484,7 +495,7 @@ const InfoDetail = ({
               <Dropdown
                 options={[
                   'Arts & Architecture',
-                  'The College',
+                  'Letters & Sciences',
                   'Education & Information Studies',
                   'Engineering',
                   'Music',
@@ -731,6 +742,209 @@ const InstructorAutocomplete = ({ selected, setSelected }) => {
   );
 };
 
+const BuildingDropdown = ({ selected, setSelected }) => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
+  const timeoutRef = useRef();
+
+  const fetchBuildings = async q => {
+    if (!q) {
+      setResults([]);
+      return;
+    }
+    try {
+      const res = await fetch(
+        `http://localhost:3000/courses/buildings/search?q=${encodeURIComponent(q)}`
+      );
+      const data = await res.json();
+      setResults(data.filter(name => !selected.includes(name)));
+    } catch {
+      setResults([]);
+    }
+  };
+
+  const addBuilding = value => {
+    if (!value || selected.includes(value)) return;
+    setSelected([...selected, value]);
+    setQuery('');
+    setResults([]);
+    setShowDropdown(false);
+    setActiveIndex(-1);
+  };
+
+  const removeBuilding = value => {
+    setSelected(selected.filter(b => b !== value));
+  };
+
+  const onChange = e => {
+    const val = e.target.value;
+    setQuery(val);
+    clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => fetchBuildings(val), 200);
+    setShowDropdown(true);
+  };
+
+  useEffect(() => {
+    if (!showDropdown) {
+      setActiveIndex(-1);
+      return;
+    }
+    setActiveIndex(results.length ? 0 : -1);
+  }, [showDropdown, results.length]);
+
+  const onKeyDown = e => {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      setShowDropdown(false);
+      return;
+    }
+
+    if (!results.length) {
+      return;
+    }
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setShowDropdown(true);
+      setActiveIndex(prev => (prev + 1) % results.length);
+      return;
+    }
+
+    if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setShowDropdown(true);
+      setActiveIndex(prev => (prev <= 0 ? results.length - 1 : prev - 1));
+      return;
+    }
+
+    if (e.key === 'Enter' && showDropdown) {
+      e.preventDefault();
+      if (activeIndex >= 0 && activeIndex < results.length) {
+        addBuilding(results[activeIndex]);
+      }
+    }
+  };
+
+  return (
+    <div className="relative w-full">
+      <div className="flex flex-wrap gap-2 mb-2">
+        {selected.map(building => (
+          <span key={building} className="bg-blue-900 text-white px-2 py-1 rounded">
+            {building}
+            <button
+              type="button"
+              onClick={() => removeBuilding(building)}
+              className="ml-1 text-white"
+            >
+              &times;
+            </button>
+          </span>
+        ))}
+      </div>
+      <input
+        type="text"
+        value={query}
+        onChange={onChange}
+        onFocus={() => setShowDropdown(true)}
+        onKeyDown={onKeyDown}
+        className={`${FORM_CONTROL_CLASS} w-full`}
+        placeholder="Search buildings..."
+        aria-haspopup="listbox"
+        aria-expanded={showDropdown}
+      />
+      {showDropdown && results.length > 0 && (
+        <div className={FORM_MENU_CLASS} role="listbox">
+          {results.map((name, index) => (
+            <div
+              key={name}
+              className={`cursor-pointer px-3 py-2 text-sm text-black text-center ${
+                index === activeIndex ? 'bg-blue-100' : 'hover:bg-blue-100'
+              }`}
+              onClick={() => addBuilding(name)}
+              onMouseEnter={() => setActiveIndex(index)}
+              role="option"
+              aria-selected={index === activeIndex}
+            >
+              {name}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const GeInterestsInput = ({ selected, setSelected }) => {
+  const [query, setQuery] = useState('');
+
+  const addInterest = (value) => {
+    const cleaned = String(value || '').trim();
+    if (!cleaned || selected.includes(cleaned)) return;
+    setSelected([...selected, cleaned]);
+    setQuery('');
+  };
+
+  const removeInterest = (value) => {
+    setSelected(selected.filter(i => i !== value));
+  };
+
+  const onKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ',' || e.key === 'Tab') {
+      e.preventDefault();
+      addInterest(query);
+    }
+  };
+
+  const onPaste = (e) => {
+    const pasted = e.clipboardData?.getData('text') || '';
+    if (!pasted.includes(',')) return;
+    e.preventDefault();
+    const values = pasted
+      .split(',')
+      .map(v => v.trim())
+      .filter(Boolean);
+    const next = [...selected];
+    values.forEach((value) => {
+      if (!next.includes(value)) {
+        next.push(value);
+      }
+    });
+    setSelected(next);
+    setQuery('');
+  };
+
+  return (
+    <div className="w-full">
+      <div className="flex flex-wrap gap-2 mb-2">
+        {selected.map(interest => (
+          <span key={interest} className="bg-blue-900 text-white px-2 py-1 rounded">
+            {interest}
+            <button
+              type="button"
+              onClick={() => removeInterest(interest)}
+              className="ml-1 text-white"
+            >
+              &times;
+            </button>
+          </span>
+        ))}
+      </div>
+      <input
+        type="text"
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+        onKeyDown={onKeyDown}
+        onBlur={() => addInterest(query)}
+        onPaste={onPaste}
+        className={`${FORM_CONTROL_CLASS} w-full`}
+        placeholder="(linguistics, robotics, etc.)"
+      />
+    </div>
+  );
+};
+
 const PreferencesStep = ({
   leastCoursesPerTerm,
   setLeastCoursesPerTerm,
@@ -740,6 +954,8 @@ const PreferencesStep = ({
   setPrefInstructors,
   prefBuildings,
   setPrefBuildings,
+  geInterests,
+  setGeInterests,
   handleNextClick,
   handleBackClick
 }) => {
@@ -787,20 +1003,11 @@ const PreferencesStep = ({
         </div>
         <div className={FORM_ROW_CLASS}>
           <label className={FORM_LABEL_CLASS}>Preferred buildings:</label>
-          <input
-            type="text"
-            value={prefBuildings.join(', ')}
-            onChange={e =>
-              setPrefBuildings(
-                e.target.value
-                  .split(',')
-                  .map(s => s.trim())
-                  .filter(Boolean)
-              )
-            }
-            className={`${FORM_CONTROL_CLASS} w-full`}
-            placeholder="e.g. MS, SCI"
-          />
+          <BuildingDropdown selected={prefBuildings} setSelected={setPrefBuildings} />
+        </div>
+        <div className={FORM_ROW_CLASS}>
+          <label className={FORM_LABEL_CLASS}>GE interests:</label>
+          <GeInterestsInput selected={geInterests} setSelected={setGeInterests} />
         </div>
       </div>
     </FormModal>
@@ -973,7 +1180,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
 
   const handleCreateProfile = async () => {
     if (!session || !session.user) {
-      return;
+      return false;
     }
 
     // Check if profile already exists
@@ -995,20 +1202,27 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       ]);
 
       if (error) {
-        return;
+        return false;
       }
     }
 
-    navigate('/Home');
+    return true;
   };
 
   const handleGenerateSchedule = async () => {
     try {
-      handleCreateProfile();
+      const profileReady = await handleCreateProfile();
+      if (!profileReady) {
+        navigate('/');
+        return;
+      }
 
       // Set isGenerating flag in localStorage and navigate to loading page
-      localStorage.setItem('scheduleData', JSON.stringify({ isGenerating: true }));
-      navigate('/Home');
+      localStorage.setItem(
+        'scheduleData',
+        JSON.stringify({ isGenerating: true, startedAt: Date.now() })
+      );
+      navigate('/schedule');
 
       // Get selected majors
       const selectedMajors = [data.majorName];
@@ -1042,7 +1256,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
         return req.json_data;
       });
 
-      // Call the get-courses-to-schedule endpoint
+      // Call the get-courses-to-schedule endpoint (can take several minutes)
       const response = await fetch('http://localhost:3000/courses/get-courses-to-schedule', {
         method: 'POST',
         headers: {
@@ -1051,6 +1265,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
         },
         body: JSON.stringify({ 
           jsonData: processedRequirements,
+          school: data.school,
           transcript: data.transcript,
           grad_year: data.gradYear,
           grad_quarter: data.gradQuarter,
@@ -1064,6 +1279,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
             pref_no_days: data.prefNoDays,
             pref_buildings: data.prefBuildings,
             pref_instructors: data.prefInstructors,
+            ge_interests: data.geInterests,
             max_courses_per_term: data.maxCoursesPerTerm,
             least_courses_per_term: data.leastCoursesPerTerm,
             tech_breadth: data.techBreadth,
@@ -1071,7 +1287,6 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
           }
         }),
       });
-
       if (!response.ok) {
         await response.text();
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -1082,16 +1297,34 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       // Store schedule data in localStorage with isGenerating set to false
       localStorage.setItem('scheduleData', JSON.stringify({
         ...scheduleData,
-        isGenerating: false
+        isGenerating: false,
+        school: data.school,
+        transcript: data.transcript,
+        preferences: {
+          allow_warnings: data.allowWarnings,
+          allow_primary_conflicts: data.allowPrimaryConflicts,
+          allow_secondary_conflicts: data.allowSecondaryConflicts,
+          pref_priority: data.prefPriority,
+          pref_earliest: data.earliestClassTime,
+          pref_latest: data.latestClassTime,
+          pref_no_days: data.prefNoDays,
+          pref_buildings: data.prefBuildings,
+          pref_instructors: data.prefInstructors,
+          ge_interests: data.geInterests,
+          max_courses_per_term: data.maxCoursesPerTerm,
+          least_courses_per_term: data.leastCoursesPerTerm,
+          tech_breadth: data.techBreadth,
+          second_tech_breadth: data.secondTechBreadth
+        }
       }));
 
-      // Reload the page to show the new schedule
-      window.location.reload();
+      // Keep user on schedule page once generation finishes
+      navigate('/schedule', { replace: true });
     } catch {
       // Clear isGenerating flag on error
       localStorage.setItem('scheduleData', JSON.stringify({ isGenerating: false }));
-      // Navigate back to form on error
-      navigate('/form');
+      // Keep user on schedule page even when generation fails
+      navigate('/schedule', { replace: true });
     }
   };
 
@@ -1414,6 +1647,16 @@ InstructorAutocomplete.propTypes = {
   setSelected: PropTypes.func
 };
 
+BuildingDropdown.propTypes = {
+  selected: PropTypes.arrayOf(PropTypes.string),
+  setSelected: PropTypes.func
+};
+
+GeInterestsInput.propTypes = {
+  selected: PropTypes.arrayOf(PropTypes.string),
+  setSelected: PropTypes.func
+};
+
 PreferencesStep.propTypes = {
   leastCoursesPerTerm: PropTypes.number,
   setLeastCoursesPerTerm: PropTypes.func,
@@ -1423,6 +1666,8 @@ PreferencesStep.propTypes = {
   setPrefInstructors: PropTypes.func,
   prefBuildings: PropTypes.arrayOf(PropTypes.string),
   setPrefBuildings: PropTypes.func,
+  geInterests: PropTypes.arrayOf(PropTypes.string),
+  setGeInterests: PropTypes.func,
   handleNextClick: PropTypes.func,
   handleBackClick: PropTypes.func
 };
@@ -1471,7 +1716,7 @@ export const Form = () => {
   const handleBackClick = () => setStep(step - 1);
 
   const [fullName, setFullName] = useState('');
-  const [school, setSchool] = useState('');
+  const [school, setSchool] = useState('Engineering');
   const [gradQuarter, setGradQuarter] = useState('');
   const [gradYear, setGradYear] = useState(null);
   const [major, setMajor] = useState('');
@@ -1500,6 +1745,7 @@ export const Form = () => {
   const [prefNoDays, setPrefNoDays] = useState([]); // e.g. ['F']
   const [prefBuildings, setPrefBuildings] = useState([]); // e.g. ['MS', 'SCI']
   const [prefInstructors, setPrefInstructors] = useState([]); // e.g. ['Smith']
+  const [geInterests, setGeInterests] = useState([]);
   const [maxCoursesPerTerm, setMaxCoursesPerTerm] = useState(5);
   const [leastCoursesPerTerm, setLeastCoursesPerTerm] = useState(3);
 
@@ -1612,6 +1858,8 @@ export const Form = () => {
           setPrefInstructors={setPrefInstructors}
           prefBuildings={prefBuildings}
           setPrefBuildings={setPrefBuildings}
+          geInterests={geInterests}
+          setGeInterests={setGeInterests}
           handleNextClick={handleNextClick}
           handleBackClick={handleBackClick}
         />
@@ -1662,6 +1910,7 @@ export const Form = () => {
             maxCoursesPerTerm: maxCoursesPerTerm,
             prefInstructors: prefInstructors,
             prefBuildings: prefBuildings,
+            geInterests: geInterests,
             allowWarnings: allowWarnings,
             allowPrimaryConflicts: allowPrimaryConflicts,
             allowSecondaryConflicts: allowSecondaryConflicts,

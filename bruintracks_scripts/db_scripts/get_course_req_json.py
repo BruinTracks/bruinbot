@@ -37,16 +37,23 @@ FAILED_LOG_PATH = os.environ.get("FAILED_MAJORS_LOG", "failed_majors.json")
 DUMP_DIR = os.environ.get("MAJOR_JSON_DUMP_DIR", "bruintracks_server/data/majors")
 PRUNE_UNSUPPORTED_MAJORS = os.environ.get("PRUNE_UNSUPPORTED_MAJORS", "1") == "1"
 
+MAJOR_NAME_ALIASES = {
+    "NursingBS": "NursingBSPrelicensure",
+}
+
 UNSUPPORTED_MAJOR_NAMES = [
     "MaterialsScienceandEngineeringBS",
     "IndividualFieldofConcentration(College)BA",
     "IndividualFieldofConcentration(College)BS",
     "IndividualFieldofConcentration(Arts&Architecture)BA",
-    "NursingBS",
     "IndividualFieldofConcentration(TheaterFilmandTelevision)BA",
 ]
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+
+def normalize_major_name(major_name: str) -> str:
+    return MAJOR_NAME_ALIASES.get(major_name, major_name)
 
 
 def remove_empty(data):
@@ -212,7 +219,8 @@ def scrape_major(driver, wait, major_name):
             # Not fatal; some pages may already be expanded.
             pass
 
-    website = f"https://catalog.registrar.ucla.edu/major/{CATALOG_YEAR}/{major_name}"
+    url_major_name = normalize_major_name(major_name)
+    website = f"https://catalog.registrar.ucla.edu/major/{CATALOG_YEAR}/{url_major_name}"
     driver.get(website)
     time.sleep(1.5)
     expand_all_sections()
@@ -258,7 +266,8 @@ def main():
 
     try:
         for idx, major in enumerate(majors, 1):
-            major_name = major["major_name"]
+            raw_major_name = major["major_name"]
+            major_name = normalize_major_name(raw_major_name)
             major_id = major["id"]
             print(f"[{idx}/{len(majors)}] Processing {major_name} ...")
 

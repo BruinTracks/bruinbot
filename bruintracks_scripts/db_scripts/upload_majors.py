@@ -14,6 +14,14 @@ SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
+MAJOR_NAME_ALIASES = {
+    "NursingBS": "NursingBSPrelicensure",
+}
+
+
+def normalize_major_name(major_name: str) -> str:
+    return MAJOR_NAME_ALIASES.get(major_name, major_name)
+
 # === Chrome Setup ===
 options = Options()
 options.add_argument('--headless')
@@ -81,7 +89,7 @@ try:
         for degree_link in degree_links:
             degree_type = degree_link.get_text(strip=True)
             if degree_type in ["BA", "BS"]:
-                major_name = f"{major_name_base}{degree_type}"
+                major_name = normalize_major_name(f"{major_name_base}{degree_type}")
                 majors.append({"major_name": major_name, "full_name": full_name, "school": school_id})
                 print(f"Found major: {major_name}")
                 """

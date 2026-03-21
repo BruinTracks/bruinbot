@@ -27,6 +27,14 @@ if SYNC_MODE not in {"missing", "refresh"}:
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
+MAJOR_NAME_ALIASES = {
+    "NursingBS": "NursingBSPrelicensure",
+}
+
+
+def normalize_major_name(major_name: str) -> str:
+    return MAJOR_NAME_ALIASES.get(major_name, major_name)
+
 
 def fetch_all_rows(table_name, select_clause):
     rows = []
@@ -102,7 +110,7 @@ def main():
     skipped_empty = 0
 
     for row in major_req_rows:
-        major_name = row.get("major_name")
+        major_name = normalize_major_name(row.get("major_name"))
         if not major_name:
             continue
 

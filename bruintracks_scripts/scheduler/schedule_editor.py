@@ -1,6 +1,7 @@
 import os
 import json
 import sys
+import re
 from typing import Dict, List, Set, Tuple, Optional
 from datetime import datetime
 from dotenv import load_dotenv
@@ -61,7 +62,7 @@ class ScheduleEditor:
         debug_print(f"\n🔍 Fetching data for course: {course_id}")
         
         # Special handling for FILLER courses and electives
-        if course_id == "FILLER" or "Elective" in course_id:
+        if self._is_filler_placeholder_label(course_id) or "Elective" in course_id or self._is_ge_course_label(course_id):
             debug_print("✓ Skipping validation for FILLER/Elective course")
             return None
             
@@ -184,7 +185,7 @@ class ScheduleEditor:
         debug_print(f"\n🔍 Checking prerequisites for {course_id} in term {term}")
         
         # Skip prerequisite check for FILLER courses and electives
-        if course_id == "FILLER" or "Elective" in course_id:
+        if self._is_filler_placeholder_label(course_id) or "Elective" in course_id or self._is_ge_course_label(course_id):
             debug_print("✓ Skipping prerequisite check for FILLER/Elective course")
             return True
         
@@ -207,11 +208,19 @@ class ScheduleEditor:
             if isinstance(self.schedule[prev_term], dict):
                 # For dictionary format, add course IDs directly
                 # Skip FILLER courses
-                taken_courses.update(cid for cid in self.schedule[prev_term].keys() if cid != "FILLER")
+                taken_courses.update(
+                    cid
+                    for cid in self.schedule[prev_term].keys()
+                    if not self._is_filler_placeholder_label(cid)
+                )
             else:
                 # For list format, add course IDs directly
                 # Skip FILLER courses
-                taken_courses.update(cid for cid in self.schedule[prev_term] if cid != "FILLER")
+                taken_courses.update(
+                    cid
+                    for cid in self.schedule[prev_term]
+                    if not self._is_filler_placeholder_label(cid)
+                )
         
         debug_print(f"All courses taken before {term}: {taken_courses}")
                     
@@ -231,9 +240,17 @@ class ScheduleEditor:
                     
                 # Check if prerequisite is in current term
                 if isinstance(self.schedule[term], dict):
-                    current_term_courses = set(cid for cid in self.schedule[term].keys() if cid != "FILLER")
+                    current_term_courses = set(
+                        cid
+                        for cid in self.schedule[term].keys()
+                        if not self._is_filler_placeholder_label(cid)
+                    )
                 else:
-                    current_term_courses = set(cid for cid in self.schedule[term] if cid != "FILLER")
+                    current_term_courses = set(
+                        cid
+                        for cid in self.schedule[term]
+                        if not self._is_filler_placeholder_label(cid)
+                    )
                     
                 # If prerequisite is in current term, it's not satisfied
                 if prereq in current_term_courses:
@@ -282,7 +299,7 @@ class ScheduleEditor:
         meetings = []
         for course_id, course_data in schedule.items():
             # Skip FILLER courses
-            if course_id == "FILLER" or not isinstance(course_data, dict):
+            if self._is_filler_placeholder_label(course_id) or not isinstance(course_data, dict):
                 continue
                 
             # Add lecture meetings
@@ -334,7 +351,7 @@ class ScheduleEditor:
         debug_print(f"\n🔍 Validating prerequisites for all courses in {term}")
         for course_id in self.schedule[term]:
             # Skip FILLER courses
-            if course_id == "FILLER":
+            if self._is_filler_placeholder_label(course_id):
                 continue
             if not self._meets_prerequisites(course_id, term):
                 return False, f"Prerequisites not met for {course_id} in {term}"
@@ -350,14 +367,284 @@ class ScheduleEditor:
             term = term_order[term_idx]
             debug_print(f"\n🔍 Checking all courses in {term}")
             if isinstance(self.schedule[term], dict):
-                courses = [cid for cid in self.schedule[term].keys() if cid != "FILLER"]
+                courses = [
+                    cid
+                    for cid in self.schedule[term].keys()
+                    if not self._is_filler_placeholder_label(cid)
+                ]
             else:
-                courses = [cid for cid in self.schedule[term] if cid != "FILLER"]
+                courses = [
+                    cid
+                    for cid in self.schedule[term]
+                    if not self._is_filler_placeholder_label(cid)
+                ]
             
             for course_id in courses:
                 if not self._meets_prerequisites(course_id, term):
                     return False, f"Prerequisites not met for {course_id} in {term}"
         return True, None
+
+    def _is_ge_course_label(self, course_id: str) -> bool:
+        value = str(course_id or "")
+        return bool(
+            re.search(r"\(\s*GE\s*-\s*[^)]+\)", value, re.IGNORECASE)
+            or re.search(r"^GE Course\s*\([^)]+\)", value, re.IGNORECASE)
+        )
+
+    def _is_filler_placeholder_label(self, course_id: str) -> bool:
+        value = str(course_id or "").strip()
+        return value == "FILLER" or bool(re.match(r"^FILLER_", value, re.IGNORECASE))
+
+    def _ge_foundation_from_label(self, course_id: str) -> Optional[str]:
+        value = str(course_id or "")
+        match = re.search(r"\(\s*GE\s*-\s*([^)]+)\)", value, re.IGNORECASE)
+        if match:
+            return match.group(1).strip()
+        ge_course_match = re.search(r"^GE Course\s*\(([^)]+)\)", value, re.IGNORECASE)
+        if ge_course_match:
+            return ge_course_match.group(1).strip()
+        return None
+
+    def _current_schedule_course_ids(self) -> Set[str]:
+        course_ids: Set[str] = set()
+        for term_courses in self.schedule.values():
+            if isinstance(term_courses, dict):
+                course_ids.update(term_courses.keys())
+            elif isinstance(term_courses, list):
+                course_ids.update(term_courses)
+        return course_ids
+
+    def _format_ge_course_label(self, subject_name: str, course_code: str, foundation: str) -> str:
+        short_foundation = foundation.replace("Foundations of ", "").strip()
+        return f"{subject_name} {course_code} (GE - {short_foundation})"
+
+    def _fetch_ge_candidates(self, foundation: Optional[str], interests: List[str]) -> List[Dict]:
+        query = self.supabase.table("general_education").select(
+            "subject_name,course_code,course_name,foundation,category,writing_ii,lab_demo"
+        )
+
+        if foundation:
+            query = query.ilike("foundation", f"%{foundation}%")
+
+        rows = query.limit(300).execute().data or []
+
+        lowered_interests = [i.lower() for i in interests if i and i.strip()]
+        if lowered_interests:
+            scored = []
+            for row in rows:
+                blob = " ".join(
+                    [
+                        str(row.get("subject_name") or ""),
+                        str(row.get("course_name") or ""),
+                        str(row.get("category") or ""),
+                    ]
+                ).lower()
+                score = sum(1 for interest in lowered_interests if interest in blob)
+                scored.append((score, row))
+            scored.sort(key=lambda item: item[0], reverse=True)
+            rows = [row for _, row in scored]
+
+        return rows
+
+    def replace_ge_course(self, course_id: str, term: str, interests: List[str]) -> Tuple[bool, str]:
+        if not interests:
+            return False, "Please provide interests so I can personalize your GE replacement"
+
+        if not term:
+            for maybe_term, term_courses in self.schedule.items():
+                pool = term_courses.keys() if isinstance(term_courses, dict) else term_courses
+                found = next((cid for cid in pool if self._is_ge_course_label(cid)), None)
+                if found:
+                    term = maybe_term
+                    if not course_id:
+                        course_id = found
+                    break
+
+        if term not in self.schedule:
+            return False, "Invalid term specified"
+
+        term_courses = self.schedule[term]
+        if not course_id:
+            pool = term_courses.keys() if isinstance(term_courses, dict) else term_courses
+            course_id = next((cid for cid in pool if self._is_ge_course_label(cid)), None)
+            if not course_id:
+                return False, "No GE course found in the selected term"
+
+        if isinstance(term_courses, dict):
+            if course_id not in term_courses:
+                return False, "GE course not found in specified term"
+        else:
+            if course_id not in term_courses:
+                return False, "GE course not found in specified term"
+
+        if not self._is_ge_course_label(course_id):
+            return False, "Selected course is not tagged as a GE course"
+
+        foundation = self._ge_foundation_from_label(course_id)
+        candidates = self._fetch_ge_candidates(foundation, interests)
+
+        used = self._current_schedule_course_ids().union(set(self.transcript.keys()))
+        replacement = None
+        for candidate in candidates:
+            label = self._format_ge_course_label(
+                candidate.get("subject_name", ""),
+                candidate.get("course_code", ""),
+                candidate.get("foundation", foundation or "General Education"),
+            )
+            if label == course_id or label in used:
+                continue
+            replacement = label
+            break
+
+        if not replacement:
+            return False, "I could not find an alternative GE that matches your interests and requirements"
+
+        if isinstance(term_courses, dict):
+            old_data = term_courses.get(course_id)
+            term_courses[replacement] = old_data if isinstance(old_data, dict) else {"lecture": None, "discussion": None}
+            del term_courses[course_id]
+        else:
+            idx = term_courses.index(course_id)
+            term_courses[idx] = replacement
+
+        return True, f"Replaced {course_id} with {replacement} based on your interests"
+
+    def _fetch_interest_course_candidates(self, interests: List[str]) -> List[str]:
+        cleaned_interests = [i.strip().lower() for i in (interests or []) if i and i.strip()]
+        if not cleaned_interests:
+            return []
+
+        score_by_course_id: Dict[int, int] = {}
+        for interest in cleaned_interests:
+            try:
+                rows = (
+                    self.supabase.table("course_descriptions")
+                    .select("course_id")
+                    .ilike("description", f"%{interest}%")
+                    .limit(300)
+                    .execute()
+                    .data
+                    or []
+                )
+            except Exception:
+                rows = []
+
+            for row in rows:
+                cid = row.get("course_id")
+                if cid is None:
+                    continue
+                score_by_course_id[cid] = score_by_course_id.get(cid, 0) + 1
+
+        if not score_by_course_id:
+            return []
+
+        subject_id_to_code = {v: k for k, v in self._subject_code_to_id.items()}
+        sorted_course_ids = [cid for cid, _ in sorted(score_by_course_id.items(), key=lambda kv: kv[1], reverse=True)]
+
+        candidates: List[str] = []
+        chunk_size = 200
+        for idx in range(0, len(sorted_course_ids), chunk_size):
+            chunk = sorted_course_ids[idx : idx + chunk_size]
+            rows = (
+                self.supabase.table("courses")
+                .select("id,subject_id,catalog_number")
+                .in_("id", chunk)
+                .execute()
+                .data
+                or []
+            )
+
+            row_by_id = {r.get("id"): r for r in rows}
+            for cid in chunk:
+                row = row_by_id.get(cid)
+                if not row:
+                    continue
+                subject_code = subject_id_to_code.get(row.get("subject_id"))
+                catalog = row.get("catalog_number")
+                if not subject_code or not catalog:
+                    continue
+                candidates.append(f"{subject_code}|{catalog}")
+
+        return candidates
+
+    def replace_filler_course(self, course_id: Optional[str], term: Optional[str], interests: List[str]) -> Tuple[bool, str]:
+        if not interests:
+            return False, "Please provide interests so I can suggest a course for this filler slot"
+
+        # Infer target filler slot when course_id and/or term is omitted.
+        if not term or not course_id:
+            for maybe_term, term_courses in self.schedule.items():
+                pool = list(term_courses.keys()) if isinstance(term_courses, dict) else list(term_courses)
+                filler = next((cid for cid in pool if self._is_filler_placeholder_label(cid)), None)
+                if filler:
+                    term = term or maybe_term
+                    course_id = course_id or filler
+                    break
+
+        if not term or term not in self.schedule:
+            return False, "Invalid term specified"
+
+        term_courses = self.schedule[term]
+        if not course_id:
+            pool = list(term_courses.keys()) if isinstance(term_courses, dict) else list(term_courses)
+            course_id = next((cid for cid in pool if self._is_filler_placeholder_label(cid)), None)
+            if not course_id:
+                return False, "No filler slot found in the selected term"
+
+        if isinstance(term_courses, dict):
+            if course_id not in term_courses:
+                return False, "Filler slot not found in specified term"
+        else:
+            if course_id not in term_courses:
+                return False, "Filler slot not found in specified term"
+
+        if not self._is_filler_placeholder_label(course_id):
+            return False, "Selected course is not a filler placeholder"
+
+        used = {
+            cid
+            for cid in self._current_schedule_course_ids().union(set(self.transcript.keys()))
+            if not self._is_filler_placeholder_label(cid)
+        }
+        candidates = self._fetch_interest_course_candidates(interests)
+        if not candidates:
+            return False, "I could not find matching course suggestions for those interests"
+
+        original_schedule = {**self.schedule}
+        earliest_term = min(self.schedule.keys()) if self.schedule else None
+
+        for replacement in candidates:
+            if replacement in used:
+                continue
+
+            temp_schedule = {**self.schedule}
+            if isinstance(temp_schedule[term], dict):
+                updated_term = {**temp_schedule[term]}
+                updated_term.pop(course_id, None)
+                updated_term[replacement] = {"lecture": None, "discussion": None}
+                temp_schedule[term] = updated_term
+            else:
+                updated_term = list(temp_schedule[term])
+                repl_idx = updated_term.index(course_id)
+                updated_term[repl_idx] = replacement
+                temp_schedule[term] = updated_term
+
+            self.schedule = temp_schedule
+
+            prereq_ok, _ = self._validate_prerequisites_after_term(term)
+            if not prereq_ok:
+                self.schedule = original_schedule
+                continue
+
+            if term == earliest_term and isinstance(temp_schedule[term], dict):
+                if not self._validate_term_schedule(temp_schedule[term]):
+                    self.schedule = original_schedule
+                    continue
+
+            return True, f"Replaced {course_id} with {replacement} based on your interests"
+
+        self.schedule = original_schedule
+        return False, "I could not find a replacement course that matches your interests and prerequisite constraints"
 
     def move_course(self, course_id: str, from_term: str, to_term: str) -> Tuple[bool, str]:
         """
@@ -562,6 +849,18 @@ def main():
             operation['term'],
             operation.get('new_lecture_id'),
             operation.get('new_discussion_id')
+        )
+    elif operation['type'] == 'replace_ge':
+        success, message = editor.replace_ge_course(
+            operation.get('course_id'),
+            operation.get('term'),
+            operation.get('interests', [])
+        )
+    elif operation['type'] == 'replace_filler':
+        success, message = editor.replace_filler_course(
+            operation.get('course_id'),
+            operation.get('term'),
+            operation.get('interests', [])
         )
     else:
         success, message = False, "Invalid operation type"

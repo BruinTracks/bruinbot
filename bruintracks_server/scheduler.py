@@ -3,8 +3,10 @@ import re
 import time
 import json
 import sys
+import csv
+import ast
 from datetime import datetime
-from typing import Dict, List, Tuple, Optional, Set
+from typing import Dict, List, Tuple, Optional, Set, Any
 from itertools import combinations
 from dotenv import load_dotenv
 from supabase import create_client
@@ -12,7 +14,7 @@ from supabase import create_client
 # ───── CONFIGURATION ─────
 load_dotenv()
 SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_ANON_KEY")
+SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY") or os.getenv("SUPABASE_ANON_KEY")
 
 # ───── DEFAULTS ─────
 DEFAULT_COURSES_TO_SCHEDULE = [
@@ -46,6 +48,7 @@ ALLOW_SECONDARY_CONFLICTS = True
 
 # Debug payload from last run, returned when explicitly requested.
 LAST_UNSCHEDULED_DEBUG: Dict[str, Dict] = {}
+GE_DISPLAY_BY_COURSE: Dict[str, str] = {}
 
 # Preferences defaults (rankable)
 PREF_PRIORITY    = ['time','building','days','instructor']
@@ -155,6 +158,435 @@ def create_term_sequence(start_q: str, start_y: int, end_q: str, end_y: int) -> 
     return seq
 
 
+def canonical_school_bucket(school: Optional[str]) -> str:
+    value = (school or "").strip().lower()
+    if value in {"arts & architecture", "music"}:
+        return "arts_music"
+    if value in {
+        "letters & sciences",
+        "education & information studies",
+        "public affairs",
+    }:
+        return "ls_edu_public"
+    if value == "engineering":
+        return "engineering"
+    if value == "nursing":
+        return "nursing"
+    if value in {"theater, film & television", "theater, film and television"}:
+        return "tft"
+    return "ls_edu_public"
+
+
+def short_foundation_name(foundation: str) -> str:
+    txt = canonical_foundation_name(foundation)
+    txt = re.sub(r"^Foundations of\s+", "", txt, flags=re.IGNORECASE)
+    return txt or "General Education"
+
+
+def canonical_foundation_name(foundation: str) -> str:
+    txt = str(foundation or "").strip()
+    lowered = txt.lower()
+
+    # Support both schema variants used in data sources.
+    aliases = {
+        "arts and humanities": "Foundations of Arts and Humanities",
+        "foundations of arts and humanities": "Foundations of Arts and Humanities",
+        "society and culture": "Foundations of Society and Culture",
+        "foundations of society and culture": "Foundations of Society and Culture",
+        "scientific inquiry": "Foundations of Scientific Inquiry",
+        "foundations of scientific inquiry": "Foundations of Scientific Inquiry",
+    }
+    return aliases.get(lowered, txt)
+
+
+def get_school_ge_rules(bucket: str) -> List[Dict[str, Any]]:
+    # Matrix-driven approximation using course counts by school/foundation/category.
+    # Hard constraints are encoded here; interest ranking happens during selection.
+    common_ah = {
+        "foundation": "Foundations of Arts and Humanities",
+        "total": 3,
+        "category_min": {
+            "Literary and Cultural Analysis": 1,
+            "Philosophical and Linguistic Analysis": 1,
+            "Visual and Performance Arts Analysis and Practice": 1,
+        },
+    }
+    common_sc = {
+        "foundation": "Foundations of Society and Culture",
+        "total": 3,
+        "category_min": {
+            "Historical Analysis": 1,
+            "Social Analysis": 1,
+        },
+    }
+
+    rules_by_bucket = {
+        "arts_music": [
+            common_ah,
+            common_sc,
+            {
+                "foundation": "Foundations of Scientific Inquiry",
+                "total": 2,
+                "category_min": {},
+                "max_per_category": {},
+                "lab_min": 0,
+            },
+        ],
+        "ls_edu_public": [
+            common_ah,
+            common_sc,
+            {
+                "foundation": "Foundations of Scientific Inquiry",
+                "total": 4,
+                "category_min": {
+                    "Life Sciences": 2,
+                    "Physical Sciences": 2,
+                },
+                "lab_min": 1,
+            },
+        ],
+        "engineering": [
+            {
+                "foundation": "Foundations of Arts and Humanities",
+                "total": 2,
+                "category_min": {},
+                "max_per_category": {
+                    "Literary and Cultural Analysis": 1,
+                    "Philosophical and Linguistic Analysis": 1,
+                    "Visual and Performance Arts Analysis and Practice": 1,
+                },
+            },
+            {
+                "foundation": "Foundations of Society and Culture",
+                "total": 2,
+                "category_min": {
+                    "Historical Analysis": 1,
+                    "Social Analysis": 1,
+                },
+            },
+            {
+                "foundation": "Foundations of Scientific Inquiry",
+                "total": 1,
+                "category_min": {
+                    "Life Sciences": 1,
+                },
+            },
+        ],
+        "nursing": [
+            common_ah,
+            common_sc,
+            {
+                "foundation": "Foundations of Scientific Inquiry",
+                "total": 4,
+                "category_min": {
+                    "Life Sciences": 2,
+                    "Physical Sciences": 2,
+                },
+            },
+        ],
+        "tft": [
+            {
+                "foundation": "Foundations of Arts and Humanities",
+                "total": 5,
+                "category_min": {},
+                "max_per_category": {
+                    "Literary and Cultural Analysis": 2,
+                    "Philosophical and Linguistic Analysis": 2,
+                    "Visual and Performance Arts Analysis and Practice": 2,
+                },
+            },
+            common_sc,
+            {
+                "foundation": "Foundations of Scientific Inquiry",
+                "total": 2,
+                "category_min": {
+                    "Life Sciences": 1,
+                    "Physical Sciences": 1,
+                },
+            },
+        ],
+    }
+
+    return rules_by_bucket.get(bucket, rules_by_bucket["ls_edu_public"])
+
+
+def interest_score_for_ge(row: Dict[str, Any], interests: List[str]) -> int:
+    if not interests:
+        return 0
+    blob = " ".join(
+        [
+            str(row.get("subject_name") or ""),
+            str(row.get("course_name") or ""),
+            str(row.get("category") or ""),
+            str(row.get("foundation") or ""),
+        ]
+    ).lower()
+    score = 0
+    for interest in interests:
+        txt = str(interest or "").strip().lower()
+        if txt and txt in blob:
+            score += 3
+    if bool(row.get("writing_ii")):
+        score += 1
+    if bool(row.get("lab_demo")):
+        score += 1
+    return score
+
+
+def pick_initial_ge_courses(
+    supa,
+    school: Optional[str],
+    ge_interests: List[str],
+    sub2id: Dict[str, int],
+    id2sub: Dict[int, str],
+    transcript: Dict[str, Optional[str]],
+    existing_courses: List[str],
+    term_ids: Set[int],
+) -> Tuple[List[str], Dict[str, str]]:
+    bucket = canonical_school_bucket(school)
+    rules = get_school_ge_rules(bucket)
+
+    ge_rows = []
+    start = 0
+    while True:
+        batch = safe_execute(
+            supa.table("general_education")
+            .select(
+                "subject_id,subject_name,course_code,course_name,foundation,category,lab_demo,writing_ii"
+            )
+            .range(start, start + 999)
+        ).data or []
+        ge_rows.extend(batch)
+        if len(batch) < 1000:
+            break
+        start += 1000
+
+    # Some environments do not have general_education seeded yet.
+    # Fall back to the repo CSV so GE generation still works.
+    if not ge_rows:
+        ge_rows = load_ge_rows_from_csv(sub2id)
+
+    if not ge_rows:
+        return [], {}
+
+    # Restrict to courses that have at least one section in the planning window.
+    sec_rows = []
+    sec_start = 0
+    while True:
+        batch = safe_execute(
+            supa.table("sections")
+            .select("course_id,term_id")
+            .in_("term_id", list(term_ids) if term_ids else [-1])
+            .range(sec_start, sec_start + 999)
+        ).data or []
+        sec_rows.extend(batch)
+        if len(batch) < 1000:
+            break
+        sec_start += 1000
+    schedulable_course_ids = {r["course_id"] for r in sec_rows}
+
+    used = {
+        normalize_course_key(c)
+        for c in existing_courses
+        if isinstance(c, str) and not c.startswith("RESOLVE:")
+    }
+    used |= {
+        normalize_course_key(c)
+        for c, g in transcript.items()
+        if g and meets_min_grade(g, "D-")
+    }
+
+    chosen: List[str] = []
+    ge_display_map: Dict[str, str] = {}
+
+    def normalized_category(row: Dict[str, Any]) -> str:
+        return str(row.get("category") or "").strip()
+
+    def foundation_rows(foundation: str) -> List[Dict[str, Any]]:
+        target = canonical_foundation_name(foundation)
+        return [
+            r
+            for r in ge_rows
+            if canonical_foundation_name(str(r.get("foundation") or "")).lower() == target.lower()
+        ]
+
+    def row_to_course_key(row: Dict[str, Any]) -> Optional[str]:
+        subject_id = row.get("subject_id")
+        if subject_id not in id2sub:
+            return None
+        code = id2sub[subject_id]
+        num = normalize_catalog_number(str(row.get("course_code") or ""))
+        if not num:
+            return None
+        key = f"{code}|{num}"
+        if key in used:
+            return None
+        # Confirm course exists and has sections in planning window.
+        row_match = safe_execute(
+            supa.table("courses")
+            .select("id")
+            .eq("subject_id", subject_id)
+            .eq("catalog_number", num)
+            .limit(1)
+        ).data or []
+        if not row_match:
+            return None
+        if row_match[0]["id"] not in schedulable_course_ids:
+            return None
+        return key
+
+    for rule in rules:
+        foundation = rule["foundation"]
+        total_needed = int(rule.get("total", 0))
+        category_min = dict(rule.get("category_min", {}))
+        max_per_category = dict(rule.get("max_per_category", {}))
+        lab_min = int(rule.get("lab_min", 0))
+
+        f_rows = foundation_rows(foundation)
+        f_rows.sort(key=lambda r: interest_score_for_ge(r, ge_interests), reverse=True)
+
+        selected_rows: List[Dict[str, Any]] = []
+        category_counts: Dict[str, int] = {}
+        subject_seen: Set[str] = set()
+
+        def can_take(row: Dict[str, Any]) -> bool:
+            category = normalized_category(row)
+            if category in max_per_category and category_counts.get(category, 0) >= max_per_category[category]:
+                return False
+            subject_name = str(row.get("subject_name") or "").strip().lower()
+            if subject_name and subject_name in subject_seen:
+                return False
+            return True
+
+        def push_row(row: Dict[str, Any]) -> bool:
+            key = row_to_course_key(row)
+            if not key:
+                return False
+            short = short_foundation_name(foundation)
+            display = f"{key.replace('|', ' ')} (GE - {short})"
+            selected_rows.append(row)
+            category = normalized_category(row)
+            category_counts[category] = category_counts.get(category, 0) + 1
+            subject_name = str(row.get("subject_name") or "").strip().lower()
+            if subject_name:
+                subject_seen.add(subject_name)
+            used.add(key)
+            chosen.append(key)
+            ge_display_map[key] = display
+            return True
+
+        # 1) Fill category minimums first.
+        for category, min_count in category_min.items():
+            candidates = [
+                r for r in f_rows if normalized_category(r).lower() == category.lower()
+            ]
+            needed = max(0, int(min_count))
+            for row in candidates:
+                if needed <= 0:
+                    break
+                if not can_take(row):
+                    continue
+                if push_row(row):
+                    needed -= 1
+
+        # 2) Enforce lab minimum for this foundation if requested.
+        current_lab = sum(1 for r in selected_rows if bool(r.get("lab_demo")))
+        if lab_min > current_lab:
+            lab_candidates = [r for r in f_rows if bool(r.get("lab_demo"))]
+            for row in lab_candidates:
+                if current_lab >= lab_min:
+                    break
+                if row in selected_rows or not can_take(row):
+                    continue
+                if push_row(row):
+                    current_lab += 1
+
+        # 3) Fill remaining slots by interest score under max constraints.
+        while len(selected_rows) < total_needed:
+            added = False
+            for row in f_rows:
+                if row in selected_rows or not can_take(row):
+                    continue
+                if push_row(row):
+                    added = True
+                    break
+            if not added:
+                break
+
+    return chosen, ge_display_map
+
+
+def load_ge_rows_from_csv(sub2id: Dict[str, int]) -> List[Dict[str, Any]]:
+    csv_path = os.path.join(
+        os.path.dirname(__file__),
+        "..",
+        "bruintracks_scripts",
+        "ge_courses",
+        "ucla_ge_courses.csv",
+    )
+    if not os.path.exists(csv_path):
+        return []
+
+    foundation_map = {
+        "Arts and Humanities": "Foundations of Arts and Humanities",
+        "Society and Culture": "Foundations of Society and Culture",
+        "Scientific Inquiry": "Foundations of Scientific Inquiry",
+    }
+
+    rows: List[Dict[str, Any]] = []
+    with open(csv_path, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for rec in reader:
+            dept_code = str(rec.get("Department Code") or "").strip().upper()
+            subject_id = sub2id.get(dept_code)
+            if not subject_id:
+                continue
+
+            raw_foundations = str(rec.get("Foundation Categories") or "").strip()
+            if not raw_foundations:
+                continue
+
+            try:
+                foundation_entries = ast.literal_eval(raw_foundations)
+            except Exception:
+                continue
+
+            if not isinstance(foundation_entries, list):
+                continue
+
+            writing_val = str(rec.get("Writing II") or "").strip().lower()
+            writing_ii = writing_val in {"yes", "y", "true", "1"}
+            course_code = str(rec.get("Catalog Number") or "").strip()
+            course_name = str(rec.get("Course Title") or "").strip()
+            subject_name = str(rec.get("Department") or "").strip()
+
+            for entry in foundation_entries:
+                text = str(entry or "").strip()
+                if not text:
+                    continue
+                if ":" not in text:
+                    continue
+                group, category = [p.strip() for p in text.split(":", 1)]
+                foundation = foundation_map.get(group)
+                if not foundation:
+                    continue
+
+                rows.append(
+                    {
+                        "subject_id": subject_id,
+                        "subject_name": subject_name,
+                        "course_code": course_code,
+                        "course_name": course_name,
+                        "foundation": foundation,
+                        "category": category,
+                        "lab_demo": False,
+                        "writing_ii": writing_ii,
+                    }
+                )
+
+    return rows
+
+
 def quarter_prefixes(prereq_logic: Dict[str, List[Tuple[str, str, str, str]]],
                      k: int, allow_warnings: bool) -> List[List[str]]:
     """Top-level helper used only when choosing the *very first* quarter.
@@ -186,9 +618,12 @@ def quarter_prefixes(prereq_logic: Dict[str, List[Tuple[str, str, str, str]]],
 
 def build_schedule(start_y: int, start_q: str,
                    end_y: int, end_q: str,
-                   allow_warnings: bool) -> Tuple[Dict[str, object], Optional[str]]:
+                   allow_warnings: bool,
+                   school: Optional[str],
+                   ge_interests: List[str]) -> Tuple[Dict[str, object], Optional[str]]:
     global COURSES_TO_SCHEDULE
     global LAST_UNSCHEDULED_DEBUG
+    global GE_DISPLAY_BY_COURSE
     
     # Separate RESOLVE requirements from regular courses and count them
     resolve_reqs = []
@@ -231,6 +666,22 @@ def build_schedule(start_y: int, start_q: str,
     sub2id = {s['code']: s['id'] for s in subs}
     id2sub = {s['id']: s['code'] for s in subs}
     name2sub = {re.sub(r"\s*\(.*\)$", "", s['name']).strip().upper(): s['code'] for s in subs}
+
+    # GE auto-selection (school + matrix + interests) ------------------------
+    all_planning_term_ids: Set[int] = set().union(*idx2db) if idx2db else set()
+    selected_ge_courses, ge_display_map = pick_initial_ge_courses(
+        supa=supa,
+        school=school,
+        ge_interests=ge_interests,
+        sub2id=sub2id,
+        id2sub=id2sub,
+        transcript=TRANSCRIPT,
+        existing_courses=regular_courses,
+        term_ids=all_planning_term_ids,
+    )
+    if selected_ge_courses:
+        regular_courses.extend(selected_ge_courses)
+    GE_DISPLAY_BY_COURSE = ge_display_map
 
     # remove passed courses ---------------------------------------------------
     passed = {
@@ -754,6 +1205,8 @@ def build_schedule(start_y: int, start_q: str,
             explanations.append(f"{course} ({reason})")
         note = "Unable to schedule: " + "; ".join(explanations)
 
+    ge_unscheduled = sorted(c for c in unscheduled if c in GE_DISPLAY_BY_COURSE)
+
     LAST_UNSCHEDULED_DEBUG = debug_unscheduled
 
     # Restore original COURSES_TO_SCHEDULE
@@ -866,11 +1319,36 @@ def build_schedule(start_y: int, start_q: str,
         else:
             note = "Unable to schedule: " + ", ".join(sorted(unplaced_reqs))
 
+    # Visibility fallback: keep unscheduled GE and unresolved electives visible
+    # in the final term so users can still see outstanding requirements.
+    if terms:
+        final_term = terms[-1]
+        term_courses = schedule.get(final_term)
+
+        def append_if_missing(item: str):
+            if isinstance(term_courses, dict):
+                if item not in term_courses:
+                    term_courses[item] = {'lecture': None, 'discussion': None}
+            elif isinstance(term_courses, list):
+                if item not in term_courses:
+                    term_courses.append(item)
+
+        for ge_course in ge_unscheduled:
+            append_if_missing(ge_course)
+
+        for elective_req in unplaced_reqs:
+            append_if_missing(elective_req)
+
     return schedule, note
 
 # ─────  Utility: format_schedule()  ─────
 
 def format_schedule(schedule: Dict[str, object]) -> Dict[str, object]:
+    global GE_DISPLAY_BY_COURSE
+
+    def display_course(course_key: str) -> str:
+        return GE_DISPLAY_BY_COURSE.get(course_key, course_key)
+
     out = {}
     for term, ent in schedule.items():
         if isinstance(ent, dict):
@@ -906,13 +1384,13 @@ def format_schedule(schedule: Dict[str, object]) -> Dict[str, object]:
                 }
 
             for course, info in ent.items():
-                term_d[course] = {
+                term_d[display_course(course)] = {
                     'lecture': clean(info.get('lecture')),
                     'discussion': clean(info.get('discussion'))
                 }
             out[term] = term_d
         else:
-            out[term] = ent
+            out[term] = [display_course(course) for course in ent]
     return out
 
 # ─────  CLI entrypoint ─────
@@ -935,6 +1413,7 @@ if __name__ == "__main__":
     PREF_NO_DAYS = set(prefs.get('pref_no_days', list(PREF_NO_DAYS)))
     PREF_BUILDINGS = set(prefs.get('pref_buildings', list(PREF_BUILDINGS)))
     PREF_INSTRUCTORS = set(prefs.get('pref_instructors', list(PREF_INSTRUCTORS)))
+    ge_interests = prefs.get('ge_interests', []) or []
     MAX_COURSES_PER_TERM = prefs.get('max_courses_per_term', MAX_COURSES_PER_TERM)
     LEAST_COURSES_PER_TERM = prefs.get('least_courses_per_term', LEAST_COURSES_PER_TERM)
 
@@ -942,7 +1421,9 @@ if __name__ == "__main__":
     sched, note = build_schedule(
         inp['start_year'], inp['start_quarter'],
         inp['end_year'], inp['end_quarter'],
-        ALLOW_WARNINGS
+        ALLOW_WARNINGS,
+        inp.get('school'),
+        ge_interests,
     )
     result = {'schedule': format_schedule(sched)}
     if note:

@@ -13,12 +13,18 @@ import * as Tooltip from '@radix-ui/react-tooltip';
 import { useCourseDescription } from '../hooks/useCourseDescription';
 import { ScheduleEditChat } from './ScheduleEditChat';
 
+const GENERATION_TIMEOUT_MS = 10 * 60 * 1000;
+
 export const CourseCard = ({ course, courseData, isFirstTerm }) => {
   const { description, loading } = useCourseDescription(course);
 
   // Clean course name by replacing "|" with a space
   const cleanCourseName = (name) => {
-    return name.replace(/\|/g, ' ');
+    return String(name)
+      .replace(/^RESOLVE:\s*/i, '')
+      .replace(/\|/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
   };
 
   // For terms after the first one, show a simple card
@@ -708,6 +714,26 @@ export const HomePage = () => {
     setIsScheduleEditorOpen(true);
   };
 
+  const clearGeneratingState = () => {
+    try {
+      const storedSchedule = localStorage.getItem('scheduleData');
+      if (storedSchedule) {
+        const parsed = JSON.parse(storedSchedule);
+        localStorage.setItem(
+          'scheduleData',
+          JSON.stringify({ ...parsed, isGenerating: false })
+        );
+      } else {
+        localStorage.setItem('scheduleData', JSON.stringify({ isGenerating: false }));
+      }
+    } catch {
+      localStorage.setItem('scheduleData', JSON.stringify({ isGenerating: false }));
+    }
+    setIsGeneratingSchedule(false);
+    setLoading(false);
+    navigate('/form');
+  };
+
   useEffect(() => {
     // Helper function to convert quarter string to sortable number
     const quarterToSortValue = (quarterStr) => {
@@ -742,8 +768,67 @@ export const HomePage = () => {
         try {
           const data = JSON.parse(storedSchedule);
           if (data.isGenerating) {
+            const startedAt = Number(data.startedAt || 0);
+            if (startedAt && Date.now() - startedAt > GENERATION_TIMEOUT_MS) {
+              localStorage.setItem(
+                'scheduleData',
+                JSON.stringify({ ...data, isGenerating: false })
+              );
+            } else {
             setIsGeneratingSchedule(true);
             setLoading(true);
+            return;
+            }
+          }
+
+          // Prefer the latest generated schedule payload from localStorage.
+          const localSchedule = data?.schedule?.schedule;
+          if (localSchedule && typeof localSchedule === 'object') {
+            const cleanedLocalSchedule = {};
+            Object.entries(localSchedule).forEach(([quarter, courses]) => {
+              if (
+                !courses ||
+                (typeof courses !== 'object' && !Array.isArray(courses))
+              ) {
+                return;
+              }
+
+              if (Array.isArray(courses)) {
+                const validCourses = courses.filter(
+                  (course) =>
+                    course &&
+                    typeof course === 'string' &&
+                    course.trim() !== '' &&
+                    course !== 'FILLER'
+                );
+                while (validCourses.length < leastCoursesPerTerm) {
+                  validCourses.push('FILLER');
+                }
+                cleanedLocalSchedule[quarter] = validCourses;
+              } else {
+                cleanedLocalSchedule[quarter] = {};
+                Object.entries(courses).forEach(([courseId, courseData]) => {
+                  if (courseData && typeof courseData === 'object') {
+                    cleanedLocalSchedule[quarter][courseId] = courseData;
+                  }
+                });
+
+                while (
+                  Object.keys(cleanedLocalSchedule[quarter]).length <
+                  leastCoursesPerTerm
+                ) {
+                  const fillerId = `FILLER_${
+                    Object.keys(cleanedLocalSchedule[quarter]).length + 1
+                  }`;
+                  cleanedLocalSchedule[quarter][fillerId] = 'FILLER';
+                }
+              }
+            });
+
+            const sortedLocalSchedule = sortQuarters(cleanedLocalSchedule);
+            setScheduleData(sortedLocalSchedule);
+            setLoading(false);
+            setIsGeneratingSchedule(false);
             return;
           }
         } catch {
@@ -880,6 +965,14 @@ export const HomePage = () => {
               <p className="text-gray-400 mt-2">
                 This may take a few minutes as we optimize your course schedule
               </p>
+              <motion.button
+                onClick={clearGeneratingState}
+                className="mt-6 bg-gray-700 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Stop and go back to form
+              </motion.button>
             </>
           ) : (
             <>

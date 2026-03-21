@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<Banner />} />
         <Route path="/Form" element={<Form />} />
         <Route path="/Home" element={<HomePage />} />
+        <Route path="/schedule" element={<HomePage />} />
         <Route path="/saved-schedules" element={<SavedSchedules />} />
         <Route path="/CoursePlanDetail" element={<CoursePlanDetailPage />} />
       </Routes>
