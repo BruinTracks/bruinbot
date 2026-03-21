@@ -12,7 +12,7 @@ export const InputField = ({ setValue, ...props }) => {
         }
       }}
       className={
-        'h-12 w-full rounded-lg border border-gray-300 bg-white px-3 text-base text-gray-900 text-center placeholder:text-center shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200'
+        'h-13 w-full rounded-xl border border-slate-600 bg-slate-900/85 px-4 text-base text-white placeholder:text-slate-400 shadow-sm transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30'
       }
     ></input>
   );

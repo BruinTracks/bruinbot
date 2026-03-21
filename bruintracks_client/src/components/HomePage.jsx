@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '../index.css';
 import '../App.css';
-import { motion } from 'framer-motion';
+import { motion, useDragControls } from 'framer-motion';
 import { Chatbox } from './Chatbox';
 import { handleSignOut } from '../supabaseClient.js';
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +14,12 @@ import { useCourseDescription } from '../hooks/useCourseDescription';
 import { ScheduleEditChat } from './ScheduleEditChat';
 
 const GENERATION_TIMEOUT_MS = 10 * 60 * 1000;
+const PANEL_CLASS =
+  'rounded-3xl border border-slate-700/80 bg-slate-900/80 shadow-[0_24px_80px_rgba(15,23,42,0.45)] backdrop-blur-sm';
+const SUBPANEL_CLASS =
+  'rounded-2xl border border-slate-700/70 bg-slate-800/85 shadow-lg';
+const ACTION_BUTTON_CLASS =
+  'inline-flex cursor-pointer items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition duration-200 whitespace-nowrap';
 
 export const CourseCard = ({ course, courseData, isFirstTerm }) => {
   const { description, loading } = useCourseDescription(course);
@@ -34,10 +40,10 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
         <Tooltip.Root>
           <Tooltip.Trigger asChild>
             <motion.div
-              className="bg-gray-700 rounded-lg shadow-md p-3 mb-4"
+              className={`${SUBPANEL_CLASS} mb-4 p-3`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -5, borderColor: 'rgba(96,165,250,0.45)' }}
             >
               <h3 className="text-sm font-semibold text-white">
                 {course === 'FILLER' ? 'Filler Course' : cleanCourseName(course)}
@@ -46,7 +52,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
           </Tooltip.Trigger>
           <Tooltip.Portal>
             <Tooltip.Content
-              className="bg-gray-800 text-white p-3 rounded-lg shadow-lg max-w-md text-sm"
+              className="max-w-md rounded-xl border border-slate-700 bg-slate-900 p-3 text-sm text-white shadow-2xl"
               sideOffset={5}
             >
               {loading ? 'Loading...' : description}
@@ -62,12 +68,15 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
   if (course === 'FILLER' || course.startsWith('FILLER_')) {
     return (
       <motion.div
-        className="bg-gray-700 rounded-lg shadow-md p-4 mb-4"
+        className={`${SUBPANEL_CLASS} mb-4 p-4`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        whileHover={{ y: -5 }}
+        whileHover={{ y: -5, borderColor: 'rgba(96,165,250,0.45)' }}
       >
         <h3 className="text-lg font-semibold text-white">Filler Course</h3>
+        <p className="mt-2 text-sm text-slate-300">
+          Open slot available for a personalized course recommendation.
+        </p>
       </motion.div>
     );
   }
@@ -79,20 +88,20 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
         <Tooltip.Root>
           <Tooltip.Trigger asChild>
             <motion.div
-              className="bg-gray-700 rounded-lg shadow-md p-4 mb-4"
+              className={`${SUBPANEL_CLASS} mb-4 p-4`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -5, borderColor: 'rgba(96,165,250,0.45)' }}
             >
               <h3 className="text-lg font-semibold text-white">
                 {cleanCourseName(course)}
               </h3>
-              <p className="text-gray-400">Course details not available</p>
+              <p className="text-slate-300">Course details not available</p>
             </motion.div>
           </Tooltip.Trigger>
           <Tooltip.Portal>
             <Tooltip.Content
-              className="bg-gray-800 text-white p-3 rounded-lg shadow-lg max-w-md text-sm"
+              className="max-w-md rounded-xl border border-slate-700 bg-slate-900 p-3 text-sm text-white shadow-2xl"
               sideOffset={5}
             >
               {loading ? 'Loading...' : description}
@@ -126,22 +135,22 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
       <Tooltip.Root>
         <Tooltip.Trigger asChild>
           <motion.div
-            className="bg-gray-700 rounded-lg shadow-md p-4 mb-4"
+            className={`${SUBPANEL_CLASS} mb-4 p-4`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -5 }}
+            whileHover={{ y: -5, borderColor: 'rgba(96,165,250,0.45)' }}
           >
             <h3 className="text-lg font-semibold text-white mb-2">{cleanCourseName(course)}</h3>
 
             {/* Lecture Section */}
             <div className="mb-3">
-              <h4 className="text-md font-medium text-blue-400">Lecture</h4>
+              <h4 className="text-md font-medium text-cyan-300">Lecture</h4>
               <div className="ml-4">
                 {lecture.section && (
-                  <p className="text-sm text-gray-400">Section: {lecture.section}</p>
+                  <p className="text-sm text-slate-300">Section: {lecture.section}</p>
                 )}
                 {lecture.instructors && (
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-slate-300">
                     Instructor:{' '}
                     {Array.isArray(lecture.instructors)
                       ? lecture.instructors.join(', ')
@@ -150,7 +159,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                 )}
                 {lecture.times &&
                   lecture.times.map((time, idx) => (
-                    <div key={idx} className="text-sm text-gray-400">
+                    <div key={idx} className="text-sm text-slate-300">
                       {time.days && <p>Days: {time.days}</p>}
                       {time.start && time.end && <p>Time: {time.start} - {time.end}</p>}
                       {time.building && time.room && (
@@ -162,7 +171,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                   <div className="mt-2 space-y-2">
                     {/* Enrollment Bar */}
                     <div>
-                      <div className="flex justify-between text-xs text-gray-400 mb-1">
+                      <div className="mb-1 flex justify-between text-xs text-slate-300">
                         <span>
                           Enrollment: {lecture.enrollment_total}/{lecture.enrollment_cap}
                         </span>
@@ -174,7 +183,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                           %
                         </span>
                       </div>
-                      <div className="w-full bg-gray-600 rounded-full h-2">
+                      <div className="h-2 w-full rounded-full bg-slate-700">
                         <div
                           className={`h-2 rounded-full ${getEnrollmentColor(
                             getEnrollmentPercentage(
@@ -195,7 +204,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                     {/* Waitlist Bar */}
                     {lecture.waitlist_total > 0 && (
                       <div>
-                        <div className="flex justify-between text-xs text-gray-400 mb-1">
+                        <div className="mb-1 flex justify-between text-xs text-slate-300">
                           <span>
                             Waitlist: {lecture.waitlist_total}/{lecture.waitlist_cap}
                           </span>
@@ -207,7 +216,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                             %
                           </span>
                         </div>
-                        <div className="w-full bg-gray-600 rounded-full h-2">
+                        <div className="h-2 w-full rounded-full bg-slate-700">
                           <div
                             className="h-2 rounded-full bg-purple-500"
                             style={{
@@ -228,13 +237,13 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
             {/* Discussion Section */}
             {discussion && (
               <div>
-                <h4 className="text-md font-medium text-blue-400">Discussion</h4>
+                <h4 className="text-md font-medium text-cyan-300">Discussion</h4>
                 <div className="ml-4">
                   {discussion.section && (
-                    <p className="text-sm text-gray-400">Section: {discussion.section}</p>
+                    <p className="text-sm text-slate-300">Section: {discussion.section}</p>
                   )}
                   {discussion.instructors && (
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-slate-300">
                       Instructor:{' '}
                       {Array.isArray(discussion.instructors)
                         ? discussion.instructors.join(', ')
@@ -243,7 +252,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                   )}
                   {discussion.times &&
                     discussion.times.map((time, idx) => (
-                      <div key={idx} className="text-sm text-gray-400">
+                      <div key={idx} className="text-sm text-slate-300">
                         {time.days && <p>Days: {time.days}</p>}
                         {time.start && time.end && <p>Time: {time.start} - {time.end}</p>}
                         {time.building && time.room && (
@@ -255,7 +264,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                     <div className="mt-2 space-y-2">
                       {/* Enrollment Bar */}
                       <div>
-                        <div className="flex justify-between text-xs text-gray-400 mb-1">
+                        <div className="mb-1 flex justify-between text-xs text-slate-300">
                           <span>
                             Enrollment: {discussion.enrollment_total}/{discussion.enrollment_cap}
                           </span>
@@ -267,7 +276,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                             %
                           </span>
                         </div>
-                        <div className="w-full bg-gray-600 rounded-full h-2">
+                        <div className="h-2 w-full rounded-full bg-slate-700">
                           <div
                             className={`h-2 rounded-full ${getEnrollmentColor(
                               getEnrollmentPercentage(
@@ -288,7 +297,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                       {/* Waitlist Bar */}
                       {discussion.waitlist_total > 0 && (
                         <div>
-                          <div className="flex justify-between text-xs text-gray-400 mb-1">
+                          <div className="mb-1 flex justify-between text-xs text-slate-300">
                             <span>
                               Waitlist: {discussion.waitlist_total}/{discussion.waitlist_cap}
                             </span>
@@ -300,7 +309,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
                               %
                             </span>
                           </div>
-                          <div className="w-full bg-gray-600 rounded-full h-2">
+                          <div className="h-2 w-full rounded-full bg-slate-700">
                             <div
                               className="h-2 rounded-full bg-purple-500"
                               style={{
@@ -322,7 +331,7 @@ export const CourseCard = ({ course, courseData, isFirstTerm }) => {
         </Tooltip.Trigger>
         <Tooltip.Portal>
           <Tooltip.Content
-            className="bg-gray-800 text-white p-3 rounded-lg shadow-lg max-w-md text-sm"
+            className="max-w-md rounded-xl border border-slate-700 bg-slate-900 p-3 text-sm text-white shadow-2xl"
             sideOffset={5}
           >
             {loading ? 'Loading...' : description}
@@ -343,11 +352,21 @@ export const QuarterSchedule = ({ quarter, courses, isFirstTerm }) => {
 
   return (
     <motion.div
-      className="mb-8"
+      className={`${PANEL_CLASS} mb-8 p-6`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      <h2 className="text-2xl font-bold text-white mb-4">{quarter}</h2>
+      <div className="mb-5 flex items-center justify-between gap-4">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+            Quarter Plan
+          </p>
+          <h2 className="mt-1 text-2xl font-bold text-white">{quarter}</h2>
+        </div>
+        <div className="rounded-full border border-slate-600 bg-slate-800/90 px-3 py-1 text-xs text-slate-200">
+          {Array.isArray(courses) ? courses.length : Object.keys(courses).length} courses
+        </div>
+      </div>
       <div
         className={`grid ${
           isFirstTerm
@@ -409,33 +428,41 @@ export const ScheduleSummary = ({ scheduleData }) => {
 
   return (
     <motion.div
-      className="bg-gray-700 rounded-lg p-6 mb-8"
+      className={`${PANEL_CLASS} mb-8 p-6`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      <h2 className="text-2xl font-bold text-white mb-4">Schedule Summary</h2>
+      <div className="mb-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+          Overview
+        </p>
+        <h2 className="mt-1 text-2xl font-bold text-white">Schedule Summary</h2>
+        <p className="mt-2 text-sm text-slate-300">
+          A quick snapshot of your plan, timeline, and saved preferences.
+        </p>
+      </div>
 
       {/* Basic Schedule Info */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <motion.div
-          className="bg-gray-800 p-4 rounded-lg"
-          whileHover={{ scale: 1.05 }}
+          className={`${SUBPANEL_CLASS} p-4`}
+          whileHover={{ scale: 1.03, borderColor: 'rgba(34,211,238,0.35)' }}
         >
-          <h3 className="text-lg font-semibold text-blue-400">Total Courses</h3>
+          <h3 className="text-lg font-semibold text-cyan-300">Total Courses</h3>
           <p className="text-3xl font-bold text-white">{totalCourses}</p>
         </motion.div>
         <motion.div
-          className="bg-gray-800 p-4 rounded-lg"
-          whileHover={{ scale: 1.05 }}
+          className={`${SUBPANEL_CLASS} p-4`}
+          whileHover={{ scale: 1.03, borderColor: 'rgba(34,211,238,0.35)' }}
         >
-          <h3 className="text-lg font-semibold text-blue-400">Start Quarter</h3>
+          <h3 className="text-lg font-semibold text-cyan-300">Start Quarter</h3>
           <p className="text-xl text-white">{startQuarter}</p>
         </motion.div>
         <motion.div
-          className="bg-gray-800 p-4 rounded-lg"
-          whileHover={{ scale: 1.05 }}
+          className={`${SUBPANEL_CLASS} p-4`}
+          whileHover={{ scale: 1.03, borderColor: 'rgba(34,211,238,0.35)' }}
         >
-          <h3 className="text-lg font-semibold text-blue-400">End Quarter</h3>
+          <h3 className="text-lg font-semibold text-cyan-300">End Quarter</h3>
           <p className="text-xl text-white">{endQuarter}</p>
         </motion.div>
       </div>
@@ -443,17 +470,17 @@ export const ScheduleSummary = ({ scheduleData }) => {
       {/* Preferences Summary */}
       {preferences && (
         <motion.div
-          className="bg-gray-800 rounded-lg p-4"
+          className={`${SUBPANEL_CLASS} p-4`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <h3 className="text-lg font-semibold text-blue-400 mb-3">
+          <h3 className="mb-3 text-lg font-semibold text-cyan-300">
             Your Preferences
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Course Load */}
-            <div className="bg-gray-700 p-3 rounded">
-              <p className="text-sm text-gray-400">Course Load</p>
+            <div className="rounded-xl border border-slate-700 bg-slate-900/70 p-3">
+              <p className="text-sm text-slate-400">Course Load</p>
               <p className="text-white">
                 {preferences.least_courses_per_term} -{' '}
                 {preferences.max_courses_per_term} courses per quarter
@@ -461,8 +488,8 @@ export const ScheduleSummary = ({ scheduleData }) => {
             </div>
 
             {/* Time Preferences */}
-            <div className="bg-gray-700 p-3 rounded">
-              <p className="text-sm text-gray-400">Preferred Times</p>
+            <div className="rounded-xl border border-slate-700 bg-slate-900/70 p-3">
+              <p className="text-sm text-slate-400">Preferred Times</p>
               <p className="text-white">
                 {preferences.pref_earliest && preferences.pref_latest
                   ? `${preferences.pref_earliest} - ${preferences.pref_latest}`
@@ -471,8 +498,8 @@ export const ScheduleSummary = ({ scheduleData }) => {
             </div>
 
             {/* Unpreferred Day Preferences */}
-            <div className="bg-gray-700 p-3 rounded">
-              <p className="text-sm text-gray-400">Unpreferred Days</p>
+            <div className="rounded-xl border border-slate-700 bg-slate-900/70 p-3">
+              <p className="text-sm text-slate-400">Unpreferred Days</p>
               <p className="text-white">
                 {Array.isArray(preferences.pref_no_days) &&
                 preferences.pref_no_days.length > 0
@@ -484,8 +511,8 @@ export const ScheduleSummary = ({ scheduleData }) => {
             {/* Professor Preferences */}
             {Array.isArray(preferences.pref_instructors) &&
               preferences.pref_instructors.length > 0 && (
-                <div className="bg-gray-700 p-3 rounded">
-                  <p className="text-sm text-gray-400">Preferred Professors</p>
+                <div className="rounded-xl border border-slate-700 bg-slate-900/70 p-3">
+                  <p className="text-sm text-slate-400">Preferred Professors</p>
                   <p className="text-white">
                     {preferences.pref_instructors.join(', ')}
                   </p>
@@ -495,8 +522,8 @@ export const ScheduleSummary = ({ scheduleData }) => {
             {/* Course Preferences */}
             {Array.isArray(preferences.pref_buildings) &&
               preferences.pref_buildings.length > 0 && (
-                <div className="bg-gray-700 p-3 rounded">
-                  <p className="text-sm text-gray-400">Preferred Buildings</p>
+                <div className="rounded-xl border border-slate-700 bg-slate-900/70 p-3">
+                  <p className="text-sm text-slate-400">Preferred Buildings</p>
                   <p className="text-white">
                     {preferences.pref_buildings.join(', ')}
                   </p>
@@ -505,8 +532,8 @@ export const ScheduleSummary = ({ scheduleData }) => {
 
             {/* Other Preferences */}
             {preferences.tech_breadth && (
-              <div className="bg-gray-700 p-3 rounded">
-                <p className="text-sm text-gray-400">Tech Breadth</p>
+              <div className="rounded-xl border border-slate-700 bg-slate-900/70 p-3">
+                <p className="text-sm text-slate-400">Tech Breadth</p>
                 <p className="text-white">{preferences.tech_breadth}</p>
               </div>
             )}
@@ -591,11 +618,19 @@ export const WeeklyCalendar = ({ courses }) => {
   /* ───────── render ───────── */
   return (
     <motion.div
-      className="bg-gray-700 rounded-lg shadow-md p-6 mb-8"
+      className={`${PANEL_CLASS} mb-8 p-6`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      <h2 className="text-2xl font-bold text-white mb-6">Weekly Schedule</h2>
+      <div className="mb-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+          First Quarter
+        </p>
+        <h2 className="mt-1 text-2xl font-bold text-white">Weekly Schedule</h2>
+        <p className="mt-2 text-sm text-slate-300">
+          A time-based view of your earliest scheduled quarter.
+        </p>
+      </div>
 
       <div className="overflow-x-auto">
         <div className="min-w-[800px]">
@@ -610,7 +645,7 @@ export const WeeklyCalendar = ({ courses }) => {
             <div></div>
             {days.map((d) => (
               <div key={d} className="text-center">
-                <h3 className="text-lg font-semibold text-blue-400">{d}</h3>
+                <h3 className="text-lg font-semibold text-cyan-300">{d}</h3>
               </div>
             ))}
           </div>
@@ -627,12 +662,12 @@ export const WeeklyCalendar = ({ courses }) => {
                 }}
               >
                 {/* time label */}
-                <div className="flex items-center justify-center border-b border-gray-600">
-                  <span className="text-sm text-gray-400">{t}</span>
+                <div className="flex items-center justify-center border-b border-slate-700">
+                  <span className="text-sm text-slate-400">{t}</span>
                 </div>
                 {/* five day cells */}
                 {days.map((d) => (
-                  <div key={`${d}-${t}`} className="border-b border-gray-600"></div>
+                  <div key={`${d}-${t}`} className="border-b border-slate-700"></div>
                 ))}
               </div>
             ))}
@@ -656,7 +691,7 @@ export const WeeklyCalendar = ({ courses }) => {
                 return (
                   <motion.div
                     key={`${blk.name}-${blk.label}-${day}`}
-                    className="absolute bg-gray-800 border border-blue-500 rounded p-2 text-white text-sm shadow-lg overflow-hidden"
+                    className="absolute overflow-hidden rounded-xl border border-cyan-400/45 bg-slate-800/95 p-2 text-sm text-white shadow-lg"
                     style={{
                       top: top,
                       height: height - 4, // small interior padding
@@ -665,19 +700,19 @@ export const WeeklyCalendar = ({ courses }) => {
                     }}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    whileHover={{ scale: 1.05, backgroundColor: "#1a365d" }}
+                    whileHover={{ scale: 1.03, backgroundColor: '#18314f' }}
                   >
                     {overlapCount > 0 && (
                       <div className="absolute top-1 right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                         {overlapCount}
                       </div>
                     )}
-                    <p className="font-semibold text-blue-400 break-words">
+                    <p className="break-words font-semibold text-cyan-300">
                       {blk.name.replace(/\|/g, " ")}
                     </p>
-                    <p className="text-xs text-gray-400">{blk.label}</p>
+                    <p className="text-xs text-slate-300">{blk.label}</p>
                     {blk.building && blk.room && (
-                      <p className="text-xs text-gray-400 break-words">
+                      <p className="break-words text-xs text-slate-300">
                         {blk.building} {blk.room}
                       </p>
                     )}
@@ -695,12 +730,15 @@ export const WeeklyCalendar = ({ courses }) => {
 export const HomePage = () => {
   const navigate = useNavigate();
   const { session } = useAuth();
+  const pageRef = useRef(null);
   const [scheduleData, setScheduleData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isGeneratingSchedule, setIsGeneratingSchedule] = useState(false);
   const [leastCoursesPerTerm, setLeastCoursesPerTerm] = useState(3);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isScheduleEditorOpen, setIsScheduleEditorOpen] = useState(false);
+  const planningDragControls = useDragControls();
+  const editorDragControls = useDragControls();
 
   const handleChatButtonClick = () => {
     setIsChatOpen(true);
@@ -954,20 +992,21 @@ export const HomePage = () => {
 
   if (loading || !scheduleData) {
     return (
-      <div className="bg-gray-900 min-h-screen min-w-screen text-white flex flex-col items-center justify-center">
-        <div className="text-center">
+      <div className="relative flex min-h-screen min-w-screen flex-col items-center justify-center overflow-hidden bg-slate-950 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.12),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.12),_transparent_30%)]" />
+        <div className={`${PANEL_CLASS} relative mx-4 max-w-xl p-10 text-center`}>
           {isGeneratingSchedule ? (
             <>
               <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-400 mx-auto mb-4"></div>
-              <h2 className="text-xl font-semibold text-gray-300">
-                Generating your schedule...
+              <h2 className="text-xl font-semibold text-slate-200">
+                Bruin up your schedule...
               </h2>
-              <p className="text-gray-400 mt-2">
+              <p className="mt-2 text-slate-300">
                 This may take a few minutes as we optimize your course schedule
               </p>
               <motion.button
                 onClick={clearGeneratingState}
-                className="mt-6 bg-gray-700 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                className="mt-6 rounded-xl border border-slate-600 bg-slate-800 px-6 py-2 text-white transition-colors hover:bg-slate-700"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -976,15 +1015,18 @@ export const HomePage = () => {
             </>
           ) : (
             <>
-              <h2 className="text-2xl font-semibold text-gray-300 mb-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                BruinBot Home
+              </p>
+              <h2 className="mb-3 mt-2 text-3xl font-semibold text-white">
                 Welcome to bruinbot
               </h2>
-              <p className="text-gray-400 mb-8">
+              <p className="mb-8 text-slate-300">
                 Generate your personalized course schedule to help plan your academic journey
               </p>
               <motion.button
                 onClick={() => navigate('/form')}
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="rounded-xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-blue-700"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -998,43 +1040,159 @@ export const HomePage = () => {
   }
 
   return (
-    <div className="bg-gray-900 min-h-screen min-w-screen text-white flex flex-col items-center pt-10">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center mb-8">
-          <motion.h1
-            className="text-3xl font-bold"
+    <div ref={pageRef} className="relative min-h-screen min-w-screen overflow-y-auto bg-slate-950 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.12),_transparent_28%),radial-gradient(circle_at_85%_15%,_rgba(59,130,246,0.10),_transparent_24%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.22),rgba(2,6,23,0.48))]" />
+      <div className="relative mx-auto max-w-7xl px-4 pb-24 pt-10">
+        <div className={`${PANEL_CLASS} mb-8 overflow-hidden p-6`}>
+          <div className="grid gap-8 xl:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.9fr)]">
+            <div className="max-w-3xl">
+              <motion.p
+                className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300"
+                initial={{ opacity: 0, y: -12 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                BruinBot Home
+              </motion.p>
+              <motion.h1
+            className="mt-2 text-4xl font-bold tracking-tight"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
           >
             Your Schedule
           </motion.h1>
-          <div className="flex gap-4">
-            <GoogleCalendarButton scheduleData={scheduleData} />
-            <motion.button
-              onClick={() => navigate('/form')}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Take me back to the form
-            </motion.button>
-            <motion.button
-              onClick={() => navigate('/saved-schedules')}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View Saved Schedules
-            </motion.button>
-            <motion.button
-              onClick={onSignOut}
-              className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Sign Out
-            </motion.button>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+                Review your academic plan, inspect your first-quarter calendar,
+                and use the assistants to refine your roadmap in one place.
+              </p>
+            </div>
+            <div className={`${SUBPANEL_CLASS} flex flex-col justify-between p-5`}>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+                  Quick Actions
+                </p>
+                <h2 className="mt-2 text-xl font-semibold text-white">
+                  Keep planning without losing momentum
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  Export your schedule, revisit your intake, or jump back into saved plans.
+                </p>
+              </div>
+              <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <GoogleCalendarButton scheduleData={scheduleData} />
+                <motion.button
+                  onClick={() => navigate('/form')}
+                  className={`${ACTION_BUTTON_CLASS} bg-blue-600 text-white hover:bg-blue-700`}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Back to Form
+                </motion.button>
+                <motion.button
+                  onClick={() => navigate('/saved-schedules')}
+                  className={`${ACTION_BUTTON_CLASS} border border-slate-600 bg-slate-800 text-white hover:bg-slate-700`}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Saved Schedules
+                </motion.button>
+                <motion.button
+                  onClick={onSignOut}
+                  className={`${ACTION_BUTTON_CLASS} bg-red-600 text-white hover:bg-red-700`}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Sign Out
+                </motion.button>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="mb-8 grid gap-4 lg:grid-cols-2">
+          <motion.button
+            onClick={handleScheduleEditorClick}
+            className={`${PANEL_CLASS} group flex min-h-[188px] h-full cursor-pointer p-5 text-left transition duration-200 hover:border-blue-300/40 hover:bg-slate-900`}
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.99 }}
+          >
+            <div className="flex w-full items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="rounded-2xl border border-blue-400/30 bg-blue-400/10 p-3 text-blue-300">
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-200">
+                    AI Assistant
+                  </p>
+                  <h2 className="mt-2 text-2xl font-semibold text-white">
+                    Schedule Editor
+                  </h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">
+                    Move classes, swap terms, replace fillers, and refine your plan with guardrails.
+                  </p>
+                </div>
+              </div>
+              <span className="flex min-w-[126px] cursor-pointer items-center justify-center self-center rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-center text-sm font-medium text-blue-200">
+                Edit plan
+              </span>
+            </div>
+          </motion.button>
+
+          <motion.button
+            onClick={handleChatButtonClick}
+            className={`${PANEL_CLASS} group flex min-h-[188px] h-full cursor-pointer p-5 text-left transition duration-200 hover:border-cyan-300/40 hover:bg-slate-900`}
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.99 }}
+          >
+            <div className="flex w-full items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="rounded-2xl border border-cyan-400/30 bg-cyan-400/10 p-3 text-cyan-300">
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">
+                    AI Assistant
+                  </p>
+                  <h2 className="mt-2 text-2xl font-semibold text-white">
+                    Planning Assistant
+                  </h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">
+                    Ask about requirements, course sequencing, GE options, and your next best move.
+                  </p>
+                </div>
+              </div>
+              <span className="flex min-w-[126px] cursor-pointer items-center justify-center self-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-center text-sm font-medium text-cyan-200">
+                Ask anything
+              </span>
+            </div>
+          </motion.button>
         </div>
 
         {/* Schedule Summary */}
@@ -1066,67 +1224,42 @@ export const HomePage = () => {
             />
           ))}
 
-        {/* Floating Chat Buttons */}
-        <div className="fixed bottom-6 right-5 flex justify-between w-full px-6">
-          {/* Edit Button (Left Side) */}
-          <button
-            onClick={handleScheduleEditorClick}
-            className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 z-50"
-            aria-label="Open schedule editor"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-              />
-            </svg>
-          </button>
-
-          {/* Chat Button (Right Side) */}
-          <button
-            onClick={handleChatButtonClick}
-            className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 z-50"
-            aria-label="Open chat"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-              />
-            </svg>
-          </button>
-        </div>
-
         {/* Chat Interface */}
         {isChatOpen && (
           <motion.div
-            className="fixed bottom-28 right-8 w-[400px] h-[600px] bg-gray-800 rounded-lg shadow-2xl z-50 border border-gray-700"
+            className="fixed bottom-8 right-4 z-50 flex h-[620px] max-h-[calc(100vh-4rem)] w-[calc(100vw-2rem)] max-w-[440px] flex-col overflow-hidden rounded-3xl border border-slate-600/80 bg-slate-800/95 shadow-[0_30px_90px_rgba(2,8,23,0.55)] backdrop-blur-md sm:right-8"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            drag
+            dragControls={planningDragControls}
+            dragListener={false}
+            dragMomentum={false}
+            dragElastic={0.08}
+            dragConstraints={{ top: -420, left: -900, right: 80, bottom: 120 }}
           >
-            <div className="p-4 border-b border-gray-700 flex justify-between items-center bg-gray-900 rounded-t-lg">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <h3 className="text-lg font-semibold text-white">
-                  AI Planning Assistant
-                </h3>
+            <div
+              className="flex cursor-grab items-start justify-between border-b border-slate-700 bg-slate-900 p-4 active:cursor-grabbing"
+              onPointerDown={(event) => planningDragControls.start(event)}
+            >
+              <div className="flex items-start space-x-3">
+                <div className="mt-1 h-3 w-3 rounded-full bg-green-500"></div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-lg font-semibold text-white">
+                      AI Planning Assistant
+                    </h3>
+                    <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-2 py-0.5 text-[11px] font-medium text-cyan-200">
+                      Ask anything
+                    </span>
+                  </div>
+                  <p className="mt-1 text-sm text-slate-300">
+                    Course guidance, requirement help, and quarter-planning support.
+                  </p>
+                  <p className="mt-2 text-xs uppercase tracking-[0.18em] text-slate-500">
+                    Drag this window by the header
+                  </p>
+                </div>
               </div>
               <div className="flex items-center space-x-2">
                 <button
@@ -1151,7 +1284,7 @@ export const HomePage = () => {
                 </button>
               </div>
             </div>
-            <div className="h-[calc(100%-4rem)] overflow-hidden">
+            <div className="flex-1 overflow-hidden">
               <Chatbox scheduleData={scheduleData} />
             </div>
           </motion.div>
@@ -1160,17 +1293,39 @@ export const HomePage = () => {
         {/* Schedule Editor Interface */}
         {isScheduleEditorOpen && (
           <motion.div
-            className="fixed bottom-28 left-8 w-[400px] h-[600px] bg-gray-800 rounded-lg shadow-2xl z-50 border border-gray-700"
+            className="fixed bottom-8 left-4 z-50 flex h-[620px] max-h-[calc(100vh-4rem)] w-[calc(100vw-2rem)] max-w-[460px] flex-col overflow-hidden rounded-3xl border border-slate-600/80 bg-slate-800/95 shadow-[0_30px_90px_rgba(2,8,23,0.55)] backdrop-blur-md sm:left-8"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            drag
+            dragControls={editorDragControls}
+            dragListener={false}
+            dragMomentum={false}
+            dragElastic={0.08}
+            dragConstraints={{ top: -420, left: -80, right: 900, bottom: 120 }}
           >
-            <div className="p-4 border-b border-gray-700 flex justify-between items-center bg-gray-900 rounded-t-lg">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                <h3 className="text-lg font-semibold text-white">
-                  Schedule Editor
-                </h3>
+            <div
+              className="flex cursor-grab items-start justify-between border-b border-slate-700 bg-slate-900 p-4 active:cursor-grabbing"
+              onPointerDown={(event) => editorDragControls.start(event)}
+            >
+              <div className="flex items-start space-x-3">
+                <div className="mt-1 h-3 w-3 rounded-full bg-blue-500"></div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-lg font-semibold text-white">
+                      Schedule Editor
+                    </h3>
+                    <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-2 py-0.5 text-[11px] font-medium text-blue-200">
+                      Make changes
+                    </span>
+                  </div>
+                  <p className="mt-1 text-sm text-slate-300">
+                    Edit your plan with guided moves, swaps, GE replacements, and filler updates.
+                  </p>
+                  <p className="mt-2 text-xs uppercase tracking-[0.18em] text-slate-500">
+                    Drag this window by the header
+                  </p>
+                </div>
               </div>
               <div className="flex items-center space-x-2">
                 <button
@@ -1195,7 +1350,7 @@ export const HomePage = () => {
                 </button>
               </div>
             </div>
-            <div className="h-[calc(100%-4rem)] overflow-hidden">
+            <div className="flex-1 overflow-hidden">
               <ScheduleEditChat scheduleData={scheduleData} onScheduleUpdate={onScheduleUpdate} />
             </div>
           </motion.div>

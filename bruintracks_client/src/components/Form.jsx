@@ -41,15 +41,22 @@ const classes = {
 };
 
 const FORM_ROW_CLASS =
-  'mx-auto w-full max-w-[24rem] flex flex-col items-center gap-2';
-const FORM_LABEL_CLASS = 'text-xl text-center';
+  'mx-auto flex w-full max-w-[28rem] flex-col gap-2';
+const FORM_ROW_WIDE_CLASS =
+  'flex w-full flex-col gap-2';
+const FORM_LABEL_CLASS =
+  'text-sm font-semibold uppercase tracking-[0.16em] text-cyan-200';
 const FORM_CONTROL_CLASS =
-  'h-12 w-full rounded-lg border border-gray-300 bg-white px-3 text-base text-gray-900 text-center placeholder:text-center shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200';
+  'h-13 w-full rounded-xl border border-slate-600 bg-slate-900/85 px-4 text-base text-white placeholder:text-slate-400 shadow-sm transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30';
 const FORM_MENU_CLASS =
-  'absolute left-0 top-[calc(100%+0.25rem)] z-50 max-h-56 w-full overflow-y-auto rounded-lg border border-gray-300 bg-white shadow-lg';
+  'absolute left-0 top-[calc(100%+0.35rem)] z-50 max-h-56 w-full overflow-y-auto rounded-2xl border border-slate-600 bg-slate-900 shadow-2xl';
 const FORM_TITLE_ALIGN_CLASS = 'w-full text-center';
 const FORM_CHECKBOX_ROW_CLASS =
-  'mx-auto flex w-full max-w-[34rem] items-center justify-center gap-4';
+  'mx-auto flex w-full max-w-[34rem] items-center justify-between gap-4 rounded-2xl border border-slate-700 bg-slate-900/60 px-5 py-4';
+const FORM_PANEL_CLASS =
+  'rounded-[2rem] border border-slate-700/80 bg-slate-950/85 shadow-[0_30px_90px_rgba(2,8,23,0.5)] backdrop-blur-md';
+const FORM_SUBPANEL_CLASS =
+  'rounded-2xl border border-slate-700/70 bg-slate-900/70 shadow-lg';
 
 const normalizeSchoolLabel = (schoolName) => {
   const value = String(schoolName || '').trim();
@@ -70,43 +77,58 @@ const FormModal = ({
 
   return (
     <motion.div
-      className="bg-gray-100 rounded-xl border border-gray-700"
-      style={{ width: '50%', paddingTop: '2%', paddingBottom: '2%' }}
-      whileHover={{ scale: 0.98, opacity: 1 }}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0 }}
+      className={`${FORM_PANEL_CLASS} w-full max-w-[72rem] overflow-hidden`}
+      initial={{ opacity: 0, y: 24, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 16, scale: 0.98 }}
+      transition={{ duration: 0.28, ease: 'easeOut' }}
     >
-      <div className="text-black flex flex-col items-center p-8 mt-5 space-y-4">
+      <div className="border-b border-slate-800 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.12),_transparent_35%)] px-6 py-5 sm:px-8">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
+              BruinBot Intake
+            </p>
+            <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-300">
+              Build a personalized UCLA plan using your academic path, completed coursework,
+              schedule preferences, and planning constraints.
+            </p>
+          </div>
+          <div className="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1 text-xs font-medium text-slate-300">
+            Guided intake
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col space-y-6 px-6 py-6 text-white sm:px-8">
         {children}
         {isInvalid && (
-          <span className="text-red-800 mb-5 font-bold">
+          <span className="mx-auto rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 font-semibold text-red-200">
             Make sure to complete all required fields.
           </span>
         )}
-        <div className="flex flex-row">
+        <div className="mt-2 flex w-full items-center justify-between border-t border-slate-800 pt-4">
           {handleBackClick != null ? (
             <button
               onClick={handleBackClick}
-              className="text-black inline-block mt-1 hover:text-blue-500"
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-slate-900/70 px-4 py-2 text-slate-200 transition hover:border-cyan-400/40 hover:text-white"
             >
               <ArrowLeftCircle size={30} />
+              <span className="text-sm font-medium">Back</span>
             </button>
-          ) : null}
-          <div className="flex flex-col">
-            {showNextArrow && (
-              <button
-                onClick={
-                  validate
-                    ? () => (validate() ? handleClick() : setIsInvalid(true))
-                    : handleClick
-                }
-                className="text-black inline-block mt-1 hover:text-blue-500"
-              >
-                <ArrowRightCircle size={30} />
-              </button>
-            )}
-          </div>
+          ) : <div />}
+          {showNextArrow && (
+            <button
+              onClick={
+                validate
+                  ? () => (validate() ? handleClick() : setIsInvalid(true))
+                  : handleClick
+              }
+              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-white transition hover:bg-blue-700"
+            >
+              <span className="text-sm font-semibold">Continue</span>
+              <ArrowRightCircle size={24} />
+            </button>
+          )}
         </div>
       </div>
     </motion.div>
@@ -153,45 +175,54 @@ const Icebreaker = ({
   return (
     <FormModal handleClick={handleNextClick} validate={validate} handleBackClick={null}>
       <div className={FORM_TITLE_ALIGN_CLASS}>
-        <p className="text-4xl font-bold mt-4">But first,</p>
-        <p className="text-4xl font-light mb-4">tell us about yourself!</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Getting Started</p>
+        <p className="mt-2 text-3xl font-bold text-white sm:text-4xl">Tell us about yourself</p>
+        <p className="mt-2 text-base text-slate-300">
+          We’ll use this to build a plan that matches your timeline and school requirements.
+        </p>
       </div>
-      <div className={FORM_ROW_CLASS}>
-        <label className={FORM_LABEL_CLASS}>Name:</label>
-        <InputField
-          type="text"
-          defaultValue={name}
-          setValue={setName}
-          required
-          placeholder="Jane Doe"
-        />
+      <div className="mx-auto grid w-full max-w-4xl gap-5 md:grid-cols-2">
+        <div className={FORM_ROW_WIDE_CLASS}>
+          <label className={FORM_LABEL_CLASS}>Name:</label>
+          <InputField
+            type="text"
+            defaultValue={name}
+            setValue={setName}
+            required
+            placeholder="Jane Doe"
+          />
+        </div>
+        <div className={FORM_ROW_WIDE_CLASS}>
+          <label className={FORM_LABEL_CLASS}>School:</label>
+          <Dropdown
+            options={schoolOptions}
+            onSelect={setSchool}
+            defaultOption={school}
+            placeholder="Select a school"
+          />
+        </div>
+        <div className={FORM_ROW_WIDE_CLASS}>
+          <label className={FORM_LABEL_CLASS}>Grad year:</label>
+          <InputField
+            type="number"
+            defaultValue={gradYear || null}
+            setValue={setGradYear}
+            required
+            placeholder="2030"
+          />
+        </div>
+        <div className={FORM_ROW_WIDE_CLASS}>
+          <label className={FORM_LABEL_CLASS}>Grad quarter:</label>
+          <Dropdown
+            options={['Fall', 'Winter', 'Spring']}
+            onSelect={setGradQuarter}
+            defaultOption={gradQuarter}
+          />
+        </div>
       </div>
-      <div className={FORM_ROW_CLASS}>
-        <label className={FORM_LABEL_CLASS}>School:</label>
-        <Dropdown
-          options={schoolOptions}
-          onSelect={setSchool}
-          defaultOption={school}
-          placeholder="Select a school"
-        />
-      </div>
-      <div className={FORM_ROW_CLASS}>
-        <label className={FORM_LABEL_CLASS}>Grad year:</label>
-        <InputField
-          type="number"
-          defaultValue={gradYear || null}
-          setValue={setGradYear}
-          required
-          placeholder="2030"
-        />
-      </div>
-      <div className={FORM_ROW_CLASS}>
-        <label className={FORM_LABEL_CLASS}>Grad quarter:</label>
-        <Dropdown
-          options={['Fall', 'Winter', 'Spring']}
-          onSelect={setGradQuarter}
-          defaultOption={gradQuarter}
-        />
+      <div className="mx-auto flex w-full max-w-4xl flex-wrap items-center justify-center gap-3 rounded-2xl border border-slate-800 bg-slate-900/45 px-4 py-3 text-sm text-slate-300">
+        <span className="font-medium text-slate-100">What you&apos;ll add:</span>
+        <span>Your academic profile, major plan, time preferences, and completed courses.</span>
       </div>
     </FormModal>
   );
@@ -317,8 +348,8 @@ const MajorAutocomplete = ({ school, major, setMajor, setMajorName }) => {
           {filtered.map((opt, index) => (
             <div
               key={opt.major_name}
-              className={`cursor-pointer px-3 py-2 text-sm text-black text-center ${
-                index === activeIndex ? 'bg-blue-100' : 'hover:bg-blue-100'
+              className={`cursor-pointer px-3 py-3 text-sm text-white ${
+                index === activeIndex ? 'bg-cyan-400/15' : 'hover:bg-slate-800'
               }`}
               onClick={() => {
                 setMajor(opt.full_name);
@@ -456,7 +487,11 @@ const InfoDetail = ({
       validate={validate}
     >
       <div className={FORM_TITLE_ALIGN_CLASS}>
-        <p className="text-4xl font-bold mb-2">Tell us more!</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Academic Profile</p>
+        <p className="mt-3 text-4xl font-bold text-white">Tell us more</p>
+        <p className="mt-3 text-base text-slate-300">
+          Choose your major path so BruinBot can personalize requirements and technical breadth guidance.
+        </p>
       </div>
       <div className="w-full flex flex-col gap-3">
         <div className={FORM_ROW_CLASS}>
@@ -583,8 +618,8 @@ const SchedulePreferences = ({
                 type="button"
                 className={`px-3 py-1 rounded-lg border transition ${
                   prefNoDays.includes(day)
-                    ? 'bg-blue-600 text-black border-blue-700 ring-2 ring-blue-400'
-                    : 'bg-gray-100 text-black border-gray-300'
+                    ? 'border-cyan-400 bg-cyan-400/15 text-cyan-100 ring-2 ring-cyan-400/30'
+                    : 'border-slate-600 bg-slate-900/70 text-slate-200 hover:border-slate-500'
                 }`}
                 onClick={() => toggleDay(day)}
               >
@@ -706,7 +741,7 @@ const InstructorAutocomplete = ({ selected, setSelected }) => {
     <div className="relative w-full">
       <div className="flex flex-wrap gap-2 mb-1">
         {selected.map(name => (
-          <span key={name} className="bg-blue-900 text-white px-2 py-1 rounded">
+          <span key={name} className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-white">
             {name}
             <button onClick={() => onRemove(name)} className="ml-1 text-white">
               &times;
@@ -730,8 +765,8 @@ const InstructorAutocomplete = ({ selected, setSelected }) => {
           {results.map((name, index) => (
             <div
               key={name}
-              className={`cursor-pointer px-3 py-2 text-sm text-black text-center ${
-                index === activeIndex ? 'bg-blue-100' : 'hover:bg-blue-100'
+              className={`cursor-pointer px-3 py-3 text-sm text-white ${
+                index === activeIndex ? 'bg-cyan-400/15' : 'hover:bg-slate-800'
               }`}
               onClick={() => onSelect(name)}
               onMouseEnter={() => setActiveIndex(index)}
@@ -836,7 +871,7 @@ const BuildingDropdown = ({ selected, setSelected }) => {
     <div className="relative w-full">
       <div className="flex flex-wrap gap-2 mb-2">
         {selected.map(building => (
-          <span key={building} className="bg-blue-900 text-white px-2 py-1 rounded">
+          <span key={building} className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-white">
             {building}
             <button
               type="button"
@@ -864,8 +899,8 @@ const BuildingDropdown = ({ selected, setSelected }) => {
           {results.map((name, index) => (
             <div
               key={name}
-              className={`cursor-pointer px-3 py-2 text-sm text-black text-center ${
-                index === activeIndex ? 'bg-blue-100' : 'hover:bg-blue-100'
+              className={`cursor-pointer px-3 py-3 text-sm text-white ${
+                index === activeIndex ? 'bg-cyan-400/15' : 'hover:bg-slate-800'
               }`}
               onClick={() => addBuilding(name)}
               onMouseEnter={() => setActiveIndex(index)}
@@ -924,7 +959,7 @@ const GeInterestsInput = ({ selected, setSelected }) => {
     <div className="w-full">
       <div className="flex flex-wrap gap-2 mb-2">
         {selected.map(interest => (
-          <span key={interest} className="bg-blue-900 text-white px-2 py-1 rounded">
+          <span key={interest} className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-white">
             {interest}
             <button
               type="button"
@@ -1054,7 +1089,7 @@ const AdvancedPreferencesStep = ({
             type="checkbox"
             checked={allowWarnings}
             onChange={e => setAllowWarnings(e.target.checked)}
-            className="w-6 h-6 accent-blue-900"
+            className="h-6 w-6 accent-cyan-400"
           />
         </div>
         <div className={FORM_CHECKBOX_ROW_CLASS}>
@@ -1063,7 +1098,7 @@ const AdvancedPreferencesStep = ({
             type="checkbox"
             checked={allowPrimaryConflicts}
             onChange={e => setAllowPrimaryConflicts(e.target.checked)}
-            className="w-6 h-6 accent-blue-900"
+            className="h-6 w-6 accent-cyan-400"
           />
         </div>
         <div className={FORM_CHECKBOX_ROW_CLASS}>
@@ -1072,7 +1107,7 @@ const AdvancedPreferencesStep = ({
             type="checkbox"
             checked={allowSecondaryConflicts}
             onChange={e => setAllowSecondaryConflicts(e.target.checked)}
-            className="w-6 h-6 accent-blue-900"
+            className="h-6 w-6 accent-cyan-400"
           />
         </div>
         <div className="flex flex-col gap-2 mt-4">
@@ -1084,7 +1119,7 @@ const AdvancedPreferencesStep = ({
               onDragStart={() => onDragStart(idx)}
               onDragOver={onDragOver}
               onDrop={() => onDrop(idx)}
-              className={`flex items-center gap-2 px-4 py-2 rounded shadow cursor-move bg-gray-100 border border-gray-300 ${
+              className={`flex cursor-move items-center gap-2 rounded-2xl border border-slate-700 bg-slate-900/70 px-4 py-3 shadow ${
                 draggedIdx === idx ? 'opacity-50' : ''
               }`}
               style={{ userSelect: 'none' }}
@@ -1160,8 +1195,10 @@ export const ClassSelect = ({
             ).map((item, index) => (
               <div
                 key={index}
-                className={`pl-4 pr-4 pt-2 pb-2 border rounded-lg text-center cursor-pointer transition ${
-                  selectedItems.has(item) ? 'bg-blue-900 text-white' : 'bg-gray-100'
+                className={`cursor-pointer rounded-xl border px-4 pb-2 pt-2 text-center transition ${
+                  selectedItems.has(item)
+                    ? 'border-cyan-400/40 bg-cyan-400/15 text-white'
+                    : 'border-slate-700 bg-slate-900/60 text-slate-200 hover:border-slate-500'
                 }`}
                 onClick={() => toggleItem(item)}
               >
@@ -1339,15 +1376,18 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       handleBackClick={handleBackClick}
       showNextArrow={false}
     >
-      <p className="w-full text-center text-4xl font-bold mb-4">Registration Summary</p>
+      <div className="w-full text-center">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Final Review</p>
+        <p className="mt-3 text-4xl font-bold text-white">Registration Summary</p>
+      </div>
       <div className="flex flex-col">
         <motion.div
-          className="flex flex-col bg-gray-300 rounded-xl p-5 mb-5"
+          className={`${FORM_SUBPANEL_CLASS} mb-5 flex flex-col p-5 text-slate-200`}
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 0.75, y: 0 }}
-          whileHover={{ opacity: 1, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileHover={{ y: -4, borderColor: 'rgba(34,211,238,0.35)' }}
         >
-          <a onClick={() => setStep(1)} className="cursor-pointer">
+          <a onClick={() => setStep(1)} className="cursor-pointer text-cyan-300 underline underline-offset-4">
             Edit
           </a>
           <span>
@@ -1361,12 +1401,12 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
           </span>
         </motion.div>
         <motion.div
-          className="flex flex-col bg-gray-300 rounded-xl p-5 mb-5"
+          className={`${FORM_SUBPANEL_CLASS} mb-5 flex flex-col p-5 text-slate-200`}
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 0.75, y: 0 }}
-          whileHover={{ opacity: 1, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileHover={{ y: -4, borderColor: 'rgba(34,211,238,0.35)' }}
         >
-          <a onClick={() => setStep(2)} className="cursor-pointer underline">
+          <a onClick={() => setStep(2)} className="cursor-pointer text-cyan-300 underline underline-offset-4">
             Edit
           </a>
           <span>
@@ -1392,12 +1432,12 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
           ) : null}
         </motion.div>
         <motion.div
-          className="flex flex-col bg-gray-300 rounded-xl p-5"
+          className={`${FORM_SUBPANEL_CLASS} flex flex-col p-5 text-slate-200`}
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 0.75, y: 0 }}
-          whileHover={{ opacity: 1, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileHover={{ y: -4, borderColor: 'rgba(34,211,238,0.35)' }}
         >
-          <a onClick={() => setStep(3)} className="cursor-pointer underline">
+          <a onClick={() => setStep(3)} className="cursor-pointer text-cyan-300 underline underline-offset-4">
             Edit
           </a>
           <span>
@@ -1416,7 +1456,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
           handleGenerateSchedule();
         }}
         className="mt-4 inline-flex items-center justify-center rounded-lg !bg-[#0b1f4f] px-5 py-3 font-semibold !text-white shadow transition hover:!bg-[#12387a] focus:outline-none focus:ring-2 focus:ring-[#1f4ca8]"
-        style={{ backgroundColor: '#0b1f4f', color: '#fff' }}
+        style={{ backgroundColor: '#2563eb', color: '#fff' }}
       >
         Generate Schedule
       </button>
@@ -1534,15 +1574,15 @@ const TranscriptStep = ({
   return (
     <FormModal handleClick={handleNextClick} handleBackClick={handleBackClick}>
       <div className="p-4">
-        <div className="mb-4 text-center">
-          <strong>Select completed courses and assign a grade:</strong>
+        <div className="mb-5 text-center">
+          <strong className="text-white">Select completed courses and assign a grade:</strong>
         </div>
-        <div className={`${FORM_ROW_CLASS} mb-4`}>
+        <div className="mx-auto mb-6 flex w-full max-w-3xl flex-col items-center gap-2">
           <label className={FORM_LABEL_CLASS}>Filter by subject:</label>
           <select
             value={selectedSubject}
             onChange={e => setSelectedSubject(e.target.value)}
-            className={`${FORM_CONTROL_CLASS} max-w-56`}
+            className={`${FORM_CONTROL_CLASS} w-full max-w-[22rem] text-center`}
           >
             {subjects.map(subject => (
               <option key={subject} value={subject}>
@@ -1551,14 +1591,16 @@ const TranscriptStep = ({
             ))}
           </select>
         </div>
-        <div className="grid grid-cols-3 gap-2 mb-4 max-h-60 overflow-y-auto">
+        <div className="mb-4 grid max-h-60 grid-cols-3 gap-2 overflow-y-auto">
           {filteredCourses.map((course, idx) => {
             const isSelected = selectedCourses.includes(course);
             return (
               <div
                 key={idx}
-                className={`pl-4 pr-4 pt-2 pb-2 border rounded-lg text-center cursor-pointer transition ${
-                  isSelected ? 'bg-blue-900 text-white' : 'bg-gray-100'
+                className={`cursor-pointer rounded-xl border px-4 pb-2 pt-2 text-center transition ${
+                  isSelected
+                    ? 'border-cyan-400/40 bg-cyan-400/15 text-white'
+                    : 'border-slate-700 bg-slate-900/60 text-slate-200 hover:border-slate-500'
                 }`}
                 onClick={() => toggleCourse(course)}
               >
@@ -1569,7 +1611,7 @@ const TranscriptStep = ({
                       value={transcript[course] || 'A'}
                       onClick={e => e.stopPropagation()}
                       onChange={e => setGrade(course, e.target.value)}
-                      className="h-9 rounded-md border border-[#183778] bg-[#0b1f4f] px-2 text-sm text-white text-center focus:border-[#1f4ca8] focus:ring-2 focus:ring-[#1f4ca8]"
+                      className="h-9 rounded-md border border-slate-600 bg-slate-950 px-2 text-center text-sm text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
                     >
                       {gradeOptions.map(g => (
                         <option key={g} value={g}>
@@ -1786,22 +1828,39 @@ export const Form = () => {
   const progressPercent = Math.min(100, Math.max(0, (step / totalSteps) * 100));
 
   return (
-    <div className="relative flex h-screen w-screen justify-center items-start overflow-y-auto bg-gray-900 pt-20 pb-6">
+    <div className="relative min-h-screen w-screen overflow-y-auto bg-slate-950 px-4 pb-8 pt-16 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.12),_transparent_28%),radial-gradient(circle_at_85%_15%,_rgba(59,130,246,0.10),_transparent_24%)]" />
       <button
         onClick={onSignOut}
-        className="absolute top-6 right-8 text-white bg-blue-900 px-4 py-2 rounded-lg shadow hover:bg-blue-700 z-50"
+        className="absolute right-6 top-5 z-50 rounded-xl border border-slate-600 bg-slate-900/85 px-4 py-2 text-white shadow hover:bg-slate-800"
       >
-        SIGN OUT
+        Sign Out
       </button>
-      <div className="absolute top-6 left-1/2 z-40 w-[min(90vw,34rem)] -translate-x-1/2">
-        <div className="mb-1 flex items-center justify-between text-xs font-medium tracking-wide text-white/85">
+      <div className="absolute left-1/2 top-5 z-40 w-[min(88vw,36rem)] -translate-x-1/2">
+        <div className="mb-2 flex items-center justify-between text-[11px] font-medium uppercase tracking-[0.18em] text-slate-200">
           <span>Step {step} of {totalSteps}</span>
           <span>{Math.round(progressPercent)}%</span>
         </div>
-        <div className="h-2 overflow-hidden rounded-full bg-white/20">
-          <div className="h-full rounded-full bg-white transition-all duration-300" style={{ width: `${progressPercent}%` }} />
+        <div className="h-2 overflow-hidden rounded-full bg-slate-800">
+          <div className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300" style={{ width: `${progressPercent}%` }} />
         </div>
       </div>
+
+      <div className="relative mx-auto mt-10 w-full max-w-6xl">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3 px-1">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+              BruinBot Planner
+            </p>
+            <h1 className="mt-2 text-2xl font-semibold text-white sm:text-3xl">
+              Build your UCLA schedule faster
+            </h1>
+          </div>
+          <div className="rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-sm text-slate-300">
+            Guided intake with assistant-ready preferences
+          </div>
+        </div>
+        <div className="flex justify-center">
       {step === 1 && (
         <Icebreaker
           handleNextClick={handleNextClick}
@@ -1925,6 +1984,8 @@ export const Form = () => {
           }}
         />
       )}
+        </div>
+      </div>
     </div>
   );
 };

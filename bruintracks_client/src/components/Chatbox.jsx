@@ -5,10 +5,12 @@ import { useAuth } from '../AuthContext';
 
 export const Chatbox = () => {
   const { session } = useAuth();
+  const initialAssistantMessage =
+    'I am your AI Planning Assistant. I can help with UCLA requirements, course options, quarter planning, and questions about your current schedule.';
   const [messages, setMessages] = useState(() => {
     const savedMessages = localStorage.getItem('chatHistory');
     return savedMessages ? JSON.parse(savedMessages) : [
-      { role: 'assistant', content: 'Hi! How may I help you?' }
+      { role: 'assistant', content: initialAssistantMessage }
     ];
   });
   const [inputValue, setInputValue] = useState('');
@@ -16,14 +18,9 @@ export const Chatbox = () => {
   const messagesEndRef = useRef(null);
 
   const exampleQuestions = [
-    "What are some math courses offered at UCLA?",
-    "What GE courses satisfy the Scientific Inquiry requirement?",
-    "Can you help me plan my Computer Science major?",
-    "What are the prerequisites for CS 31?",
-    "Which professors teach Data Structures?",
-    "What courses should I take for my first quarter?",
-    "Can you explain the Writing II requirement?",
-    "What are some easy GE courses?"
+    'What courses does professor Smallberg teach?',
+    'What are some easy intro math classes I can take?',
+    'What are some courses related to robotics?',
   ];
 
   const scrollToBottom = () => {
@@ -39,7 +36,7 @@ export const Chatbox = () => {
   }, [messages]);
 
   const clearChat = () => {
-    setMessages([{ role: 'assistant', content: 'Hi! How may I help you?' }]);
+    setMessages([{ role: 'assistant', content: initialAssistantMessage }]);
   };
 
   const handleSendMessage = async () => {
@@ -123,6 +120,43 @@ export const Chatbox = () => {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col h-full">
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        {showSuggestions && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="rounded-2xl border border-slate-700 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4 shadow-lg"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                  AI Planning Assistant
+                </p>
+                <h3 className="mt-1 text-lg font-semibold text-white">
+                  Plan smarter across requirements, courses, and next steps
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  Ask about degree requirements, course sequencing, GE options,
+                  prerequisites, or what to take next based on your current
+                  schedule.
+                </p>
+              </div>
+              <div className="hidden rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200 md:block">
+                Live assistant
+              </div>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {['Degree planning', 'GE guidance', 'Prerequisite help'].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-slate-600 bg-slate-800/80 px-3 py-1 text-xs text-slate-200"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
         {messages.map((message, ind) => (
           <motion.div
             key={ind}
@@ -130,17 +164,21 @@ export const Chatbox = () => {
             animate={{ opacity: 1, y: 0 }}
             className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
           >
-            <div className={`max-w-[80%] rounded-lg p-3 ${message.role === 'assistant' ? 'bg-gray-700 text-white' : 'bg-blue-600 text-white'}`}>
-              <p className="text-sm font-medium mb-1">{message.role === 'assistant' ? 'Assistant' : 'You'}</p>
+            <div className={`max-w-[85%] rounded-2xl p-3 ${message.role === 'assistant' ? 'border border-slate-700 bg-slate-800 text-white' : 'bg-blue-600 text-white'}`}>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-300">
+                {message.role === 'assistant' ? 'Planning Assistant' : 'You'}
+              </p>
               <p className="text-sm">{message.content}</p>
             </div>
           </motion.div>
         ))}
         {isLoading && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-start">
-            <div className="bg-gray-700 text-white rounded-lg p-3">
-              <p className="text-sm font-medium mb-1">Assistant</p>
-              <p className="text-sm">Thinking...</p>
+            <div className="rounded-2xl border border-slate-700 bg-slate-800 p-3 text-white">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-300">
+                Planning Assistant
+              </p>
+              <p className="text-sm">Thinking through your options...</p>
             </div>
           </motion.div>
         )}
@@ -150,13 +188,15 @@ export const Chatbox = () => {
             animate={{ opacity: 1, y: 0 }}
             className="mt-4"
           >
-            <p className="text-sm text-gray-400 mb-3">Try asking me about:</p>
+            <p className="mb-3 text-sm font-medium text-slate-300">
+              Try asking me about:
+            </p>
             <div className="grid grid-cols-1 gap-2">
               {exampleQuestions.map((question, index) => (
                 <motion.button
                   key={index}
                   onClick={() => handleSuggestionClick(question)}
-                  className="text-left p-3 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors"
+                  className="rounded-xl border border-slate-700 bg-slate-800/90 p-3 text-left transition-colors hover:border-cyan-400/40 hover:bg-slate-700"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -177,8 +217,8 @@ export const Chatbox = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyPress}
-            className="flex-1 bg-gray-700 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent p-2"
-            placeholder="Type your message..."
+            className="flex-1 rounded-xl border border-gray-600 bg-gray-700 p-3 text-white placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-blue-500"
+            placeholder="Ask about classes, requirements, or what to take next..."
           />
           <Button 
             onClick={handleSendMessage}

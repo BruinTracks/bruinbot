@@ -117,7 +117,7 @@ export const Dropdown = ({
         type="text"
         ref={inputRef}
         id="dropdown"
-        className="h-12 w-full rounded-lg border border-gray-300 bg-white px-3 text-base text-gray-900 text-center placeholder:text-center shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+        className="h-13 w-full rounded-xl border border-slate-600 bg-slate-900/85 px-4 text-base text-white placeholder:text-slate-400 shadow-sm transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
         placeholder={placeholder ? placeholder : 'Select an option'}
         value={selectedOption}
         onClick={toggleDropdown}
@@ -130,7 +130,7 @@ export const Dropdown = ({
         <motion.div
           ref={dropdownRef}
           id="dropdown-options"
-          className="absolute left-0 top-[calc(100%+0.25rem)] z-50 max-h-56 w-full overflow-y-auto rounded-lg border border-gray-300 bg-white shadow-lg"
+          className="absolute left-0 top-[calc(100%+0.35rem)] z-50 max-h-56 w-full overflow-y-auto rounded-2xl border border-slate-600 bg-slate-900 shadow-2xl"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
@@ -139,8 +139,8 @@ export const Dropdown = ({
           {options.map((option, index) => (
             <div
               key={`${option}-${index}`}
-              className={`cursor-pointer px-3 py-2 text-sm text-gray-900 text-center ${
-                index === activeIndex ? 'bg-blue-100' : 'hover:bg-gray-100'
+              className={`cursor-pointer px-4 py-3 text-sm text-white ${
+                index === activeIndex ? 'bg-cyan-400/15' : 'hover:bg-slate-800'
               }`}
               onClick={() => selectOption(option)}
               onMouseEnter={() => setActiveIndex(index)}

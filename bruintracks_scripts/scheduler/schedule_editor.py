@@ -383,9 +383,8 @@ class ScheduleEditor:
                 return False, f"Prerequisites not met for {course_id} in {term}"
         return True, None
 
-    def _validate_prerequisites_after_term(self, start_term: str) -> Tuple[bool, Optional[str]]:
-        """Check prerequisites for all courses in and after the specified term."""
-        debug_print(f"\n🔍 Validating prerequisites from {start_term} onward")
+    def _collect_prerequisite_failures_after_term(self, start_term: str) -> List[Tuple[str, str]]:
+        """Collect all prerequisite failures from the given term onward."""
         term_order = list(self.schedule.keys())
 
         try:
@@ -393,9 +392,9 @@ class ScheduleEditor:
         except ValueError:
             start_idx = 0
 
+        failures: List[Tuple[str, str]] = []
         for term_idx in range(start_idx, len(term_order)):
             term = term_order[term_idx]
-            debug_print(f"\n🔍 Checking all courses in {term}")
             if isinstance(self.schedule[term], dict):
                 courses = [
                     cid
@@ -408,10 +407,20 @@ class ScheduleEditor:
                     for cid in self.schedule[term]
                     if not self._is_filler_placeholder_label(cid)
                 ]
-            
+
             for course_id in courses:
                 if not self._meets_prerequisites(course_id, term):
-                    return False, f"Prerequisites not met for {course_id} in {term}"
+                    failures.append((course_id, term))
+
+        return failures
+
+    def _validate_prerequisites_after_term(self, start_term: str) -> Tuple[bool, Optional[str]]:
+        """Check prerequisites for all courses in and after the specified term."""
+        debug_print(f"\n🔍 Validating prerequisites from {start_term} onward")
+        failures = self._collect_prerequisite_failures_after_term(start_term)
+        if failures:
+            course_id, term = failures[0]
+            return False, f"Prerequisites not met for {course_id} in {term}"
         return True, None
 
     def _is_ge_course_label(self, course_id: str) -> bool:
@@ -479,27 +488,13 @@ class ScheduleEditor:
     def replace_ge_course(self, course_id: str, term: str, interests: List[str]) -> Tuple[bool, str]:
         if not interests:
             return False, "Please provide interests so I can personalize your GE replacement"
-
-        if not term:
-            for maybe_term, term_courses in self.schedule.items():
-                pool = term_courses.keys() if isinstance(term_courses, dict) else term_courses
-                found = next((cid for cid in pool if self._is_ge_course_label(cid)), None)
-                if found:
-                    term = maybe_term
-                    if not course_id:
-                        course_id = found
-                    break
+        if not term or not course_id:
+            return False, "Please specify the exact quarter and GE course you want to replace"
 
         if term not in self.schedule:
             return False, "Invalid term specified"
 
         term_courses = self.schedule[term]
-        if not course_id:
-            pool = term_courses.keys() if isinstance(term_courses, dict) else term_courses
-            course_id = next((cid for cid in pool if self._is_ge_course_label(cid)), None)
-            if not course_id:
-                return False, "No GE course found in the selected term"
-
         if isinstance(term_courses, dict):
             if course_id not in term_courses:
                 return False, "GE course not found in specified term"
@@ -511,6 +506,8 @@ class ScheduleEditor:
             return False, "Selected course is not tagged as a GE course"
 
         foundation = self._ge_foundation_from_label(course_id)
+        if not foundation:
+            return False, "I could not determine the GE foundation for that course"
         candidates = self._fetch_ge_candidates(foundation, interests)
 
         used = self._current_schedule_course_ids().union(set(self.transcript.keys()))
@@ -537,7 +534,7 @@ class ScheduleEditor:
             idx = term_courses.index(course_id)
             term_courses[idx] = replacement
 
-        return True, f"Replaced {course_id} with {replacement} based on your interests"
+        return True, f"Replaced {course_id} with {replacement} based on your interests while keeping the same GE foundation"
 
     def _fetch_interest_course_candidates(self, interests: List[str]) -> List[str]:
         cleaned_interests = [i.strip().lower() for i in (interests or []) if i and i.strip()]
@@ -672,27 +669,13 @@ class ScheduleEditor:
     def replace_filler_course(self, course_id: Optional[str], term: Optional[str], interests: List[str]) -> Tuple[bool, str]:
         if not interests:
             return False, "Please provide interests so I can suggest a course for this filler slot"
-
-        # Infer target filler slot when course_id and/or term is omitted.
         if not term or not course_id:
-            for maybe_term, term_courses in self.schedule.items():
-                pool = list(term_courses.keys()) if isinstance(term_courses, dict) else list(term_courses)
-                filler = next((cid for cid in pool if self._is_filler_placeholder_label(cid)), None)
-                if filler:
-                    term = term or maybe_term
-                    course_id = course_id or filler
-                    break
+            return False, "Please specify the exact quarter and filler slot you want to replace"
 
         if not term or term not in self.schedule:
             return False, "Invalid term specified"
 
         term_courses = self.schedule[term]
-        if not course_id:
-            pool = list(term_courses.keys()) if isinstance(term_courses, dict) else list(term_courses)
-            course_id = next((cid for cid in pool if self._is_filler_placeholder_label(cid)), None)
-            if not course_id:
-                return False, "No filler slot found in the selected term"
-
         if isinstance(term_courses, dict):
             if course_id not in term_courses:
                 return False, "Filler slot not found in specified term"
@@ -787,18 +770,21 @@ class ScheduleEditor:
         
         # Store original schedule
         original_schedule = {**self.schedule}
+        earliest_term = self._earlier_term(from_term, to_term)
+        baseline_failures = set(self._collect_prerequisite_failures_after_term(earliest_term))
         
         # Apply temporary changes to check prerequisites
         self.schedule = temp_schedule
         
         # Check prerequisites for all courses in and after both terms
-        earliest_term = self._earlier_term(from_term, to_term)
-        valid, message = self._validate_prerequisites_after_term(earliest_term)
-        
-        if not valid:
+        updated_failures = set(self._collect_prerequisite_failures_after_term(earliest_term))
+        new_failures = updated_failures - baseline_failures
+
+        if new_failures:
             # Restore original schedule
             self.schedule = original_schedule
-            return False, message
+            failing_course, failing_term = sorted(new_failures, key=lambda item: list(self.schedule.keys()).index(item[1]))[0]
+            return False, f"Move would cause unmet prerequisites for {failing_course} in {failing_term}"
             
         # Validate term schedule if destination is earliest quarter (has detailed info)
         if to_term == self._first_term() and isinstance(temp_schedule[to_term], dict):
@@ -837,18 +823,21 @@ class ScheduleEditor:
         
         # Store original schedule
         original_schedule = {**self.schedule}
+        earliest_term = self._earlier_term(term1, term2)
+        baseline_failures = set(self._collect_prerequisite_failures_after_term(earliest_term))
         
         # Apply temporary changes to check prerequisites
         self.schedule = temp_schedule
         
         # Check prerequisites for all courses in and after both terms
-        earliest_term = self._earlier_term(term1, term2)
-        valid, message = self._validate_prerequisites_after_term(earliest_term)
-        
-        if not valid:
+        updated_failures = set(self._collect_prerequisite_failures_after_term(earliest_term))
+        new_failures = updated_failures - baseline_failures
+
+        if new_failures:
             # Restore original schedule
             self.schedule = original_schedule
-            return False, message
+            failing_course, failing_term = sorted(new_failures, key=lambda item: list(self.schedule.keys()).index(item[1]))[0]
+            return False, f"Swap would cause unmet prerequisites for {failing_course} in {failing_term}"
             
         # Validate both terms
         if not self._validate_term_schedule(temp_schedule[term1]):
