@@ -1,0 +1,181 @@
+{
+  "major_name": "LinguisticsandAnthropologyBA",
+  "major_id": 82,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the equivalent to the sixth level of one foreign language or the equivalent to the third level of two different foreign languages.",
+      "courses": [
+        "ANTHRO 4 - Culture and Communication",
+        "LING 20 - Introduction to Linguistic Analysis"
+      ],
+      "options": [
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five course as follows:",
+      "options": [
+        {
+          "title": "Required Linguistics Courses",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Linguistics 102 or 103",
+              "courses": [
+                "LING 102 - Introduction to Applied Phonetics",
+                "LING 103 - Introduction to General Phonetics"
+              ]
+            },
+            {
+              "title": "Linguistics 110",
+              "courses": [
+                "LING 110 - Introduction to Historical Linguistics"
+              ]
+            },
+            {
+              "title": "Linguistics 119A or 120A",
+              "courses": [
+                "LING 119A - Applied Phonology",
+                "LING 120A - Phonology I"
+              ]
+            },
+            {
+              "title": "Linguistics 120B or 127",
+              "courses": [
+                "LING 120B - Syntax I",
+                "LING 127 - Syntactic Typology and Universals"
+              ]
+            },
+            {
+              "title": "Linguistics M146",
+              "courses": [
+                "LING M146 - Language in Culture",
+                "ANTHRO M150 - Language in Culture"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistic Elective",
+          "courses": [
+            "LING 114 - American Indigenous Linguistics",
+            "LING 120C - Semantics I",
+            "LING 144 - Fundamentals of Translation and Interpreting",
+            "LING 160 - Field Methods",
+            "LING 161 - Language Documentation",
+            "LING 170 - Language and Society: Introduction to Sociolinguistics"
+          ]
+        },
+        {
+          "title": "Anthropology 151 or Sociology CM124A",
+          "courses": [
+            "ANTHRO 151 - Ethnography of Everyday Speech",
+            "SOCIOL CM124A - Conversational Structures I",
+            "COMM M144A - Conversational Structures I"
+          ]
+        },
+        {
+          "title": "Upper-Division Electives",
+          "description": "Only one course may apply.",
+          "options": [
+            {
+              "title": "Anthropology 130 series",
+              "courses": [
+                "Anthropology 130 through 139"
+              ]
+            },
+            {
+              "title": "Anthropology 150 series",
+              "courses": [
+                "Anthropology 150 through 159"
+              ]
+            },
+            {
+              "title": "Anthropology 160 series",
+              "courses": [
+                "Anthropology 160 through 169"
+              ]
+            },
+            {
+              "title": "Sociology CM124A or CM125",
+              "courses": [
+                "SOCIOL CM124A - Conversational Structures I",
+                "COMM M144A - Conversational Structures I",
+                "SOCIOL CM125 - Talk and Social Institutions",
+                "COMM M125 - Talk and Social Institutions"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "options": [
+        {
+          "title": "Linguistics 198A and 198B",
+          "courses": [
+            "LING 198A - Honors Research in Linguistics I",
+            "LING 198B - Honors Research in Linguistics II"
+          ]
+        },
+        {
+          "title": "Linguistics 199",
+          "courses": [
+            "LING 199 - Directed Research or Senior Project in Linguistics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Introduction to Computing",
+          "options": [
+            {
+              "title": "Program in Computing",
+              "courses": [
+                "COMPTNG 10A - Introduction to Programming",
+                "COMPTNG 10B - Intermediate Programming",
+                "COMPTNG 10C - Advanced Programming"
+              ]
+            },
+            {
+              "title": "Computer Science",
+              "courses": [
+                "COM SCI 31 - Introduction to Computer Science I",
+                "COM SCI 32 - Introduction to Computer Science II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistics 185A and Mathematics 61",
+          "courses": [
+            "LING 185A - Computational Linguistics I",
+            "MATH 61 - Introduction to Discrete Structures"
+          ]
+        },
+        {
+          "title": "Additional Linguistics Elective",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 127 - Syntactic Typology and Universals",
+            "LING 132 - Language Processing",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II",
+            "LING 165C - Semantics II",
+            "LING 180 - Mathematical Structures in Language I",
+            "LING 185B - Computational Linguistics II"
+          ]
+        }
+      ]
+    }
+  ]
+}

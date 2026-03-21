@@ -1,0 +1,67 @@
+{
+  "major_name": "BusinessEconomicsBA",
+  "major_id": 33,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete two courses as follows:",
+      "courses": [
+        "ECON 1 - Principles of Economics",
+        "ECON 2 - Principles of Economics",
+        "ECON 11 - Microeconomic Theory",
+        "ECON 41 - Probability and Statistics for Economists",
+        "ECON 101 - Microeconomic Theory",
+        "MGMT 1A - Principles of Accounting",
+        "MGMT 1B - Principles of Accounting"
+      ],
+      "options": [
+        {
+          "title": "Mathematics",
+          "description": "Select one course from:",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus"
+          ],
+          "options": [
+            {
+              "title": "Mathematics 31B or 31E",
+              "courses": [
+                "MATH 31B - Integration and Infinite Series",
+                "MATH 31E - Calculus for Economics Students"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete at least two courses from the Economics 106 series.",
+      "courses": [
+        "ECON 102 - Macroeconomic Theory",
+        "ECON 103 - Introduction to Econometrics",
+        "ECON 103L - Econometrics Laboratory",
+        "ECON 104 - Data Science for Economists",
+        "ECON 104L - Data Science for Economists Laboratory",
+        "ENGCOMP 131B - Specialized Writing: Business and Social Policy"
+      ],
+      "options": [
+        {
+          "title": "Economics 106 series"
+        },
+        {
+          "title": "Upper-Division Electives"
+        },
+        {
+          "title": "Economics Courses with Laboratories"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ECON 198A - Honors Research in Economics I",
+        "ECON 198B - Honors Research in Economics II"
+      ]
+    }
+  ]
+}

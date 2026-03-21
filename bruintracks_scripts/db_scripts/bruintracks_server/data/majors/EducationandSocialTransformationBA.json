@@ -1,0 +1,95 @@
+{
+  "major_name": "EducationandSocialTransformationBA",
+  "major_id": 127,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "EDUC 35 - Introduction to Inquiry and Research in Education"
+      ],
+      "options": [
+        {
+          "title": "Additional Education Course",
+          "courses": [
+            "EDUC 10 - Introduction to Educational Issues and Scholarship",
+            "EDUC 11 - Education, Equality, and Future of American Society: Problems, Prospects, and Policies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select courses from each of the three areas of competency as follows:",
+      "options": [
+        {
+          "title": "Areas of Competency",
+          "description": "Complete Education 100 and at least one additional course from Education 101 through 119.",
+          "options": [
+            {
+              "title": "Histories and Philosophies of Education",
+              "description": "Complete the following course:"
+            },
+            {
+              "title": "Contexts of Teaching, Learning, and Development",
+              "description": "Complete the following course:"
+            },
+            {
+              "title": "Inquiry and Design for Learning",
+              "description": "Complete the following two courses:"
+            }
+          ]
+        },
+        {
+          "title": "Additional Education Course",
+          "options": [
+            {
+              "title": "Community Engagement and Social Change",
+              "courses": [
+                "CESC 130 - Intercultural Communication in Global Workplace"
+              ]
+            },
+            {
+              "title": "Elective Education Courses",
+              "courses": [
+                "Education 170 through 179"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Education 180",
+          "courses": [
+            "EDUC 180 - Orientation to Community Engagement"
+          ]
+        },
+        {
+          "title": "Community Engagement Course",
+          "courses": [
+            "EDUC M129XP - Arts Education Undergraduate Practicum and Capstone Project",
+            "EDUC 130AX - Instructional Apprenticeship in Teaching and Learning at UCLA Lab School",
+            "EDUC 130BX - Instructional Apprenticeship in Teaching and Learning at UCLA Partner Schools",
+            "EDUC 130CX - Instructional Apprenticeship in Teaching and Learning at UCLA Community Schools",
+            "EDUC M131A - Language, Literacy, and Human Development Research Group Seminars",
+            "EDUC M131B - Culture, Gender, and Human Development Research Group Seminars",
+            "EDUC M131C - Culture, Communications, and Human Development Research Group Seminars",
+            "EDUC M142 - Introduction to Arts Education for Multiple Publics: Theory and Practice",
+            "EDUC 144XP - Pedagogies of Global Citizenship Education",
+            "EDUC 159 - Educational Research and Equity in Informal Learning: Collaboration between Hammer Museum and UCLA Education",
+            "EDUC 171 - Community Service Learning for Academic Achievement",
+            "EDUC 176 - Transformative Research in Community-Based Settings: Practicum",
+            "EDUC 195 - Community Internships in Education",
+            "EDUC 195CE - Community or Corporate Internships in Education",
+            "EDUC 196XP - Community-Engaged Research Apprenticeship"
+          ]
+        },
+        {
+          "title": "Capstone Course",
+          "courses": [
+            "EDUC 181 - Capstone in Education and Social Transformation"
+          ]
+        }
+      ]
+    }
+  ]
+}

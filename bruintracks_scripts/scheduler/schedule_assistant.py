@@ -1,5 +1,6 @@
 import os
 import json
+import re
 from typing import Dict, List, Optional, Tuple, Any
 from dotenv import load_dotenv
 import openai
@@ -90,6 +91,22 @@ Available operations and their EXACT required JSON format:
     "new_discussion_id": "ID"   # Optional, numeric ID
 }
 
+4. Replace GE course (one at a time):
+{
+    "type": "replace_ge",
+    "course_id": "COURSE LABEL",   # e.g. "LS 7A (GE - Foundations of Scientific Inquiry)"
+    "term": "TERM",                # e.g. "Winter 2026"
+    "interests": ["biology", "health"]
+}
+
+5. Replace a filler slot (one at a time):
+{
+    "type": "replace_filler",
+    "course_id": "FILLER OR FILLER_#",  # e.g. "FILLER" or "FILLER_2"
+    "term": "TERM",                     # e.g. "Winter 2026"
+    "interests": ["robotics", "linguistics"]
+}
+
 Your response MUST be a JSON object with EXACTLY this format:
 {
     "operations": [
@@ -109,6 +126,12 @@ Important:
 - Terms must match exactly as shown in the schedule
 - Department codes must match exactly as shown in the schedule
 - Section changes are only possible in the earliest quarter
+- For GE replacement, the user must specify the exact quarter and the exact GE course label to replace
+- GE replacements must stay within the same GE foundation as the original course
+- For filler replacement, the user must specify the exact quarter and the exact filler slot label to replace
+- Do not guess or infer a filler slot, GE course, or term if the user did not explicitly identify it
+- GE replacement requires one course at a time and should include interests when available
+- Filler replacement requires one course at a time and should include interests when available
 - For quarters after the earliest one, courses are just strings in a list"""
     
     schedule_context = f"Current Schedule:\n{json.dumps(current_schedule, indent=2)}"
@@ -131,6 +154,54 @@ Important:
             "explanation": "Sorry, I encountered an error while interpreting your request.",
             "operations": []
         }
+
+
+def _looks_like_ge_replace_request(request: str) -> bool:
+    text = (request or "").lower()
+    ge_words = ["ge", "general education", "scientific inquiry", "society and culture", "arts and humanities"]
+    action_words = ["swap", "replace", "change", "switch", "pick another"]
+    return any(word in text for word in ge_words) and any(word in text for word in action_words)
+
+
+def _extract_interests(request: str) -> List[str]:
+    text = request or ""
+    patterns = [
+        r"interests?\s*[:\-]\s*([^\.\n]+)",
+        r"i\s+like\s+([^\.\n]+)",
+        r"into\s+([^\.\n]+)",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            raw = match.group(1)
+            parts = [p.strip() for p in re.split(r",|/| and ", raw) if p.strip()]
+            if parts:
+                return parts[:6]
+    return []
+
+
+def _looks_like_filler_replace_request(request: str) -> bool:
+    text = (request or "").lower()
+    filler_words = ["filler", "placeholder", "open slot", "empty slot", "fill this slot"]
+    action_words = ["swap", "replace", "change", "switch", "fill", "recommend"]
+    return any(word in text for word in filler_words) and any(word in text for word in action_words)
+
+
+def _validate_replacement_ops(operations: List[Dict[str, Any]]) -> Optional[str]:
+    for op in operations or []:
+        if op.get("type") == "replace_ge":
+            if not op.get("term") or not op.get("course_id"):
+                return (
+                    "To replace a GE, please tell me the exact quarter and the exact GE course "
+                    "you want replaced. I will keep the replacement in the same GE foundation."
+                )
+        if op.get("type") == "replace_filler":
+            if not op.get("term") or not op.get("course_id"):
+                return (
+                    "To replace a filler, please tell me the exact quarter and the exact filler "
+                    "slot you want replaced."
+                )
+    return None
 
 def execute_operations(editor: ScheduleEditor, operations: List[Dict]) -> Tuple[bool, str, Optional[Dict]]:
     """Execute a list of operations on the schedule."""
@@ -167,6 +238,18 @@ def execute_operations(editor: ScheduleEditor, operations: List[Dict]) -> Tuple[
                         new_lecture_id=op.get("new_lecture_id"),
                         new_discussion_id=op.get("new_discussion_id")
                     )
+            elif op["type"] == "replace_ge":
+                op_success, message = editor.replace_ge_course(
+                    course_id=op.get("course_id"),
+                    term=op.get("term"),
+                    interests=op.get("interests") or []
+                )
+            elif op["type"] == "replace_filler":
+                op_success, message = editor.replace_filler_course(
+                    course_id=op.get("course_id"),
+                    term=op.get("term"),
+                    interests=op.get("interests") or []
+                )
             else:
                 op_success = False
                 message = f"Unknown operation type: {op['type']}"
@@ -178,7 +261,8 @@ def execute_operations(editor: ScheduleEditor, operations: List[Dict]) -> Tuple[
                 return False, "\n".join(messages), None
                 
         except Exception as e:
-            return False, f"Error executing operation: {str(e)}", None
+            debug_print(f"Error executing operation: {e}")
+            return False, "Error executing operation due to a data lookup failure.", None
     
     return success, "\n".join(messages), editor.schedule if success else None
 
@@ -227,8 +311,41 @@ def main():
     operation = input_data['operation']
     
     if operation['type'] == 'interpret':
+        question_text = operation.get('question', '')
+        parsed_interests = _extract_interests(question_text)
+
+        if _looks_like_ge_replace_request(question_text) and not parsed_interests:
+            result = {
+                'success': False,
+                'message': 'I can help swap a GE. Tell me your interests and specify the exact quarter and GE course you want to replace.'
+            }
+            print(json.dumps(result))
+            return
+
+        if _looks_like_filler_replace_request(question_text) and not parsed_interests:
+            result = {
+                'success': False,
+                'message': 'I can help replace a filler slot. Tell me your interests and specify the exact quarter and filler slot you want to replace.'
+            }
+            print(json.dumps(result))
+            return
+
         # First interpret the request
-        interpretation = interpret_request(operation['question'], editor.schedule)
+        interpretation = interpret_request(question_text, editor.schedule)
+
+        if parsed_interests and interpretation.get('operations'):
+            for op in interpretation['operations']:
+                if op.get('type') in {'replace_ge', 'replace_filler'} and not op.get('interests'):
+                    op['interests'] = parsed_interests
+
+        replacement_validation_error = _validate_replacement_ops(interpretation.get('operations') or [])
+        if replacement_validation_error:
+            result = {
+                'success': False,
+                'message': replacement_validation_error
+            }
+            print(json.dumps(result))
+            return
         
         if not interpretation['feasible']:
             result = {
@@ -272,6 +389,17 @@ def main():
             operation['term'],
             operation.get('new_lecture_id'),
             operation.get('new_discussion_id')
+        )
+        result = {
+            'success': success,
+            'message': message,
+            'schedule': editor.schedule if success else None
+        }
+    elif operation['type'] == 'replace_filler':
+        success, message = editor.replace_filler_course(
+            operation.get('course_id'),
+            operation.get('term'),
+            operation.get('interests', [])
         )
         result = {
             'success': success,

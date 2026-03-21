@@ -1,0 +1,65 @@
+{
+  "major_name": "PhilosophyBA",
+  "major_id": 100,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select Philosophy 7 or 21.",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "PHILOS 7 - Introduction to Philosophy of Mind",
+            "PHILOS 21 - Skepticism and Rationality",
+            "PHILOS 22 - Introduction to Ethical Theory",
+            "PHILOS 31 - Logic, First Course"
+          ]
+        },
+        {
+          "title": "Elective"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following three courses.",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "PHILOS 100A - History of Greek Philosophy",
+            "PHILOS 100B - Medieval and Early Modern Philosophy",
+            "PHILOS 100C - History of Modern Philosophy, 1650 to 1800"
+          ]
+        },
+        {
+          "title": "Groups",
+          "options": [
+            {
+              "title": "Group I\u2014History of Philosophy"
+            },
+            {
+              "title": "Group II\u2014Logic, Semantics, and Philosophy of Science"
+            },
+            {
+              "title": "Group III\u2014Ethics and Value Theory"
+            },
+            {
+              "title": "Group IV\u2014Metaphysics and Epistemology"
+            }
+          ]
+        },
+        {
+          "title": "Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PHILOS 198A - Honors Research in Philosophy",
+        "PHILOS 198B - Honors Research in Philosophy"
+      ]
+    }
+  ]
+}

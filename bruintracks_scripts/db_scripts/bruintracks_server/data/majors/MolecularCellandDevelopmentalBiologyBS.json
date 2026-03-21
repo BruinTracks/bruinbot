@@ -1,0 +1,157 @@
+{
+  "major_name": "MolecularCellandDevelopmentalBiologyBS",
+  "major_id": 97,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Life Sciences Core Curriculum",
+          "description": "Select one series from:",
+          "options": [
+            {
+              "title": "Chemistry"
+            },
+            {
+              "title": "Life Sciences",
+              "courses": [
+                "LIFESCI 7A - Cell and Molecular Biology",
+                "LIFESCI 7B - Genetics, Evolution, and Ecology",
+                "LIFESCI 7C - Physiology and Human Biology",
+                "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "description": "Students may select either Life Sciences 40 or Statistics 13."
+            },
+            {
+              "title": "Physics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following five courses:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+            "LIFESCI 107 - Genetics",
+            "MCD BIO 138 - Developmental Biology",
+            "MCD BIO 144 - Molecular Biology of Cellular Processes",
+            "MCD BIO 165A - Biology of Cells"
+          ]
+        },
+        {
+          "title": "Laboratory",
+          "description": "Students completing the Biomedical Research minor may satisfy the laboratory requirement with the following course:",
+          "courses": [
+            "MCD BIO 104AL - Research Immersion Laboratory in Developmental Biology",
+            "MCD BIO 150AL - Research Immersion Laboratory in Plant-Microbe Ecology",
+            "MCD BIO 187AL - Research Immersion Laboratory in Genomic Biology",
+            "MCD BIO 196B - Research Apprenticeship II in Molecular, Cell, and Developmental Biology"
+          ],
+          "options": [
+            {
+              "title": "Biomedical Research Minor Substitution",
+              "courses": [
+                "MCD BIO 198C - Honors Research in Molecular, Cell, and Developmental Biology"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Electives",
+          "description": "Select five units from Molecular, Cell, and Developmental Biology (except 100, 104AL, 138, 144, 150AL, 165A, 187AL, 192A, 192B, 193, 194A, 194B, or 199).",
+          "options": [
+            {
+              "title": "Molecular, Cell, and Developmental Biology Upper-Division"
+            },
+            {
+              "title": "Additional Electives",
+              "courses": [
+                "CHEM C100 - Genomics and Computational Biology",
+                "CHEM 153C - Biochemistry: Biosynthetic and Energy Metabolism and Its Regulation",
+                "CHEM 153L - Biochemical Methods I",
+                "CHEM C159 - Mechanisms of Gene Regulation",
+                "COM SCI C121 - Probabilistic Models in Computational Genomics",
+                "COM SCI C124 - Machine Learning Applications in Genetics",
+                "COM SCI CM186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+                "MIMG 100L - Microbiology Laboratory for Professional Schools",
+                "MIMG 101 - Introductory Microbiology",
+                "MIMG 102 - Introductory Virology",
+                "MIMG 105 - Biological Microscopy",
+                "MIMG 158 - Microbial Genomics",
+                "MIMG 168 - Molecular Parasitology",
+                "MIMG 174 - Advanced Topics in Molecular Parasitology",
+                "MIMG 185A - Immunology",
+                "PHYSCI 121 - Disease Mechanisms and Therapies",
+                "PHYSCI 125 - Molecular Systems Biology",
+                "PHYSCI 174 - Cell Biophysics in Physiology and Disease"
+              ]
+            },
+            {
+              "title": "Additional Electives",
+              "courses": [
+                "BIOSTAT 100 - Introduction to Biostatistics",
+                "EE BIOL 110 - Vertebrate Morphology",
+                "EE BIOL 121 - Molecular Evolution",
+                "EE BIOL 162 - Plant Physiology",
+                "HUM GEN C144 - Genomic Technology",
+                "PHYSCI 166 - Animal Physiology",
+                "STATS 100A - Introduction to Probability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "MCD BIO 145 - Appreciation and Critical Review of Biomedical Research",
+        "MCD BIO 180A - Scientific Analysis and Communication I",
+        "MCD BIO 180B - Scientific Analysis and Communication II",
+        "MCD BIO 191 - Variable Topics Research Seminars: Molecular, Cell, and Developmental Biology",
+        "BMD RES 193H - Journal Club Seminars: Current Topics in Biomedical Research",
+        "BMD RES 194H - Research Group Seminars: Data Presentation in Biomedical Research",
+        "MCD BIO 198A - Honors Research in Molecular, Cell, and Developmental Biology",
+        "MCD BIO 198B - Honors Research in Molecular, Cell, and Developmental Biology",
+        "MCD BIO 198C - Honors Research in Molecular, Cell, and Developmental Biology"
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Students may select either Life Sciences 40 or Statistics 13",
+      "options": [
+        {
+          "title": "Required",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming",
+            "COMPTNG 10C - Advanced Programming",
+            "COMPTNG 16A - Python with Applications I",
+            "LIFESCI 40 - Statistics of Biological Systems",
+            "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+          ]
+        },
+        {
+          "title": "Elective",
+          "courses": [
+            "CHEM C100 - Genomics and Computational Biology",
+            "COM SCI C121 - Probabilistic Models in Computational Genomics",
+            "COM SCI C124 - Machine Learning Applications in Genetics",
+            "COM SCI CM186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "MCD BIO 187AL - Research Immersion Laboratory in Genomic Biology",
+            "PHYSCI 125 - Molecular Systems Biology"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "major_name": "EnvironmentalScienceBS",
+  "major_id": 51,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Chemistry",
+          "options": [
+            {
+              "title": "Chemistry 14 series",
+              "courses": [
+                "CHEM 14A - General Chemistry for Life Scientists I",
+                "CHEM 14B - General Chemistry for Life Scientists II",
+                "CHEM 14BL - General and Organic Chemistry Laboratory I"
+              ]
+            },
+            {
+              "title": "Chemistry 20 series",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change",
+                "CHEM 20L - General Chemistry Laboratory"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Environment",
+          "courses": [
+            "ENVIRON 10 - Introduction to Environmental Science"
+          ]
+        },
+        {
+          "title": "Geography",
+          "courses": [
+            "GEOG 7 - Introduction to Geographic Information Systems"
+          ]
+        },
+        {
+          "title": "Life Sciences",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "LIFESCI 7B - Genetics, Evolution, and Ecology"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "description": "Students may select Mathematics 31A or 31AL.",
+          "options": [
+            {
+              "title": "Life Sciences 30 series",
+              "courses": [
+                "LIFESCI 30A - Mathematics for Life Scientists",
+                "LIFESCI 30B - Mathematics for Life Scientists"
+              ]
+            },
+            {
+              "title": "Mathematics 3 series",
+              "courses": [
+                "MATH 3A - Calculus for Life Sciences Students",
+                "MATH 3B - Calculus for Life Sciences Students"
+              ]
+            },
+            {
+              "title": "Mathematics 31 series",
+              "courses": [
+                "MATH 31A - Differential and Integral Calculus",
+                "MATH 31AL - Differential and Integral Calculus Laboratory",
+                "MATH 31B - Integration and Infinite Series"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Physics",
+          "options": [
+            {
+              "title": "Physics 1 series",
+              "courses": [
+                "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+                "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields"
+              ]
+            },
+            {
+              "title": "Physics 5 series",
+              "courses": [
+                "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy",
+                "PHYSICS 5C - Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Statistics",
+          "courses": [
+            "LIFESCI 40 - Statistics of Biological Systems",
+            "STATS 12 - Introduction to Statistical Methods for Geography and Environmental Studies",
+            "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+          ]
+        },
+        {
+          "title": "Atmospheric and Oceanic Sciences Minor",
+          "courses": [
+            "CHEM 14C - Structure of Organic Molecules",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "MATH 3C - Ordinary Differential Equations with Linear Algebra for Life Sciences Students",
+            "MATH 32A - Calculus of Several Variables",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics"
+          ]
+        },
+        {
+          "title": "Conservation Biology Minor",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Chemistry 14C or 30A",
+              "courses": [
+                "CHEM 14C - Structure of Organic Molecules",
+                "CHEM 30A - Organic Chemistry I: Structure and Reactivity"
+              ]
+            },
+            {
+              "title": "Life Sciences 7C and 23L",
+              "courses": [
+                "LIFESCI 7C - Physiology and Human Biology",
+                "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Earth and Environmental Science Minor",
+          "description": "Select one course from:",
+          "courses": [
+            "EPS SCI 1 - Introduction to Earth Science"
+          ],
+          "options": [
+            {
+              "title": "Earth, Planetary, and Space Sciences Elective",
+              "courses": [
+                "EPS SCI 5 - Environmental Geology of Los Angeles",
+                "EPS SCI 13 - Natural Disasters",
+                "EPS SCI 15 - Blue Planet: Introduction to Oceanography",
+                "EPS SCI 61 - Geologic Maps"
+              ]
+            },
+            {
+              "title": "Additional Course",
+              "courses": [
+                "CHEM 14C - Structure of Organic Molecules",
+                "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+                "MATH 3C - Ordinary Differential Equations with Linear Algebra for Life Sciences Students",
+                "MATH 32A - Calculus of Several Variables",
+                "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Environmental Engineering Minor",
+          "courses": [
+            "MATH 3C - Ordinary Differential Equations with Linear Algebra for Life Sciences Students",
+            "MATH 32A - Calculus of Several Variables"
+          ]
+        },
+        {
+          "title": "Environmental Health Concentration",
+          "courses": [
+            "CHEM 14C - Structure of Organic Molecules",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity"
+          ]
+        },
+        {
+          "title": "Required for the Environmental Systems and Society Minor",
+          "courses": [
+            "CHEM 14C - Structure of Organic Molecules",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "EPS SCI 1 - Introduction to Earth Science",
+            "LIFESCI 7C - Physiology and Human Biology",
+            "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology",
+            "MATH 3C - Ordinary Differential Equations with Linear Algebra for Life Sciences Students",
+            "MATH 32A - Calculus of Several Variables",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics"
+          ]
+        },
+        {
+          "title": "Geography/Environmental Studies Minor",
+          "description": "Select one course from:",
+          "courses": [
+            "GEOG 5 - People and Earth's Ecosystems"
+          ],
+          "options": [
+            {
+              "title": "Geography Elective",
+              "courses": [
+                "GEOG 1 - Earth's Physical Environment",
+                "GEOG 2 - Biodiversity in Changing World",
+                "GEOG 3 - Cultural Geography",
+                "GEOG 4 - Globalization: Regional Development and World Economy",
+                "GEOG 6 - World Regions: Concepts and Contemporary Issues"
+              ]
+            },
+            {
+              "title": "Additional Course",
+              "courses": [
+                "CHEM 14C - Structure of Organic Molecules",
+                "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+                "EPS SCI 1 - Introduction to Earth Science",
+                "LIFESCI 7C - Physiology and Human Biology",
+                "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology",
+                "MATH 3C - Ordinary Differential Equations with Linear Algebra for Life Sciences Students",
+                "MATH 32A - Calculus of Several Variables",
+                "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five courses as follows:",
+      "options": [
+        {
+          "title": "Physical and Life Sciences Requirements",
+          "description": "Select four courses from the following physical and life sciences areas. No more than two courses may be from any one department.",
+          "courses": [
+            "ENVIRON 175 - Programming with Big Environmental Datasets"
+          ],
+          "options": [
+            {
+              "title": "Additional Physical and Life Sciences Courses",
+              "courses": [
+                "A&O SCI 101 - Fundamentals of Atmospheric Dynamics and Thermodynamics",
+                "A&O SCI 102 - Climate Change and Climate Modeling",
+                "A&O SCI 103 - Physical Oceanography",
+                "A&O SCI 104 - Fundamentals of Air and Water Pollution",
+                "A&O SCI M105 - Introduction to Chemical Oceanography",
+                "A&O SCI 107 - Biological Oceanography",
+                "A&O SCI 112 - Climate Change Assessment",
+                "A&O SCI 121 - Climate Mitigation Solutions",
+                "A&O SCI 123 - Climate Adaptation Solutions",
+                "A&O SCI 130 - California's Ocean",
+                "A&O SCI 141 - Introduction to Atmospheric Chemistry and Air Pollution",
+                "C&EE 153 - Introduction to Environmental Engineering Science",
+                "C&EE 154 - Chemical Fate and Transport in Aquatic Environments",
+                "C&EE M166 - Environmental Microbiology",
+                "EPS SCI 101 - Earth's Energy: Diminishing Fossil Resources and Prospects for Sustainable Future",
+                "EPS SCI C113 - Biological and Environmental Geochemistry",
+                "EPS SCI 119 - Continental Drift and Plate Tectonics",
+                "EPS SCI 139 - Engineering and Environmental Geology",
+                "EPS SCI 150 - Remote Sensing for Earth Sciences",
+                "EPS SCI 153 - Oceans and Atmospheres",
+                "EE BIOL 100 - Introduction to Ecology and Behavior",
+                "EE BIOL 109 - Introduction to Marine Science",
+                "EE BIOL 116 - Conservation Biology",
+                "EE BIOL 136 - Ecological Restoration",
+                "EE BIOL 151A - Tropical Ecology",
+                "EE BIOL 154 - California Ecosystems",
+                "ENVIRON 157 - Energy, Environment, and Development",
+                "ENV HLT 100 - Introduction to Environmental Health",
+                "ENV HLT C125 - Atmospheric Transport and Transformations of Airborne Chemicals",
+                "ENV HLT C152D - Properties and Measurement of Airborne Particles",
+                "GEOG 101 - Principles of Geomorphology",
+                "GEOG M102 - Soils and Environment",
+                "GEOG M103 - Soil and Water Conservation",
+                "GEOG 107 - Forest Ecosystems",
+                "GEOG M110 - Ecosystem Ecology",
+                "GEOG 116 - Climatology",
+                "GEOG 117 - Tropical Climatology",
+                "GEOG M118 - Applied Climatology: Principles of Climate Impact on Natural Environment",
+                "GEOG 120 - Hydrology",
+                "GEOG M126 - Environmental Change",
+                "GEOG 133 - Humid Tropics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Social Sciences and Humanities Requirements",
+          "description": "Select two courses from:",
+          "courses": [
+            "ENVIRON 140 - Foundations of Environmental Policy and Regulation"
+          ],
+          "options": [
+            {
+              "title": "Additional Social Sciences and Humanities Courses",
+              "courses": [
+                "ANTHRO 132 - Anthropology of Environment",
+                "ANTHRO 133 - Anthropology of Food",
+                "A&O SCI 121 - Climate Mitigation Solutions",
+                "A&O SCI 123 - Climate Adaptation Solutions",
+                "ENGL 118E - Literature and Environment",
+                "ENVIRON M125 - Environmentalism: Past, Present, and Future",
+                "ENVIRON M133 - Environmental Sociology",
+                "ENVIRON M147 - Critical Analysis of Strategies toward Environmental Justice",
+                "ENVIRON 150 - Environmental Journalism, Science Communications, and New Media",
+                "ENVIRON M153 - Introduction to Sustainable Architecture and Community Planning",
+                "ENVIRON 155 - Energy and Society in Time of Climate Change: Moving toward Just Transition",
+                "ENVIRON 157 - Energy, Environment, and Development",
+                "ENVIRON C159 - Life-Cycle Assessment",
+                "ENVIRON M161 - Global Environment and World Politics",
+                "ENVIRON 162 - Entrepreneurship and Finance for Environmental Scientists",
+                "ENVIRON 163 - Business and Natural Environment",
+                "ENVIRON M164 - Environmental Politics and Governance",
+                "ENVIRON 166 - Leadership in Water Management",
+                "ENVIRON M167 - Environmental Justice through Multiple Lenses",
+                "GEOG M127 - Global Environment and Development: Problems and Issues",
+                "GEOG 130 - Food and Environment",
+                "GEOG 138 - Wildlife Conservation in Eastern and Southern Africa",
+                "GEOG M142 - (When) Do Leaders Make Differences?",
+                "GEOG 160 - Urban Geography",
+                "GEOG 171C - Metropolitan Los Angeles",
+                "PHILOS 125 - Philosophy of Science: Contemporary",
+                "PUB AFF M160 - Urban Sustainability",
+                "SOC GEN 141 - Nature versus Nurture: Genes and Environment",
+                "URBN PL 121 - Urban Policy and Planning"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Practicum/Sustainability Talks Requirements",
+          "courses": [
+            "ENVIRON 180A - Practicum in Environmental Science",
+            "ENVIRON 180B - Practicum in Environmental Science",
+            "ENVIRON 180C - Practicum in Environmental Science",
+            "ENVIRON 185A - Sustainability Talks"
+          ]
+        },
+        {
+          "title": "Minor and Concentration Requirements",
+          "description": "Complete seven 4-unit courses as follows. Other relevant courses from related disciplines may be substituted with prior approval of the department. At least five courses approved for the minor must be upper-division. One course may be taken on a Passed/Not Passed basis.",
+          "options": [
+            {
+              "title": "Atmospheric and Oceanic Sciences Minor",
+              "description": "Select three courses from:"
+            },
+            {
+              "title": "Conservation Biology Minor",
+              "description": "Select four to six courses from the following list or any courses associated with the Field Biology Quarter or the Marine Biology Quarter or approved equivalent. A maximum of two Geography courses may be applied to the minor.",
+              "courses": [
+                "EE BIOL 100 - Introduction to Ecology and Behavior",
+                "EE BIOL 116 - Conservation Biology"
+              ]
+            },
+            {
+              "title": "Earth and Environmental Science Minor",
+              "courses": [
+                "EPS SCI 101 - Earth's Energy: Diminishing Fossil Resources and Prospects for Sustainable Future",
+                "EPS SCI 112 - Structural Geology",
+                "EPS SCI C113 - Biological and Environmental Geochemistry",
+                "EPS SCI 139 - Engineering and Environmental Geology",
+                "EPS SCI 150 - Remote Sensing for Earth Sciences",
+                "EPS SCI 153 - Oceans and Atmospheres"
+              ]
+            },
+            {
+              "title": "Environmental Engineering Minor",
+              "description": "Select five from the following list. Credit for both Chemical Engineering 102A and Mechanical and Aerospace Engineering 105A is not allowed.",
+              "courses": [
+                "C&EE 153 - Introduction to Environmental Engineering Science"
+              ]
+            },
+            {
+              "title": "Environmental Health Concentration",
+              "description": "Select two courses from:",
+              "courses": [
+                "EPIDEM 100 - Principles of Epidemiology"
+              ]
+            },
+            {
+              "title": "Environmental Systems and Society Minor",
+              "courses": [
+                "ENVIRON M111 - Earth and Its Environment",
+                "ENVIRON M125 - Environmentalism: Past, Present, and Future",
+                "ENVIRON M126 - Environmental Change",
+                "ENVIRON M131 - Human Impact on Biophysical Environment",
+                "ENVIRON M133 - Environmental Sociology",
+                "ENVIRON 134 - Environmental Economics with Data Analysis",
+                "ENVIRON 140 - Foundations of Environmental Policy and Regulation",
+                "ENVIRON M147 - Critical Analysis of Strategies toward Environmental Justice",
+                "ENVIRON 150 - Environmental Journalism, Science Communications, and New Media",
+                "ENVIRON M153 - Introduction to Sustainable Architecture and Community Planning",
+                "ENVIRON 155 - Energy and Society in Time of Climate Change: Moving toward Just Transition",
+                "ENVIRON 157 - Energy, Environment, and Development",
+                "ENVIRON C159 - Life-Cycle Assessment",
+                "ENVIRON M161 - Global Environment and World Politics",
+                "ENVIRON 162 - Entrepreneurship and Finance for Environmental Scientists",
+                "ENVIRON 163 - Business and Natural Environment",
+                "ENVIRON M164 - Environmental Politics and Governance",
+                "ENVIRON 166 - Leadership in Water Management",
+                "ENVIRON M167 - Environmental Justice through Multiple Lenses",
+                "ENVIRON 175 - Programming with Big Environmental Datasets"
+              ]
+            },
+            {
+              "title": "Geography/Environmental Studies  Minor",
+              "description": "Select three courses from:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ENVIRON 198 - Honors Research in Environmental Science"
+      ]
+    }
+  ]
+}

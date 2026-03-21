@@ -1,0 +1,75 @@
+{
+  "major_name": "ElectricalEngineeringBS",
+  "major_id": 8,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "CHEM 20A - Chemical Structure",
+        "COM SCI 31 - Introduction to Computer Science I",
+        "COM SCI 32 - Introduction to Computer Science II",
+        "EC ENGR 2 - Physics for Electrical Engineers",
+        "EC ENGR 3 - Introduction to Electrical Engineering",
+        "EC ENGR 10 - Circuit Theory I",
+        "EC ENGR 11L - Circuits Laboratory I",
+        "MATH 31A - Differential and Integral Calculus",
+        "MATH 31B - Integration and Infinite Series",
+        "MATH 32A - Calculus of Several Variables",
+        "MATH 32B - Calculus of Several Variables",
+        "MATH 33A - Linear Algebra and Applications",
+        "MATH 33B - Differential Equations",
+        "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+        "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+        "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+        "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+        "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+      ],
+      "options": [
+        {
+          "title": "Computer Science M51A or Electrical and Computer Engineering M16",
+          "courses": [
+            "COM SCI M51A - Logic Design of Digital Systems",
+            "EC ENGR M16 - Logic Design of Digital Systems"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select six core courses from:",
+      "courses": [
+        "EC ENGR 101A - Engineering Electromagnetics",
+        "EC ENGR 102 - Systems and Signals",
+        "EC ENGR 110 - Circuit Theory II",
+        "EC ENGR 111L - Circuits Laboratory II",
+        "EC ENGR 113 - Digital Signal Processing",
+        "EC ENGR 131A - Probability and Statistics"
+      ],
+      "options": [
+        {
+          "title": "Core",
+          "courses": [
+            "COM SCI 33 - Introduction to Computer Organization",
+            "EC ENGR 101B - Electromagnetic Waves",
+            "EC ENGR 115A - Analog Electronic Circuits I",
+            "EC ENGR 121B - Principles of Semiconductor Device Design",
+            "EC ENGR 132A - Introduction to Communication Systems",
+            "EC ENGR 133A - Applied Numerical Computing",
+            "EC ENGR 141 - Principles of Feedback Control",
+            "EC ENGR 170A - Principles of Photonics"
+          ]
+        },
+        {
+          "title": "Technical Breadth"
+        },
+        {
+          "title": "Upper-Division Electrical and Computer Engineering Electives"
+        },
+        {
+          "title": "Capstone Design"
+        }
+      ]
+    }
+  ]
+}

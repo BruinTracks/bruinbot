@@ -1,0 +1,119 @@
+{
+  "major_name": "EarthandEnvironmentalScienceBA",
+  "major_id": 46,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following course:",
+      "options": [
+        {
+          "title": "Earth, Planetary, and Space Sciences 1",
+          "description": "Earth, Planetary, and Space Sciences 1 may be substituted with a course from the following range or listed course:",
+          "courses": [
+            "EPS SCI 1 - Introduction to Earth Science"
+          ],
+          "options": [
+            {
+              "title": "Earth, Planetary, and Space Sciences 1 Substitution",
+              "courses": [
+                "CLUSTER 70A - Evolution of Cosmos and Life"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Additional Earth, Planetary, and Space Sciences Course",
+          "courses": [
+            "EPS SCI 51 - Mineralogy: Earth and Planetary Materials",
+            "EPS SCI 61 - Geologic Maps",
+            "EPS SCI M71 - Introduction to Computing for Geoscientists"
+          ]
+        },
+        {
+          "title": "Chemistry",
+          "options": [
+            {
+              "title": "Chemistry 14 series",
+              "courses": [
+                "CHEM 14A - General Chemistry for Life Scientists I",
+                "CHEM 14B - General Chemistry for Life Scientists II",
+                "CHEM 14BL - General and Organic Chemistry Laboratory I"
+              ]
+            },
+            {
+              "title": "Chemistry 20 series",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change",
+                "CHEM 20L - General Chemistry Laboratory"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "options": [
+            {
+              "title": "Mathematics 3 series",
+              "courses": [
+                "MATH 3A - Calculus for Life Sciences Students",
+                "MATH 3B - Calculus for Life Sciences Students"
+              ]
+            },
+            {
+              "title": "Mathematics 31 series",
+              "courses": [
+                "MATH 31A - Differential and Integral Calculus",
+                "MATH 31B - Integration and Infinite Series"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select two courses from:",
+      "options": [
+        {
+          "title": "Earth, Planetary, and Space Sciences",
+          "courses": [
+            "EPS SCI 103A - Igneous Petrology",
+            "EPS SCI 103B - Sedimentary Petrology",
+            "EPS SCI 111 - Stratigraphic and Field Geology",
+            "EPS SCI 112 - Structural Geology"
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "EPS SCI 199 - Directed Research or Senior Project in Earth, Planetary, and Space Sciences"
+          ]
+        },
+        {
+          "title": "Upper-Division Earth, Planetary, and Space Sciences Electives"
+        },
+        {
+          "title": "Geography",
+          "courses": [
+            "GEOG 101 - Principles of Geomorphology",
+            "GEOG M102 - Soils and Environment",
+            "GEOG M103 - Soil and Water Conservation",
+            "GEOG 116 - Climatology",
+            "GEOG 120 - Hydrology",
+            "GEOG M126 - Environmental Change",
+            "GEOG M131 - Human Impact on Biophysical Environment",
+            "GEOG 136 - Health and Global Environment"
+          ]
+        }
+      ]
+    }
+  ]
+}

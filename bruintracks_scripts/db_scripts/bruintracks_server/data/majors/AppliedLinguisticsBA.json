@@ -1,0 +1,185 @@
+{
+  "major_name": "AppliedLinguisticsBA",
+  "major_id": 18,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "LING 20 - Introduction to Linguistic Analysis"
+      ],
+      "options": [
+        {
+          "title": "Anthropology 4 or Psychology 10",
+          "courses": [
+            "ANTHRO 4 - Culture and Communication",
+            "PSYCH 10 - Introductory Psychology"
+          ]
+        },
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete four courses as follows:",
+      "options": [
+        {
+          "title": "Required Linguistics Courses",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Linguistics 102 or 103",
+              "courses": [
+                "LING 102 - Introduction to Applied Phonetics",
+                "LING 103 - Introduction to General Phonetics"
+              ]
+            },
+            {
+              "title": "Linguistics 119A or 120A",
+              "courses": [
+                "LING 119A - Applied Phonology",
+                "LING 120A - Phonology I"
+              ]
+            },
+            {
+              "title": "Linguistics 120B",
+              "courses": [
+                "LING 120B - Syntax I"
+              ]
+            },
+            {
+              "title": "Linguistics 130 or C140",
+              "courses": [
+                "LING 130 - Language Development",
+                "LING C140 - Bilingualism and Second Language Acquisition"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Additional Linguistic Courses",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 115 - Linguistics and Speech Pathology",
+            "LING 120C - Semantics I",
+            "LING 130 - Language Development",
+            "LING C140 - Bilingualism and Second Language Acquisition",
+            "LING M141 - Current Methods of Language Teaching",
+            "LING 144 - Fundamentals of Translation and Interpreting",
+            "LING M146 - Language in Culture",
+            "LING 170 - Language and Society: Introduction to Sociolinguistics"
+          ]
+        },
+        {
+          "title": "Upper-Division Linguistics Electives"
+        },
+        {
+          "title": "Additional Elective",
+          "courses": [
+            "ANTHRO 151 - Ethnography of Everyday Speech",
+            "ANTHRO M152P - Language Development and Socialization",
+            "ANTHRO 152Q - Language and Social Organization through Life Cycle",
+            "ANTHRO 152R - Language, Culture, and Education",
+            "ANTHRO 153 - Language and Identity",
+            "ANTHRO 154P - Multilingualism: Communities and Histories in Contact",
+            "ANTHRO 154Q - Gender and Language in Society",
+            "ANTHRO M156 - Language Endangerment and Linguistic Revitalization",
+            "ANTHRO 159 - Selected Topics in Linguistic Anthropology",
+            "ARABIC 180 - Linguistics Analysis of Arabic",
+            "ARABIC 181 - Translating Arabic",
+            "ARMENIA 110 - History of Armenian Language",
+            "CCAS 164XP - Oral History: Latino New Immigrant Youth",
+            "CCAS M167XP - Taking It to Street: Spanish in Community",
+            "CCAS M170XP - Topics in Community Engagement",
+            "COMM 119 - Voice and Its Perception",
+            "COMM M125 - Talk and Social Institutions",
+            "COMM M144A - Conversational Structures I",
+            "FRNCH 105 - Structure of French",
+            "GERMAN 140 - Language and Linguistics",
+            "HEBREW 180A - Survey of Hebrew Grammar",
+            "HEBREW 180B - Survey of Hebrew Grammar",
+            "IRANIAN 131 - Introduction to Judeo-Persian: Literature and Culture",
+            "LING M116 - Introduction to Japanese Linguistics",
+            "LING M146 - Language in Culture",
+            "LING M176A - Japanese Phonology and Morphology",
+            "LING M176B - Structure of Japanese",
+            "LING M177 - Structure of Korean",
+            "LING M178 - Contrastive Analysis of Japanese and Korean",
+            "PORTGSE 100A - Phonology and Morphology",
+            "PORTGSE 100B - Syntax",
+            "SLAVC CM114 - Teaching and Learning of Heritage Languages",
+            "SPAN 100A - Introduction to Study of Spanish Grammar: Phonology and Morphology",
+            "SPAN 100B - Introduction to Study of Spanish Grammar: Syntax",
+            "SPAN 160 - Topics in Spanish Linguistics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "options": [
+        {
+          "title": "Linguistics 198A and 198B",
+          "courses": [
+            "LING 198A - Honors Research in Linguistics I",
+            "LING 198B - Honors Research in Linguistics II"
+          ]
+        },
+        {
+          "title": "Linguistics 199",
+          "courses": [
+            "LING 199 - Directed Research or Senior Project in Linguistics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Introduction to Computing",
+          "options": [
+            {
+              "title": "Program in Computing",
+              "courses": [
+                "COMPTNG 10A - Introduction to Programming",
+                "COMPTNG 10B - Intermediate Programming",
+                "COMPTNG 10C - Advanced Programming"
+              ]
+            },
+            {
+              "title": "Computer Science",
+              "courses": [
+                "COM SCI 31 - Introduction to Computer Science I",
+                "COM SCI 32 - Introduction to Computer Science II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistics 185A and Mathematics 61",
+          "courses": [
+            "LING 185A - Computational Linguistics I",
+            "MATH 61 - Introduction to Discrete Structures"
+          ]
+        },
+        {
+          "title": "Additional Linguistics Elective",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 127 - Syntactic Typology and Universals",
+            "LING 132 - Language Processing",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II",
+            "LING 165C - Semantics II",
+            "LING 180 - Mathematical Structures in Language I",
+            "LING 185B - Computational Linguistics II"
+          ]
+        }
+      ]
+    }
+  ]
+}

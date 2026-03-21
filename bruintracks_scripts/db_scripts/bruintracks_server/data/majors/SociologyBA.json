@@ -1,0 +1,136 @@
+{
+  "major_name": "SociologyBA",
+  "major_id": 110,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following two courses:",
+      "options": [
+        {
+          "title": "Sociology",
+          "courses": [
+            "SOCIOL 1 - Introductory Sociology",
+            "SOCIOL 20 - Introduction to Sociological Research Methods"
+          ]
+        },
+        {
+          "title": "Political Science or Statisics",
+          "courses": [
+            "POL SCI 6 - Introduction to Data Analysis",
+            "STATS 10 - Introduction to Statistical Reasoning",
+            "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following two courses:",
+      "options": [
+        {
+          "title": "Theory",
+          "courses": [
+            "SOCIOL 101 - Development of Sociological Theory",
+            "SOCIOL 102 - Contemporary Sociological Theory"
+          ]
+        },
+        {
+          "title": "Methods",
+          "courses": [
+            "SOCIOL 106A - Field Research Methods I",
+            "SOCIOL 106B - Field Research Methods II",
+            "SOCIOL 110 - Comparative and Historical Methods",
+            "SOCIOL 111 - Social Networks",
+            "SOCIOL 112 - Introduction to Mathematical Sociology",
+            "SOCIOL 113 - Statistical and Computer Methods for Social Research",
+            "SOCIOL CM124A - Conversational Structures I",
+            "SOCIOL 191H - Honors Seminars: Sociology",
+            "STATS 112 - Statistics: Window to Understanding Diversity"
+          ]
+        },
+        {
+          "title": "Core Areas",
+          "options": [
+            {
+              "title": "Interactions",
+              "courses": [
+                "SOCIOL 111 - Social Networks",
+                "SOCIOL CM124A - Conversational Structures I",
+                "SOCIOL CM125 - Talk and Social Institutions",
+                "SOCIOL 126 - Study of Norms",
+                "SOCIOL 130 - Self and Society",
+                "SOCIOL 132 - Social Psychology: Sociological Approaches",
+                "SOCIOL 133 - Collective Behavior",
+                "SOCIOL 134 - Culture and Personality",
+                "SOCIOL 140 - Negotiating Medical Care: Physician-Patient Conversations",
+                "SOCIOL 152 - Comparative Acculturation and Assimilation"
+              ]
+            },
+            {
+              "title": "Institutions and Social Processes",
+              "courses": [
+                "SOCIOL 116 - Social Demography",
+                "SOCIOL 121 - Sociology of Religion",
+                "SOCIOL M139 - Asian Community: Border-Crossing, Diasporic Formation, and Social Transformation",
+                "SOCIOL 140 - Negotiating Medical Care: Physician-Patient Conversations",
+                "SOCIOL 143 - Human Health and Society",
+                "SOCIOL 151 - Comparative Immigration",
+                "SOCIOL 158 - Urban Sociology",
+                "SOCIOL 172 - Entrepreneurship",
+                "SOCIOL 173 - Economy and Society",
+                "SOCIOL M174 - Sociology of Family",
+                "SOCIOL M175 - Sociology of Education",
+                "SOCIOL M176 - Sociology of Mass Communication",
+                "SOCIOL 181B - Sociology of Contemporary China"
+              ]
+            },
+            {
+              "title": "Power and Inequality",
+              "courses": [
+                "SOCIOL M115 - Environmental Sociology",
+                "SOCIOL 122 - Sociology of Violence",
+                "SOCIOL 123 - Social Change",
+                "SOCIOL M139 - Asian Community: Border-Crossing, Diasporic Formation, and Social Transformation",
+                "SOCIOL 147A - Sociology of Crime",
+                "SOCIOL M155 - Latinos in U.S.",
+                "SOCIOL 156 - Race and Ethnicity in American Life",
+                "SOCIOL 157 - Social Stratification",
+                "SOCIOL M161 - Comparative American Indian Societies",
+                "SOCIOL M162 - Sociology of Gender",
+                "SOCIOL M164 - Politics of Reproduction and Everyday Life",
+                "SOCIOL M165 - Sociology of Race and Labor",
+                "SOCIOL 181A - Sociology of Global China",
+                "SOCIOL 182 - Political Sociology",
+                "SOCIOL 183 - Comparative and Historical Sociology",
+                "SOCIOL 185 - American Society",
+                "SOCIOL 186 - Latin American Societies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Upper-Division Sociology Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "SOCIOL 191H - Honors Seminars: Sociology",
+        "SOCIOL 198A - Honors Research in Sociology",
+        "SOCIOL 198B - Honors Research in Sociology",
+        "SOCIOL 198C - Honors Research in Sociology"
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "courses": [
+        "COMPTNG 10A - Introduction to Programming",
+        "COMPTNG 10B - Intermediate Programming",
+        "COMPTNG 10C - Advanced Programming",
+        "SOCIOL 111 - Social Networks",
+        "SOCIOL 113 - Statistical and Computer Methods for Social Research"
+      ]
+    }
+  ]
+}

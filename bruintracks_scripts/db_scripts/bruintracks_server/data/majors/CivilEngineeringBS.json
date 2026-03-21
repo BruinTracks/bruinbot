@@ -1,0 +1,202 @@
+{
+  "major_name": "CivilEngineeringBS",
+  "major_id": 4,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following three courses:",
+      "options": [
+        {
+          "title": "Chemistry",
+          "courses": [
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory"
+          ]
+        },
+        {
+          "title": "Civil Engineering",
+          "description": "Select one course from:",
+          "courses": [
+            "C&EE 1 - Civil Engineering and Infrastructure"
+          ],
+          "options": [
+            {
+              "title": "Civil Engineering M20 or Computer Science 31",
+              "courses": [
+                "C&EE M20 - Introduction to Computer Programming with MATLAB",
+                "COM SCI 31 - Introduction to Computer Science I"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "description": "Select one course from:",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications"
+          ],
+          "options": [
+            {
+              "title": "Mathematics 33B or Mechanical and Aerospace Engineering 82",
+              "courses": [
+                "MATH 33B - Differential Equations",
+                "MECH&AE 82 - Mathematics of Engineering"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics"
+          ]
+        },
+        {
+          "title": "Natural Science",
+          "courses": [
+            "C&EE 58XP - Climate Change, Water Quality, and Ecosystem Functioning",
+            "EPS SCI 3 - Astrobiology",
+            "EPS SCI 15 - Blue Planet: Introduction to Oceanography",
+            "EPS SCI 16 - Major Events in History of Life",
+            "EPS SCI 17 - Dinosaurs and Their Relatives",
+            "EPS SCI 20 - Natural History of Southern California",
+            "ENVIRON 12 - Sustainability and Environment",
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "MIMG 5 - Science of Memory and Learning",
+            "MIMG 6 - Microbiology for Nonmajors",
+            "NEUROSC 10 - Brain Made Simple: Neuroscience for 21st Century"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete 12 courses: 7 required courses and one course from each of the five options as follows:",
+      "options": [
+        {
+          "title": "Required",
+          "description": "Select one course from:",
+          "courses": [
+            "C&EE 103 - Applied Numerical Computing and Modeling in Civil and Environmental Engineering",
+            "C&EE 108 - Introduction to Mechanics of Deformable Solids",
+            "C&EE 120 - Principles of Soil Mechanics",
+            "C&EE 135A - Elementary Structural Analysis",
+            "C&EE 150 - Introduction to Hydrology",
+            "C&EE 153 - Introduction to Environmental Engineering Science",
+            "C&EE 190 - Professional Practice"
+          ],
+          "options": [
+            {
+              "title": "Chemical Engineering 102A or Mechanical and Aerospace Engineering 105A",
+              "courses": [
+                "CH ENGR 102A - Thermodynamics I",
+                "MECH&AE 105A - Introduction to Engineering Thermodynamics"
+              ]
+            },
+            {
+              "title": "Civil Engineering 91 or Mechanical and Aerospace Engineering 101",
+              "courses": [
+                "C&EE 91 - Statics",
+                "MECH&AE 101 - Statics and Strength of Materials"
+              ]
+            },
+            {
+              "title": "Civil Engineering C104 or Materials Science and Engineering 104",
+              "courses": [
+                "C&EE C104 - Structure, Processing, and Properties of Civil Engineering Materials",
+                "MAT SCI 104 - Science of Engineering Materials"
+              ]
+            },
+            {
+              "title": "Civil Engineering 107 or Mechanical and Aerospace Engineering 103",
+              "courses": [
+                "C&EE 107 - Environmental Fluid Mechanics",
+                "MECH&AE 103 - Elementary Fluid Mechanics"
+              ]
+            },
+            {
+              "title": "Civil Engineering 110 or C111",
+              "courses": [
+                "C&EE 110 - Introduction to Probability and Statistics for Engineers",
+                "C&EE C111 - Machine Learning and Artificial Intelligence for Civil Engineering"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Technical breadth courses"
+        },
+        {
+          "title": "Field Electives",
+          "options": [
+            {
+              "title": "Civil Engineering Materials",
+              "courses": [
+                "C&EE C104 - Structure, Processing, and Properties of Civil Engineering Materials",
+                "C&EE C105 - Structure and Properties of Amorphous Civil Engineering Materials",
+                "C&EE C106 - Modeling and Simulation of Civil Engineering Materials",
+                "C&EE C111 - Machine Learning and Artificial Intelligence for Civil Engineering",
+                "C&EE C182 - Rigid and Flexible Pavements: Design, Materials, and Serviceability"
+              ]
+            },
+            {
+              "title": "Environmental Engineering",
+              "courses": [
+                "C&EE 116XP - Engineering and Environmental Justice",
+                "C&EE 154 - Chemical Fate and Transport in Aquatic Environments",
+                "C&EE 155 - Unit Operations and Processes for Water and Wastewater Treatment",
+                "C&EE C159 - Green Infrastructure",
+                "C&EE C164 - Sustainable Waste Management",
+                "C&EE M165 - Environmental Nanotechnology: Implications and Applications",
+                "C&EE M166 - Environmental Microbiology"
+              ]
+            },
+            {
+              "title": "Geotechnical Engineering",
+              "courses": [
+                "C&EE 125 - Fundamentals of Earthquake Engineering"
+              ]
+            },
+            {
+              "title": "Hydrology and Water Resources Engineering",
+              "courses": [
+                "C&EE 157A - Hydrologic Modeling",
+                "C&EE C158 - Coastal Engineering"
+              ]
+            },
+            {
+              "title": "Structural Engineering and Mechanics",
+              "courses": [
+                "C&EE 125 - Fundamentals of Earthquake Engineering",
+                "C&EE 130 - Elementary Structural Mechanics",
+                "C&EE 132 - Dynamics of Rigid and Flexible Structures",
+                "C&EE 135B - Intermediate Structural Analysis",
+                "C&EE M135C - Introduction to Finite Element Methods",
+                "C&EE 142 - Design of Reinforced Concrete Structures"
+              ]
+            },
+            {
+              "title": "Transportation Engineering",
+              "courses": [
+                "C&EE 180 - Introduction to Transportation Engineering",
+                "C&EE C181 - Traffic Engineering Systems: Operations and Control",
+                "C&EE C182 - Rigid and Flexible Pavements: Design, Materials, and Serviceability",
+                "C&EE C183 - Transportation Sustainability",
+                "C&EE C185 - Transportation Systems Analysis",
+                "C&EE C186 - Intelligent Transportation Systems"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

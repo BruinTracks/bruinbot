@@ -1,0 +1,93 @@
+{
+  "major_name": "GreekandLatinBA",
+  "major_id": 67,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Greek 16 may be substituted for Greek 1, 2, 3.",
+      "courses": [
+        "CLASSIC 10 - Discovering Greeks",
+        "CLASSIC 20 - Discovering Romans",
+        "GREEK 1 - Elementary Greek",
+        "GREEK 2 - Elementary Greek",
+        "GREEK 3 - Elementary Greek",
+        "GREEK 20 - Intermediate Greek I",
+        "LATIN 1 - Elementary Latin",
+        "LATIN 2 - Elementary Latin",
+        "LATIN 3 - Elementary Latin",
+        "LATIN 20 - Intermediate Latin I"
+      ],
+      "options": [
+        {
+          "title": "Greek Substitution",
+          "courses": [
+            "GREEK 16 - Intensive First-Year Greek"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete eight upper-division Greek and Latin courses, of which at least four must be in each language, including Greek 110 or Latin 110.",
+      "options": [
+        {
+          "title": "Upper-Division Greek and Latin Courses",
+          "description": "Greek and/or Latin 197 and 199 may be applied only be petition.",
+          "courses": [
+            "GREEK 110 - Study of Greek Prose",
+            "LATIN 110 - Study of Latin Prose"
+          ],
+          "options": [
+            {
+              "title": "Course Substitutions",
+              "courses": [
+                "GREEK 197 - Individual Studies in Greek",
+                "GREEK 199 - Directed Research in Greek",
+                "LATIN 197 - Individual Studies in Latin",
+                "LATIN 199 - Directed Research in Latin"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Upper-Division Classical Civilization and/or Ancient History Courses",
+          "description": "Upper-division courses in classical civilization.",
+          "options": [
+            {
+              "title": "Classical Civilization"
+            },
+            {
+              "title": "Ancient History",
+              "courses": [
+                "HIST 112A - History of Ancient Mediterranean World",
+                "HIST 112B - History of Ancient Mediterranean World",
+                "HIST M112C - History of Ancient Mediterranean World",
+                "HIST 112D - History and Monuments of Ancient Greece: Field Studies",
+                "HIST M112E - History and Monuments of Rome: Field Studies",
+                "HIST 113A - History of Ancient Greece: Rise of Greek City-State",
+                "HIST 113B - History of Ancient Greece: Classical Period",
+                "HIST 114A - History of Rome to Death of Caesar",
+                "HIST 114B - History of Rome from Death of Caesar to Time of Constantine",
+                "HIST 114C - History of Rome: Transformation of Classical World",
+                "HIST 115 - Topics in Ancient History"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Capstone Seminar",
+          "courses": [
+            "CLASSIC 191 - Capstone Seminar: Classics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "CLASSIC 198A - Honors Research in Classics",
+        "CLASSIC 198B - Honors Research in Classics"
+      ]
+    }
+  ]
+}

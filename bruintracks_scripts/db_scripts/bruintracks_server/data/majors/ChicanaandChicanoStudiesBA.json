@@ -1,0 +1,173 @@
+{
+  "major_name": "ChicanaandChicanoStudiesBA",
+  "major_id": 37,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "CCAS 10A - Introduction to Chicana/Chicano Studies: History and Culture",
+        "CCAS 10B - Introduction to Chicana/Chicano Studies: Social Structure and Contemporary Conditions",
+        "SPAN 5 - Intermediate Spanish"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from following list or from the approved list available in the department each term:",
+      "courses": [
+        "CCAS 101 - Theoretical Concepts in Chicana/Chicano Studies"
+      ],
+      "options": [
+        {
+          "title": "Service Learning",
+          "courses": [
+            "CCAS 100XP - Barrio Organization and Service Learning",
+            "CCAS M170XP - Topics in Community Engagement"
+          ]
+        },
+        {
+          "title": "Electives from Outside Department"
+        },
+        {
+          "title": "Advanced Seminar",
+          "courses": [
+            "CCAS 191 - Variable Topics Research Seminars: Chicana/o and Central American Studies"
+          ]
+        },
+        {
+          "title": "Concentrations",
+          "options": [
+            {
+              "title": "Border and Transnational Studies",
+              "courses": [
+                "CCAS CM110 - Chicana Feminism",
+                "CCAS 120 - Immigration and Chicano Community",
+                "CCAS M124 - Latinx Immigration Policy and Politics",
+                "CCAS M125 - U.S./Mexico Relations",
+                "CCAS M126 - Politics of Crisis: Migration, Identity, and Religion",
+                "CCAS M132 - Border Consciousness",
+                "CCAS 143 - Mestizaje: History of Diverse Racial/Cultural Roots of Mexico",
+                "CCAS M144 - Women's Movement in Latin America",
+                "CCAS CM147 - Transnational Women's Organizing in Americas",
+                "CCAS 151 - Human Rights in Americas",
+                "CCAS 152 - Disposable People: U.S. Deportation and Repatriation Campaigns",
+                "CCAS 153A - Central Americans in U.S.",
+                "CCAS M154 - Contemporary Issues among Chicanas",
+                "CCAS M155A - Latinos in U.S.",
+                "CCAS M156A - Immigrant Rights, Labor, and Higher Education",
+                "CCAS 163 - Bilingual Advantage: Spanish Language Topics on Chicana/Chicano and Latin American Cultures",
+                "CCAS 176 - Globalization and Transnationalism: Local Historical Dynamics and Praxis",
+                "CCAS 184 - History of U.S./Mexican Borderlands",
+                "CCAS 191 - Variable Topics Research Seminars: Chicana/o and Central American Studies"
+              ]
+            },
+            {
+              "title": "Expressive Arts",
+              "courses": [
+                "CCAS M103C - Origins and Evolution of Chicano Theater",
+                "CCAS M103D - Contemporary Chicano Theater: Beginning of Chicano Theater Movement",
+                "CCAS M103G - Contemporary Chicano Theater: Chicano Theater since 1980",
+                "CCAS 104 - Comedy and Culture: Your Humorous Life",
+                "CCAS M108A - Music of Latin America: Mexico, Central America, and Caribbean Isles",
+                "CCAS M115 - Musical Aesthetics in Los Angeles",
+                "CCAS M116 - Chicano/Latino Music in U.S.",
+                "CCAS 117 - Chicana/Chicano Images in Mexican Film and Literature",
+                "CCAS CM135 - Bilingual Writing Workshop",
+                "CCAS M175 - Chicana Art and Artists",
+                "CCAS M185 - Whose Monument Where: Course on Public Art",
+                "CCAS M186A - Beyond Mexican Mural: Beginning Muralism and Community Development",
+                "CCAS M186AL - Beyond Mexican Mural: Beginning Muralism and Community Laboratory",
+                "CCAS M186B - Beyond Mexican Mural: Intermediate Muralism and Community Development",
+                "CCAS M186BL - Beyond Mexican Mural: Intermediate Muralism and Community Laboratory",
+                "CCAS M186C - Beyond Mexican Mural: Advanced Muralism and Community Development",
+                "CCAS M186CL - Beyond Mexican Mural: Advanced Muralism and Community Laboratory",
+                "CCAS M187 - Latino Metropolis: Architecture and Urbanism in Americas",
+                "CCAS 191 - Variable Topics Research Seminars: Chicana/o and Central American Studies"
+              ]
+            },
+            {
+              "title": "History, Culture, and Language of Americas",
+              "courses": [
+                "CCAS M105A - Early Chicana/Chicano Literature, 1400 to 1920",
+                "CCAS M105C - Chicana/Chicano Literature since el Movimiento, 1970s to Present",
+                "CCAS 109 - Chicana/Chicano Folklore",
+                "CCAS CM110 - Chicana Feminism",
+                "CCAS 111 - Chicana/Chicano and Latina/Latino Intellectual Traditions",
+                "CCAS M114 - Chicanos in Film/Video",
+                "CCAS M116 - Chicano/Latino Music in U.S.",
+                "CCAS 131 - Barrio Popular Culture",
+                "CCAS M132 - Border Consciousness",
+                "CCAS M133 - Chicana Lesbian Literature",
+                "CCAS M139 - Topics in Chicana/Chicano and/or Latina/Latino Literature",
+                "CCAS C141 - Chicana and Latin American Women's Narrative",
+                "CCAS 142 - Mesoamerican Literature",
+                "CCAS 143 - Mestizaje: History of Diverse Racial/Cultural Roots of Mexico",
+                "CCAS 145B - Literature of Chicana/Chicano Movement",
+                "CCAS 146 - Chicano Narrative",
+                "CCAS 157 - Chicano Movement and Its Political Legacies",
+                "CCAS M158 - Chicana Historiography",
+                "CCAS M159A - History of Chicano Peoples",
+                "CCAS M159B - History of Chicano Peoples",
+                "CCAS 160 - Introduction to Chicana/Chicano Speech in American Society",
+                "CCAS 168A - Latinos: Print Media",
+                "CCAS 168B - Latinos: Television News",
+                "CCAS 169 - Representations of Indigenous Peoples in Americas",
+                "CCAS 171 - Humor as Social Control",
+                "CCAS M173 - Nonviolence and Social Movements",
+                "CCAS 181 - History of Chicana/Chicano Los Angeles, 20th Century",
+                "CCAS CM182 - Understanding Whiteness in American History and Culture",
+                "CCAS M183 - History of Los Angeles",
+                "CCAS 184 - History of U.S./Mexican Borderlands",
+                "CCAS M187 - Latino Metropolis: Architecture and Urbanism in Americas",
+                "CCAS 191 - Variable Topics Research Seminars: Chicana/o and Central American Studies"
+              ]
+            },
+            {
+              "title": "Labor, Law, and Policy Studies",
+              "courses": [
+                "CCAS M102 - Mexican Americans and Schools",
+                "CCAS CM106 - Health in Chicano/Latino Population",
+                "CCAS M119 - Chicano/Latino Community Formation: Critical Perspectives and Oral Histories",
+                "CCAS 120 - Immigration and Chicano Community",
+                "CCAS M121 - Issues in Latina/Latino Poverty: Mexican and Central American Voices from Los Angeles",
+                "CCAS M122 - Planning Issues in Latina/Latino Communities: Preserving and Strengthening Community Assets in Mexican and Salvadoran Los Angeles",
+                "CCAS 123 - Applied Research Methods in Latino Communities",
+                "CCAS M127 - Farmworker Movements, Social Justice, and United Farm Workers Legacy",
+                "CCAS M128 - Race, Gender, and U.S. Labor",
+                "CCAS M130 - Worker Center Movement: Next Wave Organizing for Justice for Immigrant Workers",
+                "CCAS M148 - Politics of Struggle: Race, Solidarity, and Resistance",
+                "CCAS 149 - Gendered Politics and Chicana/Latina Political Participation",
+                "CCAS 150 - Affirmative Action: History and Politics",
+                "CCAS 151 - Human Rights in Americas",
+                "CCAS 152 - Disposable People: U.S. Deportation and Repatriation Campaigns",
+                "CCAS M156A - Immigrant Rights, Labor, and Higher Education",
+                "CCAS M156B - Research on Immigration Rights, Labor, and Higher Education",
+                "CCAS 165 - Latinas and Latinos in Public Education",
+                "CCAS 166 - Paulo Freire for Chicana/Chicano Classroom",
+                "CCAS 174AX - Restoring Civility: Understanding, Using, and Resolving Conflict",
+                "CCAS 174BX - Restoring Civility: Understanding, Using, and Resolving Conflict",
+                "CCAS CM177 - Latino Social Policy",
+                "CCAS 178 - Latinas/Latinos and Law: Comparative and Historical Perspectives",
+                "CCAS C179 - Language Politics and Policies in U.S.: Comparative History",
+                "CCAS 191 - Variable Topics Research Seminars: Chicana/o and Central American Studies"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "CCAS 198A - Honors Research in Chicana/Chicano and Central American Studies: Thesis Conceptualization",
+        "CCAS 198B - Honors Research in Chicana/Chicano and Central American Studies: Annotated Bibliography/Literature Review",
+        "CCAS 198C - Honors Research in Chicana/Chicano and Central American Studies: Writing and Revision"
+      ]
+    },
+    {
+      "title": "Optional Multidisciplinary Senior Thesis",
+      "courses": [
+        "CCAS 199 - Directed Research or Senior Project in Chicana/Chicano and Central American Studies"
+      ]
+    }
+  ]
+}

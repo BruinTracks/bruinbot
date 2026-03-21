@@ -1,0 +1,122 @@
+{
+  "major_name": "EuropeanLanguagesandTransculturalStudieswithScandinavianBA",
+  "major_id": 56,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following course or equivalent:",
+      "options": [
+        {
+          "title": "Scandinavian (Intermediate Level)",
+          "courses": [
+            "SCAND 6 - Intermediate Swedish"
+          ]
+        },
+        {
+          "title": "European Literature, Language, Culture, or Film and Media",
+          "courses": [
+            "FRNCH 12 - Introduction to Study of French and Francophone Literature",
+            "FRNCH 14 - Introduction to French Culture and Civilization in English",
+            "FRNCH 14W - Introduction to French Culture and Civilization in English",
+            "FRNCH 16 - Society And Self in Early Modern France",
+            "FRNCH 41 - French Cinema and Culture",
+            "FRNCH 60 - French and Francophone Novel",
+            "GERMAN 50B - Great Works of German Literature in Translation: Romanticism to Present",
+            "GERMAN 59 - Holocaust in Film and Literature",
+            "ITALIAN 42A - Italy through Ages in English: Saints and Sinners in Early Modern Italy",
+            "ITALIAN 42B - Italy through Ages in English: Modern and Contemporary Italy",
+            "ITALIAN 42C - Italy Through the Ages in English: Food and Literature in Italy",
+            "ITALIAN 46 - Italian Cinema and Culture in English",
+            "ITALIAN 50A - Masterpieces of Italian Literature in English: Middle Ages to Baroque",
+            "ITALIAN 50B - Masterpieces of Italian Literature in English: Enlightenment to Postmodernity",
+            "SCAND 40 - Heroic Journey in Northern Myth, Legend, and Epic",
+            "SCAND 40W - Heroic Journey in Northern Myth, Legend, and Epic",
+            "SCAND 50 - Introduction to Scandinavian Literatures and Cultures",
+            "SCAND 50W - Introduction to Scandinavian Literatures and Cultures",
+            "SCAND 60W - Introduction to Nordic Cinema"
+          ]
+        },
+        {
+          "title": "Experimental Humanities (Digital, Environmental, Medical, and Urban)",
+          "options": [
+            {
+              "title": "Digital",
+              "courses": [
+                "COM LIT 1E - Social Media and Storytelling: Comparing Cultures",
+                "DGT HUM 30 - Los Angeles Tech City: Digital Technologies and Spatial Justice"
+              ]
+            },
+            {
+              "title": "Environmental",
+              "courses": [
+                "ENGL M30 - Environmental Literature and Culture"
+              ]
+            },
+            {
+              "title": "Medical",
+              "courses": [
+                "AN N EA 14W - Medicine, Magic, and Science in Ancient Times",
+                "EE BIOL 17 - Evolution for Everyone",
+                "HIST 3D - History of Modern Medicine",
+                "HNRS 1 - Plague Culture",
+                "HNRS 26 - Representing Medicine: Art, Literature, and Film",
+                "MCD BIO 60 - Biomedical Ethics",
+                "RELIGN 55 - Spirit of Medicine"
+              ]
+            },
+            {
+              "title": "Urban",
+              "courses": [
+                "GERMAN 61A - Modern Metropolis: Berlin"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from three of the following four areas (total of three courses):",
+      "options": [
+        {
+          "title": "Areas",
+          "options": [
+            {
+              "title": "European Literature"
+            },
+            {
+              "title": "European Culture"
+            },
+            {
+              "title": "European Film and Media"
+            },
+            {
+              "title": "Experimental Humanities"
+            }
+          ]
+        },
+        {
+          "title": "Electives",
+          "description": "Select four courses from:",
+          "options": [
+            {
+              "title": "Scandinavian",
+              "courses": [
+                "Scandinavian C131 through C185"
+              ]
+            },
+            {
+              "title": "Additional Electives"
+            }
+          ]
+        },
+        {
+          "title": "Capstone Senior Thesis",
+          "courses": [
+            "ELTS 187 - Capstone Seminar"
+          ]
+        }
+      ]
+    }
+  ]
+}

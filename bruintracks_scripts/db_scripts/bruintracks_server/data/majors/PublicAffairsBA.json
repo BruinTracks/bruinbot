@@ -1,0 +1,73 @@
+{
+  "major_name": "PublicAffairsBA",
+  "major_id": 137,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following three courses:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "PUB AFF 40 - Microeconomics for Public Affairs",
+            "PUB AFF 60 - Using Data to Learn about Society: Introduction to Empirical Research and Statistics",
+            "PUB AFF 80 - How Social Environments Shape Human Development"
+          ]
+        },
+        {
+          "title": "Additional Courses",
+          "courses": [
+            "PUB AFF 10 - Social Problems and Social Change",
+            "PUB AFF 20 - Power, Politics, and Policy Change",
+            "PUB AFF 30 - Comparative Analysis of Wealth, Policy, and Power",
+            "PUB AFF 50 - Foundations and Debates in Public Thought",
+            "PUB AFF 70 - Information, Evidence, and Persuasion"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select two courses from:",
+      "options": [
+        {
+          "title": "Theory",
+          "courses": [
+            "PUB AFF M109 - Introduction to Cities and Planning",
+            "PUB AFF 110 - Urban Revolution: Space and Society in Global Context",
+            "PUB AFF 111 - Microeconomics: Market Failures and Inequality",
+            "PUB AFF 112 - Social Movements",
+            "PUB AFF 113 - Policy Analysis: Approaches to Addressing Social Problems",
+            "PUB AFF 114 - People, Organizations, and Systems"
+          ]
+        },
+        {
+          "title": "Research Methods",
+          "courses": [
+            "PUB AFF 115 - Using Quantitative Methods to Understand Social Problems and their Potential Solutions",
+            "PUB AFF 116 - Using Qualitative Methods to Understand Social Problems and Their Potential Solutions"
+          ]
+        },
+        {
+          "title": "Capstone Sequence",
+          "courses": [
+            "PUB AFF 187AX - Experiential Learning Capstone",
+            "PUB AFF 187BX - Experiential Learning Capstone",
+            "PUB AFF 187CX - Experiential Learning Capstone"
+          ]
+        },
+        {
+          "title": "Upper-Division Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PUB AFF 198A - Honors Research in Public Affairs",
+        "PUB AFF 198B - Honors Research in Public Affairs",
+        "PUB AFF 198C - Honors Research in Public Affairs"
+      ]
+    }
+  ]
+}

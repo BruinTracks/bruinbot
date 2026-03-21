@@ -1,0 +1,262 @@
+{
+  "major_name": "GlobalStudiesBA",
+  "major_id": 65,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "GLBL ST 1 - Introduction to Globalization"
+      ],
+      "options": [
+        {
+          "title": "Methods",
+          "courses": [
+            "POL SCI 6 - Introduction to Data Analysis",
+            "POL SCI 30 - Politics and Strategy",
+            "PUB AFF 60 - Using Data to Learn about Society: Introduction to Empirical Research and Statistics",
+            "STATS 10 - Introduction to Statistical Reasoning",
+            "STATS 12 - Introduction to Statistical Methods for Geography and Environmental Studies",
+            "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+          ]
+        },
+        {
+          "title": "Foreign Language"
+        },
+        {
+          "title": "Additional Courses",
+          "description": "Only one course from each pair of Comparative Literature 1C or 2CW, 1D or 2DW, and 4CW or 4DW may be applied.",
+          "options": [
+            {
+              "title": "Culture and Society",
+              "description": "One course from the following list may be applied toward the culture and society category:",
+              "courses": [
+                "ANTHRO 3 - Culture and Society",
+                "ANTHRO 4 - Culture and Communication",
+                "COM LIT 1D - Great Books from World at Large",
+                "COM LIT 2CW - Survey of Literature: Age of Enlightenment to 20th Century",
+                "COM LIT 2DW - Survey of Literature: Great Books from World at Large",
+                "COM LIT 4CW - Literature and Writing: Age of Enlightenment to 20th Century",
+                "COM LIT 4DW - Literature and Writing: Great Books from World at Large",
+                "ETHNMUS M25 - Global Pop",
+                "GENDER 10 - Introduction to Gender Studies",
+                "GEOG 3 - Cultural Geography",
+                "GEOG 6 - World Regions: Concepts and Contemporary Issues",
+                "INTL DV 1 - Introduction to International Development Studies",
+                "WL ARTS 20 - Culture: Introduction",
+                "WL ARTS 33 - Colonialisms and Resistance"
+              ]
+            },
+            {
+              "title": "Governance and Conflict",
+              "courses": [
+                "CLUSTER 48B - Political Violence in Modern World: Causes, Cases, and Consequences",
+                "HIST 1C - Introduction to Western Civilization: Circa 1715 to Present",
+                "HIST 10B - History of Africa, 1800 to Present",
+                "HIST 12B - Inequality: History of Neoliberalism",
+                "HIST 12C - Inequality: Global History of Anti-Colonial Thought and Struggle",
+                "HIST 22 - Contemporary World History, 1760 to Present",
+                "I A STD 1 - Introduction to International and Area Studies",
+                "POL SCI 10 - Introduction to Political Theory",
+                "POL SCI 20 - World Politics",
+                "POL SCI 50 - Introduction to Comparative Politics",
+                "SOCIOL 1 - Introductory Sociology"
+              ]
+            },
+            {
+              "title": "Markets and Resources",
+              "courses": [
+                "CLUSTER M1A - Food: Lens for Environment and Sustainability",
+                "ECON 1 - Principles of Economics",
+                "ECON 2 - Principles of Economics",
+                "ENVIRON 12 - Sustainability and Environment",
+                "GEOG 4 - Globalization: Regional Development and World Economy",
+                "GEOG 5 - People and Earth's Ecosystems",
+                "PUB AFF 40 - Microeconomics for Public Affairs",
+                "SOCIOL 51 - Sociology of Migration"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select six elective courses, two from each of the following categories:",
+      "courses": [
+        "GLBL ST 102 - Globalization: Markets and Resources",
+        "GLBL ST 103 - Globalization: Governance and Conflict",
+        "GLBL ST 104 - Globalization: Culture and Society"
+      ],
+      "options": [
+        {
+          "title": "Electives",
+          "options": [
+            {
+              "title": "Culture and Society",
+              "courses": [
+                "ANTHRO 146 - Urban Anthropology",
+                "ANTHRO M148 - (When) Do Leaders Make Differences?",
+                "ASIA AM M130C - Chinese Immigration",
+                "ASIA AM 170 - Transnational Perspectives on Asian America",
+                "ASIA AM M172A - Indian Identity in U.S. and Diaspora",
+                "ASIA AM 172C - Transnational Bollywood",
+                "ASIA AM 178 - Critical Refugee Studies",
+                "ASIAN 135 - Asian Foodways across Borders",
+                "CCAS 120 - Immigration and Chicano Community",
+                "CCAS 143 - Mestizaje: History of Diverse Racial/Cultural Roots of Mexico",
+                "CCAS CM147 - Transnational Women's Organizing in Americas",
+                "COM LIT 100 - Introduction to Literary and Critical Theory",
+                "COM LIT M148 - Contemporary Arab Film and Song",
+                "EDUC 109A - Globalization and Learning",
+                "ENGL 130 - Introduction to Postcolonial Literatures",
+                "ENGL 131 - Studies in Postcolonial Literatures",
+                "ENGL 133 - Transatlantic Literatures and Cultures",
+                "ENGL 134 - Nationalism and Transnationalism",
+                "FILM TV 106C - History of African, Asian, and Latin American Film",
+                "FILM TV 112 - Film and Social Change",
+                "FILM TV M124 - Sex, Race, and Difference in Transnational Film",
+                "FRNCH 121 - Studies in Francophone Cultures and Literatures",
+                "FRNCH 142 - Francophone Cinema",
+                "GENDER 102 - Power",
+                "GENDER M147C - Transnational Women's Organizing in Americas",
+                "GENDER M162 - Sociology of Gender",
+                "GEOG 141 - Cultural Geography of Modern World",
+                "GEOG 151 - Uneven Development Geographies: Prosperity and Impoverishment in Third World",
+                "GEOG 175A - Japan in World: Culture, Place, and Global Connections",
+                "GEOG 175B - Contemporary China",
+                "GLBL ST 125 - Los Angeles as Global City: Exporter and Importer of Global Culture",
+                "GLBL ST 140 - Hollywood and the Immigrant Experience in America",
+                "GLBL ST 141 - Hollywood and Tales of Underrepresented Communities",
+                "HNRS 138 - Empire, Border Crossing, and Multiethnic Storytelling",
+                "KOREA 153 - Korea West Encounters",
+                "POL SCI M184A - Black Experience in Latin America and Caribbean I",
+                "RELIGN M107 - Islam in West",
+                "SEASIAN C150 - Indigenous Peoples of Southeast Asia",
+                "SEASIAN 157 - Gender Issues in Southeast Asia",
+                "SOC GEN 134 - Food and Health in Global Perspective",
+                "SOCIOL 151 - Comparative Immigration",
+                "SOCIOL 152 - Comparative Acculturation and Assimilation",
+                "SOCIOL 154 - Race and Ethnicity in Latin America",
+                "SOCIOL M162 - Sociology of Gender",
+                "SOCIOL 191F - Undergraduate Seminar: Sociology of Globalization"
+              ]
+            },
+            {
+              "title": "Governance and Conflict",
+              "courses": [
+                "ASIA AM 171A - Critical Issues in U.S.-China Relations",
+                "ASIA AM M171D - Critical Issues in U.S.-Philippine Relations",
+                "ASIA AM 171E - Critical Issues in U.S.-Vietnam Relations",
+                "CCAS 151 - Human Rights in Americas",
+                "ENVIRON M125 - Environmentalism: Past, Present, and Future",
+                "GEOG M131 - Human Impact on Biophysical Environment",
+                "GEOG 148 - Political Geography",
+                "GEOG 149 - Border Studies: Globalization, Nation, Identity",
+                "HIST 121E - History of Modern Europe: Era of Total War, 1914 to 1945",
+                "HIST 121F - History of Modern Europe: World War II and Its Aftermath, 1939 to Present",
+                "HIST 144 - America in World",
+                "HIST 176B - History of Southeast Asia: Southeast Asia since 1815",
+                "HIST M186A - Women and Gender, Prehistory to 1792",
+                "INTL DV 140 - Decolonizing Political Economy: Colonialism and Development",
+                "POL SCI 120A - Foreign Relations of U.S.",
+                "POL SCI M122B - Global Environment and World Politics",
+                "POL SCI 123A - International Law",
+                "POL SCI 123B - International Organizations",
+                "POL SCI 125A - Arms Control and International Security",
+                "POL SCI 126 - Peace and War",
+                "POL SCI 132A - International Relations of Middle East",
+                "POL SCI M132B - International Relations of Middle East",
+                "POL SCI 137A - International Relations Theory",
+                "POL SCI 169 - Special Studies in Comparative Politics",
+                "SOCIOL 182 - Political Sociology",
+                "URBN PL M165 - Environmentalism: Past, Present, and Future"
+              ]
+            },
+            {
+              "title": "Markets and Resources",
+              "courses": [
+                "ANTHRO 143 - Economic Anthropology",
+                "CCAS M119 - Chicano/Latino Community Formation: Critical Perspectives and Oral Histories",
+                "CCAS M125 - U.S./Mexico Relations",
+                "CCAS 176 - Globalization and Transnationalism: Local Historical Dynamics and Praxis",
+                "ECON 111 - Theories of Development",
+                "ECON 113 - Globalization and Gender",
+                "ECON 121 - International Trade Theory",
+                "ECON 122 - International Finance",
+                "ENVIRON 134 - Environmental Economics with Data Analysis",
+                "GEOG M127 - Global Environment and Development: Problems and Issues",
+                "GEOG 135 - Africa and African Diaspora in Americas",
+                "GEOG 145 - Slavery and Human Trafficking",
+                "GEOG 150 - Economic Geography",
+                "GLBL ST 120 - Introduction to International Business",
+                "GLBL ST 145 - Rethinking Global Capitalism: Race, Class, Gender, History",
+                "HIST 120A - East-Central Europe: Long 19th Century, 1780 to 1914",
+                "HIST 131A - Marxist Theory and History",
+                "HIST 134C - Economic History of Europe, 20th Century",
+                "INTL DV M120 - Political Economy of Development",
+                "I M STD 155 - Theory, Research, and Methods in Study of International Migration",
+                "POL SCI 124A - International Political Economy",
+                "POL SCI 151B - African Politics: Political Economy of Africa",
+                "POL SCI M167C - Political Economy of Development",
+                "POL SCI 167D - Political Institutions and Economic Development",
+                "PUB AFF 111 - Microeconomics: Market Failures and Inequality",
+                "SPAN 135 - Topics in Early Modern Studies",
+                "SOCIOL 183 - Comparative and Historical Sociology"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Required Summer Global Learning Institute",
+          "options": [
+            {
+              "title": "Option 1",
+              "courses": [
+                "GLBL ST 110A - Globalization in Context",
+                "GLBL ST 110B - Globalization in Context Research Seminar"
+              ]
+            },
+            {
+              "title": "Option 2",
+              "courses": [
+                "GLBL ST 112AD - Globalization in Context: Markets and Resources",
+                "GLBL ST 112BD - Globalization in Context Seminar: World Markets and Resources"
+              ]
+            },
+            {
+              "title": "Option 3",
+              "courses": [
+                "GLBL ST 113AD - Globalization in Context: Governance and Conflict",
+                "GLBL ST 113BD - Globalization in Context Seminar: World Governance"
+              ]
+            },
+            {
+              "title": "Option 4",
+              "courses": [
+                "GLBL ST 114AD - Globalization in Context: Culture and Society",
+                "GLBL ST 114BD - Globalization in Context Seminar: World Culture and Society"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Required Capstone",
+          "courses": [
+            "GLBL ST 191 - Variable Topics Research Seminars: Global Studies\u2014Senior Seminar",
+            "I A STD 195CE - Community and Corporate Internships in International and Area Studies",
+            "GLBL ST 199 - Directed Research in Global Studies",
+            "GLBL ST 199A - Directed Research in Global Studies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "GLBL ST 199A - Directed Research in Global Studies",
+        "GLBL ST 199B - Directed Individual Research in Global Studies"
+      ]
+    }
+  ]
+}

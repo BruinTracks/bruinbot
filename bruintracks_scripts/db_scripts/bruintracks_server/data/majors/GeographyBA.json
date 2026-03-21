@@ -1,0 +1,43 @@
+{
+  "major_name": "GeographyBA",
+  "major_id": 61,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Geography 1 or 2",
+          "courses": [
+            "GEOG 1 - Earth's Physical Environment",
+            "GEOG 2 - Biodiversity in Changing World"
+          ]
+        },
+        {
+          "title": "Geography 3, 4, or 6",
+          "courses": [
+            "GEOG 3 - Cultural Geography",
+            "GEOG 4 - Globalization: Regional Development and World Economy",
+            "GEOG 6 - World Regions: Concepts and Contemporary Issues"
+          ]
+        },
+        {
+          "title": "Statistics 12",
+          "courses": [
+            "STATS 12 - Introduction to Statistical Methods for Geography and Environmental Studies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major"
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "GEOG 198A - Honors Research in Geography I",
+        "GEOG 198B - Honors Research in Geography II"
+      ]
+    }
+  ]
+}

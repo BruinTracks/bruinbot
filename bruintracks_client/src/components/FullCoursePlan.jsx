@@ -1,8 +1,5 @@
-import { Card } from './Card';
-import { Button } from './Button';
-import { InputField } from './InputField';
 import { motion } from 'framer-motion';
-import { ArrowLeftCircle, ArrowRightCircle } from 'react-bootstrap-icons';
+import { ArrowRightCircle } from 'react-bootstrap-icons';
 
 const schedules = {
   'S25': ['CS 33', 'MATH 61', 'CS 35L'],

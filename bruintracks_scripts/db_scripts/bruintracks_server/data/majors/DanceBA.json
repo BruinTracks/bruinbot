@@ -1,0 +1,127 @@
+{
+  "major_name": "DanceBA",
+  "major_id": 122,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "DANCE 1 - Global Perspectives on Dance",
+        "DANCE 16 - Beginning Improvisation in Dance",
+        "DANCE 44 - World Dance Histories",
+        "DANCE 45 - Introduction to Dance Studies",
+        "DANCE 67A - Theories and Methods in Dance Composition I: Languages",
+        "DANCE 67B - Theories and Methods in Dance Composition II: Processes",
+        "DANCE 70 - Production Practicum"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following three courses:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "DANCE 101 - Theories of Dance",
+            "DANCE 117A - Theories and Methods in Dance Composition III: Locations",
+            "DANCE 117B - Theories and Methods in Dance Composition IV: Impacts"
+          ]
+        },
+        {
+          "title": "Areas",
+          "description": "No more than 8 units of courses 160 may be applied toward this area.",
+          "options": [
+            {
+              "title": "Creative Inquiry as Research",
+              "courses": [
+                "DANCE 114 - Performance Practicum",
+                "DANCE 116 - Advanced Improvisation in Dance",
+                "DANCE 117C - Advanced Topics in Choreography",
+                "DANCE 118 - Advanced Performance Practicum",
+                "DANCE C122 - Music and Dance Collaborations",
+                "DANCE C171 - Dance Production: Variable Topics",
+                "DANCE 174A - Projects in Dance",
+                "DANCE C174B - Projects in Dance",
+                "DANCE C180 - Dance for Camera"
+              ]
+            },
+            {
+              "title": "Critical Dance Studies",
+              "courses": [
+                "DANCE C145XP - Selected Topics in Dance Studies",
+                "DANCE C152 - History and Theory of Modern/Postmodern Dance",
+                "DANCE M157 - Rechoreographing Disability",
+                "DANCE 160 - Topics in Body Mechanics",
+                "DANCE 182 - Dance and Visual Media",
+                "WL ARTS 199 - Directed Research in World Arts and Cultures"
+              ]
+            },
+            {
+              "title": "Dance and Civic Engagement",
+              "courses": [
+                "DANCE CM168 - Art-Making beyond the Campus",
+                "DANCE C184 - Production Arts Seminar",
+                "WL ARTS 100A - Art as Social Action",
+                "WL ARTS 100B - Art as Moral Action",
+                "WL ARTS 103 - Arts in Communities",
+                "WL ARTS 144 - Make Art/Stop AIDS",
+                "WL ARTS 160 - Performing Sexual Health: UCLA Sex Squad",
+                "WL ARTS 177XP - Taking Action: Arts Practice and Community Service",
+                "WL ARTS 195 - Community or Corporate Internships in World Arts and Cultures"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Movement Arts/Dance Practices",
+          "description": "Select 30 of the total 40 units from the following. A minimum of 6 units of a first style and 4 units of a second style must be at the advanced level.",
+          "options": [
+            {
+              "title": "Group 1",
+              "courses": [
+                "DANCE 6 - Beginning West African Dance",
+                "DANCE 9 - Beginning Hip-Hop Dance",
+                "DANCE 13 - Beginning Ballet",
+                "DANCE 15 - Beginning Modern/Postmodern Dance",
+                "DANCE 16 - Beginning Improvisation in Dance",
+                "DANCE 56 - Intermediate West African Dance",
+                "DANCE 59 - Intermediate Hip-Hop Dance",
+                "DANCE 63 - Intermediate Ballet",
+                "DANCE 65 - Intermediate Modern/Postmodern Dance",
+                "DANCE C106A - Advanced West African Dance",
+                "DANCE C113A - Advanced Ballet",
+                "DANCE C115 - Advanced Modern/Postmodern Dance",
+                "DANCE 116 - Advanced Improvisation in Dance"
+              ]
+            },
+            {
+              "title": "Group 2",
+              "courses": [
+                "DANCE 5 - Moving Voice",
+                "DANCE 10 - Beginning Martial Arts",
+                "DANCE 11 - Yoga",
+                "DANCE 12 - Beginning Special Topics",
+                "DANCE 16 - Beginning Improvisation in Dance",
+                "DANCE 52 - Intermediate Special Topics",
+                "DANCE 60 - Intermediate Martial Arts",
+                "DANCE C112A - Advanced Special Topics",
+                "DANCE 116 - Advanced Improvisation in Dance",
+                "DANCE 160 - Topics in Body Mechanics",
+                "WL ARTS 55 - Intermediate World Arts Practices in Global and Transcultural Forms",
+                "WL ARTS 78 - Private Instruction in World Arts and Cultures",
+                "WL ARTS 80 - Video Tools and Techniques",
+                "WL ARTS 178 - Advanced Private Instruction in World Arts and Cultures"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Senior Project",
+      "courses": [
+        "DANCE 186A - Senior Projects in Dance",
+        "DANCE 186B - Senior Projects in Dance"
+      ]
+    }
+  ]
+}

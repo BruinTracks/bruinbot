@@ -1,0 +1,122 @@
+{
+  "major_name": "AstrophysicsBS",
+  "major_id": 27,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following course:",
+      "options": [
+        {
+          "title": "Astronomy",
+          "courses": [
+            "ASTR 81 - Fundamentals of Astrophysics"
+          ]
+        },
+        {
+          "title": "Physics",
+          "description": "Students may substitute courses from the Physics 1 honors series for the Physics 1 series.",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism",
+            "PHYSICS 17 - Modern Physics",
+            "PHYSICS 32 - Mathematical Methods"
+          ],
+          "options": [
+            {
+              "title": "Physics 1 Honors series",
+              "courses": [
+                "PHYSICS 1AH - Physics for Scientists and Engineers: Mechanics (Honors)",
+                "PHYSICS 1BH - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields (Honors)",
+                "PHYSICS 1CH - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity (Honors)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31AL - Differential and Integral Calculus Laboratory",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations"
+          ]
+        },
+        {
+          "title": "Programming",
+          "courses": [
+            "COM SCI 30 - Principles and Practices of Computing",
+            "COM SCI 31 - Introduction to Computer Science I",
+            "COMPTNG 10A - Introduction to Programming"
+          ]
+        },
+        {
+          "title": "Recommended",
+          "courses": [
+            "CHEM 20A - Chemical Structure"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following four courses:",
+      "options": [
+        {
+          "title": "Astronomy",
+          "courses": [
+            "ASTR 115 - Introduction to Galactic Astronomy",
+            "ASTR 117 - Introduction to Extragalactic Astrophysics",
+            "ASTR 127 - Stars from Birth to Death",
+            "ASTR 180 - Astrophysics Laboratory"
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 105A - Analytic Mechanics",
+            "PHYSICS 105B - Analytic Mechanics",
+            "PHYSICS 110A - Electricity and Magnetism",
+            "PHYSICS 110B - Electricity and Magnetism",
+            "PHYSICS 115A - Quantum Mechanics",
+            "PHYSICS 115B - Quantum Mechanics",
+            "PHYSICS 115C - Quantum Mechanics"
+          ]
+        },
+        {
+          "title": "Electives",
+          "courses": [
+            "ASTR 140 - Galaxies",
+            "ASTR 141 - Cosmology",
+            "ASTR 142 - Data and Computation in Astrophysics",
+            "ASTR 143 - Planets and Exoplanets",
+            "ASTR 144 - Star Formation and Interstellar Medium",
+            "ASTR 145 - High-Energy Astrophysics",
+            "ASTR 146 - Astronomical Instrumentation",
+            "EPS SCI 155 - Planetary Physics",
+            "EPS SCI C179 - Search for Extraterrestrial Intelligence (SETI)",
+            "PHYSICS 108 - Optical Physics",
+            "PHYSICS M122 - Introduction to Plasma Science and Engineering",
+            "PHYSICS 124 - Nuclear Physics",
+            "PHYSICS 126 - Elementary Particle Physics",
+            "PHYSICS 127 - General Relativity",
+            "PHYSICS 128 - Cosmology and Particle Astrophysics",
+            "PHYSICS 132 - Mathematical Methods of Physics",
+            "PHYSICS C170M - Machine Learning for Physical Sciences Laboratory"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ASTR 199 - Directed Research or Senior Project in Astronomy"
+      ]
+    }
+  ]
+}

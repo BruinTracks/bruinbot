@@ -1,0 +1,114 @@
+{
+  "major_name": "JewishStudiesBA",
+  "major_id": 76,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "JEWISH M10 - Introduction to Judaism"
+      ],
+      "options": [
+        {
+          "title": "Elective",
+          "courses": [
+            "AN N EA 10W - Jerusalem: Holy City",
+            "AN N EA 12W - Jerusalem: Holy City",
+            "JEWISH M67 - Popular Jewish and Israeli Music",
+            "JEWISH M80 - Jewish American Experience through Music",
+            "JEWISH M82 - Music and Holocaust: Individual Experience",
+            "M E STD M50A - First Civilizations",
+            "M E STD M50B - Origins of Judaism, Christianity, and Islam",
+            "M E STD M50CW - Making and Studying Modern Middle East"
+          ]
+        },
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select three courses from the following list. Students may substitute another upper-division language (Judeo-Arabic, Judeo-Persian, Ladino, Yiddish) if they can demonstrate its integral role in their specific course of study.",
+      "options": [
+        {
+          "title": "Hebrew",
+          "courses": [
+            "HEBREW 102A - Intermediate Hebrew",
+            "HEBREW 102B - Intermediate Hebrew",
+            "HEBREW 102C - Intermediate Hebrew",
+            "HEBREW 103A - Advanced Hebrew",
+            "HEBREW 103B - Advanced Hebrew",
+            "HEBREW 103C - Advanced Hebrew",
+            "HEBREW 110A - Introduction to Biblical Hebrew: Phonology, Morphology, and Structure of Biblical Hebrew",
+            "HEBREW 110B - Introduction to Biblical Hebrew: Readings of Biblical Prose Texts",
+            "HEBREW 111A - Israeli Society through Hebrew Song and Video",
+            "HEBREW 111B - Conversational Hebrew",
+            "HEBREW 111C - Conversational Hebrew",
+            "HEBREW 112 - Readings in Modern Scholarly Hebrew",
+            "HEBREW M113 - Contemporary Israeli Short Stories/Novellas and Films in English",
+            "HEBREW 120 - Biblical Texts",
+            "HEBREW 125 - Hebrew Bible with Medieval Commentaries",
+            "HEBREW 130 - Rabbinic Texts",
+            "HEBREW 135 - Medieval Hebrew Texts",
+            "HEBREW C140 - Modern Hebrew Poetry and Prose",
+            "HEBREW 170 - Dead Sea Scrolls",
+            "HEBREW 180A - Survey of Hebrew Grammar",
+            "HEBREW 180B - Survey of Hebrew Grammar",
+            "HEBREW 188FL - Special Studies: Readings in Hebrew"
+          ]
+        },
+        {
+          "title": "Jewish Studies",
+          "courses": [
+            "JEWISH 140A - American Jewish History, 1654 to 1914",
+            "JEWISH 140B - American Jewish History, 1914 to the Present",
+            "JEWISH M142 - Modern Israel: Politics, Society, Culture",
+            "JEWISH M144 - Zionism: Ideology and Practice in Making of Jewish State",
+            "JEWISH M178 - Introduction to History and Culture of Iranian Jews",
+            "JEWISH M181 - Topics in Jewish History",
+            "JEWISH M182A - Ancient Jewish History",
+            "JEWISH M182B - Medieval Jewish History",
+            "JEWISH M182C - Modern Jewish History",
+            "JEWISH M184A - Jewish Civilization: Encounter with Great World Cultures",
+            "JEWISH M184B - History of Anti-Semitism",
+            "JEWISH M184C - American Jewish Experience"
+          ]
+        },
+        {
+          "title": "Electives",
+          "courses": [
+            "AN N EA M135 - Religion in Ancient Israel",
+            "AN N EA 162 - Archaeology, Identity, and Bible",
+            "AN N EA M170 - Bible and Its Interpreters",
+            "ENGL 111A - Hebrew Bible in Translation",
+            "ENGL 111C - Topics in Biblical Literature",
+            "GERMAN 109 - Jewish Question and German Thought",
+            "HIST C191F - Topics in History: Near East",
+            "IRANIAN 130 - Intellectual History of Jews of Persia",
+            "IRANIAN 131 - Introduction to Judeo-Persian: Literature and Culture",
+            "IRANIAN 132 - Intermediate Judeo-Persian Literature and Culture",
+            "IRANIAN M178 - Introduction to History and Culture of Iranian Jews",
+            "POL SCI 132A - International Relations of Middle East",
+            "POL SCI M132B - International Relations of Middle East",
+            "SEMITIC 130 - Biblical Aramaic",
+            "RELIGN 120 - Judaism, Christianity, and Islam: Comparative Approach",
+            "YIDDSH 101A - Elementary Yiddish",
+            "YIDDSH 101B - Elementary Yiddish",
+            "YIDDSH 101C - Elementary Yiddish",
+            "YIDDSH 102A - Intermediate Yiddish",
+            "YIDDSH 102B - Intermediate Yiddish",
+            "YIDDSH 102C - Intermediate Yiddish",
+            "YIDDSH 121A - 20th-Century Yiddish Poetry in English Translation",
+            "YIDDSH 121B - 20th-Century Yiddish Prose and Drama in English Translation",
+            "YIDDSH 121C - Special Topics in Yiddish Literature in English Translation",
+            "YIDDSH 130 - Introduction to Yiddish Culture and Language through Film",
+            "YIDDSH 131A - Modern Yiddish Poetry",
+            "YIDDSH 131B - Modern Yiddish Prose and Drama",
+            "YIDDSH 131C - Special Topics in Yiddish Literature"
+          ]
+        }
+      ]
+    }
+  ]
+}

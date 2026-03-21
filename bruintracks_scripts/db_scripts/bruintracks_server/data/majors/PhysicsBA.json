@@ -1,0 +1,97 @@
+{
+  "major_name": "PhysicsBA",
+  "major_id": 101,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following seven courses:",
+      "options": [
+        {
+          "title": "Physics",
+          "description": "Students may substitute courses from the Physics 1 honors series for the Physics 1 series.",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism",
+            "PHYSICS 17 - Modern Physics",
+            "PHYSICS 32 - Mathematical Methods"
+          ],
+          "options": [
+            {
+              "title": "Physics 1 Honors series",
+              "courses": [
+                "PHYSICS 1AH - Physics for Scientists and Engineers: Mechanics (Honors)",
+                "PHYSICS 1BH - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields (Honors)",
+                "PHYSICS 1CH - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity (Honors)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chemistry",
+          "courses": [
+            "CHEM 20A - Chemical Structure"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31AL - Differential and Integral Calculus Laboratory",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations"
+          ]
+        },
+        {
+          "title": "Program in Computing or Computer Science",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COM SCI 30 - Principles and Practices of Computing",
+            "COM SCI 31 - Introduction to Computer Science I"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following eight courses:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "PHYSICS 105A - Analytic Mechanics",
+            "PHYSICS 105B - Analytic Mechanics",
+            "PHYSICS 110A - Electricity and Magnetism",
+            "PHYSICS 110B - Electricity and Magnetism",
+            "PHYSICS 112 - Thermal Physics",
+            "PHYSICS 115A - Quantum Mechanics",
+            "PHYSICS 115B - Quantum Mechanics",
+            "PHYSICS 115C - Quantum Mechanics"
+          ]
+        },
+        {
+          "title": "Physics 170 series and 180 series",
+          "options": [
+            {
+              "title": "Physics 170 series",
+              "courses": [
+                "Physics 170 series"
+              ]
+            },
+            {
+              "title": "Physics 180 series",
+              "courses": [
+                "Physics 180 series"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

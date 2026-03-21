@@ -1,0 +1,191 @@
+{
+  "major_name": "HistoryBA",
+  "major_id": 68,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select two history survey courses from:",
+      "options": [
+        {
+          "title": "History Survey",
+          "courses": [
+            "HIST 1A - Introduction to Western Civilization: Ancient Civilizations, Prehistory to circa AD 843",
+            "HIST 1B - Introduction to Western Civilization: Circa 843 to circa 1715",
+            "HIST 1C - Introduction to Western Civilization: Circa 1715 to Present",
+            "HIST 2B - Social Knowledge and Social Power",
+            "HIST 2C - Religion, Occult, and Science: Mystics, Heretics, and Witches in Western Tradition, 1000 to 1600",
+            "HIST 3A - History of Science: Renaissance to 1800",
+            "HIST 3B - History of Science: Enlightment to 1900",
+            "HIST 3C - History of Science: 20th Century",
+            "HIST 3D - History of Modern Medicine",
+            "HIST M4 - Introduction to History of Religions",
+            "HIST 5 - Holocaust: History and Memory",
+            "HIST 8A - Colonial Latin America",
+            "HIST 8B - Modern Latin America",
+            "HIST 8C - Latin American Social History",
+            "HIST 9A - Introduction to Asian Civilizations: History of India",
+            "HIST 9C - Introduction to Asian Civilizations: History of Japan",
+            "HIST 9D - Introduction to Asian Civilizations: History of Middle East",
+            "HIST 9E - Introduction to Asian Civilizations: Southeast Asian Crossroads",
+            "HIST M10A - History of Africa to 1800",
+            "HIST 10B - History of Africa, 1800 to Present",
+            "HIST 11A - History of China: To 1000",
+            "HIST 11B - History of China, circa 1000 to 2000",
+            "HIST 12A - Inequality: History of Mass Imprisonment",
+            "HIST 12B - Inequality: History of Neoliberalism",
+            "HIST 12C - Inequality: Global History of Anti-Colonial Thought and Struggle",
+            "HIST 13A - History of the U.S. and Its Colonial Origins: Colonial Origins and First Nation Building Acts",
+            "HIST 13B - History of the U.S. and Its Colonial Origins: 19th Century",
+            "HIST 13C - History of the U.S. and Its Colonial Origins: 20th Century",
+            "HIST 14 - Atlantic World, 1492 to 1830",
+            "HIST 20 - World History to AD 600",
+            "HIST 21 - World History, circa 600 to 1760",
+            "HIST 22 - Contemporary World History, 1760 to Present"
+          ]
+        },
+        {
+          "title": "History 94, 96W, or 97A through 97O",
+          "courses": [
+            "HIST 94 - What Is History? An Introduction to Historical Thinking and Practice",
+            "HIST 96W - Introduction to Historical Practice"
+          ],
+          "options": [
+            {
+              "title": "History 97A through 97O",
+              "courses": [
+                "History 97A through 97O"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Additional Lower-Division History Courses",
+          "courses": [
+            "Lower-Division History Courses (except History 19, 89, 89HC, 99)."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete two courses in U.S. history.",
+      "options": [
+        {
+          "title": "U.S. history"
+        },
+        {
+          "title": "Non-Western History"
+        },
+        {
+          "title": "European History or History of Science"
+        },
+        {
+          "title": "Topics in Historiography",
+          "courses": [
+            "History 187A through C187R"
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "History 191 series"
+          ]
+        },
+        {
+          "title": "History before 1700 CE",
+          "courses": [
+            "HIST 1A - Introduction to Western Civilization: Ancient Civilizations, Prehistory to circa AD 843",
+            "HIST 1B - Introduction to Western Civilization: Circa 843 to circa 1715",
+            "HIST 2C - Religion, Occult, and Science: Mystics, Heretics, and Witches in Western Tradition, 1000 to 1600",
+            "HIST 3A - History of Science: Renaissance to 1800",
+            "HIST 8A - Colonial Latin America",
+            "HIST 9A - Introduction to Asian Civilizations: History of India",
+            "HIST 9C - Introduction to Asian Civilizations: History of Japan",
+            "HIST 9D - Introduction to Asian Civilizations: History of Middle East",
+            "HIST M10A - History of Africa to 1800",
+            "HIST 11A - History of China: To 1000",
+            "HIST 11B - History of China, circa 1000 to 2000",
+            "HIST 14 - Atlantic World, 1492 to 1830",
+            "HIST 20 - World History to AD 600",
+            "HIST 21 - World History, circa 600 to 1760",
+            "HIST 102A - Iran and Persianate World",
+            "HIST M103A - History of Ancient Egypt",
+            "HIST M103B - History of Ancient Egypt",
+            "HIST M104A - History of Ancient Mesopotamia and Syria",
+            "HIST M104B - Sumerians",
+            "HIST M104C - Babylonians",
+            "HIST M104D - Assyrians",
+            "HIST 105A - Survey of Middle East, 500 to Present: 500 to 1300",
+            "HIST 105B - Survey of Middle East, 500 to Present: 1300 to 1700",
+            "HIST M106 - Premodern Islam",
+            "HIST 107A - Armenian History: Armenia in Ancient and Medieval Times, 2nd Millennium BC to AD 11th Century",
+            "HIST 107B - Armenian History: Armenia from Cilician Kingdom through Periods of Foreign Domination and National Stirrings, 11th to 19th Centuries",
+            "HIST 108A - History of North Africa from Islamic Conquest",
+            "HIST 108B - History of Islamic Iberia",
+            "HIST M110A - Iranian Civilization: History of Achaemenid Empire",
+            "HIST M110B - Iranian Civilization: History of Arsacid (Parthian) Empire",
+            "HIST M110C - Iranian Civilization: History of Early Sasanian Empire\u2014From Ardashir I to Rise of Peroz (circa 224-459 CE)",
+            "HIST 111A - Topics in Middle Eastern History: Premodern",
+            "HIST 111B - Topics in Middle Eastern History: Early Modern",
+            "HIST 121A - History of Modern Europe: Renaissance and Reformation, 1450 to 1660",
+            "HIST 121B - History of Modern Europe: Baroque Culture and Absolutist Politics, 1600 to 1715",
+            "HIST 122A - Cultural and Intellectual History of Modern Europe, 15th Century",
+            "HIST 122B - Cultural and Intellectual History of Modern Europe, 16th Century",
+            "HIST 122C - Cultural and Intellectual History of Modern Europe, 17th Century",
+            "HIST 124A - History of France: France, 1500 to 1715",
+            "HIST 125D - History of Low Countries",
+            "HIST M127A - History of Russia, Origins to Rise of Muscovy",
+            "HIST 128A - History of Italy, 1350 to 1559",
+            "HIST 128B - History of Italy, 1559 to 1848",
+            "HIST 129A - Social History of Spain and Portugal: Age of Silver in Spain and Portugal, 1479 to 1789",
+            "HIST 130 - History of European Political Thought",
+            "HIST M133A - History of Women in Europe, 800 to 1715",
+            "HIST 135A - Europe and World: Exploration and Conquest, 1400 to 1700",
+            "HIST 136A - History of Britain: Tudor-Stuart Times, 1485 to 1715",
+            "HIST 157A - Early Latin America",
+            "HIST 157B - Indians of Colonial Mexico",
+            "HIST 162B - Brazil and Atlantic World, 1500 to 1822",
+            "HIST 164B - Topics in African History: Africa and Slave Trade",
+            "HIST 166A - History of West Africa: West Africa, Earliest Times to 1800",
+            "HIST 167A - History of Northeast Africa",
+            "HIST 167B - History of East Africa",
+            "HIST 168A - History of Southern Africa, Origins to 1870",
+            "HIST 169A - Thought and Society in China to 1000",
+            "HIST 170A - Culture and Power in Late Imperial China",
+            "HIST M170C - History of Women in China, AD 1000 to Present",
+            "HIST 172A - Japan\u2014Ancient and Medieval History",
+            "HIST 172B - Japanese History: Early Modern, 1600 to 1868",
+            "HIST M173C - Shinto, Buddhism, and Japanese Folk Religion",
+            "HIST 174A - Early History of India",
+            "HIST M174D - Indo-Islamic Interactions, 700 to 1750",
+            "HIST 176A - History of Southeast Asia to 1815",
+            "HIST 176E - Vietnam: Past and Present",
+            "HIST M182A - Ancient Jewish History",
+            "HIST M182B - Medieval Jewish History",
+            "HIST M185D - Religions of Ancient Near East",
+            "HIST M185F - History of Early Christians",
+            "HIST M185G - Religious Environment of Early Christians",
+            "HIST M185I - Jesus of Nazareth in Historical Research",
+            "HIST M186A - Women and Gender, Prehistory to 1792"
+          ],
+          "options": [
+            {
+              "title": "History 112A through 119D",
+              "courses": [
+                "History 112A through 119D"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "HIST 198A - Honors Research in History",
+        "HIST 198B - Honors Research in History",
+        "HIST 198C - Honors Research in History"
+      ]
+    }
+  ]
+}

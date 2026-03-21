@@ -1,10 +1,9 @@
 import { OpenAI } from "openai";
 import dotenv from "dotenv";
-import { spawn } from 'child_process';
-import path from 'path';
+import { spawn } from "child_process";
+import path from "path";
 dotenv.config();
 import { fileURLToPath } from "url";
-import { createClient } from "@supabase/supabase-js";
 import supabase from "./supabase_client.js";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -32,6 +31,8 @@ You are helping build a structured list of courses required for a major. Your ta
 
 2. For elective requirements with specific counts:
    - Do NOT come up with any course substitutions. Instead, assume every elective is 4 units. Add the elective title placeholder, proceeded by "RESOLVE:", to the list and then the number of the elective. For example, the Computer Science and Engineering requires 12 units of electives. Then we include "RESOLVE: Computer Science Elective #1", "RESOLVE: Computer Science Elective #2", "RESOLVE: Computer Science Elective #3". Even if it's just one particular elective, i.e. the Electrical and Computer Engineering Elective for Computer Science & Engineering, we'll still label it "RESOLVE: Electrical and Computer Engineering Elective #1". This does NOT apply to tech breadths.
+   - Make the placeholder name as specific as possible. Never output a bare label like "RESOLVE: Elective #1" if the JSON gives any departmental, track, or category context.
+   - If the local title is generic like "Electives", use nearby context from the parent heading/section/description to expand it, for example "RESOLVE: Civil Engineering Field Elective #1" or "RESOLVE: Linguistics Upper-Division Elective #1".
 
 3. For technical breadth requirements, ignore them. We will handle them separately.
 
@@ -61,33 +62,42 @@ You are helping build a structured list of courses required for a major. Your ta
 `;
 
 // Add function to get tech breadth recommendations
-async function getTechBreadthRecommendations(transcript, techBreadthArea, required_courses) {
+async function getTechBreadthRecommendations(
+  transcript,
+  techBreadthArea,
+  required_courses,
+) {
   return new Promise((resolve, reject) => {
-    const pythonProcess = spawn('python3', [
-      path.join(process.cwd(), '../bruintracks_scripts/scheduler/tech_breadth_optimizer.py')
+    const pythonProcess = spawn("python3", [
+      path.join(
+        process.cwd(),
+        "../bruintracks_scripts/scheduler/tech_breadth_optimizer.py",
+      ),
     ]);
 
-    let outputData = '';
-    let errorData = '';
+    let outputData = "";
+    let errorData = "";
 
-    pythonProcess.stdin.write(JSON.stringify({
-      transcript: transcript,
-      required_courses: required_courses,
-      tech_breadth_area: techBreadthArea
-    }));
+    pythonProcess.stdin.write(
+      JSON.stringify({
+        transcript: transcript,
+        required_courses: required_courses,
+        tech_breadth_area: techBreadthArea,
+      }),
+    );
     pythonProcess.stdin.end();
 
-    pythonProcess.stdout.on('data', (data) => {
+    pythonProcess.stdout.on("data", (data) => {
       outputData += data.toString();
     });
 
-    pythonProcess.stderr.on('data', (data) => {
+    pythonProcess.stderr.on("data", (data) => {
       errorData += data.toString();
     });
 
-    pythonProcess.on('close', (code) => {
+    pythonProcess.on("close", (code) => {
       if (code !== 0) {
-        console.error('Tech breadth optimizer error:', errorData);
+        console.error("Tech breadth optimizer error:", errorData);
         reject(new Error(`Tech breadth optimizer failed with code ${code}`));
         return;
       }
@@ -97,7 +107,7 @@ async function getTechBreadthRecommendations(transcript, techBreadthArea, requir
         resolve(recommendations);
         console.log("Tech breadth recommendations:", recommendations);
       } catch (error) {
-        console.error('Failed to parse tech breadth optimizer output:', error);
+        console.error("Failed to parse tech breadth optimizer output:", error);
         reject(error);
       }
     });
@@ -124,16 +134,23 @@ export const getCoursesToSchedule = async (req, res) => {
     console.log("\nForm Data Fields:", Object.keys(req.body));
     console.log(
       "Form Data Values:",
-      Object.entries(req.body).map(([key, value]) => `${key}: ${typeof value}`)
+      Object.entries(req.body).map(([key, value]) => `${key}: ${typeof value}`),
     );
 
-    const { jsonData, transcript, grad_year, grad_quarter, preferences } =
-      req.body;
+    const {
+      jsonData,
+      transcript,
+      grad_year,
+      grad_quarter,
+      school,
+      preferences,
+    } = req.body;
     console.log("Destructured values:", {
       grad_year,
       grad_quarter,
       hasJsonData: !!jsonData,
       hasTranscript: !!transcript,
+      school,
       hasPreferences: !!preferences,
     });
 
@@ -142,7 +159,7 @@ export const getCoursesToSchedule = async (req, res) => {
     if (Array.isArray(transcript)) {
       transcript.forEach((course) => {
         // Split on last space to separate number from subject
-        const lastSpaceIndex = course.lastIndexOf(' ');
+        const lastSpaceIndex = course.lastIndexOf(" ");
         if (lastSpaceIndex !== -1) {
           const subject = course.substring(0, lastSpaceIndex);
           const number = course.substring(lastSpaceIndex + 1);
@@ -152,7 +169,7 @@ export const getCoursesToSchedule = async (req, res) => {
     } else if (typeof transcript === "object") {
       Object.entries(transcript).forEach(([course, grade]) => {
         // Split on last space to separate number from subject
-        const lastSpaceIndex = course.lastIndexOf(' ');
+        const lastSpaceIndex = course.lastIndexOf(" ");
         if (lastSpaceIndex !== -1) {
           const subject = course.substring(0, lastSpaceIndex);
           const number = course.substring(lastSpaceIndex + 1);
@@ -176,102 +193,158 @@ export const getCoursesToSchedule = async (req, res) => {
     const allCourses = new Set();
     const gptPromises = [];
 
-    // First process the major requirements to get the initial course list
-    for (const section of requirements) {
-      console.log("\nProcessing section:", section.title);
+    // Determines whether a section (or nested subsection) has actionable requirement data.
+    const hasRequirementContent = (node) => {
+      if (!node || typeof node !== "object") return false;
 
-      // Skip sections without options
-      if (!section.options || !Array.isArray(section.options)) {
-        console.log("Skipping section without options:", section.title);
-        continue;
+      if (Array.isArray(node.courses) && node.courses.length > 0) {
+        return true;
       }
 
-      for (const option of section.options) {
-        console.log("\nProcessing option:", option.title);
+      const nestedOptions = Array.isArray(node.options) ? node.options : [];
+      const nestedTracks = Array.isArray(node.tracks) ? node.tracks : [];
+      return [...nestedOptions, ...nestedTracks].some((child) =>
+        hasRequirementContent(child),
+      );
+    };
 
-        // Skip options without courses
-        if (!option.courses || !Array.isArray(option.courses)) {
-          console.log("Skipping option without courses:", option.title);
-          continue;
-        }
+    // Prefer options/tracks when present; otherwise fall back to whole section.
+    const buildPreferredTargets = (section) => {
+      const nestedOptions = Array.isArray(section.options)
+        ? section.options
+        : [];
+      const nestedTracks = Array.isArray(section.tracks) ? section.tracks : [];
+      const preferred = [...nestedOptions, ...nestedTracks].filter((node) =>
+        hasRequirementContent(node),
+      );
 
-        const sectionJson = JSON.stringify(section, null, 2);
-        const transcriptJson = JSON.stringify(formattedTranscript, null, 2);
-        const userPrompt = `Here is the next section of the major requirements:\n\`\`\`json\n${sectionJson}\n\`\`\`\n\nAnd here are the courses the student has already completed:\n\`\`\`json\n${transcriptJson}\n\`\`\`\n\nPlease analyze the course descriptions and titles, and select the most appropriate courses based on the student's completed courses and the logical progression of the major. Pay special attention to the number of courses required for each section, especially for electives.`;
-        console.log("Sending prompt to GPT:", userPrompt);
+      if (preferred.length > 0) {
+        return preferred.map((node, idx) => {
+          const sectionCourses =
+            Array.isArray(section.courses) && section.courses.length > 0
+              ? { courses: section.courses }
+              : {};
 
-        const gptPromise = openai.chat.completions
-          .create({
-            model: "gpt-4o",
-            messages: [
-              { role: "system", content: systemPrompt },
-              { role: "user", content: userPrompt },
-            ],
-            temperature: 0,
-          })
-          .then((completion) => {
-            console.log("GPT Response:", JSON.stringify(completion, null, 2));
+          return {
+            title:
+              node?.title ||
+              node?.heading ||
+              `${section?.title || "Untitled Section"} item #${idx + 1}`,
+            payload: {
+              title: section?.title,
+              description: section?.description,
+              ...sectionCourses,
+              options: [node],
+            },
+          };
+        });
+      }
 
-            const content = completion.choices[0].message.content;
-            if (!content) {
-              console.error("No content returned from GPT");
+      return [
+        {
+          title: section?.title || "Untitled Section",
+          payload: section,
+        },
+      ];
+    };
+
+    const queuePromptForTarget = (sectionTitle, targetTitle, payload) => {
+      const sectionJson = JSON.stringify(payload, null, 2);
+      const transcriptJson = JSON.stringify(formattedTranscript, null, 2);
+      const userPrompt = `Here is the next section of the major requirements:\n\`\`\`json\n${sectionJson}\n\`\`\`\n\nAnd here are the courses the student has already completed:\n\`\`\`json\n${transcriptJson}\n\`\`\`\n\nPlease analyze the course descriptions and titles, and select the most appropriate courses based on the student's completed courses and the logical progression of the major. Pay special attention to the number of courses required for each section, especially for electives.`;
+      console.log(
+        `Sending prompt to GPT for section "${sectionTitle}" target "${targetTitle}"`,
+      );
+
+      const gptPromise = openai.chat.completions
+        .create({
+          model: "gpt-4o",
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: userPrompt },
+          ],
+          temperature: 0,
+        })
+        .then((completion) => {
+          console.log("GPT Response:", JSON.stringify(completion, null, 2));
+
+          const content = completion.choices[0].message.content;
+          if (!content) {
+            console.error("No content returned from GPT");
+            return;
+          }
+
+          try {
+            // Remove markdown code block formatting if present
+            const jsonContent = content.replace(/```json\n|\n```/g, "").trim();
+            console.log("Cleaned JSON content:", jsonContent);
+
+            const parsed = JSON.parse(jsonContent);
+            console.log("Parsed courses from GPT:", parsed);
+
+            if (!parsed.courses || !Array.isArray(parsed.courses)) {
+              console.error("Invalid courses format in GPT response:", parsed);
               return;
             }
 
-            try {
-              // Remove markdown code block formatting if present
-              const jsonContent = content
-                .replace(/```json\n|\n```/g, "")
-                .trim();
-              console.log("Cleaned JSON content:", jsonContent);
+            const courses = parsed.courses;
+            console.log("Adding courses:", courses);
 
-              const parsed = JSON.parse(jsonContent);
-              console.log("Parsed courses from GPT:", parsed);
+            courses.forEach((course) => {
+              if (typeof course !== "string") return;
 
-              if (!parsed.courses || !Array.isArray(parsed.courses)) {
-                console.error(
-                  "Invalid courses format in GPT response:",
-                  parsed
-                );
-                return;
-              }
-
-              const courses = parsed.courses;
-              console.log("Adding courses:", courses);
-
-              courses.forEach((course) => {
-                if (course.includes("RESOLVE")) {
-                  allCourses.add(course);
-                } else if (typeof course === "string" && course.trim()) {
-                  // Handle multi-word subjects by splitting on the last space
-                  const lastSpaceIndex = course.trim().lastIndexOf(' ');
-                  if (lastSpaceIndex !== -1) {
-                    const subject = course.substring(0, lastSpaceIndex);
-                    const number = course.substring(lastSpaceIndex + 1);
-                    const formattedCourse = `${subject}|${number}`;
-                    // Only add if not in transcript
-                    if (!formattedTranscript[formattedCourse]) {
-                      allCourses.add(formattedCourse);
-                    }
+              if (course.includes("RESOLVE")) {
+                allCourses.add(course);
+              } else if (course.trim()) {
+                // Handle multi-word subjects by splitting on the last space
+                const lastSpaceIndex = course.trim().lastIndexOf(" ");
+                if (lastSpaceIndex !== -1) {
+                  const subject = course.substring(0, lastSpaceIndex);
+                  const number = course.substring(lastSpaceIndex + 1);
+                  const formattedCourse = `${subject}|${number}`;
+                  // Only add if not in transcript
+                  if (!formattedTranscript[formattedCourse]) {
+                    allCourses.add(formattedCourse);
                   }
                 }
-              });
+              }
+            });
 
-              console.log(
-                `Processed section successfully. Current courses:`,
-                Array.from(allCourses)
-              );
-            } catch (parseError) {
-              console.error("Error parsing GPT response:", parseError);
-              console.error("Raw response:", content);
-            }
-          })
-          .catch((err) => {
-            console.error(`Error processing section:`, err.message);
-          });
+            console.log(
+              `Processed section "${sectionTitle}" target "${targetTitle}" successfully. Current courses:`,
+              Array.from(allCourses),
+            );
+          } catch (parseError) {
+            console.error("Error parsing GPT response:", parseError);
+            console.error("Raw response:", content);
+          }
+        })
+        .catch((err) => {
+          console.error(
+            `Error processing section "${sectionTitle}" target "${targetTitle}":`,
+            err.message,
+          );
+        });
 
-        gptPromises.push(gptPromise);
+      gptPromises.push(gptPromise);
+    };
+
+    for (const section of requirements) {
+      const sectionTitle = section?.title || "Untitled Section";
+      console.log("\nProcessing section:", sectionTitle);
+
+      if (!hasRequirementContent(section)) {
+        console.log(
+          "Skipping section without course/options content:",
+          sectionTitle,
+        );
+        continue;
       }
+
+      const targets = buildPreferredTargets(section);
+      targets.forEach((target) => {
+        queuePromptForTarget(sectionTitle, target.title, target.payload);
+      });
     }
 
     // Wait for all GPT responses to complete
@@ -285,12 +358,12 @@ export const getCoursesToSchedule = async (req, res) => {
         const techBreadthCourses = await getTechBreadthRecommendations(
           formattedTranscript,
           preferences.tech_breadth,
-          Array.from(allCourses) // Pass the current course list
+          Array.from(allCourses), // Pass the current course list
         );
         console.log("Technical breadth recommendations:", techBreadthCourses);
-        
+
         // Add recommended courses to allCourses
-        techBreadthCourses.forEach(courseId => {
+        techBreadthCourses.forEach((courseId) => {
           if (!formattedTranscript[courseId]) {
             allCourses.add(courseId);
           }
@@ -303,23 +376,31 @@ export const getCoursesToSchedule = async (req, res) => {
     // Get second major tech breadth recommendations if applicable
     if (preferences?.second_tech_breadth) {
       try {
-        console.log("\n🔍 Getting second major technical breadth recommendations...");
+        console.log(
+          "\n🔍 Getting second major technical breadth recommendations...",
+        );
         console.log("Current required courses:", Array.from(allCourses));
         const secondTechBreadthCourses = await getTechBreadthRecommendations(
           formattedTranscript,
           preferences.second_tech_breadth,
-          Array.from(allCourses) // Pass the current course list
+          Array.from(allCourses), // Pass the current course list
         );
-        console.log("Second major technical breadth recommendations:", secondTechBreadthCourses);
-        
+        console.log(
+          "Second major technical breadth recommendations:",
+          secondTechBreadthCourses,
+        );
+
         // Add recommended courses to allCourses
-        secondTechBreadthCourses.forEach(courseId => {
+        secondTechBreadthCourses.forEach((courseId) => {
           if (!formattedTranscript[courseId]) {
             allCourses.add(courseId);
           }
         });
       } catch (error) {
-        console.error("Error getting second major tech breadth recommendations:", error);
+        console.error(
+          "Error getting second major tech breadth recommendations:",
+          error,
+        );
       }
     }
 
@@ -328,6 +409,7 @@ export const getCoursesToSchedule = async (req, res) => {
       start_quarter: "Spring",
       end_year: parseInt(grad_year),
       end_quarter: grad_quarter || "Spring",
+      school: school || null,
       courses_to_schedule: Array.from(allCourses),
       transcript: formattedTranscript,
       preferences,
@@ -335,12 +417,12 @@ export const getCoursesToSchedule = async (req, res) => {
 
     console.log(
       "\n🎓 Final Structured Course List:",
-      JSON.stringify(finalList, null, 2)
+      JSON.stringify(finalList, null, 2),
     );
 
     if (finalList.courses_to_schedule.length === 0) {
       console.error(
-        "No courses were selected. This might indicate an issue with the GPT response or data processing."
+        "No courses were selected. This might indicate an issue with the GPT response or data processing.",
       );
     }
 
@@ -389,13 +471,14 @@ export const getCoursesToSchedule = async (req, res) => {
         max_courses_per_term: preferences?.max_courses_per_term ?? 4,
         least_courses_per_term: preferences?.least_courses_per_term ?? 3,
         tech_breadth: preferences?.tech_breadth ?? null,
-        second_tech_breadth: preferences?.second_tech_breadth ?? null
+        second_tech_breadth: preferences?.second_tech_breadth ?? null,
+        debug_unscheduled: preferences?.debug_unscheduled ?? true,
       },
     };
 
     console.log(
       "\n📅 Scheduling Request Body:",
-      JSON.stringify(schedulingRequestBody, null, 2)
+      JSON.stringify(schedulingRequestBody, null, 2),
     );
 
     // Call scheduling controller
@@ -432,7 +515,7 @@ export const getCoursesToSchedule = async (req, res) => {
         throw (
           lastError ||
           new Error(
-            `Scheduling failed with status: ${schedulingResponse?.status}`
+            `Scheduling failed with status: ${schedulingResponse?.status}`,
           )
         );
       }
@@ -440,8 +523,16 @@ export const getCoursesToSchedule = async (req, res) => {
       const schedulingResult = await schedulingResponse.json();
       console.log(
         "\n📊 Scheduling Result:",
-        JSON.stringify(schedulingResult, null, 2)
+        JSON.stringify(schedulingResult, null, 2),
       );
+
+      const scheduleNote = schedulingResult?.note;
+      if (
+        typeof scheduleNote === "string" &&
+        scheduleNote.startsWith("Unable to schedule:")
+      ) {
+        console.log(`\n⚠️ ${scheduleNote}`);
+      }
 
       // Return both the course list and scheduling result
       res.json({

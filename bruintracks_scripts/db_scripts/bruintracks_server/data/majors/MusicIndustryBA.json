@@ -1,0 +1,167 @@
+{
+  "major_name": "MusicIndustryBA",
+  "major_id": 134,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete Music Industry 1 three times and the following six courses:",
+      "options": [
+        {
+          "title": "Music Industry Core",
+          "courses": [
+            "MSC IND 1 - Music Industry Forum",
+            "MSC IND 2 - Music Industry Fundamentals",
+            "MSC IND 10A - Finance and Accounting in Music Industry I",
+            "MSC IND 10B - Finance and Accounting in Music Industry II",
+            "MSC IND 20A - How Music Works I",
+            "MSC IND 20B - How Music Works II",
+            "MSC IND 25 - Fostering Musical Creativity: Artists and Repertoires"
+          ]
+        },
+        {
+          "title": "Ensemble"
+        },
+        {
+          "title": "History and Culture of Music",
+          "courses": [
+            "ETHNMUS 20A - Musical Cultures of World: Europe and Americas",
+            "ETHNMUS 20B - Musical Cultures of World: Africa and Near East",
+            "ETHNMUS 21 - Global Popular Musics I: Emergence of Recording Industries and Major Styles",
+            "ETHNMUS 22 - Global Popular Musics II: From Cassettes to Digital and Online Media",
+            "ETHNMUS M25 - Global Pop",
+            "ETHNMUS 30 - Music and Media",
+            "ETHNMUS M35 - Blues, Society, and American Culture",
+            "ETHNMUS 40 - Music and Religion",
+            "ETHNMUS 45 - Music of Bollywood and Beyond",
+            "ETHNMUS M50A - Jazz in American Culture: Late 19th Century through 1940s",
+            "ETHNMUS M50B - Jazz in American Culture: 1940s to Present",
+            "ETHNMUS M110A - African American Musical Heritage",
+            "ETHNMUS M110B - African American Musical Heritage",
+            "MSC IND 29 - Docs that Rock: Music Documentary in History and Practice",
+            "MSC IND 55 - Songwriters on Songwriting",
+            "MUSCLG 5 - History of Rock and Roll",
+            "MUSCLG 7 - Film and Music",
+            "MUSCLG 8 - History of Electronic Dance Music",
+            "MUSCLG 13 - Punk: Music, History, Subculture",
+            "MUSCLG 60 - American Musical",
+            "MUSCLG 61 - Music in Los Angeles",
+            "MUSCLG 64 - Motown and Soul: African American Popular Music of 1960s",
+            "MUSCLG 65 - Blues in American Music",
+            "MUSCLG 68 - Beatles",
+            "MUSCLG 75 - History of Jazz",
+            "MUSCLG 94 - Music and Internet"
+          ]
+        },
+        {
+          "title": "Race, Culture, and American Music",
+          "courses": [
+            "ETHNMUS M35 - Blues, Society, and American Culture",
+            "ETHNMUS M50A - Jazz in American Culture: Late 19th Century through 1940s",
+            "ETHNMUS M50B - Jazz in American Culture: 1940s to Present",
+            "ETHNMUS M110A - African American Musical Heritage",
+            "ETHNMUS M110B - African American Musical Heritage",
+            "MUSCLG 64 - Motown and Soul: African American Popular Music of 1960s",
+            "MUSCLG 65 - Blues in American Music",
+            "MUSCLG 75 - History of Jazz"
+          ]
+        },
+        {
+          "title": "Communication Fundamentals",
+          "courses": [
+            "COMM 1 - Principles of Oral Communication"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following eight courses:",
+      "options": [
+        {
+          "title": "Music Industry Core",
+          "courses": [
+            "MSC IND 101 - Seminar in Music Industry",
+            "MSC IND 104A - Music and Law",
+            "MSC IND 104B - Legal and Business Aspects of Music Publishing",
+            "MSC IND 113A - Music Supervision",
+            "MSC IND 122 - Digital Marketing and Promotion",
+            "MSC IND 126 - Artist Management",
+            "MSC IND 129 - Global Music Industry",
+            "MSC IND M182 - Music Industry"
+          ]
+        },
+        {
+          "title": "Music Technology and Studio Production",
+          "courses": [
+            "MUSC 260A - Seminar: Composition for Motion Pictures and Television",
+            "MUSC 260B - Seminar: Composition for Motion Pictures and Television",
+            "MSC IND 107A - Engineering and Production Fundamentals",
+            "MSC IND 107B - Engineering and Production for Musicians",
+            "MSC IND 111A - Rock/Pop Studio Ensemble I",
+            "MSC IND 111B - Rock/Pop Studio Ensemble II",
+            "MSC IND 112A - Introduction to Songwriting",
+            "MSC IND 112B - Advanced Songwriting",
+            "MSC IND 115A - Art of Music Production I",
+            "MSC IND 115B - Art of Music Production II",
+            "MSC IND 116A - Digital Production and Beat Design I",
+            "MSC IND 116B - Digital Production and Beat Design II",
+            "MSC IND 118 - Post-Production Audio for Film, Television, and Visual Media"
+          ]
+        },
+        {
+          "title": "Music Business and Law",
+          "courses": [
+            "COMM M117 - Negotiation",
+            "MSC IND 104C - Legal and Business Aspects of Sound Recordings",
+            "MSC IND 110 - Music Business Now",
+            "MSC IND 113B - Advanced Music Supervision",
+            "MSC IND 114 - Concerts and Venues: Producing Special Events and Live Concerts",
+            "MSC IND 124B - Music Industry Entrepreneurship and Innovation",
+            "MSC IND 155 - Music and Data Science",
+            "MSC IND M181 - Forensic Musicology"
+          ]
+        },
+        {
+          "title": "Music Culture and History",
+          "courses": [
+            "ETHNMUS M116 - Chicano/Latino Music in U.S.",
+            "ETHNMUS M119 - Cultural History of Rap",
+            "ETHNMUS C121 - Tibetan Pop Music: Tibet, Exile, China, and World",
+            "ETHNMUS 122 - Global Dynamics of K-Pop",
+            "ETHNMUS 148 - Global and Local South Asian Popular Music",
+            "ETHNMUS 174 - Aesthetics of Music",
+            "ETHNMUS 175 - Sociology of Music",
+            "ETHNMUS 177 - Music, Internet, and Social Media",
+            "ETHNMUS 181 - Anthropology of Music",
+            "MSC IND 108 - Founding and Sustaining Performing Arts Organizations",
+            "MSC IND 131 - DIY: Punk Organizing as Social Justice",
+            "MSC IND 132 - Music and Activism",
+            "MSC IND 134 - Psychology and Music Management",
+            "MUSCLG 128 - History of Popular Music",
+            "MUSCLG M136 - Music and Gender",
+            "MUSCLG M137 - Lesbian, Gay, Bisexual, Transgender, and Queer Perspectives in Pop Music",
+            "MUSCLG 140 - Music, Media, and Consumer Society"
+          ]
+        },
+        {
+          "title": "Elective"
+        },
+        {
+          "title": "Internship/Practicum Experience",
+          "courses": [
+            "MSC IND 195CE - Community and Corporate Internships in Music Industry",
+            "MSC IND 196 - Directed Mentorships in Music Industry"
+          ]
+        },
+        {
+          "title": "Capstone Experience",
+          "courses": [
+            "MSC IND 187A - Capstone Seminar in Music Industry I: Developing Project/Connections",
+            "MSC IND 187B - Capstone Seminar in Music Industry II: Creating Project/Internship",
+            "MSC IND 187C - Capstone Seminar in Music Industry III: Presenting Project/Report"
+          ]
+        }
+      ]
+    }
+  ]
+}

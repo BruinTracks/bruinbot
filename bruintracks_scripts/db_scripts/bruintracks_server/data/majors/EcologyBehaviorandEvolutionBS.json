@@ -1,0 +1,268 @@
+{
+  "major_name": "EcologyBehaviorandEvolutionBS",
+  "major_id": 47,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Life Science Core Curriculum",
+          "description": "Select one series from:",
+          "options": [
+            {
+              "title": "Chemistry"
+            },
+            {
+              "title": "Life Sciences",
+              "courses": [
+                "LIFESCI 7A - Cell and Molecular Biology",
+                "LIFESCI 7B - Genetics, Evolution, and Ecology",
+                "LIFESCI 7C - Physiology and Human Biology",
+                "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "description": "Students may select Mathematics 31A or 31AL."
+            },
+            {
+              "title": "Statistics",
+              "courses": [
+                "LIFESCI 40 - Statistics of Biological Systems",
+                "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+              ]
+            },
+            {
+              "title": "Physics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select at least four units (one course) from:",
+      "options": [
+        {
+          "title": "Morphology and Systematics",
+          "courses": [
+            "EE BIOL 101 - Marine Botany",
+            "EE BIOL 103 - Plant Diversity and Evolution",
+            "EE BIOL 104 - Plants and People",
+            "EE BIOL 105 - Biology of Invertebrates",
+            "EE BIOL 110 - Vertebrate Morphology",
+            "EE BIOL 111 - Biology of Vertebrates",
+            "EE BIOL 112 - Ichthyology",
+            "EE BIOL 113A - Herpetology",
+            "EE BIOL 114A - Ornithology",
+            "EE BIOL 115 - Mammalogy",
+            "EE BIOL 117 - Evolution of Vertebrates",
+            "EE BIOL 130 - Principles of Systematic Biology",
+            "EE BIOL 140 - Biology of Marine Mammals",
+            "EE BIOL 144L - Prehistoric California Laboratory",
+            "EE BIOL M157 - Biology of Superheroes: Exploring Limits of Form and Function",
+            "EE BIOL 167 - Natural History Collections in Biological Sciences",
+            "EE BIOL 167L - Natural History Collections in Biological Sciences Laboratory",
+            "EE BIOL 169 - Biology of Bats: The True Superheroes",
+            "EE BIOL 184 - Evolution, Development, and Disease"
+          ]
+        },
+        {
+          "title": "Physiology",
+          "courses": [
+            "EE BIOL 117 - Evolution of Vertebrates",
+            "EE BIOL M157 - Biology of Superheroes: Exploring Limits of Form and Function",
+            "EE BIOL 162 - Plant Physiology",
+            "EE BIOL 162L - Plant Physiology and Ecophysiology Laboratory",
+            "EE BIOL 170 - Animal Environmental Physiology",
+            "EE BIOL 169 - Biology of Bats: The True Superheroes",
+            "PHYSCI 165 - Comparative Animal Physiology",
+            "PHYSCI 166 - Animal Physiology"
+          ]
+        },
+        {
+          "title": "Ecology, Behavior, and Evolution",
+          "courses": [
+            "ANTHRO 128P - Primate Behavior Nonhuman to Human",
+            "BIOENGR CM186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "C&S BIO M186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "COM SCI CM186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "EPS SCI CM173 - Earth Process and Evolutionary History",
+            "EE BIOL 100 - Introduction to Ecology and Behavior",
+            "EE BIOL 113A - Herpetology",
+            "EE BIOL 113AL - Herpetology Laboratory",
+            "EE BIOL 116 - Conservation Biology",
+            "EE BIOL C119A - Mathematical and Computational Modeling in Ecology",
+            "EE BIOL C119B - Modeling in Ecological Research",
+            "EE BIOL 120 - Evolution",
+            "EE BIOL 121 - Molecular Evolution",
+            "EE BIOL 122 - Ecology",
+            "EE BIOL C126 - Behavioral Ecology",
+            "EE BIOL 128 - Plant Physiological Ecology",
+            "EE BIOL 129 - Animal Behavior",
+            "EE BIOL 130 - Principles of Systematic Biology",
+            "EE BIOL 133 - Elements of Theoretical and Computational Biology",
+            "EE BIOL C135 - Population Genetics",
+            "EE BIOL 136 - Ecological Restoration",
+            "EE BIOL 137 - Chemical Communication",
+            "EE BIOL 142 - Aquatic Communities",
+            "EE BIOL 143 - Viral Ecology and Evolution",
+            "EE BIOL 144 - Prehistoric California",
+            "EE BIOL 144L - Prehistoric California Laboratory",
+            "EE BIOL C146 - Conservation Genetics",
+            "EE BIOL 149 - Evolutionary Genomics",
+            "EE BIOL 150 - Principles of Genetics",
+            "EE BIOL 150L - Principles of Genetics Laboratory",
+            "EE BIOL 151A - Tropical Ecology",
+            "EE BIOL 152 - World Vegetation Ecology and Ecophysiology",
+            "EE BIOL 153 - Physics and Chemistry of Biotic Environments",
+            "EE BIOL 154 - California Ecosystems",
+            "EE BIOL 155 - Community Ecology",
+            "EE BIOL M157 - Biology of Superheroes: Exploring Limits of Form and Function",
+            "EE BIOL 161 - Plant Ecology",
+            "EE BIOL 161L - Plant Ecology Laboratory",
+            "EE BIOL 162 - Plant Physiology",
+            "EE BIOL 167 - Natural History Collections in Biological Sciences",
+            "EE BIOL 167L - Natural History Collections in Biological Sciences Laboratory",
+            "EE BIOL 168 - Global Change Ecology",
+            "EE BIOL 169 - Biology of Bats: The True Superheroes",
+            "EE BIOL CM173 - Earth Process and Evolutionary History",
+            "EE BIOL C174 - Comparative Biology and Macroevolution",
+            "EE BIOL 175 - Evolutionary Dynamics of Sex",
+            "EE BIOL M178 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "EE BIOL 183 - Finding Ecological Solutions to Environmental Problems",
+            "EE BIOL 184 - Evolution, Development, and Disease",
+            "EE BIOL 185 - Evolutionary Medicine",
+            "EE BIOL 186 - Evolutionary Medicine: Clinical Perspective on Medical, Surgical, and Psychiatric Disorders",
+            "LIFESCI 107 - Genetics"
+          ]
+        },
+        {
+          "title": "Capstone Field Quarter"
+        },
+        {
+          "title": "Electives",
+          "description": "Upper-division chemistry (except Chemistry 188SA through 199; Chemistry 153A and 153L are strongly recommended).",
+          "options": [
+            {
+              "title": "Anthropology",
+              "courses": [
+                "ANTHRO 128P - Primate Behavior Nonhuman to Human"
+              ]
+            },
+            {
+              "title": "Chemistry"
+            },
+            {
+              "title": "Earth, Planetary, and Space Sciences"
+            },
+            {
+              "title": "Ecology and Evolutionary Biology"
+            },
+            {
+              "title": "Geography"
+            },
+            {
+              "title": "Life Sciences",
+              "courses": [
+                "LIFESCI 107 - Genetics"
+              ]
+            },
+            {
+              "title": "Mathematics"
+            },
+            {
+              "title": "Microbiology"
+            },
+            {
+              "title": "Molecular, Cell, and Developmental Biology",
+              "courses": [
+                "MCD BIO 172 - Genomics and Bioinformatics"
+              ]
+            },
+            {
+              "title": "Physics"
+            },
+            {
+              "title": "Recommended: Taxon-Oriented Courses",
+              "courses": [
+                "EE BIOL 111 - Biology of Vertebrates",
+                "EE BIOL 112 - Ichthyology",
+                "EE BIOL 113A - Herpetology",
+                "EE BIOL 113AL - Herpetology Laboratory",
+                "EE BIOL 114A - Ornithology",
+                "EE BIOL 115 - Mammalogy"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Field Biology",
+      "description": "The Field Biology Quarter involves some combination of the following list of courses:",
+      "options": [
+        {
+          "title": "Field Biology Quarter (FBQ)",
+          "courses": [
+            "EE BIOL 113B - Field Herpetology",
+            "EE BIOL 114B - Field Ornithology",
+            "EE BIOL 118 - Plant Adaptations",
+            "EE BIOL 124A - Field Ecology",
+            "EE BIOL 124B - Field Ecology",
+            "EE BIOL 125 - Tropical Animal Communication",
+            "EE BIOL C126 - Behavioral Ecology",
+            "EE BIOL 132 - Field Behavioral Ecology",
+            "EE BIOL 134B - Field Physiological Ecology of Desert Animals",
+            "EE BIOL 151B - Field Tropical Ecology"
+          ]
+        },
+        {
+          "title": "Marine Biology Quarter",
+          "courses": [
+            "EE BIOL 102 - Biology of Marine Invertebrates",
+            "EE BIOL 106 - Experimental Marine Invertebrate Biology",
+            "EE BIOL 123A - Field Marine Ecology",
+            "EE BIOL 123B - Field Marine Ecology",
+            "EE BIOL 147 - Biological Oceanography",
+            "EE BIOL 148 - Biology of Marine Plants",
+            "EE BIOL 163 - Biology of Marine Tetrapods",
+            "EE BIOL 164 - Field Biology of Marine Fishes",
+            "EE BIOL 165 - Ecological Physiology of Marine Vertebrates",
+            "EE BIOL 182 - Marine Parasitology"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "EE BIOL 198A - Honors Research in Ecology and Evolutionary Biology",
+        "EE BIOL 198B - Honors Research in Ecology and Evolutionary Biology"
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Complete the following three courses and Program in Computing 30 and 60:",
+      "options": [
+        {
+          "title": "Program to Computing",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming",
+            "COMPTNG 10C - Advanced Programming"
+          ]
+        },
+        {
+          "title": "Additional Course",
+          "courses": [
+            "COM SCI CM186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "PSYCH 186A - Cognitive Science Laboratory: Introduction to Theory and Simulation",
+            "PSYCH 186B - Cognitive Science Laboratory: Neural Networks"
+          ]
+        }
+      ]
+    }
+  ]
+}

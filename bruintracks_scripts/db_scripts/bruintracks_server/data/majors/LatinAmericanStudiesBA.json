@@ -1,0 +1,217 @@
+{
+  "major_name": "LatinAmericanStudiesBA",
+  "major_id": 80,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "I A STD 1 - Introduction to International and Area Studies"
+      ],
+      "options": [
+        {
+          "title": "Area Studies",
+          "courses": [
+            "HIST 8A - Colonial Latin America",
+            "HIST 8B - Modern Latin America",
+            "HIST 8C - Latin American Social History",
+            "HIST 97E - Introduction to Historical Practice: Variable Topics in Latin American History",
+            "I A STD 50 - Introduction to Latin America",
+            "PORTGSE 40B - Portuguese, Brazilian, and African Literature in Translation: Brazilian Literature",
+            "PORTGSE 46 - Brazil and Portuguese-Speaking World",
+            "SPAN 44 - Latin American Cultures"
+          ]
+        },
+        {
+          "title": "International Politics and Markets",
+          "courses": [
+            "ECON 1 - Principles of Economics",
+            "ECON 2 - Principles of Economics",
+            "GEOG 4 - Globalization: Regional Development and World Economy",
+            "GEOG 6 - World Regions: Concepts and Contemporary Issues",
+            "POL SCI 50 - Introduction to Comparative Politics",
+            "SOCIOL 1 - Introductory Sociology"
+          ]
+        },
+        {
+          "title": "International Societies and Cultures",
+          "courses": [
+            "ANTHRO 3 - Culture and Society",
+            "COM LIT 1D - Great Books from World at Large",
+            "COM LIT 2DW - Survey of Literature: Great Books from World at Large",
+            "COM LIT 4DW - Literature and Writing: Great Books from World at Large",
+            "ETHNMUS 5 - Music Around World",
+            "ETHNMUS M25 - Global Pop",
+            "GEOG 3 - Cultural Geography",
+            "HIST 2B - Social Knowledge and Social Power",
+            "HIST 22 - Contemporary World History, 1760 to Present",
+            "WL ARTS 20 - Culture: Introduction",
+            "WL ARTS 33 - Colonialisms and Resistance"
+          ]
+        },
+        {
+          "title": "Foreign Language",
+          "courses": [
+            "PORTGSE 3 - Intermediate Portuguese",
+            "PORTGSE 11B - Intensive Portuguese",
+            "SPAN 5 - Intermediate Spanish",
+            "SPAN 7A - Introductory Spanish for Heritage Speakers"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select seven courses from the humanities and arts and social sciences groups as follows:",
+      "options": [
+        {
+          "title": "Area Studies",
+          "description": "Select three courses from:",
+          "options": [
+            {
+              "title": "Humanities and Arts Group 1",
+              "courses": [
+                "ART HIS C142A - Mexican Art in Modern Age",
+                "ART HIS C142B - Latin American Art of 20th Century",
+                "ART HIS 144 - Caribbean Art",
+                "COM LIT 177 - Comparative Studies of Francophone and Anglophone Caribbean",
+                "ETHNMUS M108A - Music of Latin America: Mexico, Central America, and Caribbean Isles",
+                "ETHNMUS 108B - Music of Latin America: Latin South America",
+                "ETHNMUS 113 - Music of Brazil",
+                "ETHNMUS 161K - Advanced World Music Performance Organizations: Music of Mexico",
+                "FILM TV 106C - History of African, Asian, and Latin American Film",
+                "MUSC M131 - Development of Latin Jazz",
+                "PORTGSE 130A - Introduction to Literature in Portuguese",
+                "PORTGSE 130B - Introduction to Literature in Portuguese",
+                "PORTGSE 141B - Film, Television, and Society in Brazil",
+                "PORTGSE 142A - Brazil and Its Culture",
+                "PORTGSE 142B - Brazil and Portugal in Comparative Perspective",
+                "SPAN 120 - Literature in Historical Context",
+                "WL ARTS C139 - Afro-Caribbean Ritual Arts"
+              ]
+            },
+            {
+              "title": "Social Sciences Group 1",
+              "courses": [
+                "AF AMER M154C - Black Experience in Latin America and Caribbean I",
+                "AF AMER M178 - Sociology of Caribbean",
+                "ANTHRO 161 - Latin American Communities",
+                "ANTHRO 162 - Ethnography of South America",
+                "CCAS 111 - Chicana/Chicano and Latina/Latino Intellectual Traditions",
+                "CCAS 117 - Chicana/Chicano Images in Mexican Film and Literature",
+                "CCAS M132 - Border Consciousness",
+                "CCAS C141 - Chicana and Latin American Women's Narrative",
+                "CCAS 143 - Mestizaje: History of Diverse Racial/Cultural Roots of Mexico",
+                "CCAS 151 - Human Rights in Americas",
+                "CCAS 169 - Representations of Indigenous Peoples in Americas",
+                "COM HLT 132 - Health, Disease, and Health Services in Latin America",
+                "GENDER M147C - Transnational Women's Organizing in Americas",
+                "GEOG 135 - Africa and African Diaspora in Americas",
+                "GEOG 172A - Spanish South America",
+                "GEOG 172C - Brazil",
+                "HIST 159 - Latin America in 19th Century",
+                "HIST 160A - Latin American Elitelore",
+                "HIST 160B - Mexican Revolution since 1910",
+                "HIST 162A - Modern Brazil",
+                "LBR STD M125 - U.S./Mexico Relations",
+                "LBR STD M144 - Women's Movement in Latin America",
+                "POL SCI 154A - Government and Politics in Latin America: States of Middle America",
+                "POL SCI 154B - Government and Politics in Latin America: States of South America",
+                "PUB HLT M106 - Health in Chicano/Latino Population",
+                "SOCIOL 186 - Latin American Societies",
+                "SOCIOL 191J - Undergraduate Seminar: Mexican Society"
+              ]
+            },
+            {
+              "title": "Additional Elective"
+            },
+            {
+              "title": "Substitutions"
+            }
+          ]
+        },
+        {
+          "title": "International Themes",
+          "description": "Select two courses from:",
+          "options": [
+            {
+              "title": "International Politics and Markets",
+              "courses": [
+                "ANTHRO 143 - Economic Anthropology",
+                "ECON 111 - Theories of Development",
+                "ECON 112 - Policies for Economic Development",
+                "ECON 121 - International Trade Theory",
+                "ECON 122 - International Finance",
+                "ENVIRON 134 - Environmental Economics with Data Analysis",
+                "GEOG M127 - Global Environment and Development: Problems and Issues",
+                "GEOG 148 - Political Geography",
+                "GEOG 150 - Economic Geography",
+                "INTL DV 130 - Theory and History in International Development",
+                "MGMT 109 - International Business Law",
+                "MGMT 127C - International Taxation",
+                "POL SCI M122B - Global Environment and World Politics",
+                "POL SCI 123A - International Law",
+                "POL SCI 124A - International Political Economy",
+                "POL SCI 125A - Arms Control and International Security",
+                "POL SCI 126 - Peace and War",
+                "POL SCI 129 - Diplomacy and War",
+                "POL SCI 134 - Foreign Policy Decision Making and Tools of Statecraft",
+                "POL SCI 137A - International Relations Theory",
+                "POL SCI 150 - Political Violence",
+                "POL SCI 166 - Comparative Constitutional Design",
+                "POL SCI M167C - Political Economy of Development",
+                "POL SCI 167D - Political Institutions and Economic Development",
+                "POL SCI 168 - Comparative Political Analysis",
+                "SOCIOL 182 - Political Sociology",
+                "SOCIOL 183 - Comparative and Historical Sociology",
+                "URBN PL M165 - Environmentalism: Past, Present, and Future"
+              ]
+            },
+            {
+              "title": "International Societies and Cultures",
+              "courses": [
+                "ANTHRO 130 - Study of Culture",
+                "ANTHRO 140 - Study of Social Systems",
+                "ANTHRO 146 - Urban Anthropology",
+                "ANTHRO 147 - Development Anthropology",
+                "ART HIS C160 - Art and Empire",
+                "COMM 179 - Images of U.S.",
+                "COM LIT 100 - Introduction to Literary and Critical Theory",
+                "ENVIRON M133 - Environmental Sociology",
+                "FILM TV 112 - Film and Social Change",
+                "GEOG M131 - Human Impact on Biophysical Environment",
+                "GEOG 139C - Problems in Geography: Culture and Environment in Modern World",
+                "GEOG 140 - Social Geography",
+                "GEOG 141 - Cultural Geography of Modern World",
+                "GEOG 158 - Population Geography",
+                "GEOG 161 - Cities and Social Difference",
+                "HIST M186B - Global Feminism, 1850 to Present",
+                "HNRS M152 - (When) Do Leaders Make Differences?",
+                "INTL DV 110 - Culture, Power, and Development",
+                "SOCIOL 116 - Social Demography",
+                "SOCIOL 151 - Comparative Immigration",
+                "SOCIOL 154 - Race and Ethnicity in Latin America",
+                "SOCIOL 191D - Undergraduate Seminar: Sociology of Development",
+                "SOCIOL 191F - Undergraduate Seminar: Sociology of Globalization"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "I A STD 191 - Variable Topics Senior Research Seminars: International and Area Studies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "I A STD 198A - Honors Research in International and Area Studies",
+        "I A STD 198B - Honors Research in International and Area Studies",
+        "I A STD 198C - Honors Research in International and Area Studies"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "major_name": "MusicEducationBA",
+  "major_id": 132,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following courses with grades of C\u2013 or better:",
+      "options": [
+        {
+          "title": "Musicianship",
+          "courses": [
+            "MUSC M6A - Introduction to Global Musicianship",
+            "MUSC M6B - Introduction to Musicianship",
+            "MUSC M6C - Introduction to Musicianship"
+          ]
+        },
+        {
+          "title": "Theory",
+          "options": [
+            {
+              "title": "Music 20 Series",
+              "courses": [
+                "MUSC 20A - Music Theory I",
+                "MUSC 20B - Music Theory II",
+                "MUSC 20C - Music Theory III"
+              ]
+            },
+            {
+              "title": "Music 21 Series",
+              "courses": [
+                "MUSC 21A - Project Approach to Music Theory I",
+                "MUSC 21B - Project Approach to Music Theory II",
+                "MUSC 21C - Project Approach to Music Theory III"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Instrumental or Vocal Studio",
+          "description": "Complete 12 units from:",
+          "options": [
+            {
+              "title": "Instrumentalists",
+              "courses": [
+                "Music 60A through 60U"
+              ]
+            },
+            {
+              "title": "Vocalists",
+              "courses": [
+                "MUSC 61A - Voice Studio",
+                "MUSC 61C - Voice Coaching for Music Education Specialists"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Large Conducted Ensembles",
+          "courses": [
+            "MUSC C185A - UCLA Chorale",
+            "MUSC C185B - Chamber Singers",
+            "MUSC C185C - Opera Workshop",
+            "MUSC C185D - Symphony Orchestra",
+            "MUSC C185E - Philharmonia",
+            "MUSC 185F - Symphonic Band",
+            "MUSC C185G - Wind Ensemble",
+            "MUSC 185H - Marching and Varsity Bands"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following courses with grades of C- or better:",
+      "options": [
+        {
+          "title": "Musicianship",
+          "courses": [
+            "MUSC 102A - Advanced Musicianship I",
+            "MUSC 102B - Advanced Musicianship II",
+            "MUSC 102C - Advanced Musicianship III"
+          ]
+        },
+        {
+          "title": "Theory",
+          "courses": [
+            "MUSC 111A - Music Theory through Improvisation",
+            "MUSC 111B - Music Creation and Analysis through Technology",
+            "MUSC 111C - Arranging Music for Educational Settings"
+          ]
+        },
+        {
+          "title": "History",
+          "courses": [
+            "MUSCLG 125A - History of Western Music: Era of Church and Patron",
+            "MUSCLG 125B - History of Western Music: Era of Empires and Marketplaces",
+            "MUSCLG 125C - History of Western Music: Modern and Postmodern Era"
+          ]
+        },
+        {
+          "title": "Music Education",
+          "courses": [
+            "MUSC 110A - Learning Approaches in Music Education",
+            "MUSC 110B - Musicality and Creativity in Childhood",
+            "MUSC 110C - Comparative Study of Choral Music Education",
+            "MUSC 110D - Comparative Study of Instrumental Music Education",
+            "MUSC 114A - Study of Instrumental Techniques: High Strings",
+            "MUSC 114B - Study of Instrumental Techniques: Low Strings",
+            "MUSC 114C - Vocal Techniques for Music Education I",
+            "MUSC 114D - Vocal Techniques for Music Education II",
+            "MUSC 114J - Piano Skill in Classroom",
+            "MUSC 115A - Study of Instrumental Techniques: Woodwinds",
+            "MUSC 115B - Study of Instrumental Techniques: Brass",
+            "MUSC 115C - Study of Instrumental Techniques: Percussion",
+            "MUSC 116 - Introduction to Conducting",
+            "MUSC 117 - Study and Conducting of Instrumental and Choral Literature"
+          ]
+        },
+        {
+          "title": "Advanced Instrumental or Voice Studio",
+          "description": "Select 4 units from:",
+          "options": [
+            {
+              "title": "Instrumentalists",
+              "courses": [
+                "Music 160A through 160U"
+              ]
+            },
+            {
+              "title": "Vocalists",
+              "courses": [
+                "MUSC 161A - Advanced Voice Studio",
+                "MUSC 161C - Advanced Voice Coaching for Music Education Specialists"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Public Recital",
+          "courses": [
+            "Music 163A through 163V"
+          ]
+        },
+        {
+          "title": "Capstone Project",
+          "courses": [
+            "MUSC 110D - Comparative Study of Instrumental Music Education"
+          ]
+        }
+      ]
+    }
+  ]
+}

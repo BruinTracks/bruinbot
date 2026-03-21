@@ -5,16 +5,17 @@ import {
   getLatestSchedule,
 } from "../controllers/scheduling_controller.js";
 import { handleScheduleEdit } from "../controllers/schedule_edit_controller.js";
+import { authenticateUser } from "../middleware/auth.js";
 
 const router = express.Router();
 
 // POST /schedule
-router.post("/", scheduleCourses);
+router.post("/", authenticateUser, scheduleCourses);
 
 // GET /schedule/latest
-router.get("/latest", getLatestSchedule);
+router.get("/latest", authenticateUser, getLatestSchedule);
 
 // POST /schedule/edit - Basic endpoint for schedule editing
-router.post("/edit", handleScheduleEdit);
+router.post("/edit", authenticateUser, handleScheduleEdit);
 
 export default router;

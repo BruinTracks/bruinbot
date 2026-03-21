@@ -1,0 +1,258 @@
+{
+  "major_name": "MarineBiologyBS",
+  "major_id": 89,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Life Sciences Core Curriculum",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Atmospheric and Oceanic Sciences or Earth, Planetary, and Space Sciences",
+              "courses": [
+                "A&O SCI 1 - Climate Change: From Puzzles to Policy",
+                "EPS SCI 15 - Blue Planet: Introduction to Oceanography"
+              ]
+            },
+            {
+              "title": "Chemistry"
+            },
+            {
+              "title": "Life Sciences",
+              "courses": [
+                "LIFESCI 7A - Cell and Molecular Biology",
+                "LIFESCI 7B - Genetics, Evolution, and Ecology",
+                "LIFESCI 7C - Physiology and Human Biology",
+                "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+              ]
+            },
+            {
+              "title": "Mathematics"
+            },
+            {
+              "title": "Statistics",
+              "courses": [
+                "LIFESCI 40 - Statistics of Biological Systems",
+                "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+              ]
+            },
+            {
+              "title": "Physics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select at least 4 laboratory units (one course) from:",
+      "courses": [
+        "EE BIOL 109 - Introduction to Marine Science",
+        "EE BIOL 109L - Introduction to Marine Science Laboratory"
+      ],
+      "options": [
+        {
+          "title": "Laboratory",
+          "courses": [
+            "EE BIOL 101 - Marine Botany",
+            "EE BIOL 105 - Biology of Invertebrates",
+            "EE BIOL 110 - Vertebrate Morphology",
+            "EE BIOL 112 - Ichthyology",
+            "EE BIOL 136 - Ecological Restoration",
+            "EE BIOL 170 - Animal Environmental Physiology",
+            "EE BIOL 181 - Parasitology"
+          ]
+        },
+        {
+          "title": "Marine Organismic Biology or Physiology",
+          "courses": [
+            "EE BIOL 101 - Marine Botany",
+            "EE BIOL 105 - Biology of Invertebrates",
+            "EE BIOL 107 - Evolution, Development, and Function of Invertebrate Animals",
+            "EE BIOL 112 - Ichthyology",
+            "EE BIOL 117 - Evolution of Vertebrates",
+            "EE BIOL 128 - Plant Physiological Ecology",
+            "EE BIOL 140 - Biology of Marine Mammals",
+            "EE BIOL 142 - Aquatic Communities",
+            "EE BIOL 170 - Animal Environmental Physiology",
+            "EE BIOL C174 - Comparative Biology and Macroevolution",
+            "EE BIOL 184 - Evolution, Development, and Disease",
+            "PHYSCI 166 - Animal Physiology"
+          ]
+        },
+        {
+          "title": "Ecology and Behavior",
+          "courses": [
+            "ANTHRO 128P - Primate Behavior Nonhuman to Human",
+            "BIOENGR CM186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "C&S BIO M186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "COM SCI CM186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "EE BIOL 100 - Introduction to Ecology and Behavior",
+            "EE BIOL 116 - Conservation Biology",
+            "EE BIOL C119A - Mathematical and Computational Modeling in Ecology",
+            "EE BIOL C119B - Modeling in Ecological Research",
+            "EE BIOL 122 - Ecology",
+            "EE BIOL C126 - Behavioral Ecology",
+            "EE BIOL 128 - Plant Physiological Ecology",
+            "EE BIOL 129 - Animal Behavior",
+            "EE BIOL M131 - Ecosystem Ecology",
+            "EE BIOL 133 - Elements of Theoretical and Computational Biology",
+            "EE BIOL 136 - Ecological Restoration",
+            "EE BIOL 137 - Chemical Communication",
+            "EE BIOL 140 - Biology of Marine Mammals",
+            "EE BIOL 142 - Aquatic Communities",
+            "EE BIOL 143 - Viral Ecology and Evolution",
+            "EE BIOL C146 - Conservation Genetics",
+            "EE BIOL 151A - Tropical Ecology",
+            "EE BIOL 152 - World Vegetation Ecology and Ecophysiology",
+            "EE BIOL 154 - California Ecosystems",
+            "EE BIOL 155 - Community Ecology",
+            "EE BIOL M157 - Biology of Superheroes: Exploring Limits of Form and Function",
+            "EE BIOL 161 - Plant Ecology",
+            "EE BIOL 161L - Plant Ecology Laboratory",
+            "EE BIOL 162 - Plant Physiology",
+            "EE BIOL 170 - Animal Environmental Physiology",
+            "EE BIOL C172 - Advanced Statistics in Ecology and Evolutionary Biology",
+            "EE BIOL M178 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "EE BIOL 183 - Finding Ecological Solutions to Environmental Problems",
+            "EE BIOL 184 - Evolution, Development, and Disease",
+            "GEOG M110 - Ecosystem Ecology"
+          ]
+        },
+        {
+          "title": "Evolution",
+          "courses": [
+            "ANTHRO M128S - Primate Genetics, Ecology, and Conservation",
+            "EPS SCI CM173 - Earth Process and Evolutionary History",
+            "EE BIOL 116 - Conservation Biology",
+            "EE BIOL 117 - Evolution of Vertebrates",
+            "EE BIOL 120 - Evolution",
+            "EE BIOL 121 - Molecular Evolution",
+            "EE BIOL 130 - Principles of Systematic Biology",
+            "EE BIOL 133 - Elements of Theoretical and Computational Biology",
+            "EE BIOL C135 - Population Genetics",
+            "EE BIOL 140 - Biology of Marine Mammals",
+            "EE BIOL 143 - Viral Ecology and Evolution",
+            "EE BIOL 144 - Prehistoric California",
+            "EE BIOL 144L - Prehistoric California Laboratory",
+            "EE BIOL C146 - Conservation Genetics",
+            "EE BIOL 149 - Evolutionary Genomics",
+            "EE BIOL 150 - Principles of Genetics",
+            "EE BIOL 150L - Principles of Genetics Laboratory",
+            "EE BIOL CM173 - Earth Process and Evolutionary History",
+            "EE BIOL C174 - Comparative Biology and Macroevolution",
+            "EE BIOL 175 - Evolutionary Dynamics of Sex",
+            "EE BIOL 184 - Evolution, Development, and Disease",
+            "EE BIOL 185 - Evolutionary Medicine",
+            "EE BIOL 186 - Evolutionary Medicine: Clinical Perspective on Medical, Surgical, and Psychiatric Disorders",
+            "LIFESCI 107 - Genetics",
+            "SOC GEN M142 - Primate Genetics, Ecology, and Conservation"
+          ]
+        },
+        {
+          "title": "Capstone Field Quarter"
+        },
+        {
+          "title": "Physical, Chemical, or Geological Oceanography",
+          "courses": [
+            "A&O SCI 102 - Climate Change and Climate Modeling",
+            "A&O SCI 103 - Physical Oceanography",
+            "A&O SCI 104 - Fundamentals of Air and Water Pollution",
+            "A&O SCI M105 - Introduction to Chemical Oceanography",
+            "A&O SCI M106 - Applied Climatology: Principles of Climate Impact on Natural Environment",
+            "A&O SCI 130 - California's Ocean",
+            "CHEM 103 - Environmental Chemistry",
+            "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+            "EPS SCI 100 - Principles of Earth Science",
+            "EPS SCI 116 - Paleontology",
+            "EPS SCI 119 - Continental Drift and Plate Tectonics",
+            "EPS SCI C141 - Basin Analysis",
+            "EPS SCI 153 - Oceans and Atmospheres",
+            "EE BIOL 104 - Plants and People",
+            "EE BIOL M131 - Ecosystem Ecology",
+            "EE BIOL M139 - Introduction to Chemical Oceanography",
+            "EE BIOL 153 - Physics and Chemistry of Biotic Environments",
+            "EE BIOL 198B - Honors Research in Ecology and Evolutionary Biology",
+            "EE BIOL 199 - Directed Research in Ecology and Evolutionary Biology",
+            "GEOG 101 - Principles of Geomorphology",
+            "GEOG M110 - Ecosystem Ecology",
+            "GEOG M118 - Applied Climatology: Principles of Climate Impact on Natural Environment",
+            "GEOG 130 - Food and Environment",
+            "GEOG 182A - Introduction to Remote Sensing",
+            "MECH&AE 103 - Elementary Fluid Mechanics",
+            "MECH&AE 150A - Intermediate Fluid Mechanics",
+            "MCD BIO 172 - Genomics and Bioinformatics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Field Biology",
+      "description": "The Field Biology Quarter involves some combination of the following courses:",
+      "options": [
+        {
+          "title": "Field Biology Quarter (FBQ)",
+          "courses": [
+            "EE BIOL 113B - Field Herpetology",
+            "EE BIOL 114B - Field Ornithology",
+            "EE BIOL 118 - Plant Adaptations",
+            "EE BIOL 124A - Field Ecology",
+            "EE BIOL 124B - Field Ecology",
+            "EE BIOL 125 - Tropical Animal Communication",
+            "EE BIOL C126 - Behavioral Ecology",
+            "EE BIOL 132 - Field Behavioral Ecology",
+            "EE BIOL 134B - Field Physiological Ecology of Desert Animals",
+            "EE BIOL 151B - Field Tropical Ecology"
+          ]
+        },
+        {
+          "title": "Marine Biology Quarter (MBQ)",
+          "courses": [
+            "EE BIOL 102 - Biology of Marine Invertebrates",
+            "EE BIOL 106 - Experimental Marine Invertebrate Biology",
+            "EE BIOL 123A - Field Marine Ecology",
+            "EE BIOL 123B - Field Marine Ecology",
+            "EE BIOL 147 - Biological Oceanography",
+            "EE BIOL 148 - Biology of Marine Plants",
+            "EE BIOL 163 - Biology of Marine Tetrapods",
+            "EE BIOL 164 - Field Biology of Marine Fishes",
+            "EE BIOL 165 - Ecological Physiology of Marine Vertebrates",
+            "EE BIOL 182 - Marine Parasitology"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "EE BIOL 198A - Honors Research in Ecology and Evolutionary Biology",
+        "EE BIOL 198B - Honors Research in Ecology and Evolutionary Biology"
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Complete the following three courses and Program in Computing 30 and 60:",
+      "options": [
+        {
+          "title": "Program in Computing",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming",
+            "COMPTNG 10C - Advanced Programming"
+          ]
+        },
+        {
+          "title": "Additional Course",
+          "courses": [
+            "COM SCI CM186 - Computational Systems Biology: Modeling and Simulation of Biological Systems",
+            "PSYCH 186A - Cognitive Science Laboratory: Introduction to Theory and Simulation",
+            "PSYCH 186B - Cognitive Science Laboratory: Neural Networks"
+          ]
+        }
+      ]
+    }
+  ]
+}

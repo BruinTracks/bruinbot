@@ -1,0 +1,195 @@
+{
+  "major_name": "BiochemistryBS",
+  "major_id": 30,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one series:",
+      "options": [
+        {
+          "title": "Chemistry 14 or 20 Series",
+          "description": "Chemistry 14AE or 14BE may be substituted for 14A or 14B respectively.",
+          "options": [
+            {
+              "title": "Chemistry 14 series",
+              "description": "Chemistry 14AE or 14BE may be substituted for 14A or 14B respectively.",
+              "courses": [
+                "CHEM 14A - General Chemistry for Life Scientists I",
+                "CHEM 14B - General Chemistry for Life Scientists II",
+                "CHEM 20L - General Chemistry Laboratory"
+              ]
+            },
+            {
+              "title": "Chemistry 20 series",
+              "description": "Chemistry 20AH or 20BH may be substituted for 20A or 20B respectively.",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change",
+                "CHEM 20L - General Chemistry Laboratory"
+              ]
+            },
+            {
+              "title": "Chemistry 30 series",
+              "courses": [
+                "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+                "CHEM 30AL - General Chemistry Laboratory II",
+                "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+                "CHEM 30BL - Organic Chemistry Laboratory I",
+                "CHEM 30C - Organic Chemistry III: Reactivity, Synthesis, and Biomolecules"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chemistry 30 Series",
+          "courses": [
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30AL - General Chemistry Laboratory II",
+            "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+            "CHEM 30BL - Organic Chemistry Laboratory I",
+            "CHEM 30C - Organic Chemistry III: Reactivity, Synthesis, and Biomolecules"
+          ]
+        },
+        {
+          "title": "Life Sciences",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "LIFESCI 7B - Genetics, Evolution, and Ecology",
+            "LIFESCI 7C - Physiology and Human Biology",
+            "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables"
+          ],
+          "options": [
+            {
+              "title": "Recommended Course",
+              "courses": [
+                "MATH 33A - Linear Algebra and Applications"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Physics",
+          "options": [
+            {
+              "title": "Physics 1 series",
+              "courses": [
+                "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+                "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+              ]
+            },
+            {
+              "title": "Physics 1 Honors Series",
+              "courses": [
+                "PHYSICS 1AH - Physics for Scientists and Engineers: Mechanics (Honors)",
+                "PHYSICS 1BH - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields (Honors)",
+                "PHYSICS 1CH - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity (Honors)",
+                "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+              ]
+            },
+            {
+              "title": "Physics 5 series",
+              "courses": [
+                "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy",
+                "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                "PHYSICS 5C - Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete one additional upper-division or graduate course in chemistry and biochemistry.",
+      "courses": [
+        "CHEM 110A - Physical Chemistry: Chemical Thermodynamics",
+        "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+        "CHEM 153B - Biochemistry: DNA, RNA, and Protein Synthesis",
+        "CHEM 153C - Biochemistry: Biosynthetic and Energy Metabolism and Its Regulation",
+        "CHEM 153L - Biochemical Methods I",
+        "CHEM 154 - Biochemical Methods II",
+        "CHEM 156 - Physical Biochemistry"
+      ],
+      "options": [
+        {
+          "title": "Chemistry and Biochemistry Elective"
+        },
+        {
+          "title": "Additional Electives",
+          "description": "Microbiology 101 is highly recommended.",
+          "options": [
+            {
+              "title": "Microbiology",
+              "courses": [
+                "MIMG 101 - Introductory Microbiology"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "description": "Select at least one seminar course from:",
+      "options": [
+        {
+          "title": "Undergraduate Seminar",
+          "courses": [
+            "CHEM 193A - Journal Club Seminars: UC LEADS and MARC",
+            "CHEM 193B - Journal Club Seminars: Chemistry and Biochemistry"
+          ]
+        },
+        {
+          "title": "Research",
+          "courses": [
+            "CHEM 196A - Research Apprenticeship in Chemistry and Biochemistry",
+            "CHEM 196B - Research Apprenticeship in Chemistry and Biochemistry",
+            "CHEM 199 - Directed Research in Chemistry and Biochemistry"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Complete the following two courses and one elective:",
+      "options": [
+        {
+          "title": "Program in Computing",
+          "description": "Select one course from:",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming"
+          ],
+          "options": [
+            {
+              "title": "Additional Program in Computing",
+              "courses": [
+                "COMPTNG 10C - Advanced Programming",
+                "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+                "COMPTNG 20A - Principles of Java Language with Applications"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Computational Chemistry",
+          "courses": [
+            "CHEM C126A - Computational Methods for Chemists",
+            "CHEM C145 - Theoretical and Computational Organic Chemistry",
+            "COM SCI C121 - Probabilistic Models in Computational Genomics"
+          ]
+        }
+      ]
+    }
+  ]
+}

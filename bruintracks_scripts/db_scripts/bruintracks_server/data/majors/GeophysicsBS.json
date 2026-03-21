@@ -1,0 +1,145 @@
+{
+  "major_name": "GeophysicsBS",
+  "major_id": 64,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following four courses:",
+      "options": [
+        {
+          "title": "Earth, Planetary, and Space Sciences",
+          "description": "Any course from Earth, Planetary, and Space Sciences 3 through 17 or Cluster 70A may be substituted for Earth, Planetary, and Space Sciences 1.",
+          "courses": [
+            "EPS SCI 1 - Introduction to Earth Science",
+            "EPS SCI 51 - Mineralogy: Earth and Planetary Materials",
+            "EPS SCI 61 - Geologic Maps",
+            "EPS SCI M71 - Introduction to Computing for Geoscientists"
+          ],
+          "options": [
+            {
+              "title": "Earth, Planetary, and Space Sciences 1 Alternatives",
+              "description": "Any course from Earth, Planetary, and Space Sciences 3 through 17 may be substituted for Earth, Planetary, and Space Sciences 1."
+            }
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations"
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism",
+            "PHYSICS 32 - Mathematical Methods"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete nine courses as follows:",
+      "options": [
+        {
+          "title": "Required Core",
+          "description": "Complete the following course:",
+          "courses": [
+            "EPS SCI 136A - Applied Geophysics",
+            "EPS SCI M140 - Introduction to Fluid Dynamics",
+            "EPS SCI M171 - Advanced Computing in Geosciences"
+          ],
+          "options": [
+            {
+              "title": "Capstone Field Research",
+              "courses": [
+                "EPS SCI 136C - Field Geophysics"
+              ]
+            },
+            {
+              "title": "Additional Earth, Planetary, and Space Sciences",
+              "courses": [
+                "EPS SCI 152 - Physics of Earth",
+                "EPS SCI 153 - Oceans and Atmospheres",
+                "EPS SCI 154 - Solar Terrestrial Physics",
+                "EPS SCI 155 - Planetary Physics",
+                "EPS SCI M156 - Introduction to Plasma Science and Engineering"
+              ]
+            },
+            {
+              "title": "Physics",
+              "courses": [
+                "PHYSICS 105A - Analytic Mechanics",
+                "PHYSICS 105B - Analytic Mechanics",
+                "PHYSICS 110A - Electricity and Magnetism",
+                "PHYSICS 110B - Electricity and Magnetism"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Area Requirement",
+          "options": [
+            {
+              "title": "Applied Geophysics",
+              "courses": [
+                "EPS SCI 111 - Stratigraphic and Field Geology",
+                "EPS SCI 112 - Structural Geology",
+                "EPS SCI C122 - Introduction to Seismology",
+                "EPS SCI 136B - Applied Geophysics",
+                "EPS SCI 150 - Remote Sensing for Earth Sciences",
+                "EPS SCI 152 - Physics of Earth"
+              ]
+            },
+            {
+              "title": "Earth and Planetary Exploration",
+              "courses": [
+                "EPS SCI 150 - Remote Sensing for Earth Sciences",
+                "EPS SCI 153 - Oceans and Atmospheres",
+                "EPS SCI 154 - Solar Terrestrial Physics",
+                "EPS SCI 155 - Planetary Physics",
+                "EPS SCI M156 - Introduction to Plasma Science and Engineering"
+              ]
+            },
+            {
+              "title": "Physics of the Earth",
+              "courses": [
+                "EPS SCI 119 - Continental Drift and Plate Tectonics",
+                "EPS SCI C122 - Introduction to Seismology",
+                "EPS SCI 136B - Applied Geophysics",
+                "EPS SCI 150 - Remote Sensing for Earth Sciences",
+                "EPS SCI 152 - Physics of Earth"
+              ]
+            },
+            {
+              "title": "Space Physics",
+              "courses": [
+                "A&O SCI C170 - Introduction to Solar System Plasmas",
+                "EPS SCI 136B - Applied Geophysics",
+                "EPS SCI 154 - Solar Terrestrial Physics",
+                "EPS SCI 155 - Planetary Physics",
+                "EPS SCI M156 - Introduction to Plasma Science and Engineering",
+                "PHYSICS M122 - Introduction to Plasma Science and Engineering"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "EPS SCI 198 - Honors Research in Earth, Planetary, and Space Sciences"
+      ]
+    }
+  ]
+}

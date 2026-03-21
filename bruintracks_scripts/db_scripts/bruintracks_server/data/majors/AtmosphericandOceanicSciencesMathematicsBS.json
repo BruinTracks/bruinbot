@@ -1,0 +1,146 @@
+{
+  "major_name": "AtmosphericandOceanicSciencesMathematicsBS",
+  "major_id": 29,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete three courses as follows:",
+      "options": [
+        {
+          "title": "Atmospheric and Oceanic Sciences",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Atmospheric and Oceanic Sciences M71 or Program in Computing 10A",
+              "courses": [
+                "A&O SCI M71 - Introduction to Computing for Geoscientists",
+                "COMPTNG 10A - Introduction to Programming"
+              ]
+            },
+            {
+              "title": "Atmospheric and Oceanic Sciences 90",
+              "courses": [
+                "A&O SCI 90 - Introduction to Undergraduate Research in Atmospheric and Oceanic Sciences"
+              ]
+            },
+            {
+              "title": "Atmospheric and Oceanic Sciences Elective",
+              "courses": [
+                "A&O SCI 1 - Climate Change: From Puzzles to Policy",
+                "A&O SCI 2 - Air Pollution",
+                "A&O SCI 3 - Meteorology and Extreme Weather",
+                "A&O SCI 5 - Climates of Other Worlds",
+                "A&O SCI M7 - Perils of Space: Introduction to Space Weather",
+                "A&O SCI 51 - Fundamentals of Climate Science"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations"
+          ]
+        },
+        {
+          "title": "Physics",
+          "courses": [
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity"
+          ]
+        },
+        {
+          "title": "Chemistry Biochemistry",
+          "options": [
+            {
+              "title": "Chemistry 14 series",
+              "courses": [
+                "CHEM 14A - General Chemistry for Life Scientists I",
+                "CHEM 14B - General Chemistry for Life Scientists II"
+              ]
+            },
+            {
+              "title": "Chemistry 20 series",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete six mathematics courses as follows:",
+      "options": [
+        {
+          "title": "Mathematics",
+          "description": "Select three courses from the following, one of which must be 115B, 131B, 151B, or 170B:",
+          "courses": [
+            "MATH 115A - Linear Algebra",
+            "MATH 131A - Analysis",
+            "MATH 134 - Linear and Nonlinear Systems of Differential Equations"
+          ],
+          "options": [
+            {
+              "title": "Mathematics Electives",
+              "courses": [
+                "MATH 115B - Linear Algebra",
+                "MATH 131B - Analysis",
+                "MATH 135 - Ordinary Differential Equations",
+                "MATH 136 - Partial Differential Equations",
+                "MATH 142 - Mathematical Modeling",
+                "MATH 151A - Applied Numerical Methods",
+                "MATH 151B - Applied Numerical Methods",
+                "MATH 170A - Probability Theory I",
+                "MATH 170B - Probability Theory II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Atmospheric and Oceanic Sciences",
+          "description": "Select two courses from:",
+          "options": [
+            {
+              "title": "Core",
+              "courses": [
+                "A&O SCI 101 - Fundamentals of Atmospheric Dynamics and Thermodynamics",
+                "A&O SCI 103 - Physical Oceanography",
+                "A&O SCI 112 - Climate Change Assessment"
+              ]
+            },
+            {
+              "title": "Elective",
+              "courses": [
+                "A&O SCI C110 - Advanced Dynamic and Synoptic Meteorology",
+                "A&O SCI C115 - Mesometeorology",
+                "A&O SCI M120 - Introduction to Fluid Dynamics",
+                "A&O SCI C144 - Atmospheric Boundary Layer",
+                "A&O SCI C160 - Remote Sensing of Atmosphere and Oceans",
+                "A&O SCI C170 - Introduction to Solar System Plasmas",
+                "A&O SCI 180 - Numerical Methods in Atmospheric Sciences"
+              ]
+            },
+            {
+              "title": "Additional Electives"
+            }
+          ]
+        },
+        {
+          "title": "Capstone Senior Projects/Thesis",
+          "courses": [
+            "A&O SCI 199 - Directed Research in Atmospheric and Oceanic Sciences"
+          ]
+        }
+      ]
+    }
+  ]
+}

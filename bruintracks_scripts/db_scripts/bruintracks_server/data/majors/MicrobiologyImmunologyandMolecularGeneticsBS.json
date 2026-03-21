@@ -1,0 +1,252 @@
+{
+  "major_name": "MicrobiologyImmunologyandMolecularGeneticsBS",
+  "major_id": 95,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Life Sciences Core Curriculum",
+          "description": "Select one series from:",
+          "options": [
+            {
+              "title": "Chemistry"
+            },
+            {
+              "title": "Life Sciences",
+              "courses": [
+                "LIFESCI 7A - Cell and Molecular Biology",
+                "LIFESCI 7B - Genetics, Evolution, and Ecology",
+                "LIFESCI 7C - Physiology and Human Biology",
+                "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "description": "Students may select either Life Sciences 40 or Statistics 13."
+            },
+            {
+              "title": "Physics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete 10 courses as follows:",
+      "options": [
+        {
+          "title": "Plan I\u2014Research Immersion Laboratory",
+          "description": "Complete the following five courses. Select either Chemistry 153B or Microbiology 132.",
+          "options": [
+            {
+              "title": "Foundation",
+              "courses": [
+                "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+                "CHEM 153B - Biochemistry: DNA, RNA, and Protein Synthesis",
+                "LIFESCI 107 - Genetics",
+                "MIMG 101 - Introductory Microbiology",
+                "MIMG 132 - Cell Biology of Nucleus",
+                "MIMG 185A - Immunology"
+              ]
+            },
+            {
+              "title": "Microbiology Research"
+            },
+            {
+              "title": "Focus Electives",
+              "courses": [
+                "CHEM 153L - Biochemical Methods I",
+                "MIMG 102 - Introductory Virology",
+                "MIMG 105 - Biological Microscopy",
+                "MIMG 106 - Molecular and Genetic Basis of Bacterial Infections",
+                "MIMG 107 - Viral Pathogenesis",
+                "MIMG 132 - Cell Biology of Nucleus",
+                "MIMG CM156 - Human Genetics and Genomics",
+                "MIMG 158 - Microbial Genomics",
+                "MIMG 168 - Molecular Parasitology",
+                "MIMG CM256 - Human Genetics and Genomics",
+                "MCD BIO 138 - Developmental Biology",
+                "MCD BIO 165A - Biology of Cells"
+              ]
+            },
+            {
+              "title": "General Elective",
+              "courses": [
+                "BIOENGR 100 - Bioengineering Fundamentals",
+                "BIOENGR CM145 - Molecular Biotechnology for Engineers",
+                "BIOENGR CM178 - Introduction to Biomaterials",
+                "BIOSTAT 100 - Introduction to Biostatistics",
+                "CHEM 103 - Environmental Chemistry",
+                "CHEM 110A - Physical Chemistry: Chemical Thermodynamics",
+                "CHEM M117 - Structure, Patterns, and Polyhedra",
+                "CHEM 136 - Organic Structural Methods",
+                "CHEM C140 - Bionanotechnology",
+                "CHEM 153B - Biochemistry: DNA, RNA, and Protein Synthesis",
+                "CHEM 153C - Biochemistry: Biosynthetic and Energy Metabolism and Its Regulation",
+                "CHEM 153L - Biochemical Methods I",
+                "CHEM 154 - Biochemical Methods II",
+                "CHEM 156 - Physical Biochemistry",
+                "CHEM 171 - Intermediate Inorganic Chemistry",
+                "CHEM C172 - Advanced Inorganic Chemistry",
+                "CHEM C181 - Polymer Chemistry",
+                "COM SCI C121 - Probabilistic Models in Computational Genomics",
+                "COM SCI C122 - Algorithms in Computational Genomics",
+                "COM SCI C124 - Machine Learning Applications in Genetics",
+                "EE BIOL 121 - Molecular Evolution",
+                "EE BIOL C135 - Population Genetics",
+                "EE BIOL 137 - Chemical Communication",
+                "EE BIOL 162 - Plant Physiology",
+                "EPIDEM 100 - Principles of Epidemiology",
+                "HUM GEN C144 - Genomic Technology",
+                "MIMG C122 - Mouse Molecular Genetics",
+                "MIMG 174 - Advanced Topics in Molecular Parasitology",
+                "MIMG C185B - Advanced Immunology and Applications",
+                "MIMG 191H - Honors Research Seminars: Microbiology, Immunology, and Molecular Genetics",
+                "MIMG 198C - Honors Research in Microbiology, Immunology, and Molecular Genetics",
+                "MIMG 199 - Directed Research in Microbiology, Immunology, and Molecular Genetics",
+                "MCD BIO 100 - Introduction to Cell Biology",
+                "MCD BIO 104AL - Research Immersion Laboratory in Developmental Biology",
+                "MCD BIO 138 - Developmental Biology",
+                "MCD BIO M140 - Cancer Cell Biology",
+                "MCD BIO C141 - Molecular Basis of Plant Differentiation and Development",
+                "MCD BIO 143 - Developmental Biology: Genetic Control of Organogenesis",
+                "MCD BIO 144 - Molecular Biology of Cellular Processes",
+                "MCD BIO C150 - Plant Communication",
+                "MCD BIO 165A - Biology of Cells",
+                "MCD BIO 168 - Stem Cell Biology",
+                "MCD BIO 172 - Genomics and Bioinformatics",
+                "MCD BIO M175A - Neuroscience: From Molecules to Mind\u2014Cellular and Systems Neuroscience",
+                "MCD BIO M175B - Neuroscience: From Molecules to Mind\u2014Molecular and Developmental Neuroscience",
+                "MCD BIO M175C - Neuroscience: From Molecules to Mind\u2014Behavioral and Cognitive Neuroscience",
+                "MCD BIO 187AL - Research Immersion Laboratory in Genomic Biology",
+                "NEUROSC M101A - Neuroscience: From Molecules to Mind\u2014Cellular and Systems Neuroscience",
+                "NEUROSC M101B - Neuroscience: From Molecules to Mind\u2014Molecular and Developmental Neuroscience",
+                "NEUROSC M101C - Neuroscience: From Molecules to Mind\u2014Behavioral and Cognitive Neuroscience",
+                "PHYSCI 121 - Disease Mechanisms and Therapies",
+                "PHYSCI 124 - Molecular Biology of Aging",
+                "PHYSCI 125 - Molecular Systems Biology",
+                "PHYSCI 128 - Me, Myself, and Microbes: The Microbiome in Health and Disease",
+                "STATS 100A - Introduction to Probability",
+                "STATS 100B - Introduction to Mathematical Statistics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Plan II\u2014Advanced Independent Research",
+          "description": "Complete the following five courses. Select either Chemistry 153B or Microbiology 132.",
+          "options": [
+            {
+              "title": "Foundation",
+              "courses": [
+                "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+                "CHEM 153B - Biochemistry: DNA, RNA, and Protein Synthesis",
+                "LIFESCI 107 - Genetics",
+                "MIMG 101 - Introductory Microbiology",
+                "MIMG 132 - Cell Biology of Nucleus",
+                "MIMG 185A - Immunology"
+              ]
+            },
+            {
+              "title": "Research Apprenticeship"
+            },
+            {
+              "title": "Scientific Analysis and Communication"
+            },
+            {
+              "title": "Focus Electives",
+              "courses": [
+                "CHEM 153L - Biochemical Methods I",
+                "MIMG 102 - Introductory Virology",
+                "MIMG 105 - Biological Microscopy",
+                "MIMG 106 - Molecular and Genetic Basis of Bacterial Infections",
+                "MIMG 107 - Viral Pathogenesis",
+                "MIMG 132 - Cell Biology of Nucleus",
+                "MIMG CM156 - Human Genetics and Genomics",
+                "MIMG 158 - Microbial Genomics",
+                "MIMG 168 - Molecular Parasitology",
+                "MIMG CM256 - Human Genetics and Genomics",
+                "MCD BIO 138 - Developmental Biology",
+                "MCD BIO 165A - Biology of Cells"
+              ]
+            },
+            {
+              "title": "General Elective",
+              "courses": [
+                "BIOENGR 100 - Bioengineering Fundamentals",
+                "BIOENGR CM145 - Molecular Biotechnology for Engineers",
+                "BIOENGR CM178 - Introduction to Biomaterials",
+                "BIOSTAT 100 - Introduction to Biostatistics",
+                "CHEM 103 - Environmental Chemistry",
+                "CHEM 110A - Physical Chemistry: Chemical Thermodynamics",
+                "CHEM M117 - Structure, Patterns, and Polyhedra",
+                "CHEM 136 - Organic Structural Methods",
+                "CHEM C140 - Bionanotechnology",
+                "CHEM 153B - Biochemistry: DNA, RNA, and Protein Synthesis",
+                "CHEM 153C - Biochemistry: Biosynthetic and Energy Metabolism and Its Regulation",
+                "CHEM 156 - Physical Biochemistry",
+                "CHEM 171 - Intermediate Inorganic Chemistry",
+                "CHEM C172 - Advanced Inorganic Chemistry",
+                "CHEM C181 - Polymer Chemistry",
+                "COM SCI C121 - Probabilistic Models in Computational Genomics",
+                "COM SCI C122 - Algorithms in Computational Genomics",
+                "COM SCI C124 - Machine Learning Applications in Genetics",
+                "EE BIOL 121 - Molecular Evolution",
+                "EE BIOL C135 - Population Genetics",
+                "EE BIOL 137 - Chemical Communication",
+                "EE BIOL 162 - Plant Physiology",
+                "EPIDEM 100 - Principles of Epidemiology",
+                "HUM GEN C144 - Genomic Technology",
+                "MIMG 103AL - Research Immersion Laboratory in Virology",
+                "MIMG 103BL - Advanced Research Analysis in Virology",
+                "MIMG 109AL - Research Immersion Laboratory in Microbiology",
+                "MIMG 109BL - Advanced Research Analysis in Microbiology",
+                "MIMG C122 - Mouse Molecular Genetics",
+                "MIMG 174 - Advanced Topics in Molecular Parasitology",
+                "MIMG C185B - Advanced Immunology and Applications",
+                "MIMG 191H - Honors Research Seminars: Microbiology, Immunology, and Molecular Genetics",
+                "MIMG 198C - Honors Research in Microbiology, Immunology, and Molecular Genetics",
+                "MIMG 199 - Directed Research in Microbiology, Immunology, and Molecular Genetics",
+                "MCD BIO 100 - Introduction to Cell Biology",
+                "MCD BIO 104AL - Research Immersion Laboratory in Developmental Biology",
+                "MCD BIO 138 - Developmental Biology",
+                "MCD BIO M140 - Cancer Cell Biology",
+                "MCD BIO C141 - Molecular Basis of Plant Differentiation and Development",
+                "MCD BIO 143 - Developmental Biology: Genetic Control of Organogenesis",
+                "MCD BIO 144 - Molecular Biology of Cellular Processes",
+                "MCD BIO C150 - Plant Communication",
+                "MCD BIO 165A - Biology of Cells",
+                "MCD BIO 168 - Stem Cell Biology",
+                "MCD BIO 172 - Genomics and Bioinformatics",
+                "MCD BIO M175A - Neuroscience: From Molecules to Mind\u2014Cellular and Systems Neuroscience",
+                "MCD BIO M175B - Neuroscience: From Molecules to Mind\u2014Molecular and Developmental Neuroscience",
+                "MCD BIO M175C - Neuroscience: From Molecules to Mind\u2014Behavioral and Cognitive Neuroscience",
+                "MCD BIO 187AL - Research Immersion Laboratory in Genomic Biology",
+                "NEUROSC M101A - Neuroscience: From Molecules to Mind\u2014Cellular and Systems Neuroscience",
+                "NEUROSC M101B - Neuroscience: From Molecules to Mind\u2014Molecular and Developmental Neuroscience",
+                "NEUROSC M101C - Neuroscience: From Molecules to Mind\u2014Behavioral and Cognitive Neuroscience",
+                "PHYSCI 121 - Disease Mechanisms and Therapies",
+                "PHYSCI 124 - Molecular Biology of Aging",
+                "PHYSCI 125 - Molecular Systems Biology",
+                "PHYSCI 128 - Me, Myself, and Microbes: The Microbiome in Health and Disease",
+                "STATS 100A - Introduction to Probability",
+                "STATS 100B - Introduction to Mathematical Statistics"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "MIMG 198A - Honors Research in Microbiology, Immunology, and Molecular Genetics",
+        "MIMG 198B - Honors Research in Microbiology, Immunology, and Molecular Genetics",
+        "MIMG 198C - Honors Research in Microbiology, Immunology, and Molecular Genetics"
+      ]
+    }
+  ]
+}

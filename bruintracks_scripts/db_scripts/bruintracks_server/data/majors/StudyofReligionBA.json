@@ -1,0 +1,179 @@
+{
+  "major_name": "StudyofReligionBA",
+  "major_id": 118,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Study of Religion",
+          "courses": [
+            "RELIGN M4 - Introduction to History of Religions",
+            "RELIGN 11 - Religion in Los Angeles"
+          ]
+        },
+        {
+          "title": "Electives",
+          "courses": [
+            "AN N EA 10W - Jerusalem: Holy City",
+            "ANTHRO 3 - Culture and Society",
+            "ASIAN M60 - Introduction to Buddhism",
+            "HIST 1A - Introduction to Western Civilization: Ancient Civilizations, Prehistory to circa AD 843",
+            "HIST 1B - Introduction to Western Civilization: Circa 843 to circa 1715",
+            "HIST 1C - Introduction to Western Civilization: Circa 1715 to Present",
+            "HIST 9A - Introduction to Asian Civilizations: History of India",
+            "HIST 9C - Introduction to Asian Civilizations: History of Japan",
+            "HIST 9D - Introduction to Asian Civilizations: History of Middle East",
+            "HIST 9E - Introduction to Asian Civilizations: Southeast Asian Crossroads",
+            "HIST M10A - History of Africa to 1800",
+            "HIST 10B - History of Africa, 1800 to Present",
+            "HIST 11A - History of China: To 1000",
+            "HIST 11B - History of China, circa 1000 to 2000",
+            "PHILOS 2 - Introduction to Philosophy of Religion",
+            "PHILOS 21 - Skepticism and Rationality",
+            "RELIGN M10 - Introduction to Judaism",
+            "RELIGN M20 - Introduction to Islam",
+            "RELIGN M40 - Christianities East and West",
+            "RELIGN M50 - Origins of Judaism, Christianity, and Islam",
+            "RELIGN 55 - Spirit of Medicine",
+            "RELIGN M60A - Introduction to Buddhism",
+            "RELIGN M60B - Introduction to Chinese Religions",
+            "RELIGN M60C - Introduction to Korean Religions",
+            "RELIGN M60D - Religion in Classical India: Introduction",
+            "RELIGN M60E - Religious Traditions in Southeast Asia",
+            "RELIGN M60W - Introduction to Buddhism",
+            "RELIGN M61 - Introduction to Zen Buddhism",
+            "RELIGN M61W - Introduction to Chinese Religions",
+            "RELIGN M70 - Demons, Fear, and Uncanny in Ancient World"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following course:",
+      "options": [
+        {
+          "title": "History of Study of Religion",
+          "courses": [
+            "RELIGN 101 - History of Study of Religion"
+          ]
+        },
+        {
+          "title": "Theory and Methods",
+          "courses": [
+            "ANTHRO 130 - Study of Culture",
+            "ANTHRO 142P - Anthropology of Religion",
+            "RELIGN 110 - Religion and Violence",
+            "RELIGN 120 - Judaism, Christianity, and Islam: Comparative Approach",
+            "RELIGN 150 - Women, Gender, and Religion",
+            "RELIGN 160 - Religion, Film, and Media",
+            "RELIGN 177 - Variable Topics in Religion",
+            "RELIGN 180 - Religion and Modern Critical Thought",
+            "RELIGN M186C - Jesus of Nazareth in Historical Research"
+          ]
+        },
+        {
+          "title": "Religious Ideas, Practices, and Institutions in Context",
+          "courses": [
+            "AN N EA 162 - Archaeology, Identity, and Bible",
+            "ANTHRO 114P - Ancient Civilizations of Mesoamerica",
+            "ANTHRO 162 - Ethnography of South America",
+            "ANTHRO 168P - Cultures of Pacific",
+            "ARABIC 120 - Islamic Texts",
+            "ART HIS CM115A - Late Antique Art and Architecture",
+            "ART HIS C120 - Selected Topics in Islamic Art",
+            "ART HIS 150A - Japanese Art",
+            "ART HIS 152A - Arts of Korea",
+            "ART HIS 154A - Early Art of India",
+            "ART HIS 154B - Later Art of India",
+            "ART HIS 156 - Arts of Southeast Asia",
+            "ASIAN 151 - Buddhist Literature in Translation",
+            "ASIAN 162 - Buddhist Meditation Traditions",
+            "CHIN 165 - Introduction to Chinese Buddhist Texts",
+            "CHIN C175 - Introduction to Chinese Thought",
+            "CLASSIC 166A - Greek Religion",
+            "CLASSIC 166B - Roman Religion",
+            "CLASSIC M167 - Magic in Ancient World",
+            "ENGL 111A - Hebrew Bible in Translation",
+            "ENGL 111B - Christian Biblical Texts in Translation",
+            "ENGL 111C - Topics in Biblical Literature",
+            "ENGL 145 - Medieval Literatures of Devotion and Dissent",
+            "ENGL 156 - Devotion and Dissent",
+            "GREEK 130 - Readings in New Testament",
+            "HEBREW 120 - Biblical Texts",
+            "HEBREW 130 - Rabbinic Texts",
+            "HIST 108A - History of North Africa from Islamic Conquest",
+            "HIST 121B - History of Modern Europe: Baroque Culture and Absolutist Politics, 1600 to 1715",
+            "HIST 174A - Early History of India",
+            "HIST M182C - Modern Jewish History",
+            "HIST 185B - Religions of South and Southeast Asia",
+            "IRANIAN 170 - Religion in Ancient Iran",
+            "JAPAN 161 - Religious Life in Modern Japan",
+            "JEWISH M150A - Hebrew Literature in English: Literary Traditions of Ancient Israel\u2014Bible and Apocrypha",
+            "KOREA 165 - Introduction to Korean Buddhist Texts",
+            "KOREA 172 - Topics in Korean Christianity",
+            "PHILOS 100B - Medieval and Early Modern Philosophy",
+            "PHILOS 104 - Topics in Islamic Philosophy",
+            "PHILOS 107 - Topics in Medieval Philosophy",
+            "PHILOS 155A - Medical Ethics",
+            "RELIGN M105A - Bah\u00e1'\u00ed Faith in Iran: Historical and Sociological Survey",
+            "RELIGN M105B - Bah\u00e1'\u00ed Faith in Iran: Survey of Bah\u00e1'\u00ed Scriptures and Thought",
+            "RELIGN M105C - Bah\u00e1'\u00ed Faith in Iran: 20th-Century Iran and the Bah\u00e1'\u00eds",
+            "RELIGN M106A - Premodern Islam",
+            "RELIGN M107 - Islam in West",
+            "RELIGN M108 - Qur'an",
+            "RELIGN 110 - Religion and Violence",
+            "RELIGN 113 - In Search of Meaning: From Holy Texts to Hollywood",
+            "RELIGN M115 - Islam and Other Religions",
+            "RELIGN M118B - Kierkegaard and Philosophy of Religion",
+            "RELIGN M132 - Ancient Egyptian Religion",
+            "RELIGN M133 - Bible and Qur'an",
+            "RELIGN M135 - Religion in Ancient Israel",
+            "RELIGN 140 - Undergraduate Seminar: Study of Religion",
+            "RELIGN M142C - History of Religion in U.S.",
+            "RELIGN M155 - Angels, Demons, and End of World: Magic, Mysticism, and Apocalypse in Jewish Traditions",
+            "RELIGN 156 - Religion and Liberation",
+            "RELIGN 158 - The Bible in Justice Movements",
+            "RELIGN M161A - Chinese Buddhism",
+            "RELIGN M161B - Japanese Buddhism",
+            "RELIGN M161C - Korean Buddhism",
+            "RELIGN M161D - Buddhism in India",
+            "RELIGN M172 - Bible and Its Interpreters",
+            "RELIGN M173C - Shinto, Buddhism, and Japanese Folk Religion",
+            "RELIGN M174D - Indo-Islamic Interactions, 700 to 1750",
+            "RELIGN M174E - Indo-Islamic Interactions, 1750 to 1950",
+            "RELIGN M175 - Topics in Philosophy of Religion",
+            "RELIGN M178 - Variable Topics",
+            "RELIGN M179 - Topics in Moral Philosophy: Evil",
+            "RELIGN M182A - Ancient Jewish History",
+            "RELIGN M182B - Medieval Jewish History",
+            "RELIGN M184A - Jewish Civilization: Encounter with Great World Cultures",
+            "RELIGN M185D - Religions of Ancient Near East",
+            "RELIGN M186A - History of Early Christians",
+            "RELIGN M186B - Religious Environment of Early Christians",
+            "RELIGN M186C - Jesus of Nazareth in Historical Research",
+            "WL ARTS C142 - Myth and Ritual",
+            "WL ARTS C151 - Ethnography of Religions"
+          ]
+        },
+        {
+          "title": "Electives"
+        },
+        {
+          "title": "Capstone Seminar",
+          "courses": [
+            "RELIGN 191 - Variable Topics Research Seminars: Study of Religion"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "RELIGN 198 - Honors Research in Religion"
+      ]
+    }
+  ]
+}

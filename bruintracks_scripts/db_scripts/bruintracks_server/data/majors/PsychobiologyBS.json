@@ -1,0 +1,195 @@
+{
+  "major_name": "PsychobiologyBS",
+  "major_id": 106,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one series from:",
+      "courses": [
+        "PSYCH 10 - Introductory Psychology",
+        "PSYCH 100A - Psychological Statistics",
+        "PSYCH 100B - Research Methods in Psychology"
+      ],
+      "options": [
+        {
+          "title": "Life Sciences Core Curriculum",
+          "description": "Select one series from:",
+          "options": [
+            {
+              "title": "Chemistry"
+            },
+            {
+              "title": "Life Sciences",
+              "courses": [
+                "LIFESCI 7A - Cell and Molecular Biology",
+                "LIFESCI 7B - Genetics, Evolution, and Ecology",
+                "LIFESCI 7C - Physiology and Human Biology",
+                "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+              ]
+            },
+            {
+              "title": "Mathematics",
+              "description": "Students may select Life Sciences 40 or Statistics 13."
+            },
+            {
+              "title": "Physics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five courses as follows:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Ecology and Evolutionary Biology or Psychology",
+              "courses": [
+                "EE BIOL 100 - Introduction to Ecology and Behavior",
+                "EE BIOL 129 - Animal Behavior",
+                "PSYCH 118 - Comparative Psychobiology"
+              ]
+            },
+            {
+              "title": "Psychology 110",
+              "courses": [
+                "PSYCH 110 - Fundamentals of Learning"
+              ]
+            },
+            {
+              "title": "Psychology 115",
+              "description": "Psychology 115 may be substituted with Psychology M117A, M117B, M117C. Students who complete Psychology M117A, M117B, M117C receive equivalent credit for course 115 and 10 units of upper-division psychobiology electives. All three courses must be completed to receive psychobiology elective credit.",
+              "courses": [
+                "PSYCH 115 - Principles of Behavioral Neuroscience"
+              ]
+            },
+            {
+              "title": "Psychology M116A or 116B or Neuroscience 101L",
+              "courses": [
+                "PSYCH M116A - Behavioral Neuroscience Laboratory",
+                "PSYCH 116B - Human Neuropsychology Laboratory",
+                "NEUROSC 101L - Neuroscience Laboratory"
+              ]
+            },
+            {
+              "title": "Psychology 120A or 120B",
+              "courses": [
+                "PSYCH 120A - Cognitive Psychology",
+                "PSYCH 120B - Sensation and Perception"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Additional Psychology Course",
+          "options": [
+            {
+              "title": "Courses",
+              "courses": [
+                "PSYCH 127A - Clinical Psychological Science",
+                "PSYCH 127B - Clinical Psychological Science: Biological Bases",
+                "PSYCH 127C - Clinical Psychological Science: Developmental Perspectives",
+                "PSYCH 130 - Developmental Psychology",
+                "PSYCH 135 - Social Psychology",
+                "PSYCH 150 - Introduction to Health Psychology",
+                "PSYCH 161 - Behavior and Brain Development"
+              ]
+            },
+            {
+              "title": "Psychology 133A through 133I",
+              "courses": [
+                "Psychology 133A through 133I"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Electives",
+          "description": "Only one course from Ecology and Evolutionary Biology 112, 113A, or 114A may be applied. Only 4 units of Ecology and Evolutionary Biology 124A may be applied toward the major. Psychology 191CH may only be applied if content is approved by the undergraduate vice chair.",
+          "options": [
+            {
+              "title": "Courses",
+              "courses": [
+                "PSYCH 111 - Learning Laboratory",
+                "PSYCH 112A - Basic Processes of Motivated Behavior",
+                "PSYCH 112B - Psychobiology of Fear and Anxiety",
+                "PSYCH 112C - Psychobiology of Anxiety and Depression",
+                "PSYCH 112D - Animal Cognition",
+                "PSYCH 112E - Decision Making and Brain",
+                "PSYCH M117A - Neuroscience: From Molecules to Mind\u2014Cellular and Systems Neuroscience",
+                "PSYCH M117B - Neuroscience: From Molecules to Mind\u2014Molecular and Developmental Neuroscience",
+                "PSYCH M117C - Neuroscience: From Molecules to Mind\u2014Behavioral and Cognitive Neuroscience",
+                "PSYCH 124E - Decision Psychology and Neuroscience",
+                "PSYCH 124K - Ethical, Legal, and Societal Implications of Cognitive Neuroscience",
+                "PSYCH 137A - Neuroscience of Social Perception",
+                "PSYCH 137G - Social Cognitive Neuroscience",
+                "PSYCH 152 - Mind-Body Interactions and Health",
+                "PSYCH 161 - Behavior and Brain Development",
+                "PSYCH 162 - Psychology of Addiction",
+                "PSYCH 164 - Puberty and Sleep",
+                "PSYCH M166 - Neurobiology of Bias and Discrimination",
+                "PSYCH 186D - Laboratory in Functional Neuroimaging",
+                "PSYCH 191CH - Departmental Honors Research Seminars",
+                "CHEM 153A - Biochemistry: Introduction to Structure, Enzymes, and Metabolism",
+                "CHEM 153L - Biochemical Methods I",
+                "C&S BIO M187 - Research Communication in Computational and Systems Biology",
+                "EE BIOL 100 - Introduction to Ecology and Behavior",
+                "EE BIOL 102 - Biology of Marine Invertebrates",
+                "EE BIOL 105 - Biology of Invertebrates",
+                "EE BIOL 106 - Experimental Marine Invertebrate Biology",
+                "EE BIOL 110 - Vertebrate Morphology",
+                "EE BIOL 111 - Biology of Vertebrates",
+                "EE BIOL 112 - Ichthyology",
+                "EE BIOL 113A - Herpetology",
+                "EE BIOL 114A - Ornithology",
+                "EE BIOL 115 - Mammalogy",
+                "EE BIOL 117 - Evolution of Vertebrates",
+                "EE BIOL C119A - Mathematical and Computational Modeling in Ecology",
+                "EE BIOL 120 - Evolution",
+                "EE BIOL 121 - Molecular Evolution",
+                "EE BIOL 122 - Ecology",
+                "EE BIOL 124A - Field Ecology",
+                "EE BIOL 129 - Animal Behavior",
+                "EE BIOL C135 - Population Genetics",
+                "EE BIOL 164 - Field Biology of Marine Fishes",
+                "EE BIOL 170 - Animal Environmental Physiology",
+                "LIFESCI 107 - Genetics",
+                "MIMG C185A - Immunology",
+                "MCD BIO 100 - Introduction to Cell Biology",
+                "MCD BIO 104AL - Research Immersion Laboratory in Developmental Biology",
+                "MCD BIO 138 - Developmental Biology",
+                "MCD BIO M140 - Cancer Cell Biology",
+                "MCD BIO CM156 - Human Genetics and Genomics",
+                "NEUROSC 102 - Introduction to Functional Anatomy of Central Nervous System",
+                "PHYSCI C130 - Sex Differences in Physiology and Disease",
+                "PHYSCI C144 - Neural Control of Physiological Systems",
+                "PHYSCI 146 - Principles of Nervous System Development",
+                "PHYSCI 147 - Neurobiology of Learning and Memory",
+                "PHYSCI 166 - Animal Physiology",
+                "PHYSCI 173 - Anatomy and Physiology of Sense Organs"
+              ]
+            },
+            {
+              "title": "Psychology 119A through 119Y",
+              "courses": [
+                "Psychology 119A through 119Y"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PSYCH 191AH - Departmental Honors Research Seminars",
+        "PSYCH 191BH - Departmental Honors Research Seminars",
+        "PSYCH 191CH - Departmental Honors Research Seminars"
+      ]
+    }
+  ]
+}

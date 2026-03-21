@@ -1,0 +1,170 @@
+{
+  "major_name": "MathematicsAppliedScienceBS",
+  "major_id": 93,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "MATH 31A - Differential and Integral Calculus",
+        "MATH 31AL - Differential and Integral Calculus Laboratory",
+        "MATH 31B - Integration and Infinite Series",
+        "MATH 32A - Calculus of Several Variables",
+        "MATH 32B - Calculus of Several Variables",
+        "MATH 33A - Linear Algebra and Applications",
+        "MATH 33B - Differential Equations",
+        "COMPTNG 10A - Introduction to Programming"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select seven Mathematics Department courses from Mathematics 106 through 199.",
+      "options": [
+        {
+          "title": "Mathematics"
+        },
+        {
+          "title": "Upper-Division Courses in Related Field"
+        }
+      ]
+    },
+    {
+      "title": "Mathematics/History of Science Plan",
+      "description": "Complete 10 courses as follows: Mathematics 31A or 31L, the remaining six courses, and three history courses.",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "description": "Select three courses from:",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31AL - Differential and Integral Calculus Laboratory",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "COMPTNG 10A - Introduction to Programming"
+          ],
+          "options": [
+            {
+              "title": "History Electives",
+              "courses": [
+                "HIST 2B - Social Knowledge and Social Power",
+                "HIST 3A - History of Science: Renaissance to 1800",
+                "HIST 3B - History of Science: Enlightment to 1900",
+                "HIST 3C - History of Science: 20th Century",
+                "HIST 3D - History of Modern Medicine"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Complete eight courses as follows:",
+          "options": [
+            {
+              "title": "Mathematics",
+              "description": "Select three courses from Mathematics 110A through 199.",
+              "courses": [
+                "MATH 106 - History of Mathematics",
+                "MATH 115A - Linear Algebra",
+                "MATH 131A - Analysis",
+                "MATH 134 - Linear and Nonlinear Systems of Differential Equations",
+                "MATH 170A - Probability Theory I"
+              ]
+            },
+            {
+              "title": "Outside Courses"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Medical and Life Sciences Plan",
+      "description": "Complete Mathematics 31A or 31AL and the remaining 16 courses.",
+      "options": [
+        {
+          "title": "Preparation for the Major",
+          "courses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31AL - Differential and Integral Calculus Laboratory",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+            "CHEM 30AL - General Chemistry Laboratory II",
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "LIFESCI 7B - Genetics, Evolution, and Ecology",
+            "LIFESCI 7C - Physiology and Human Biology",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "COMPTNG 10A - Introduction to Programming"
+          ]
+        },
+        {
+          "title": "The Major",
+          "description": "Complete seven courses as follows:",
+          "options": [
+            {
+              "title": "Mathematics",
+              "description": "Select one course from the following groups:",
+              "courses": [
+                "MATH 115A - Linear Algebra",
+                "MATH 131A - Analysis",
+                "MATH 134 - Linear and Nonlinear Systems of Differential Equations",
+                "MATH 151A - Applied Numerical Methods",
+                "MATH 170A - Probability Theory I",
+                "MATH 170B - Probability Theory II"
+              ]
+            },
+            {
+              "title": "Outside Courses",
+              "description": "Complete the following three courses:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Mathematics 61 or 180",
+          "courses": [
+            "MATH 61 - Introduction to Discrete Structures",
+            "MATH 180 - Graph Theory"
+          ]
+        },
+        {
+          "title": "Program in Computing",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming",
+            "COMPTNG 10B - Intermediate Programming"
+          ]
+        },
+        {
+          "title": "Program in Computing Electives",
+          "courses": [
+            "COMPTNG 10C - Advanced Programming",
+            "COMPTNG 15 - Introduction to Lisp and Symbolic Computation",
+            "COMPTNG 16A - Python with Applications I",
+            "COMPTNG 20A - Principles of Java Language with Applications",
+            "COMPTNG 40A - Introduction to Programming for Internet"
+          ]
+        },
+        {
+          "title": "Mathematics Electives",
+          "courses": [
+            "Mathematics 149 through 159"
+          ]
+        }
+      ]
+    }
+  ]
+}

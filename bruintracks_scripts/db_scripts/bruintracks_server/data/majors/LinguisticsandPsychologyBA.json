@@ -1,0 +1,184 @@
+{
+  "major_name": "LinguisticsandPsychologyBA",
+  "major_id": 87,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the equivalent to the sixth level of one foreign language or the equivalent to the third level of two different foreign languages.",
+      "courses": [
+        "LING 20 - Introduction to Linguistic Analysis",
+        "PSYCH 10 - Introductory Psychology",
+        "PSYCH 85 - Introduction to Cognitive Science",
+        "PSYCH 100A - Psychological Statistics",
+        "PSYCH 100B - Research Methods in Psychology"
+      ],
+      "options": [
+        {
+          "title": "Foreign Language"
+        },
+        {
+          "title": "Recommended",
+          "courses": [
+            "COMPTNG 10A - Introduction to Programming"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five courses as follows:",
+      "options": [
+        {
+          "title": "Required Linguistics Courses",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Linguistics 102 or 103",
+              "courses": [
+                "LING 102 - Introduction to Applied Phonetics",
+                "LING 103 - Introduction to General Phonetics"
+              ]
+            },
+            {
+              "title": "Linguistics 119A or 120A",
+              "courses": [
+                "LING 119A - Applied Phonology",
+                "LING 120A - Phonology I"
+              ]
+            },
+            {
+              "title": "Linguistics 120B",
+              "courses": [
+                "LING 120B - Syntax I"
+              ]
+            },
+            {
+              "title": "Additional Linguistics Courses",
+              "courses": [
+                "LING 115 - Linguistics and Speech Pathology",
+                "LING 130 - Language Development",
+                "LING 132 - Language Processing",
+                "LING C135 - Neurolinguistics",
+                "LING C140 - Bilingualism and Second Language Acquisition"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Upper-Division Linguistics Elective"
+        },
+        {
+          "title": "Recommended Linguistics Courses",
+          "courses": [
+            "LING 130 - Language Development",
+            "LING 132 - Language Processing",
+            "LING C135 - Neurolinguistics",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II"
+          ]
+        },
+        {
+          "title": "Psychology",
+          "description": "Select one course from:",
+          "courses": [
+            "PSYCH 120A - Cognitive Psychology",
+            "PSYCH 121 - Laboratory in Cognitive Psychology"
+          ],
+          "options": [
+            {
+              "title": "Additional Psychology",
+              "courses": [
+                "PSYCH 130 - Developmental Psychology",
+                "PSYCH 133B - Cognitive Development",
+                "PSYCH 133E - Perceptual Development"
+              ]
+            },
+            {
+              "title": "Psychology Electives",
+              "courses": [
+                "PSYCH 115 - Principles of Behavioral Neuroscience",
+                "PSYCH M116A - Behavioral Neuroscience Laboratory",
+                "PSYCH M117C - Neuroscience: From Molecules to Mind\u2014Behavioral and Cognitive Neuroscience",
+                "PSYCH 118 - Comparative Psychobiology",
+                "PSYCH M119L - Human Neuropsychology",
+                "PSYCH 124A - Language as Cognitive Science",
+                "PSYCH 124C - Human Memory",
+                "PSYCH 130 - Developmental Psychology",
+                "PSYCH 133B - Cognitive Development",
+                "PSYCH 133C - Language Development",
+                "PSYCH 133E - Perceptual Development",
+                "PSYCH 133F - Psychology and Education",
+                "PSYCH 186A - Cognitive Science Laboratory: Introduction to Theory and Simulation",
+                "PSYCH 186B - Cognitive Science Laboratory: Neural Networks"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "options": [
+        {
+          "title": "Linguistics 198A and 198B",
+          "courses": [
+            "LING 198A - Honors Research in Linguistics I",
+            "LING 198B - Honors Research in Linguistics II"
+          ]
+        },
+        {
+          "title": "Linguistics 199",
+          "courses": [
+            "LING 199 - Directed Research or Senior Project in Linguistics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Introduction to Computing",
+          "options": [
+            {
+              "title": "Program in Computing",
+              "courses": [
+                "COMPTNG 10A - Introduction to Programming",
+                "COMPTNG 10B - Intermediate Programming",
+                "COMPTNG 10C - Advanced Programming"
+              ]
+            },
+            {
+              "title": "Computer Science",
+              "courses": [
+                "COM SCI 31 - Introduction to Computer Science I",
+                "COM SCI 32 - Introduction to Computer Science II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistics 185A and Mathematics 61",
+          "courses": [
+            "LING 185A - Computational Linguistics I",
+            "MATH 61 - Introduction to Discrete Structures"
+          ]
+        },
+        {
+          "title": "Linguistics Elective",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 127 - Syntactic Typology and Universals",
+            "LING 132 - Language Processing",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II",
+            "LING 165C - Semantics II",
+            "LING 180 - Mathematical Structures in Language I",
+            "LING 185B - Computational Linguistics II"
+          ]
+        }
+      ]
+    }
+  ]
+}

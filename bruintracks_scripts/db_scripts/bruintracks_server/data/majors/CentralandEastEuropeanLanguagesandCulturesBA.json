@@ -1,0 +1,150 @@
+{
+  "major_name": "CentralandEastEuropeanLanguagesandCulturesBA",
+  "major_id": 34,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "C&EE ST 91 - Culture and Society in Central and Eastern Europe",
+        "SLAVC 90 - Introduction to Slavic Civilization"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete one three-quarter (12 to 15 units) introductory central and east European language sequence, or one 12-unit intensive introductory central and east European language course from:",
+      "options": [
+        {
+          "title": "Introductory Language Sequence",
+          "courses": [
+            "CZCH 101A - Introduction to Czech Language and Culture",
+            "CZCH 101B - Introduction to Czech Language and Culture",
+            "CZCH 101C - Introduction to Czech Language and Culture",
+            "HNGAR 101A - Elementary Hungarian",
+            "HNGAR 101B - Elementary Hungarian",
+            "HNGAR 101C - Elementary Hungarian",
+            "POLSH 101A - Elementary Polish",
+            "POLSH 101B - Elementary Polish",
+            "POLSH 101C - Elementary Polish",
+            "ROMANIA 101A - Elementary Romanian",
+            "ROMANIA 101B - Elementary Romanian",
+            "ROMANIA 101C - Elementary Romanian",
+            "ROMANIA 103 - Intensive Elementary Romanian",
+            "SRB CRO 101A - Elementary Serbian/Croatian",
+            "SRB CRO 101B - Elementary Serbian/Croatian",
+            "SRB CRO 101C - Elementary Serbian/Croatian",
+            "SRB CRO 103 - Intensive Elementary Bosnian, Serbian, Croatian",
+            "UKRN 101A - Elementary Ukrainian",
+            "UKRN 101B - Elementary Ukrainian",
+            "UKRN 101C - Elementary Ukrainian"
+          ]
+        },
+        {
+          "title": "Advanced Language Sequence",
+          "options": [
+            {
+              "title": "Czech, Hungarian, Polish, Romanian, Serbian/Croatian, and Ukrainian",
+              "courses": [
+                "CZCH 102A - Advanced Czech",
+                "CZCH 102B - Advanced Czech",
+                "CZCH 102C - Advanced Czech",
+                "HNGAR 102A - Advanced Hungarian",
+                "HNGAR 102B - Advanced Hungarian",
+                "HNGAR 102C - Advanced Hungarian",
+                "POLSH 102A - Advanced Polish",
+                "POLSH 102B - Advanced Polish",
+                "POLSH 102C - Advanced Polish",
+                "ROMANIA 102A - Advanced Romanian",
+                "ROMANIA 102B - Advanced Romanian",
+                "ROMANIA 102C - Advanced Romanian",
+                "SRB CRO 102A - Advanced Serbian/Croatian",
+                "SRB CRO 102B - Advanced Serbian/Croatian",
+                "SRB CRO 102C - Advanced Serbian/Croatian",
+                "UKRN 102A - Advanced Ukrainian",
+                "UKRN 102B - Advanced Ukrainian",
+                "UKRN 102C - Advanced Ukrainian"
+              ]
+            },
+            {
+              "title": "Russian Electives",
+              "courses": [
+                "RUSSN 100A - Literacy in Russian",
+                "RUSSN 100B - Literacy in Russian",
+                "RUSSN 100C - Literacy in Russian",
+                "RUSSN 101A - Third-Year Russian",
+                "RUSSN 101B - Third-Year Russian",
+                "RUSSN 101C - Third-Year Russian",
+                "RUSSN 102A - Topics in Advanced/Superior Russian",
+                "RUSSN 102B - Topics in Advanced/Superior Russian",
+                "RUSSN 102C - Topics in Advanced/Superior Russian",
+                "RUSSN 103A - Russian for Native and Near-Native Speakers: Russian National Identity",
+                "RUSSN 103B - Russian for Native and Near-Native Speakers: Literature and Film",
+                "RUSSN 103C - Russian for Native and Near-Native Speakers: Special Topics",
+                "RUSSN 130A - Russian Poetry: Introduction to Analysis of Russian Poetry",
+                "RUSSN 140A - Russian Prose Fiction: Introduction to Analysis of Russian Narrative Prose"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Electives",
+          "description": "One of the three courses may be selected from:",
+          "options": [
+            {
+              "title": "Courses",
+              "courses": [
+                "C&EE ST M120 - Women and Literature in Southeastern Europe",
+                "C&EE ST M125 - Interwar Central European Prose",
+                "C&EE ST CM126 - Cold-War Central European Culture",
+                "CZCH 155 - Survey of Czech Literature from Middle Ages to Present",
+                "HIST 120A - East-Central Europe: Long 19th Century, 1780 to 1914",
+                "HIST 120B - East-Central Europe: Short 20th Century, 1918 to 1990",
+                "HIST 120C - East-Central Europe in Transition, 1988 to 1993",
+                "HIST 120D - Film and History: Central and Eastern Europe, 1945 to 1989",
+                "POLSH 152A - Survey of Polish Literature: From the Middle Ages to Neoclassicism",
+                "POLSH 152B - Survey of Polish Literature: Reimagining a Nation",
+                "POLSH 152C - Survey of Polish Literature: Dreaming, Mocking, and Writing \"as if\"",
+                "ROMANIA 152 - Survey of Romanian Literature",
+                "RUSSN CM124G - Studies in Russian Literature: Gogol",
+                "UKRN 152 - Ukrainian Literature"
+              ]
+            },
+            {
+              "title": "Czech, Hungarian, Polish, Romanian, Serbian/Croatian, Ukrainian 187A through 187M",
+              "courses": [
+                "Czech, Hungarian, Polish, Romanian, Serbian/Croatian, Ukrainian 187A through 187M"
+              ]
+            },
+            {
+              "title": "Additional Russian Electives",
+              "courses": [
+                "RUSSN M118 - History of Russia, Origins to Rise of Muscovy",
+                "RUSSN 119 - Golden Age and Great Realists",
+                "RUSSN 120 - Literature and Revolution",
+                "RUSSN C124C - Studies in Russian Literature: Chekhov",
+                "RUSSN C124D - Studies in Russian Literature: Dostoevsky",
+                "RUSSN C124N - Studies in Russian Literature: Nabokov",
+                "RUSSN C124T - Studies in Russian Literature: Tolstoy"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "SLAVC 191TA - Senior Capstone Thesis in Slavic Languages and Literatures",
+            "SLAVC 191TB - Senior Capstone Thesis in Slavic Languages and Literatures",
+            "SLAVC 191TC - Senior Capstone Thesis in Slavic Languages and Literatures"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "SLAVC 198A - Honors Research in Slavic, East European, and Eurasian Languages and Cultures",
+        "SLAVC 198B - Honors Research in Slavic, East European, and Eurasian Languages and Cultures",
+        "SLAVC 198C - Honors Research in Slavic, East European, and Eurasian Languages and Cultures"
+      ]
+    }
+  ]
+}

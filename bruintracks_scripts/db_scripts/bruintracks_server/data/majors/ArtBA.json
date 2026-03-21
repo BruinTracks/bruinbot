@@ -1,0 +1,73 @@
+{
+  "major_name": "ArtBA",
+  "major_id": 121,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "ART 1A - Drawing",
+        "ART 1B - Sculpture",
+        "ART 11A - Painting",
+        "ART 11B - Photography",
+        "ART 11D - New Genres",
+        "ART 11E - Ceramics",
+        "ART 31A - Rise of Modernism in Global Context",
+        "ART 31B - Global Modernism",
+        "ART 31C - Modernism and Its Discontents"
+      ],
+      "options": [
+        {
+          "title": "Art History Elective",
+          "courses": [
+            "Art History 20 through 31"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select six courses from at least four of the following studio areas. At least one must be designated with an A.",
+      "courses": [
+        "ART 132 - Survey of Critical Thought"
+      ],
+      "options": [
+        {
+          "title": "Studio Areas",
+          "courses": [
+            "ART 130 - Advanced Drawing",
+            "ART 130A - Advanced Drawing: Topics in Anti-Racism, Equity, Diversity, and Inclusion",
+            "ART 133 - Advanced Painting",
+            "ART 133A - Advanced Painting: Topics in Anti-Racism, Equity, Diversity, and Inclusion",
+            "ART 137 - Advanced New Genres",
+            "ART 137A - Advanced New Genre: Topics in Anti-Racism, Equity, Diversity, and Inclusion",
+            "ART 140 - Advanced Printmaking",
+            "ART 145 - Advanced Sculpture",
+            "ART 145A - Advanced Sculpture: Topics in Anti-Racism, Equity, Diversity, and Inclusion",
+            "ART 147 - Advanced Photography",
+            "ART 147A - Advanced Photography: Topics in Anti-Racism, Equity, Diversity, and Inclusion",
+            "ART 148 - Advanced Ceramics",
+            "ART 148A - Advanced Ceramics: Topics in Anti-Racism, Equity, Diversity, and Inclusion",
+            "ART 149 - Advanced Interdisciplinary Studio",
+            "ART 149A - Advanced Interdisciplinary Studio: Topics in Anti-Racism, Equity, Diversity, and Inclusion"
+          ]
+        },
+        {
+          "title": "Art History Elective",
+          "courses": [
+            "Art History M110A through 185"
+          ]
+        },
+        {
+          "title": "Capstone Senior Studio",
+          "courses": [
+            "ART 150 - Senior Capstone"
+          ]
+        },
+        {
+          "title": "Art Electives"
+        }
+      ]
+    }
+  ]
+}

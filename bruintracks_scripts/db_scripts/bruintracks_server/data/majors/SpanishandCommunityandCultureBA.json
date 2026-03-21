@@ -1,0 +1,94 @@
+{
+  "major_name": "SpanishandCommunityandCultureBA",
+  "major_id": 113,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "SPAN 42 - Iberian Cultures",
+        "SPAN 44 - Latin American Cultures"
+      ],
+      "options": [
+        {
+          "title": "Spanish 25 or 27",
+          "courses": [
+            "SPAN 25 - Advanced Spanish Composition",
+            "SPAN 27 - Advanced Spanish Composition for Heritage Speakers"
+          ]
+        },
+        {
+          "title": "Spanish M35 or Portuguese M35",
+          "courses": [
+            "SPAN M35 - Spanish, Portuguese, and Nature of Language",
+            "PORTGSE M35 - Spanish, Portuguese, and Nature of Language"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Spanish Grammar",
+          "courses": [
+            "SPAN 100A - Introduction to Study of Spanish Grammar: Phonology and Morphology",
+            "SPAN 100B - Introduction to Study of Spanish Grammar: Syntax"
+          ]
+        },
+        {
+          "title": "Literary Analysis",
+          "courses": [
+            "SPAN 119 - Introduction to Literary Analysis"
+          ]
+        },
+        {
+          "title": "Spanish Literature, Culture, Linguistics, or Media Studies",
+          "courses": [
+            "SPAN 130 - Topics in Medieval Studies",
+            "SPAN 135 - Topics in Early Modern Studies",
+            "SPAN 140 - Topics in Modern Studies",
+            "SPAN 150 - Topics in Contemporary Studies",
+            "SPAN 155 - Topics in U.S. Latina/o Studies",
+            "SPAN 160 - Topics in Spanish Linguistics",
+            "SPAN 170 - Topics in Interdisciplinary and Transhistorical Studies",
+            "SPAN 175 - Topics in Creative Writing and Translation",
+            "SPAN 180 - Topics in Visual Culture",
+            "SPAN 195 - Community Internships in Spanish"
+          ]
+        },
+        {
+          "title": "Interdisciplinary Studies",
+          "courses": [
+            "CCAS 100XP - Barrio Organization and Service Learning",
+            "CCAS CM106 - Health in Chicano/Latino Population",
+            "CCAS M119 - Chicano/Latino Community Formation: Critical Perspectives and Oral Histories",
+            "CCAS 120 - Immigration and Chicano Community",
+            "CCAS M121 - Issues in Latina/Latino Poverty: Mexican and Central American Voices from Los Angeles",
+            "CCAS M122 - Planning Issues in Latina/Latino Communities: Preserving and Strengthening Community Assets in Mexican and Salvadoran Los Angeles",
+            "CCAS 131 - Barrio Popular Culture",
+            "CCAS M144 - Women's Movement in Latin America",
+            "CCAS 149 - Gendered Politics and Chicana/Latina Political Participation",
+            "CCAS 181 - History of Chicana/Chicano Los Angeles, 20th Century",
+            "SOCIOL M155 - Latinos in U.S."
+          ]
+        },
+        {
+          "title": "Capstone Community-Based and Experiential Learning Courses (15 units)",
+          "courses": [
+            "SPAN M165XP - Taking It to Street: Spanish in Community",
+            "SPAN M172XP - Topics in Community Engagement"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PORTGSE 198A - Senior Honors Research in Portuguese I",
+        "SPAN 198A - Senior Honors Research in Spanish I"
+      ]
+    }
+  ]
+}

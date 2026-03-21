@@ -1,0 +1,96 @@
+{
+  "major_name": "SoutheastAsianStudiesBA",
+  "major_id": 111,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one intermediate sequence in a Southeast Asian language offered by the department (e.g., courses listed or equivalent):",
+      "options": [
+        {
+          "title": "Intermediate Sequence in One Southeast Asian Language",
+          "courses": [
+            "FILIPNO 6 - Intermediate Filipino",
+            "INDO 6 - Intermediate Indonesian",
+            "THAI 6 - Intermediate Thai",
+            "VIETMSE 6 - Intermediate Vietnamese"
+          ]
+        },
+        {
+          "title": "Southeast Asian Studies 50",
+          "courses": [
+            "SEASIAN 50 - Southeast Asian Societies and Cultures"
+          ]
+        },
+        {
+          "title": "Religion, Literature, or Culture",
+          "courses": [
+            "ASIAN 30 - Languages and Cultures of Asia",
+            "SEASIAN M60 - Religious Traditions in Southeast Asia",
+            "SEASIAN 70 - Modern Southeast Asian Literature",
+            "VIETMSE 40 - War in Vietnamese Popular Culture"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one upper-division language course in a Southeast Asian language offered by the department from:",
+      "options": [
+        {
+          "title": "Upper-Division Southeast Asian Language",
+          "courses": [
+            "INDO 100A - Advanced Indonesian",
+            "INDO 100B - Advanced Indonesian",
+            "INDO 100C - Advanced Indonesian",
+            "THAI 100A - Advanced Thai",
+            "THAI 100B - Advanced Thai",
+            "THAI 100C - Advanced Thai",
+            "VIETMSE 100A - Advanced Vietnamese",
+            "VIETMSE 100B - Advanced Vietnamese",
+            "VIETMSE 100C - Advanced Vietnamese"
+          ]
+        },
+        {
+          "title": "Upper-Division Electives on Southeast Asia",
+          "courses": [
+            "ANTHRO 116S - Selected Topics in Archaeology of Southeast Asia",
+            "ASIA AM 123 - Cultures of/against Empire",
+            "ASIA AM 125 - Transpacific Literature and Theory",
+            "ASIA AM 133 - Pilipino American Experience",
+            "ASIA AM 134 - Vietnamese American Experience",
+            "ASIA AM M164 - Women, Violence, Globalization: India, Philippines, Singapore, Vietnam",
+            "ASIA AM M171D - Critical Issues in U.S.-Philippine Relations",
+            "ASIA AM 171E - Critical Issues in U.S.-Vietnam Relations",
+            "ASIA AM 176 - Making Fiction Work: Imagining Philippines and its Elsewheres",
+            "ART HIS 156 - Arts of Southeast Asia",
+            "FILIPNO 170 - People, Society, and Culture of Philippines",
+            "HIST 176A - History of Southeast Asia to 1815",
+            "HIST 176B - History of Southeast Asia: Southeast Asia since 1815",
+            "HIST 176C - Philippine History",
+            "HIST 176E - Vietnam: Past and Present",
+            "HIST 177A - National Histories of Southeast Asia",
+            "HIST 177B - Comparative Histories of Southeast Asia",
+            "HIST 187M - Variable Topics Historiography Proseminar: Southeast Asia",
+            "POL SCI 158 - Southeast Asian Politics",
+            "SEASIAN C120 - Ghosts, Spirits, and Witches: Supernatural in Southeast Asia",
+            "SEASIAN 130 - Topics in Southeast Asian Literature",
+            "SEASIAN 135 - Religion and Society in Southeast Asia",
+            "SEASIAN C140 - Zomia: Peoples, Societies, and Cultures of Upland Southeast Asia",
+            "SEASIAN C150 - Indigenous Peoples of Southeast Asia",
+            "SEASIAN 157 - Gender Issues in Southeast Asia",
+            "SEASIAN 160 - Majorities and Minorities in Southeast Asia",
+            "SEASIAN 170A - Topics in Southeast Asian Studies",
+            "SEASIAN 170B - Topics in Southeast Asian Studies",
+            "SEASIAN 170C - Topics in Southeast Asian Studies",
+            "VIETMSE CM155 - Topics in Vietnamese Cinema and/or Literature",
+            "VIETMSE 180A - Vietnam: History and Civilization to 1858",
+            "VIETMSE 180B - Vietnam: History and Civilization, 1858 to Present"
+          ]
+        },
+        {
+          "title": "Upper-Division Electives on Other Parts of Asia"
+        }
+      ]
+    }
+  ]
+}

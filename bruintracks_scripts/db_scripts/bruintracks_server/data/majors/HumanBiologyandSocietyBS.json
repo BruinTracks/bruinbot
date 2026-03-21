@@ -1,0 +1,461 @@
+{
+  "major_name": "HumanBiologyandSocietyBS",
+  "major_id": 70,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Core Course",
+          "courses": [
+            "SOC GEN 5 - Integrative Approaches to Human Biology and Society",
+            "SOC GEN M71A - Biotechnology and Society",
+            "SOC GEN M72A - Sex from Biology to Gendered Society"
+          ]
+        },
+        {
+          "title": "Anthropology",
+          "courses": [
+            "ANTHRO 1 - Human Evolution"
+          ]
+        },
+        {
+          "title": "Chemistry",
+          "description": "Chemistry 14AE and 14BE may be substituted for Chemistry 14A and 14B respectively.",
+          "options": [
+            {
+              "title": "Chemistry 14 Series",
+              "description": "Chemistry 14AE and 14BE may be substituted for Chemistry 14A and 14B respectively.",
+              "courses": [
+                "CHEM 14A - General Chemistry for Life Scientists I",
+                "CHEM 14B - General Chemistry for Life Scientists II",
+                "CHEM 14BL - General and Organic Chemistry Laboratory I",
+                "CHEM 14C - Structure of Organic Molecules",
+                "CHEM 14D - Organic Reactions and Pharmaceuticals"
+              ]
+            },
+            {
+              "title": "Chemistry 20 and 30 Series",
+              "courses": [
+                "CHEM 20A - Chemical Structure",
+                "CHEM 20B - Chemical Energetics and Change",
+                "CHEM 20L - General Chemistry Laboratory",
+                "CHEM 30A - Organic Chemistry I: Structure and Reactivity",
+                "CHEM 30AL - General Chemistry Laboratory II",
+                "CHEM 30B - Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Life Sciences",
+          "courses": [
+            "LIFESCI 7A - Cell and Molecular Biology",
+            "LIFESCI 7B - Genetics, Evolution, and Ecology",
+            "LIFESCI 7C - Physiology and Human Biology",
+            "LIFESCI 7L - Introduction to Laboratory and Scientific Methodology"
+          ]
+        },
+        {
+          "title": "Mathematics",
+          "description": "Select Life Sciences 40 or Statistics 13.",
+          "options": [
+            {
+              "title": "Life Sciences 30 Series",
+              "courses": [
+                "LIFESCI 30A - Mathematics for Life Scientists",
+                "LIFESCI 30B - Mathematics for Life Scientists",
+                "LIFESCI 40 - Statistics of Biological Systems",
+                "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+              ]
+            },
+            {
+              "title": "Mathematics 3 Series",
+              "courses": [
+                "MATH 3A - Calculus for Life Sciences Students",
+                "MATH 3B - Calculus for Life Sciences Students",
+                "MATH 3C - Ordinary Differential Equations with Linear Algebra for Life Sciences Students",
+                "STATS 10 - Introduction to Statistical Reasoning",
+                "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+              ]
+            },
+            {
+              "title": "Mathematics 31 Series",
+              "courses": [
+                "MATH 31A - Differential and Integral Calculus",
+                "MATH 31AL - Differential and Integral Calculus Laboratory",
+                "MATH 31B - Integration and Infinite Series",
+                "MATH 32A - Calculus of Several Variables",
+                "STATS 10 - Introduction to Statistical Reasoning",
+                "STATS 13 - Introduction to Statistical Methods for Life and Health Sciences"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Physics",
+          "options": [
+            {
+              "title": "Physics 1 Series",
+              "courses": [
+                "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+                "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+                "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+              ]
+            },
+            {
+              "title": "Physics 5 Series",
+              "courses": [
+                "PHYSICS 5A - Physics for Life Sciences Majors: Mechanics and Energy",
+                "PHYSICS 5B - Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                "PHYSICS 5C - Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Social Theory Courses",
+          "description": "Only one course from Asian American Studies 20 or 20W may be applied. Only one course from Philosophy 22 or 22W may be applied.",
+          "options": [
+            {
+              "title": "Courses",
+              "courses": [
+                "AF AMER M5 - Social Organization of Black Communities",
+                "AM IND M10 - Introduction to American Indian Studies",
+                "ANTHRO 3 - Culture and Society",
+                "ASIA AM 20 - Contemporary Asian American Communities",
+                "ASIA AM 20W - Contemporary Asian American Communities",
+                "CCAS 10A - Introduction to Chicana/Chicano Studies: History and Culture",
+                "CCAS 10B - Introduction to Chicana/Chicano Studies: Social Structure and Contemporary Conditions",
+                "GENDER 10 - Introduction to Gender Studies",
+                "GEOG 3 - Cultural Geography",
+                "HIST 3C - History of Science: 20th Century",
+                "MCD BIO 50 - Stem Cell Biology, Politics, and Ethics: Teasing Apart Issues",
+                "MCD BIO 60 - Biomedical Ethics",
+                "PHILOS 4 - Philosophical Analysis of Contemporary Moral Issues",
+                "PHILOS 6 - Introduction to Political Philosophy",
+                "PHILOS 8 - Introduction to Philosophy of Science",
+                "PHILOS 22 - Introduction to Ethical Theory",
+                "PHILOS 22W - Introduction to Ethical Theory",
+                "PUB AFF 10 - Social Problems and Social Change",
+                "SOC GEN 125 - Critical Study of Health, Sickness, and Healing in Global Perspective",
+                "SOCIOL 1 - Introductory Sociology",
+                "SOCIOL M5 - Social Organization of Black Communities"
+              ]
+            },
+            {
+              "title": "Clusters",
+              "courses": [
+                "Clusters M1A through 80CW"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following four courses:",
+      "options": [
+        {
+          "title": "Required Courses",
+          "courses": [
+            "LIFESCI 107 - Genetics",
+            "SOC GEN 102 - Societal and Medical Issues in Human Genetics",
+            "SOC GEN 105A - Ways of Knowing in Life and Human Sciences",
+            "SOC GEN 105B - Problems of Identity at Biology/Society Interface"
+          ]
+        },
+        {
+          "title": "Society and Genetics 195CE, 196, or 199",
+          "courses": [
+            "SOC GEN 195CE - Community and Corporate Internships in Society and Genetics",
+            "SOC GEN 196 - Research Apprenticeship in Society and Genetics",
+            "SOC GEN 199 - Directed Research in Society and Genetics"
+          ]
+        },
+        {
+          "title": "Electives",
+          "courses": [
+            "AN N EA 162 - Archaeology, Identity, and Bible",
+            "AN N EA CM163 - Archaeology of Iran",
+            "ANTHRO 100 - History of Anthropology",
+            "ANTHRO 110 - Principles of Archaeology",
+            "ANTHRO 111 - Theory in Anthropological Archaeology",
+            "ANTHRO 124P - Human Behavioral Ecology",
+            "ANTHRO 124Q - Evolutionary Psychology",
+            "ANTHRO 124S - Evolution of Human Sexual Behavior",
+            "ANTHRO 126Q - Evolution of Genus Homo",
+            "ANTHRO 128P - Primate Behavior Nonhuman to Human",
+            "ANTHRO M128Q - Animal Communication",
+            "ANTHRO M128S - Primate Genetics, Ecology, and Conservation",
+            "ANTHRO M128T - Amazon in Anthropocene",
+            "ANTHRO 131 - Critical Social Theory",
+            "ANTHRO 143 - Economic Anthropology",
+            "ANTHRO M145P - Marriage, Family, and Kinship",
+            "ANTHRO 145S - Culture, Gender, Sexuality",
+            "ANTHRO M148 - (When) Do Leaders Make Differences?",
+            "ANTHRO M150 - Language in Culture",
+            "ANTHRO M166Q - Culture Area of Maghrib (North Africa)",
+            "ARABIC M171 - Culture Area of Maghrib (North Africa)",
+            "ASIA AM 113 - Asian Americans and Law",
+            "ASIA AM M117 - Asian American Personality and Mental Health",
+            "CCAS CM106 - Health in Chicano/Latino Population",
+            "CCAS M124 - Latinx Immigration Policy and Politics",
+            "CCAS CM182 - Understanding Whiteness in American History and Culture",
+            "COMM 101 - Freedom of Communication",
+            "COMM 126 - Evolution of Interpersonal Communication",
+            "COMM M127 - Animal Communication",
+            "COMM 148 - Marketing Communications",
+            "COM SCI C121 - Probabilistic Models in Computational Genomics",
+            "COM SCI C124 - Machine Learning Applications in Genetics",
+            "DIS STD 101W - Perspectives on Disability Studies",
+            "DIS STD M121 - Topics in Gender and Disabilities",
+            "DIS STD M148 - Sociology of Mental Illness",
+            "DIS STD M166 - Health-Care Ethics",
+            "DIS STD M183 - Being Human: Identity and Mental Illness",
+            "EE BIOL 100 - Introduction to Ecology and Behavior",
+            "EE BIOL 116 - Conservation Biology",
+            "EE BIOL 120 - Evolution",
+            "EE BIOL 121 - Molecular Evolution",
+            "EE BIOL C126 - Behavioral Ecology",
+            "EE BIOL 129 - Animal Behavior",
+            "EE BIOL 130 - Principles of Systematic Biology",
+            "EE BIOL C135 - Population Genetics",
+            "EE BIOL M157 - Biology of Superheroes: Exploring Limits of Form and Function",
+            "EE BIOL 175 - Evolutionary Dynamics of Sex",
+            "EE BIOL 176 - Ecological Ethics",
+            "ENGL M118F - Food Cultures and Food Politics",
+            "ENVIRON M125 - Environmentalism: Past, Present, and Future",
+            "ENVIRON M133 - Environmental Sociology",
+            "ENV HLT 100 - Introduction to Environmental Health",
+            "ENV HLT C185A - Foundations of Environmental Health Sciences",
+            "ENV HLT C185B - Foundations of Environmental Health Sciences for Public Health Professionals",
+            "EPIDEM 100 - Principles of Epidemiology",
+            "FOOD ST M132 - Food Cultures and Food Politics",
+            "FOOD ST M136 - Eating Society: Science and Politics of Food from Individual to Planetary Health",
+            "GENDER M110C - Topics in Feminist Philosophy: Metaphysics and Epistemology",
+            "GENDER M114 - Introduction to Lesbian, Gay, Bisexual, Transgender, and Queer Studies",
+            "GENDER M121 - Topics in Gender and Disabilities",
+            "GENDER 125 - Perspectives on Women's Health",
+            "GENDER 134 - Gender, Science, and Theory",
+            "GENDER M154P - Marriage, Family, and Kinship",
+            "GENDER M162 - Sociology of Gender",
+            "GENDER M164 - Politics of Reproduction and Everyday Life",
+            "GENDER M165 - Psychology of Gender",
+            "GENDER M167 - Contested Sexualities",
+            "GENDER 171A - Women, Gender, and Law: Jurisprudence of Sexual Equality",
+            "GENDER M180B - Historical Perspectives on Gender and Science",
+            "GEOG M125 - Environmentalism: Past, Present, and Future",
+            "GEOG M131 - Human Impact on Biophysical Environment",
+            "GEOG M142 - (When) Do Leaders Make Differences?",
+            "GLBL ST 102 - Globalization: Markets and Resources",
+            "GLBL ST 104 - Globalization: Culture and Society",
+            "HIST M108C - Culture Area of Maghrib (North Africa)",
+            "HIST M151C - Understanding Whiteness in American History and Culture",
+            "HIST 164D - Topics in African History: Africa and Diaspora in Global and Comparative Perspective",
+            "HIST 179A - Variable Topics in History of Medicine",
+            "HIST 179B - History of Medicine: Foundations of Modern Medicine",
+            "HIST 180A - Topics in History of Science",
+            "HIST M180B - Historical Perspectives on Gender and Science",
+            "HIST 180C - Science and Technology in 20th Century",
+            "HIST 191B - Capstone Seminar: History\u2014Medieval",
+            "HIST 191C - Capstone Seminar: History\u2014Europe",
+            "HIST C191D - Topics in History: U.S.",
+            "HIST 191E - Capstone Seminar: History\u2014Latin America",
+            "HIST C191F - Topics in History: Near East",
+            "HIST 191G - Capstone Seminar: History\u2014East Asia",
+            "HIST 191I - Capstone Seminar: History\u2014Science/Technology",
+            "HIST C191J - Topics in History: Africa",
+            "HIST C191K - Topics in History: History of Religions",
+            "HIST C191L - Topics in History: Jewish History",
+            "HIST 191M - Capstone Seminar: History\u2014Southeast Asia",
+            "HIST C191N - Topics in History: India",
+            "HIST C191O - Topics in History: World",
+            "HNRS M143 - Latinx Immigration Policy and Politics",
+            "HNRS M152 - (When) Do Leaders Make Differences?",
+            "HNRS 177 - Biotechnology and Art",
+            "HNRS M183 - Being Human: Identity and Mental Illness",
+            "HUM GEN CM113 - Ethical, Legal, and Societal Topics in Genetic Counseling",
+            "HUM GEN C144 - Genomic Technology",
+            "LGBTQS M114 - Introduction to Lesbian, Gay, Bisexual, Transgender, and Queer Studies",
+            "LING 110 - Introduction to Historical Linguistics",
+            "LING 114 - American Indigenous Linguistics",
+            "LING 127 - Syntactic Typology and Universals",
+            "LING 130 - Language Development",
+            "LING 132 - Language Processing",
+            "LING C135 - Neurolinguistics",
+            "LING M146 - Language in Culture",
+            "LING M150 - Introduction to Indo-European Linguistics",
+            "LING 170 - Language and Society: Introduction to Sociolinguistics",
+            "MED HIS M169 - History of Neurosciences",
+            "MIMG 101 - Introductory Microbiology",
+            "MIMG 103AL - Research Immersion Laboratory in Virology",
+            "MIMG C122 - Mouse Molecular Genetics",
+            "MIMG CM156 - Human Genetics and Genomics",
+            "MIMG 158 - Microbial Genomics",
+            "MIMG 168 - Molecular Parasitology",
+            "MIMG 185A - Immunology",
+            "MCD BIO 138 - Developmental Biology",
+            "MCD BIO 144 - Molecular Biology of Cellular Processes",
+            "MCD BIO CM156 - Human Genetics and Genomics",
+            "MCD BIO 165A - Biology of Cells",
+            "MCD BIO 168 - Stem Cell Biology",
+            "MCD BIO 172 - Genomics and Bioinformatics",
+            "NEURBIO M169 - History of Neurosciences",
+            "NEUROSC 180 - Genetic, Molecular, and Genomic Approaches to Neural Development and Disease",
+            "PHILOS M124 - Philosophy of Science: Historical",
+            "PHILOS 125 - Philosophy of Science: Contemporary",
+            "PHILOS 129 - Philosophy of Psychology",
+            "PHILOS 130 - Philosophy of Space and Time",
+            "PHILOS 137 - Philosophy of Biology",
+            "PHILOS 150 - Society and Morals",
+            "PHILOS 153A - Topics in Ethical Theory: Normative Ethics",
+            "PHILOS 154 - Topics in Value Theory: Rationality and Action",
+            "PHILOS C154B - Topics in Value Theory: Moral Responsibility and Free Will",
+            "PHILOS 155A - Medical Ethics",
+            "PHILOS 155B - Topics in Medical Ethics",
+            "PHILOS C156 - Topics in Political Philosophy",
+            "PHILOS 157A - History of Political Philosophy",
+            "PHILOS 157B - History of Political Philosophy",
+            "PHILOS 170 - Philosophy of Mind",
+            "PHILOS M187 - Topics in Feminist Philosophy: Metaphysics and Epistemology",
+            "PHYSCI 111A - Foundations in Physiological Science",
+            "PHYSCI 111B - Foundations in Physiological Science",
+            "PHYSCI 140 - Hormones and Behavior in Humans and Other Animals",
+            "PHYSCI 147 - Neurobiology of Learning and Memory",
+            "PHYSCI 149 - Systems Biology and Mechanisms of Major Cardiometabolic Diseases",
+            "PHYSCI 177 - Neuroethology",
+            "PSYCH M107 - Asian American Personality and Mental Health",
+            "PSYCH 110 - Fundamentals of Learning",
+            "PSYCH 112A - Basic Processes of Motivated Behavior",
+            "PSYCH 112B - Psychobiology of Fear and Anxiety",
+            "PSYCH 115 - Principles of Behavioral Neuroscience",
+            "PSYCH M117A - Neuroscience: From Molecules to Mind\u2014Cellular and Systems Neuroscience",
+            "PSYCH M117B - Neuroscience: From Molecules to Mind\u2014Molecular and Developmental Neuroscience",
+            "PSYCH M117C - Neuroscience: From Molecules to Mind\u2014Behavioral and Cognitive Neuroscience",
+            "PSYCH 127A - Clinical Psychological Science",
+            "PSYCH 129C - Culture and Mental Health",
+            "PSYCH M140 - Introduction to Study of Aging",
+            "PSYCH M165 - Psychology of Gender",
+            "PUB HLT M106 - Health in Chicano/Latino Population",
+            "PUB HLT C150 - Fundamentals of Public Health",
+            "SOC WLF M140 - Introduction to Study of Aging",
+            "SOC WLF 162 - Health Policy and Services",
+            "SOC GEN 108 - Human Biology, Genetics, and Society",
+            "SOC GEN M113 - Ethical, Legal, and Societal Topics in Genetic Counseling",
+            "SOC GEN 120 - Genetics and Human History",
+            "SOC GEN 121 - Race, Science, and Citizenship",
+            "SOC GEN 130 - Biotechnology and Society",
+            "SOC GEN M132 - Food Cultures and Food Politics",
+            "SOC GEN M133 - Environmental Sociology",
+            "SOC GEN 134 - Food and Health in Global Perspective",
+            "SOC GEN M136 - Eating Society: Science and Politics of Food from Individual to Planetary Health",
+            "SOC GEN 141 - Nature versus Nurture: Genes and Environment",
+            "SOC GEN M142 - Primate Genetics, Ecology, and Conservation",
+            "SOC GEN M143 - Amazon in Anthropocene",
+            "SOC GEN 146 - Evolution in Anthropocene",
+            "SOC GEN M157 - Biology of Superheroes: Exploring Limits of Form and Function",
+            "SOC GEN 160 - Politics of Heredity",
+            "SOC GEN 161 - Controversy and Behavior Genetics",
+            "SOC GEN 162 - Biotechnologies, Law, and Body",
+            "SOC GEN 163 - Science and Popular Movements: Controversy, Conflict, and Collaboration",
+            "SOC GEN 164 - Ethics in Health and Research",
+            "SOC GEN 165 - Introduction to Bioethics",
+            "SOC GEN M166 - Health-Care Ethics",
+            "SOC GEN 174 - What's Wrong with Science?",
+            "SOC GEN 175 - Current Directions in Social and Historical Study of Science",
+            "SOC GEN 180 - Special Courses in Society and Genetics",
+            "SOC GEN M183 - Being Human: Identity and Mental Illness",
+            "SOC GEN 188 - Special Courses in Society and Genetics",
+            "SOC GEN 195CE - Community and Corporate Internships in Society and Genetics",
+            "SOC GEN 197 - Individual Studies in Society and Genetics",
+            "SOC GEN 199 - Directed Research in Society and Genetics",
+            "SOCIOL M115 - Environmental Sociology",
+            "SOCIOL 130 - Self and Society",
+            "SOCIOL 132 - Social Psychology: Sociological Approaches",
+            "SOCIOL 134 - Culture and Personality",
+            "SOCIOL M136 - Eating Society: Science and Politics of Food from Individual to Planetary Health",
+            "SOCIOL 138 - Death, Dying, and Afterlife",
+            "SOCIOL 143 - Human Health and Society",
+            "SOCIOL M144 - Stress and Society: Biology and Inequality",
+            "SOCIOL 145 - Sociology of Deviant Behavior",
+            "SOCIOL M148 - Sociology of Mental Illness",
+            "SOCIOL 154 - Race and Ethnicity in Latin America",
+            "SOCIOL 156 - Race and Ethnicity in American Life",
+            "SOCIOL M162 - Sociology of Gender",
+            "SOCIOL M164 - Politics of Reproduction and Everyday Life",
+            "SOCIOL 170 - Medical Sociology",
+            "URBN PL M165 - Environmentalism: Past, Present, and Future"
+          ]
+        },
+        {
+          "title": "Optional Subfocus Areas",
+          "description": "Complete the following three courses:",
+          "options": [
+            {
+              "title": "Cell Development",
+              "courses": [
+                "MCD BIO 138 - Developmental Biology",
+                "MCD BIO 165A - Biology of Cells",
+                "MCD BIO 168 - Stem Cell Biology"
+              ]
+            },
+            {
+              "title": "Ecology and Evolutionary Biology",
+              "courses": [
+                "ANTHRO 124P - Human Behavioral Ecology",
+                "ANTHRO 124S - Evolution of Human Sexual Behavior",
+                "ANTHRO 126Q - Evolution of Genus Homo",
+                "ANTHRO 128P - Primate Behavior Nonhuman to Human",
+                "EE BIOL 100 - Introduction to Ecology and Behavior",
+                "EE BIOL 116 - Conservation Biology",
+                "EE BIOL 120 - Evolution",
+                "EE BIOL 121 - Molecular Evolution",
+                "EE BIOL C126 - Behavioral Ecology",
+                "EE BIOL 129 - Animal Behavior",
+                "EE BIOL 130 - Principles of Systematic Biology",
+                "EE BIOL C135 - Population Genetics",
+                "EE BIOL 175 - Evolutionary Dynamics of Sex",
+                "EE BIOL 176 - Ecological Ethics"
+              ]
+            },
+            {
+              "title": "Microbiology and Immunology",
+              "description": "Select one course from:"
+            },
+            {
+              "title": "Molecular Biology and Genomics",
+              "description": "Select one course from:"
+            },
+            {
+              "title": "Physiology",
+              "description": "Select one course from:"
+            },
+            {
+              "title": "Population Genetics",
+              "description": "Select two courses from:"
+            },
+            {
+              "title": "Psychology and Mental Health",
+              "courses": [
+                "PSYCH M107 - Asian American Personality and Mental Health",
+                "PSYCH 112A - Basic Processes of Motivated Behavior",
+                "PSYCH 112B - Psychobiology of Fear and Anxiety",
+                "PSYCH 115 - Principles of Behavioral Neuroscience",
+                "PSYCH 127A - Clinical Psychological Science",
+                "PSYCH 129C - Culture and Mental Health"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program"
+    }
+  ]
+}

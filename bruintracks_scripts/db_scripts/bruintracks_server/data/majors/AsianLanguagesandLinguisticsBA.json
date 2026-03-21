@@ -1,0 +1,120 @@
+{
+  "major_name": "AsianLanguagesandLinguisticsBA",
+  "major_id": 24,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one intermediate sequence in one Asian language offered by the department (e.g., courses listed or equivalent):",
+      "options": [
+        {
+          "title": "Intermediate Sequence of Asian Language",
+          "courses": [
+            "CHIN 6 - Intermediate Modern Chinese",
+            "CHIN 10 - Intermediate Modern Chinese: Intensive",
+            "FILIPNO 6 - Intermediate Filipino",
+            "HIN-URD 100C - Intermediate Hindi-Urdu",
+            "INDO 6 - Intermediate Indonesian",
+            "JAPAN 6 - Intermediate Modern Japanese",
+            "JAPAN 10 - Intermediate Modern Japanese: Intensive",
+            "KOREA 6 - Intermediate Modern Korean",
+            "KOREA 10 - Intermediate Modern Korean: Intensive",
+            "THAI 6 - Intermediate Thai",
+            "VIETMSE 6 - Intermediate Vietnamese"
+          ]
+        },
+        {
+          "title": "Asian 30, Civilization, Introduction to Religions, or Culture",
+          "options": [
+            {
+              "title": "Asian 30",
+              "courses": [
+                "ASIAN 30 - Languages and Cultures of Asia"
+              ]
+            },
+            {
+              "title": "Civilization",
+              "courses": [
+                "CHIN 50 - Chinese Civilization",
+                "JAPAN 50 - Japanese Civilization",
+                "JAPAN 70 - Images of Japan: Literature and Film",
+                "KOREA 50 - History of Korean Civilization",
+                "SEASIAN 70 - Modern Southeast Asian Literature"
+              ]
+            },
+            {
+              "title": "Introduction to Religions",
+              "courses": [
+                "ASIAN M60 - Introduction to Buddhism",
+                "ASIAN M60W - Introduction to Buddhism",
+                "ASIAN M61 - Introduction to Zen Buddhism",
+                "CHIN M60 - Introduction to Chinese Religions",
+                "CHIN M60W - Introduction to Chinese Religions",
+                "KOREA M60 - Introduction to Korean Religions",
+                "S ASIAN M60 - Religion in Classical India: Introduction",
+                "SEASIAN M60 - Religious Traditions in Southeast Asia"
+              ]
+            },
+            {
+              "title": "Culture",
+              "courses": [
+                "JAPAN 75 - Anime",
+                "JAPAN 80 - How Does It Move? Action and Moving Image in Modern Japan",
+                "KOREA 40 - Korean Wave: Globalization of South Korean Popular Culture",
+                "KOREA 70 - Images of Korea",
+                "KOREA 80 - Introduction to Korean Cinema"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistics 20",
+          "courses": [
+            "LING 20 - Introduction to Linguistic Analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five upper-division language courses in one Asian language offered by the department, or three upper-division language courses in one Asian language offered by the department and two upper-division language courses in a different Asian language offered by the department.",
+      "options": [
+        {
+          "title": "Upper-Division Language Courses in Asian Languages"
+        },
+        {
+          "title": "Asian 100 and 104",
+          "courses": [
+            "ASIAN 100 - Methods in Asian Linguistics",
+            "ASIAN 104 - Asian Language Pedagogy"
+          ]
+        },
+        {
+          "title": "Asian Linguistics",
+          "courses": [
+            "ASIAN CM124 - Teaching and Learning of Heritage Languages",
+            "CHIN 103 - Topics in Chinese Language and Culture",
+            "CHIN C120 - Introduction to Chinese Linguistics",
+            "JAPAN M120 - Introduction to Japanese Linguistics",
+            "JAPAN CM122 - Japanese Phonology and Morphology",
+            "JAPAN CM123 - Structure of Japanese",
+            "JAPAN CM127 - Contrastive Analysis of Japanese and Korean",
+            "KOREA CM120 - Structure of Korean",
+            "KOREA 124 - Topics in Korean Language and Culture",
+            "S ASIAN 170 - Variable Topics in South Asian Linguistics, Languages, and Cultures"
+          ]
+        },
+        {
+          "title": "Upper-Division Electives"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ASIAN 198A - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198B - Honors Research in Asian Languages and Cultures",
+        "ASIAN 198C - Honors Research in Asian Languages and Cultures"
+      ]
+    }
+  ]
+}

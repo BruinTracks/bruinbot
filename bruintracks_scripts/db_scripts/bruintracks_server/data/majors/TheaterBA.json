@@ -1,0 +1,55 @@
+{
+  "major_name": "TheaterBA",
+  "major_id": 140,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "courses": [
+        "THEATER 11 - Approaches to Interpretation of Theater and Performance: Global Perspective",
+        "THEATER 12 - Introduction to Performance",
+        "THEATER 13 - Play Reading and Analysis",
+        "THEATER 14A - Introduction to Design",
+        "THEATER 14B - Introduction to Design",
+        "THEATER 14C - Introduction to Design",
+        "THEATER 50 - Theater Production"
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from:",
+      "courses": [
+        "THEATER 101A - Global Histories of Theater and Performance I",
+        "THEATER 101B - Global Histories of Theater and Performance II"
+      ],
+      "options": [
+        {
+          "title": "Theater 102A through 113",
+          "courses": [
+            "Theater 102A through 113"
+          ]
+        },
+        {
+          "title": "Capstone Seminar",
+          "courses": [
+            "THEATER 131C - Playwriting: Full-Length Play Capstone",
+            "THEATER 163C - Directing for Stage",
+            "THEATER 180 - Senior Project"
+          ]
+        },
+        {
+          "title": "Elective",
+          "courses": [
+            "THEATER 150 - Theater Production and Performance",
+            "THEATER 173A - Design Assignment: Assistant Designer",
+            "THEATER 173B - Production Design Assignment: Designer",
+            "THEATER 174B - Project in Stage Management",
+            "THEATER 174C - Project in Stage Management"
+          ]
+        },
+        {
+          "title": "Additional Electives"
+        }
+      ]
+    }
+  ]
+}

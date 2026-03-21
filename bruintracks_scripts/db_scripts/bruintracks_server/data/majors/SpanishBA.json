@@ -1,0 +1,52 @@
+{
+  "major_name": "SpanishBA",
+  "major_id": 112,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "SPAN 42 - Iberian Cultures",
+        "SPAN 44 - Latin American Cultures"
+      ],
+      "options": [
+        {
+          "title": "Spanish 25 or 27",
+          "courses": [
+            "SPAN 25 - Advanced Spanish Composition",
+            "SPAN 27 - Advanced Spanish Composition for Heritage Speakers"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following two courses:",
+      "options": [
+        {
+          "title": "Core",
+          "courses": [
+            "SPAN 119 - Introduction to Literary Analysis",
+            "SPAN 120 - Literature in Historical Context"
+          ]
+        },
+        {
+          "title": "Upper-Division Electives"
+        },
+        {
+          "title": "Senior Capstone Seminar",
+          "courses": [
+            "SPAN 191C - Senior Capstone Seminar"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "PORTGSE 198A - Senior Honors Research in Portuguese I",
+        "SPAN 198A - Senior Honors Research in Spanish I"
+      ]
+    }
+  ]
+}

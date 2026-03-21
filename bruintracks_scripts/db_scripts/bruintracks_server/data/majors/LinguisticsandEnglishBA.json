@@ -1,0 +1,160 @@
+{
+  "major_name": "LinguisticsandEnglishBA",
+  "major_id": 85,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the equivalent to the sixth level of one foreign language or the equivalent to the third level of two different foreign languages.",
+      "courses": [
+        "LING 20 - Introduction to Linguistic Analysis",
+        "ENGL 4W - Critical Reading and Writing",
+        "ENGL 4HW - Critical Reading and Writing (Honors)",
+        "ENGL 10A - Literatures in English to 1700",
+        "ENGL 10B - Literatures in English, 1700 to 1850",
+        "ENGL 10C - Literatures in English, 1850 to Present"
+      ],
+      "options": [
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete five courses. Only one course from Linguistics 165A or 165B may be applied.",
+      "options": [
+        {
+          "title": "Linguistics Core",
+          "description": "Students may substitute courses 200A or 200B for 165A or 165B respectively if they receive grades of A in 120A or 120B respectively and have consent of instructor.",
+          "courses": [
+            "LING 103 - Introduction to General Phonetics",
+            "LING 110 - Introduction to Historical Linguistics",
+            "LING 120A - Phonology I",
+            "LING 120B - Syntax I",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II"
+          ],
+          "options": [
+            {
+              "title": "Linguistics 200A or 200B",
+              "courses": [
+                "LING 200A - Phonological Theory I",
+                "LING 200B - Syntactic Theory I"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Upper-Division Linguistics Elective"
+        },
+        {
+          "title": "English",
+          "courses": [
+            "ENGL 113A - History of English Language",
+            "ENGL 120 - History of Aesthetics and Critical Theory",
+            "ENGL 141B - Introduction to Old English Language and Literature",
+            "LING 170 - Language and Society: Introduction to Sociolinguistics"
+          ]
+        },
+        {
+          "title": "Additional English Electives",
+          "description": "Only one course may apply.",
+          "courses": [
+            "ENGL 113A - History of English Language",
+            "ENGL 120 - History of Aesthetics and Critical Theory",
+            "ENGL 140A - Chaucer: \"Canterbury Tales\"",
+            "ENGL 140B - Chaucer: \"Troilus and Criseyde\" and Selected Minor Works",
+            "ENGL 141B - Introduction to Old English Language and Literature",
+            "ENGL 150A - Shakespeare: Poems and Early Plays",
+            "ENGL 150B - Shakespeare: Later Plays",
+            "ENGL 151 - Milton"
+          ],
+          "options": [
+            {
+              "title": "English 150 series",
+              "courses": [
+                "English 150 through 159"
+              ]
+            },
+            {
+              "title": "English 160 series",
+              "courses": [
+                "English 160 through 169"
+              ]
+            },
+            {
+              "title": "English 170 series",
+              "courses": [
+                "English 170 through 179"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "options": [
+        {
+          "title": "Linguistics 198A and 198B",
+          "courses": [
+            "LING 198A - Honors Research in Linguistics I",
+            "LING 198B - Honors Research in Linguistics II"
+          ]
+        },
+        {
+          "title": "Linguistics 199",
+          "courses": [
+            "LING 199 - Directed Research or Senior Project in Linguistics"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Computing Specialization",
+      "description": "Select one series from:",
+      "options": [
+        {
+          "title": "Introduction to Computing",
+          "options": [
+            {
+              "title": "Program in Computing",
+              "courses": [
+                "COMPTNG 10A - Introduction to Programming",
+                "COMPTNG 10B - Intermediate Programming",
+                "COMPTNG 10C - Advanced Programming"
+              ]
+            },
+            {
+              "title": "Computer Science",
+              "courses": [
+                "COM SCI 31 - Introduction to Computer Science I",
+                "COM SCI 32 - Introduction to Computer Science II"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Linguistics 185A and Mathematics 61",
+          "courses": [
+            "LING 185A - Computational Linguistics I",
+            "MATH 61 - Introduction to Discrete Structures"
+          ]
+        },
+        {
+          "title": "Linguistics Elective",
+          "courses": [
+            "LING C104 - Experimental Phonetics",
+            "LING 127 - Syntactic Typology and Universals",
+            "LING 132 - Language Processing",
+            "LING 165A - Phonology II",
+            "LING 165B - Syntax II",
+            "LING 165C - Semantics II",
+            "LING 180 - Mathematical Structures in Language I",
+            "LING 185B - Computational Linguistics II"
+          ]
+        }
+      ]
+    }
+  ]
+}

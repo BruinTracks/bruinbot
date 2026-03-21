@@ -1,0 +1,258 @@
+{
+  "major_name": "ArtHistoryBA",
+  "major_id": 21,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select four courses from:",
+      "options": [
+        {
+          "title": "Art History 20 through 32",
+          "courses": [
+            "Art History 20 through 32"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select one course from each of the following three historical periods:",
+      "options": [
+        {
+          "title": "Historical Periods",
+          "description": "Select one course from:",
+          "options": [
+            {
+              "title": "Ancient/Medieval before 1400",
+              "courses": [
+                "ART HIS M110A - Art and Architecture of Ancient Egypt, Predynastic Period to New Kingdom",
+                "ART HIS M110B - Art and Architecture of Ancient Egypt, New Kingdom to Greco-Roman Period",
+                "ART HIS M110C - Ancient Egyptian Temple and City of Thebes",
+                "ART HIS M111 - Minoan Art and Archaeology",
+                "ART HIS M112A - Mycenaean Art and Archaeology",
+                "ART HIS M112B - Archaic Greek Art and Archaeology",
+                "ART HIS M112C - Classical Greek Art and Archaeology",
+                "ART HIS M112D - Hellenistic Greek Art and Archaeology",
+                "ART HIS M113A - Etruscan Art and Archaeology",
+                "ART HIS M113B - Roman Art and Archaeology",
+                "ART HIS M114A - Classical Archaeology: Greco-Roman Architecture",
+                "ART HIS M114B - Classical Archaeology: Greco-Roman Sculpture",
+                "ART HIS M114C - Classical Archaeology: Greco-Roman Painting",
+                "ART HIS C114D - Selected Topics in Ancient Art",
+                "ART HIS CM115A - Late Antique Art and Architecture",
+                "ART HIS C115B - Early Medieval Art and Architecture",
+                "ART HIS 115C - Romanesque Art and Architecture",
+                "ART HIS C115D - Gothic Art and Architecture",
+                "ART HIS 115E - Late Gothic Art and Architecture",
+                "ART HIS C115F - Medieval Paris",
+                "ART HIS C116A - Middle Byzantine Art and Architecture",
+                "ART HIS C116B - Late Byzantine Art and Architecture",
+                "ART HIS C117A - Medieval Archaeology",
+                "ART HIS C117B - Selected Topics in Medieval Art",
+                "ART HIS M118A - Medieval Armenian Art",
+                "ART HIS 119A - Western Islamic Art",
+                "ART HIS 119B - Eastern Islamic Art",
+                "ART HIS CM139A - Maya Art and Architecture",
+                "ART HIS C148A - Art and Material Culture, Neolithic to 210 BC",
+                "ART HIS C148B - Art and Material Culture of Early Imperial China, 210 BC to AD 906",
+                "ART HIS 154A - Early Art of India"
+              ]
+            },
+            {
+              "title": "Early Modern, 1400 to 1700",
+              "courses": [
+                "ART HIS 121A - Italian Renaissance Art of 14th Century",
+                "ART HIS 121B - Italian Renaissance Art of 15th Century",
+                "ART HIS 121C - Italian Renaissance Art of 16th Century",
+                "ART HIS 121D - Late Renaissance Art: Counter-Reformation",
+                "ART HIS 124 - Northern Renaissance Art",
+                "ART HIS C125A - Southern Baroque Art",
+                "ART HIS 125B - Northern Baroque Art",
+                "ART HIS C126 - Selected Topics in Early Modern Art",
+                "ART HIS C139B - Aztec Art and Architecture",
+                "ART HIS C139C - Inca Art and Architecture",
+                "ART HIS CM141 - Colonial Latin American Art",
+                "ART HIS C148C - Art and Material Culture of Late Imperial China, 906 to 1911",
+                "ART HIS C148E - Art in Modern China",
+                "ART HIS C152B - History of Korean Painting",
+                "ART HIS C152C - History of Korean Ceramics",
+                "ART HIS 154B - Later Art of India"
+              ]
+            },
+            {
+              "title": "Modern/Contemporary, 1700 to Present",
+              "courses": [
+                "ART HIS M118B - Armenian Painting, 17th to 20th Century",
+                "ART HIS 127A - European Art of 17th and 18th Centuries",
+                "ART HIS 127B - European Art of 19th Century",
+                "ART HIS M127C - Cultural and Intellectual History of Modern Europe, 19th Century",
+                "ART HIS C128A - History of Photography, 1839 to 1910",
+                "ART HIS C128B - History of Photography, 1910 to Present",
+                "ART HIS C128C - History of Photography: Selected Topics",
+                "ART HIS C129A - Modern Art, 1900 to 1950",
+                "ART HIS C129B - Dada, 1915 to 1923",
+                "ART HIS C129C - Surrealism, 1924 to 1939",
+                "ART HIS 130 - Selected Topics in Modern Art",
+                "ART HIS C131A - Contemporary Art, 1940s to 1950s",
+                "ART HIS C131B - Contemporary Art, 1960s to 1970s",
+                "ART HIS C131C - Contemporary Art, 1980s to 1990s",
+                "ART HIS 132 - Selected Topics in Contemporary Art",
+                "ART HIS C133A - American Art before Civil War",
+                "ART HIS C133B - American Art in Gilded Age, 1860 to 1900",
+                "ART HIS C133C - American Art, 1900 to 1945",
+                "ART HIS 133D - Architecture in U.S.",
+                "ART HIS 133E - American Houses",
+                "ART HIS CM135A - African American Art before 1900",
+                "ART HIS CM135B - African American Art, 1900 to 1963",
+                "ART HIS C136A - Selected Topics in African American Art",
+                "ART HIS C142A - Mexican Art in Modern Age",
+                "ART HIS C142B - Latin American Art of 20th Century",
+                "ART HIS C145B - Contemporary Arts of Africa",
+                "ART HIS C148D - Advanced Chinese Art",
+                "ART HIS 154D - Modern and Contemporary South Asian Art",
+                "ART HIS C160 - Art and Empire",
+                "ART HIS C170A - Museum Studies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Geographic Regions",
+          "options": [
+            {
+              "title": "Africa",
+              "courses": [
+                "ART HIS C145A - Architecture and Urbanism in Africa",
+                "ART HIS C145B - Contemporary Arts of Africa",
+                "ART HIS C146A - Selected Topics in African Art"
+              ]
+            },
+            {
+              "title": "Asia",
+              "courses": [
+                "ART HIS C148A - Art and Material Culture, Neolithic to 210 BC",
+                "ART HIS C148B - Art and Material Culture of Early Imperial China, 210 BC to AD 906",
+                "ART HIS C148C - Art and Material Culture of Late Imperial China, 906 to 1911",
+                "ART HIS C148D - Advanced Chinese Art",
+                "ART HIS C148E - Art in Modern China",
+                "ART HIS C149 - Selected Topics in Chinese Art",
+                "ART HIS 150A - Japanese Art",
+                "ART HIS C150B - Advanced Japanese Art",
+                "ART HIS C151 - Selected Topics in Japanese Art",
+                "ART HIS 152A - Arts of Korea",
+                "ART HIS C152B - History of Korean Painting",
+                "ART HIS C152C - History of Korean Ceramics",
+                "ART HIS C152D - History of Korean Buddhist Art",
+                "ART HIS C153 - Selected Topics in Korean Art",
+                "ART HIS 154A - Early Art of India",
+                "ART HIS 154B - Later Art of India",
+                "ART HIS C154C - Advanced Indian Art",
+                "ART HIS 154D - Modern and Contemporary South Asian Art",
+                "ART HIS C155 - Selected Topics in South and Southeast Asian Art",
+                "ART HIS 156 - Arts of Southeast Asia",
+                "ART HIS C158A - Selected Topics in Asian Arts and Architecture"
+              ]
+            },
+            {
+              "title": "Europe and U.S.",
+              "courses": [
+                "ART HIS C115B - Early Medieval Art and Architecture",
+                "ART HIS 115C - Romanesque Art and Architecture",
+                "ART HIS C115D - Gothic Art and Architecture",
+                "ART HIS 115E - Late Gothic Art and Architecture",
+                "ART HIS C115F - Medieval Paris",
+                "ART HIS 121A - Italian Renaissance Art of 14th Century",
+                "ART HIS 121B - Italian Renaissance Art of 15th Century",
+                "ART HIS 121C - Italian Renaissance Art of 16th Century",
+                "ART HIS 121D - Late Renaissance Art: Counter-Reformation",
+                "ART HIS 124 - Northern Renaissance Art",
+                "ART HIS C125A - Southern Baroque Art",
+                "ART HIS 125B - Northern Baroque Art",
+                "ART HIS C126 - Selected Topics in Early Modern Art",
+                "ART HIS 127A - European Art of 17th and 18th Centuries",
+                "ART HIS 127B - European Art of 19th Century",
+                "ART HIS M127C - Cultural and Intellectual History of Modern Europe, 19th Century",
+                "ART HIS C129A - Modern Art, 1900 to 1950",
+                "ART HIS C129B - Dada, 1915 to 1923",
+                "ART HIS C129C - Surrealism, 1924 to 1939",
+                "ART HIS C131A - Contemporary Art, 1940s to 1950s",
+                "ART HIS C131B - Contemporary Art, 1960s to 1970s",
+                "ART HIS C131C - Contemporary Art, 1980s to 1990s",
+                "ART HIS C133A - American Art before Civil War",
+                "ART HIS C133B - American Art in Gilded Age, 1860 to 1900",
+                "ART HIS C133C - American Art, 1900 to 1945",
+                "ART HIS 133D - Architecture in U.S.",
+                "ART HIS 133E - American Houses",
+                "ART HIS CM135A - African American Art before 1900",
+                "ART HIS CM135B - African American Art, 1900 to 1963",
+                "ART HIS 137 - Arts of Native North America",
+                "ART HIS C170A - Museum Studies"
+              ]
+            },
+            {
+              "title": "Latin America and Caribbean",
+              "courses": [
+                "ART HIS CM139A - Maya Art and Architecture",
+                "ART HIS C139B - Aztec Art and Architecture",
+                "ART HIS C139C - Inca Art and Architecture",
+                "ART HIS C140 - Selected Topics in Arts of Indigenous Americas",
+                "ART HIS CM141 - Colonial Latin American Art",
+                "ART HIS C142A - Mexican Art in Modern Age",
+                "ART HIS C142B - Latin American Art of 20th Century",
+                "ART HIS 143 - Selected Topics in Latin American Art",
+                "ART HIS 144 - Caribbean Art"
+              ]
+            },
+            {
+              "title": "Mediterranean, Middle East, and Near East",
+              "courses": [
+                "ART HIS M110A - Art and Architecture of Ancient Egypt, Predynastic Period to New Kingdom",
+                "ART HIS M110B - Art and Architecture of Ancient Egypt, New Kingdom to Greco-Roman Period",
+                "ART HIS M110C - Ancient Egyptian Temple and City of Thebes",
+                "ART HIS M111 - Minoan Art and Archaeology",
+                "ART HIS M112A - Mycenaean Art and Archaeology",
+                "ART HIS M112B - Archaic Greek Art and Archaeology",
+                "ART HIS M112C - Classical Greek Art and Archaeology",
+                "ART HIS M112D - Hellenistic Greek Art and Archaeology",
+                "ART HIS M113A - Etruscan Art and Archaeology",
+                "ART HIS M113B - Roman Art and Archaeology",
+                "ART HIS M114A - Classical Archaeology: Greco-Roman Architecture",
+                "ART HIS M114B - Classical Archaeology: Greco-Roman Sculpture",
+                "ART HIS M114C - Classical Archaeology: Greco-Roman Painting",
+                "ART HIS CM115A - Late Antique Art and Architecture",
+                "ART HIS 119A - Western Islamic Art",
+                "ART HIS 119B - Eastern Islamic Art"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Art History Electives",
+          "courses": [
+            "ART HIS 196 - Research Apprenticeship in Art History",
+            "ART HIS 197A - Individual Studies in Art History",
+            "ART HIS 197B - Individual Capstone Studies"
+          ],
+          "options": [
+            {
+              "title": "Art History 100 through 185",
+              "courses": [
+                "Art History 100 through 185"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Language Training"
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "ART HIS 198A - Honors Research in Art History",
+        "ART HIS 198B - Honors Research in Art History"
+      ]
+    }
+  ]
+}

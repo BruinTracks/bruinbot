@@ -1,0 +1,313 @@
+{
+  "major_name": "AsianStudiesBA",
+  "major_id": 26,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Select one course from:",
+      "courses": [
+        "I A STD 1 - Introduction to International and Area Studies"
+      ],
+      "options": [
+        {
+          "title": "Area Studies",
+          "courses": [
+            "ART HIS 29 - Chinese Art",
+            "ART HIS 31 - Art of India and Southeast Asia",
+            "ASIAN 30 - Languages and Cultures of Asia",
+            "CHIN 40 - Popular Culture in Modern Chinese Societies",
+            "CHIN 50 - Chinese Civilization",
+            "CHIN 50W - Chinese Civilization",
+            "CHIN M60 - Introduction to Chinese Religions",
+            "CHIN M60W - Introduction to Chinese Religions",
+            "CHIN 80 - Chinese Cinema: Pictures, Prisms, Products, Projections",
+            "CLUSTER 25A - Politics, Society, and Urban Culture in East Asia",
+            "HIST 9A - Introduction to Asian Civilizations: History of India",
+            "HIST 9C - Introduction to Asian Civilizations: History of Japan",
+            "HIST 9E - Introduction to Asian Civilizations: Southeast Asian Crossroads",
+            "HIST 11B - History of China, circa 1000 to 2000",
+            "HIST 97G - Introduction to Historical Practice: Variable Topics in East Asian History",
+            "HIST 97M - Introduction to Historical Practice: Variable Topics in Southeast Asian History",
+            "HIST 97N - Introduction to Historical Practice: Variable Topics in Indian History",
+            "I A STD 31 - Introduction to Southeast Asia",
+            "I A STD 33 - Introduction to East Asia",
+            "JAPAN 50 - Japanese Civilization",
+            "JAPAN 70 - Images of Japan: Literature and Film",
+            "JAPAN 75 - Anime",
+            "JAPAN 80 - How Does It Move? Action and Moving Image in Modern Japan",
+            "KOREA 40W - Korean Wave: Globalization of South Korean Popular Culture",
+            "KOREA 50 - History of Korean Civilization",
+            "KOREA M60 - Introduction to Korean Religions",
+            "KOREA 70 - Images of Korea",
+            "KOREA 80 - Introduction to Korean Cinema"
+          ]
+        },
+        {
+          "title": "International Politics and Markets",
+          "courses": [
+            "ECON 1 - Principles of Economics",
+            "ECON 2 - Principles of Economics",
+            "GEOG 4 - Globalization: Regional Development and World Economy",
+            "GEOG 6 - World Regions: Concepts and Contemporary Issues",
+            "POL SCI 50 - Introduction to Comparative Politics",
+            "SOCIOL 1 - Introductory Sociology"
+          ]
+        },
+        {
+          "title": "International Societies and Cultures",
+          "courses": [
+            "ANTHRO 3 - Culture and Society",
+            "COM LIT 1D - Great Books from World at Large",
+            "COM LIT 2DW - Survey of Literature: Great Books from World at Large",
+            "COM LIT 4DW - Literature and Writing: Great Books from World at Large",
+            "ETHNMUS 5 - Music Around World",
+            "ETHNMUS M25 - Global Pop",
+            "GEOG 3 - Cultural Geography",
+            "HIST 2B - Social Knowledge and Social Power",
+            "HIST 22 - Contemporary World History, 1760 to Present",
+            "WL ARTS 20 - Culture: Introduction",
+            "WL ARTS 33 - Colonialisms and Resistance"
+          ]
+        },
+        {
+          "title": "Foreign Language",
+          "courses": [
+            "CHIN 6 - Intermediate Modern Chinese",
+            "CHIN 6A - Intermediate Modern Chinese for Advanced Students",
+            "FILIPNO 6 - Intermediate Filipino",
+            "HIN-URD 100C - Intermediate Hindi-Urdu",
+            "INDO 6 - Intermediate Indonesian",
+            "JAPAN 6 - Intermediate Modern Japanese",
+            "KOREA 6 - Intermediate Modern Korean",
+            "THAI 6 - Intermediate Thai",
+            "VIETMSE 6 - Intermediate Vietnamese"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select seven courses from the humanities and arts and social sciences groups as follows:",
+      "options": [
+        {
+          "title": "Area Studies",
+          "description": "Select three courses from the following. Ethnomusicology 161B is 2 units.",
+          "options": [
+            {
+              "title": "Humanities and Arts Group 1",
+              "courses": [
+                "ART HIS C148D - Advanced Chinese Art",
+                "ART HIS C148E - Art in Modern China",
+                "ART HIS C150B - Advanced Japanese Art",
+                "ART HIS C154C - Advanced Indian Art",
+                "ART HIS 154D - Modern and Contemporary South Asian Art",
+                "ASIAN 151 - Buddhist Literature in Translation",
+                "ASIAN 161 - Topics in Asian Religions",
+                "ASIAN 162 - Buddhist Meditation Traditions",
+                "CHIN C120 - Introduction to Chinese Linguistics",
+                "CHIN 124 - Taiwanese Language and Culture",
+                "CHIN 125 - Taiwanese Language and Expressive Cultures",
+                "CHIN 130B - Readings in Modern Chinese Literature",
+                "CHIN 131 - World Sinophone Literature: Theories and Texts",
+                "CHIN 139 - Gardens in China",
+                "CHIN C144 - Translation Workshop: Modern Chinese Texts",
+                "CHIN C150A - Lyrical Traditions",
+                "CHIN C150B - Chinese Literature in Translation: Traditional Narrative and Fiction",
+                "CHIN 151 - Chinese Literature in Translation: Modern Literature",
+                "CHIN 152 - Topics in Contemporary Chinese Literature and Culture",
+                "CHIN 155 - Topics in Chinese Cinema",
+                "CHIN C156 - Variable Topics in Culture and Society in Taiwan",
+                "CHIN CM160 - Chinese Buddhism",
+                "CHIN 165 - Introduction to Chinese Buddhist Texts",
+                "CHIN 174 - Chinese Strategic Thought",
+                "CHIN 176 - Neo-Confucianism",
+                "CHIN 180 - Chinese Mythology and Supernatural",
+                "CHIN 185 - Food and Love in Chinese Culture",
+                "CHIN 191B - Variable Topics Research Seminars: 20th-Century China and Taiwan",
+                "COM LIT M176 - Literature and Technology",
+                "COM LIT C178 - India Ink: Literature and Culture of Modern South Asia",
+                "ETHNMUS 146 - Folk Music of South Asia",
+                "ETHNMUS 147 - Survey of Classical Music in India",
+                "ETHNMUS C150 - Music and Politics in East Asia",
+                "ETHNMUS C156A - Music in China",
+                "ETHNMUS 156B - Music in China",
+                "ETHNMUS 157 - History of Chinese Opera",
+                "ETHNMUS C159 - Music on China's Periphery",
+                "ETHNMUS 160 - Survey of Music in Japan",
+                "ETHNMUS 161B - Advanced World Music Performance Organizations: Music of Bali",
+                "FILIPNO 155 - Topics in Filipino Cinema and Literature",
+                "FILIPNO 170 - People, Society, and Culture of Philippines",
+                "JAPAN 124 - Language and Culture of Ryukyu/Okinawa",
+                "JAPAN CM127 - Contrastive Analysis of Japanese and Korean",
+                "JAPAN 130A - Readings in Modern Japanese Literature",
+                "JAPAN 130B - Readings in Modern Japanese Literature",
+                "JAPAN 130C - Readings in Modern Japanese Literature",
+                "JAPAN 151 - Japanese Literature in Translation: Modern",
+                "JAPAN 154 - Postwar Japanese Culture through Literature",
+                "JAPAN 155 - Topics in Japanese Cinema",
+                "JAPAN M156 - Literature and Technology",
+                "JAPAN CM160 - Japanese Buddhism",
+                "JAPAN 161 - Religious Life in Modern Japan",
+                "JAPAN 170 - Japanese Tales of Supernatural",
+                "JAPAN C182 - Japanese Folklore",
+                "JAPAN 191B - Variable Topics Research Seminars: Modern Japan",
+                "KOREA C105A - Reading Korean Academic Texts",
+                "KOREA C105B - Reading Korean Academic Texts",
+                "KOREA C105C - Reading Korean Academic Texts",
+                "KOREA CM127 - Contrastive Analysis of Japanese and Korean",
+                "KOREA 148A - Reading Modern Korean Academic Texts",
+                "KOREA C151 - Korean Literature in Translation: Modern",
+                "KOREA 153 - Korea West Encounters",
+                "KOREA 154 - Contemporary Korean Culture through Literature and Film",
+                "KOREA 155 - Topics in Korean Cinema",
+                "KOREA CM160 - Korean Buddhism",
+                "KOREA 172 - Topics in Korean Christianity",
+                "KOREA C177 - Intellectual History of Modern Korea",
+                "KOREA 179 - Gender and Sexuality in Korean Literature",
+                "KOREA 180C - History of Korea since 1876",
+                "KOREA 182 - 1894 Kabo Reforms: History at Crossroads of Civilizations",
+                "KOREA 183 - Korean Folklore",
+                "KOREA 184B - Women in History: Modern Korea",
+                "KOREA 185 - Education and Society in Korea",
+                "KOREA M186 - Korea and Vietnam: Comparative Modern Histories",
+                "KOREA 187 - Popular and Folk Religion in Korea",
+                "KOREA 191B - Variable Topics Research Seminars: Contemporary Korean History",
+                "S ASIAN 155 - Topics in South Asian Cinema and Literature",
+                "SEASIAN 130 - Topics in Southeast Asian Literature",
+                "SEASIAN 135 - Religion and Society in Southeast Asia",
+                "SEASIAN C140 - Zomia: Peoples, Societies, and Cultures of Upland Southeast Asia",
+                "SEASIAN C150 - Indigenous Peoples of Southeast Asia",
+                "THEATER 102A - Theater of Japan",
+                "VIETMSE CM155 - Topics in Vietnamese Cinema and/or Literature",
+                "VIETMSE 180B - Vietnam: History and Civilization, 1858 to Present",
+                "VIETMSE M186 - Korea and Vietnam: Comparative Modern Histories"
+              ]
+            },
+            {
+              "title": "Social Sciences Group 1",
+              "courses": [
+                "ANTHRO M145T - Women's Voices: Their Critique of Anthropology of Japan",
+                "ANTHRO 163P - Ideology and Social Change in Contemporary China",
+                "ANTHRO 163Q - Societies of Central Asia",
+                "ANTHRO 163R - Japan",
+                "ASIA AM 171A - Critical Issues in U.S.-China Relations",
+                "ASIA AM 171B - Critical Issues in U.S.-Japan Relations",
+                "ASIA AM 171C - Critical Issues in U.S.-Korea Relations",
+                "ASIA AM M171D - Critical Issues in U.S.-Philippine Relations",
+                "ASIA AM 171E - Critical Issues in U.S.-Vietnam Relations",
+                "GENDER M164A - Women, Violence, Globalization: India, Philippines, Singapore, Vietnam",
+                "GENDER M170C - History of Women in China, AD 1000 to Present",
+                "GENDER M173B - Women in 20th-Century Japan",
+                "GEOG 175A - Japan in World: Culture, Place, and Global Connections",
+                "GEOG 175B - Contemporary China",
+                "GEOG 176A - Southeast Asia",
+                "HIST 170B - Selected Topics in Chinese History from 1500",
+                "HIST 170D - 20th-Century China",
+                "HIST 172C - Modern Japanese History, 1850 to 1945",
+                "HIST M173C - Shinto, Buddhism, and Japanese Folk Religion",
+                "HIST 174C - Contemporary South Asia",
+                "HIST 175A - Cultural and Political History of Contemporary South Asia",
+                "HIST 175C - Special Topics in Contemporary Indian History",
+                "HIST 176B - History of Southeast Asia: Southeast Asia since 1815",
+                "HIST 176C - Philippine History",
+                "POL SCI 158 - Southeast Asian Politics",
+                "POL SCI 159A - Government and Politics of China: Chinese Revolution and Age of Mao Zedong",
+                "POL SCI 159B - Government and Politics of China: China in Age of Reform",
+                "POL SCI 160 - Government and Politics of Japan",
+                "SOCIOL 181A - Sociology of Global China",
+                "SOCIOL 181B - Sociology of Contemporary China"
+              ]
+            },
+            {
+              "title": "Additional Elective"
+            },
+            {
+              "title": "Substitutions"
+            }
+          ]
+        },
+        {
+          "title": "International Themes",
+          "description": "Select two courses from:",
+          "options": [
+            {
+              "title": "International Politics and Markets",
+              "courses": [
+                "ANTHRO 143 - Economic Anthropology",
+                "ECON 111 - Theories of Development",
+                "ECON 112 - Policies for Economic Development",
+                "ECON 121 - International Trade Theory",
+                "ECON 122 - International Finance",
+                "ENVIRON 134 - Environmental Economics with Data Analysis",
+                "GEOG M127 - Global Environment and Development: Problems and Issues",
+                "GEOG 148 - Political Geography",
+                "GEOG 150 - Economic Geography",
+                "INTL DV 130 - Theory and History in International Development",
+                "MGMT 109 - International Business Law",
+                "MGMT 127C - International Taxation",
+                "POL SCI M122B - Global Environment and World Politics",
+                "POL SCI 123A - International Law",
+                "POL SCI 124A - International Political Economy",
+                "POL SCI 125A - Arms Control and International Security",
+                "POL SCI 126 - Peace and War",
+                "POL SCI 129 - Diplomacy and War",
+                "POL SCI 134 - Foreign Policy Decision Making and Tools of Statecraft",
+                "POL SCI 137A - International Relations Theory",
+                "POL SCI 150 - Political Violence",
+                "POL SCI 166 - Comparative Constitutional Design",
+                "POL SCI M167C - Political Economy of Development",
+                "POL SCI 167D - Political Institutions and Economic Development",
+                "POL SCI 168 - Comparative Political Analysis",
+                "SOCIOL 182 - Political Sociology",
+                "SOCIOL 183 - Comparative and Historical Sociology",
+                "URBN PL M165 - Environmentalism: Past, Present, and Future"
+              ]
+            },
+            {
+              "title": "International Societies and Cultures",
+              "courses": [
+                "ANTHRO 130 - Study of Culture",
+                "ANTHRO 140 - Study of Social Systems",
+                "ANTHRO 146 - Urban Anthropology",
+                "ANTHRO 147 - Development Anthropology",
+                "ART HIS C160 - Art and Empire",
+                "COMM 179 - Images of U.S.",
+                "COM LIT 100 - Introduction to Literary and Critical Theory",
+                "ENVIRON M133 - Environmental Sociology",
+                "FILM TV 112 - Film and Social Change",
+                "GEOG M131 - Human Impact on Biophysical Environment",
+                "GEOG 139C - Problems in Geography: Culture and Environment in Modern World",
+                "GEOG 140 - Social Geography",
+                "GEOG 141 - Cultural Geography of Modern World",
+                "GEOG 158 - Population Geography",
+                "GEOG 161 - Cities and Social Difference",
+                "HIST M186B - Global Feminism, 1850 to Present",
+                "HNRS M152 - (When) Do Leaders Make Differences?",
+                "INTL DV 110 - Culture, Power, and Development",
+                "SOCIOL 116 - Social Demography",
+                "SOCIOL 151 - Comparative Immigration",
+                "SOCIOL 154 - Race and Ethnicity in Latin America",
+                "SOCIOL 191D - Undergraduate Seminar: Sociology of Development",
+                "SOCIOL 191F - Undergraduate Seminar: Sociology of Globalization"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Capstone",
+          "courses": [
+            "I A STD 191 - Variable Topics Senior Research Seminars: International and Area Studies"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "courses": [
+        "I A STD 198A - Honors Research in International and Area Studies",
+        "I A STD 198B - Honors Research in International and Area Studies",
+        "I A STD 198C - Honors Research in International and Area Studies"
+      ]
+    }
+  ]
+}

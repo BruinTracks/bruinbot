@@ -1,0 +1,170 @@
+{
+  "major_name": "EnglishBA",
+  "major_id": 50,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following course:",
+      "options": [
+        {
+          "title": "English Composition 3",
+          "courses": [
+            "ENGCOMP 3 - English Composition, Rhetoric, and Language"
+          ]
+        },
+        {
+          "title": "English 4W series",
+          "courses": [
+            "ENGL 4W - Critical Reading and Writing",
+            "ENGL 4HW - Critical Reading and Writing (Honors)",
+            "ENGL 4WX - Critical Reading and Writing (Community-Engaged Learning)"
+          ]
+        },
+        {
+          "title": "English 10 series",
+          "courses": [
+            "ENGL 10A - Literatures in English to 1700",
+            "ENGL 10B - Literatures in English, 1700 to 1850",
+            "ENGL 10C - Literatures in English, 1850 to Present"
+          ]
+        },
+        {
+          "title": "Foreign Language"
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Select four historical period courses, one from each of the following four periods:",
+      "options": [
+        {
+          "title": "(1) Historical Period Courses",
+          "description": "Select from English 140A through 148 or indicated sections of 149:",
+          "options": [
+            {
+              "title": "(a) Literatures in English to 1500"
+            },
+            {
+              "title": "(b) Literatures in English, 1500 to 1700"
+            },
+            {
+              "title": "(c) Literatures in English, 1700 to 1850"
+            },
+            {
+              "title": "(d) Literatures in English, 1850 to present",
+              "courses": [
+                "ENGL M101B - Queer Literatures and Cultures, 1850 to 1970",
+                "ENGL M101C - Queer Literatures and Cultures after 1970",
+                "ENGL M102A - Historical Survey of Asian American Literature",
+                "ENGL M102B - Contemporary Asian American Literary Issues and Criticism",
+                "ENGL M104A - Early African American Literature",
+                "ENGL M104B - African American Literature from Harlem Renaissance to 1960s",
+                "ENGL M104C - African American Literature of 1960s and 1970s",
+                "ENGL M104D - Contemporary African American Literature",
+                "ENGL M105B - Chicana/Chicano Literature from Mexican Revolution to el Movimiento, 1920 to 1970s",
+                "ENGL M105C - Chicana/Chicano Literature since el Movimiento, 1970s to Present",
+                "ENGL M105D - Introduction to Latina/Latino Literature",
+                "ENGL M105E - Studies in Chicana/Chicano and/or Latina/Latino Literature",
+                "ENGL 116B - Introduction to Electronic Literature",
+                "ENGL 130 - Introduction to Postcolonial Literatures",
+                "ENGL 131 - Studies in Postcolonial Literatures",
+                "ENGL 164B - 19th-Century Critical Prose",
+                "ENGL 164C - 19th-Century Novel",
+                "ENGL 164D - Global 19th Century",
+                "ENGL 167A - American Poetry to 1900",
+                "ENGL 167B - American Fiction to 1900",
+                "ENGL 168 - Major American Writers",
+                "ENGL 170A - American Literature, 1865 to 1900",
+                "ENGL 170B - American Literature, 1900 to 1945",
+                "ENGL 170C - American Literature since 1945",
+                "ENGL 171A - Later 19th-Century Poetry",
+                "ENGL 171B - 20th-Century British Poetry",
+                "ENGL 171C - 20th-Century British Fiction",
+                "ENGL 172A - Drama, 1850 to 1945",
+                "ENGL 172B - Drama, 1945 to Present",
+                "ENGL 172C - American Drama",
+                "ENGL 173A - American Poetry, 1900 to 1945",
+                "ENGL 173B - American Poetry since 1945",
+                "ENGL 173C - Contemporary American Poetry",
+                "ENGL 174A - American Fiction, 1900 to 1945",
+                "ENGL 174B - American Fiction since 1945",
+                "ENGL 174C - Contemporary American Fiction",
+                "ENGL 179 - Topics in Literature, circa 1850 to Present",
+                "ENGL 179R - Topics in Literature, circa 1850 to Present: Research Component"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "(2) Breadth Courses",
+          "description": "Select from following groups of courses or following range:",
+          "options": [
+            {
+              "title": "(a) Gender, Race, Ethnicity, Disability, and Sexuality Studies"
+            },
+            {
+              "title": "(b) Imperial, Transnational, and Postcolonial Studies"
+            },
+            {
+              "title": "(c) Genre Studies, Interdisciplinary Studies, Critical Theory"
+            },
+            {
+              "title": "(d) Creative Writing",
+              "courses": [
+                "ENGL 136A - Creative Writing: Intermediate Poetry",
+                "ENGL 136B - Creative Writing: Advanced Poetry",
+                "ENGL 137A - Creative Writing: Intermediate Short Story",
+                "ENGL 137B - Creative Writing: Advanced Short Story",
+                "ENGL M138 - Topics in Creative Writing"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "(3) Elective Courses"
+        },
+        {
+          "title": "(4) Seminar Course",
+          "options": [
+            {
+              "title": "English 180 through 184",
+              "courses": [
+                "English 180 through 184"
+              ]
+            },
+            {
+              "title": "English M191A through M191E",
+              "courses": [
+                "ENGL M191A - Topics in African American Literature",
+                "ENGL M191B - Topics in Chicana/Chicano and/or Latina/Latino Literature",
+                "ENGL M191C - Topics in Asian American Literature",
+                "ENGL M191D - Topics in Queer Literatures and Cultures",
+                "ENGL M191E - Topics in Gender and Sexuality"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Honors Program",
+      "description": "Select one course from:",
+      "options": [
+        {
+          "title": "Theory",
+          "courses": [
+            "English 120 through 128"
+          ]
+        },
+        {
+          "title": "Honors Research",
+          "courses": [
+            "ENGL 191H - Honors Research Seminars: English",
+            "ENGL 198A - Honors Research in English",
+            "ENGL 198B - Honors Research in English"
+          ]
+        }
+      ]
+    }
+  ]
+}

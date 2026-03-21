@@ -1,0 +1,86 @@
+{
+  "major_name": "MusicBA",
+  "major_id": 130,
+  "json_data": [
+    {
+      "title": "Preparation for the Major",
+      "description": "Complete the following three courses with grades of C\u2013 or better:",
+      "options": [
+        {
+          "title": "Musicianship",
+          "courses": [
+            "MUSC M6A - Introduction to Global Musicianship",
+            "MUSC M6B - Introduction to Musicianship",
+            "MUSC M6C - Introduction to Musicianship"
+          ]
+        },
+        {
+          "title": "Music Theory",
+          "courses": [
+            "MUSC 20A - Music Theory I",
+            "MUSC 20B - Music Theory II",
+            "MUSC 20C - Music Theory III"
+          ]
+        },
+        {
+          "title": "Studio",
+          "options": [
+            {
+              "title": "Music 60A through 60Z",
+              "courses": [
+                "Music 60A through 60Z"
+              ]
+            },
+            {
+              "title": "Music 61A",
+              "courses": [
+                "MUSC 61A - Voice Studio"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Performance Organizations",
+          "courses": [
+            "MUSC C185A - UCLA Chorale",
+            "MUSC C185B - Chamber Singers",
+            "MUSC C185C - Opera Workshop",
+            "MUSC C185D - Symphony Orchestra",
+            "MUSC C185E - Philharmonia",
+            "MUSC 185F - Symphonic Band",
+            "MUSC C185G - Wind Ensemble",
+            "MUSC 185H - Marching and Varsity Bands",
+            "MUSC C186A - Piano/Keyboard Accompanying",
+            "MUSC C186B - Guitar Accompanying",
+            "MUSC C186C - Harp Accompanying"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Major",
+      "description": "Complete the following three courses, with grades of C or better:",
+      "options": [
+        {
+          "title": "Music Theory",
+          "courses": [
+            "MUSC 120A - Music Theory IV",
+            "MUSC 120B - Music Theory V",
+            "MUSC 120C - Music Theory VI"
+          ]
+        },
+        {
+          "title": "History and Analysis of Western Music",
+          "courses": [
+            "MUSC 140A - History and Analysis of Western Music to 1700",
+            "MUSC 140B - History and Analysis of Western Music, 1700 to 1800",
+            "MUSC 140C - History and Analysis of Western Music, 1890 to Present"
+          ]
+        },
+        {
+          "title": "Theory Electives"
+        }
+      ]
+    }
+  ]
+}

@@ -24,42 +24,55 @@ function getFirstDateForDay(year, quarterStart, dayChar) {
 const GoogleCalendarButton = ({ scheduleData }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const addToGoogleCalendar = () => {
-    setIsLoading(true);
-    try {
-      // Determine quarter range
-      const [quarterLabel, courses] = Object.entries(scheduleData)[0];
-      const [termName, termYear] = quarterLabel.split(' ');
-      const year = parseInt(termYear, 10);
-      const { start: qs, end: qe } = quarterDateRanges[termName];
+  const buildCalendarEvents = () => {
+    // Determine quarter range
+    const [quarterLabel, courses] = Object.entries(scheduleData)[0];
+    const [termName, termYear] = quarterLabel.split(' ');
+    const year = parseInt(termYear, 10);
+    const { start: qs, end: qe } = quarterDateRanges[termName];
 
-      // Build a flat list of event objects
-      const events = [];
-      Object.entries(courses).forEach(([courseKey, courseData]) => {
-        if (!courseData || typeof courseData !== 'object' || courseKey.startsWith('FILLER')) return;
-        ['lecture', 'discussion'].forEach(type => {
-          const section = courseData[type];
-          if (!section || !section.times) return;
-          section.times.forEach(t => {
-            (t.days || '').split('').forEach(dayChar => {
-              if (!/[MTWRFS]/.test(dayChar)) return;
-              const firstDate = getFirstDateForDay(year, qs, dayChar);
-              const dateStr = firstDate.toISOString().slice(0, 10);
-              const start = `${dateStr}T${t.start}:00`;
-              const end   = `${dateStr}T${t.end}:00`;
-              const summary = `${courseKey.replace(/\|/g,' ')} (${type.charAt(0).toUpperCase()+type.slice(1)})`;
-              const description = `Section: ${section.section}\nInstructors: ${section.instructors?.join(', ') || 'TBA'}`;
-              const location = t.building || 'TBA';
-              events.push({ summary, start, end, description, location });
-            });
+    // Build a flat list of event objects
+    const events = [];
+    Object.entries(courses).forEach(([courseKey, courseData]) => {
+      if (!courseData || typeof courseData !== 'object' || courseKey.startsWith('FILLER')) return;
+      ['lecture', 'discussion'].forEach(type => {
+        const section = courseData[type];
+        if (!section || !section.times) return;
+        section.times.forEach(t => {
+          (t.days || '').split('').forEach(dayChar => {
+            if (!/[MTWRFS]/.test(dayChar)) return;
+            const firstDate = getFirstDateForDay(year, qs, dayChar);
+            const dateStr = firstDate.toISOString().slice(0, 10);
+            const start = `${dateStr}T${t.start}:00`;
+            const end   = `${dateStr}T${t.end}:00`;
+            const summary = `${courseKey.replace(/\|/g,' ')} (${type.charAt(0).toUpperCase()+type.slice(1)})`;
+            const description = `Section: ${section.section}\nInstructors: ${section.instructors?.join(', ') || 'TBA'}`;
+            const location = t.building || 'TBA';
+            events.push({ summary, start, end, description, location, year, quarterEnd: qe });
           });
         });
       });
+    });
+
+    return events;
+  };
+
+  const addToGoogleCalendar = () => {
+    setIsLoading(true);
+    try {
+      const events = buildCalendarEvents();
 
       if (!events.length) throw new Error('No valid course times found');
 
+      const shouldContinue = window.confirm(
+        `This will open ${events.length} Google Calendar tab${events.length === 1 ? '' : 's'} so you can add each recurring event.\n\nMake sure pop-ups are allowed for this site.`
+      );
+      if (!shouldContinue) {
+        return;
+      }
+
       // Setup recurrence until quarter end
-      const until = `${year}${qe.replace(/-/g,'')}T235959Z`;
+      const until = `${events[0].year}${events[0].quarterEnd.replace(/-/g,'')}T235959Z`;
       const recurrenceRule = `RRULE:FREQ=WEEKLY;UNTIL=${until}`;
 
       // For each event, open its own recurring calendar URL
@@ -83,7 +96,6 @@ const GoogleCalendarButton = ({ scheduleData }) => {
       });
 
     } catch (err) {
-      console.error(err);
       alert(err.message || 'Failed to create event links');
     } finally {
       setIsLoading(false);
@@ -94,9 +106,10 @@ const GoogleCalendarButton = ({ scheduleData }) => {
     <motion.button
       onClick={addToGoogleCalendar}
       disabled={isLoading}
-      className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center gap-2"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      className="inline-flex min-h-[52px] w-full items-center justify-center rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition duration-200 hover:bg-blue-700"
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      title="Opens a Google Calendar tab for each class meeting"
     >
       {isLoading ? 'Generating Events...' : 'Add to Google Calendar'}
     </motion.button>
