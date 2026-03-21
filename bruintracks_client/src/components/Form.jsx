@@ -206,6 +206,11 @@ const MajorAutocomplete = ({ school, major, setMajor, setMajorName }) => {
 
   useEffect(() => {
     if (!school) return;
+    // Map display label back to backend value for lookup
+    let backendSchool = school;
+    if (school === 'Letters & Sciences') {
+      backendSchool = 'The College';
+    }
     fetch(`http://localhost:3000/schools`)
       .then(res => {
         if (!res.ok) {
@@ -215,7 +220,7 @@ const MajorAutocomplete = ({ school, major, setMajor, setMajorName }) => {
       })
       .then(schools => {
         const schoolIndex = schools.findIndex(
-          s => s.toLowerCase() === school.toLowerCase()
+          s => s.toLowerCase() === backendSchool.toLowerCase()
         );
         if (schoolIndex !== -1) {
           setSchoolId(schoolIndex + 1);

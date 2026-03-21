@@ -12,16 +12,32 @@ const normalizePlaceholderLabel = (name) =>
     .replace(/\s+/g, ' ')
     .trim();
 
-const buildElectiveDescription = (rawName) => {
+const parsePlaceholderLabel = (rawName) => {
   const normalized = normalizePlaceholderLabel(rawName);
-  const withoutNumber = normalized.replace(/\s+#\d+\s*$/i, '').trim();
+  const slotMatch = normalized.match(/\s+#(\d+)\s*$/i);
+  const slotNumber = slotMatch?.[1] || null;
+  const requirementName = normalized.replace(/\s+#\d+\s*$/i, '').trim();
+  return {
+    normalized,
+    slotNumber,
+    requirementName
+  };
+};
+
+const formatSlotSuffix = (slotNumber) =>
+  slotNumber ? ` This is placeholder slot ${slotNumber}.` : '';
+
+const buildElectiveDescription = (rawName) => {
+  const { requirementName, slotNumber } = parsePlaceholderLabel(rawName);
+  const withoutNumber = requirementName;
+  const slotSuffix = formatSlotSuffix(slotNumber);
 
   if (/technical breadth/i.test(withoutNumber)) {
-    return 'Technical breadth requirement. Pick an upper-division engineering or STEM course outside your major area that counts toward technical breadth.';
+    return `Technical breadth requirement.${slotSuffix} Pick an upper-division engineering or STEM course outside your major area that counts toward technical breadth.`;
   }
 
   if (/(computer science|com\s*sci|\bcs\b)\s+elective/i.test(withoutNumber)) {
-    return 'Computer Science elective requirement. For CS-focused plans, choose an upper-division CS course that fits your track and prerequisite chain.';
+    return `Computer Science elective requirement.${slotSuffix} Choose an upper-division CS course that fits your track and prerequisite chain.`;
   }
 
   if (
@@ -29,14 +45,30 @@ const buildElectiveDescription = (rawName) => {
       withoutNumber
     )
   ) {
-    return 'Electrical and Computer Engineering elective requirement. For ECE-focused plans, choose an upper-division ECE course aligned with your specialization.';
+    return `Electrical and Computer Engineering elective requirement.${slotSuffix} Choose an upper-division ECE course aligned with your specialization.`;
+  }
+
+  if (/science and technology/i.test(withoutNumber)) {
+    return `Science and technology requirement.${slotSuffix} Choose an approved science or technology course that fits your major's requirement rules and your prerequisite progress.`;
+  }
+
+  if (/major field elective/i.test(withoutNumber)) {
+    return `Major field elective requirement.${slotSuffix} Choose a course from the approved major field elective list for your program.`;
+  }
+
+  if (/field elective/i.test(withoutNumber)) {
+    return `Field elective requirement.${slotSuffix} Choose a course from the approved field elective list for your program or track.`;
+  }
+
+  if (/upper-division/i.test(withoutNumber) && /elective/i.test(withoutNumber)) {
+    return `${withoutNumber} requirement.${slotSuffix} Choose an approved upper-division course in this area that matches your prerequisite progress.`;
   }
 
   if (/elective/i.test(withoutNumber)) {
-    return `${withoutNumber} requirement. Choose an upper-division course that satisfies this requirement and your prerequisite progress.`;
+    return `${withoutNumber || 'Elective'} requirement.${slotSuffix} This is an unresolved major requirement placeholder. Choose a course that satisfies this specific requirement in your major worksheet.`;
   }
 
-  return 'Elective requirement placeholder. Choose a course that satisfies your major requirement document.';
+  return `${withoutNumber || 'Requirement'} placeholder.${slotSuffix} This slot still needs a specific course from your major requirements.`;
 };
 
 const isElectivePlaceholder = (name) => {

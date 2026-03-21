@@ -34,15 +34,41 @@ class ScheduleEditor:
         self._prereq_cache = {}
         self._subject_code_to_id = {}
         self._subject_name_to_code = {}
+        self._subject_rows = []
         self._load_subject_mappings()
 
     def _normalize_subject_name(self, name: str) -> str:
         """Normalize subject names for stable lookup from prerequisite text."""
         return " ".join((name or "").upper().strip().split())
 
+    def _catalog_number_sort_key(self, catalog_number: str) -> Tuple[float, str]:
+        """Prefer lower-division courses when ranking filler suggestions."""
+        text = str(catalog_number or "").strip().upper()
+        match = re.search(r"(\d+(?:\.\d+)?)", text)
+        if match:
+            try:
+                return float(match.group(1)), text
+            except ValueError:
+                pass
+        return float("inf"), text
+
+    def _first_term(self) -> Optional[str]:
+        term_order = list(self.schedule.keys())
+        return term_order[0] if term_order else None
+
+    def _earlier_term(self, term_a: str, term_b: str) -> str:
+        term_order = list(self.schedule.keys())
+        try:
+            idx_a = term_order.index(term_a)
+            idx_b = term_order.index(term_b)
+        except ValueError:
+            return term_a
+        return term_a if idx_a <= idx_b else term_b
+
     def _load_subject_mappings(self) -> None:
         """Load subject mappings once to avoid repeated network lookups."""
         rows = self.supabase.table("subjects").select("id,code,name").execute().data or []
+        self._subject_rows = rows
         for row in rows:
             code = row.get("code")
             if not code:
@@ -358,12 +384,16 @@ class ScheduleEditor:
         return True, None
 
     def _validate_prerequisites_after_term(self, start_term: str) -> Tuple[bool, Optional[str]]:
-        """Check prerequisites for all courses in all terms, starting from the first quarter."""
-        debug_print(f"\n🔍 Validating prerequisites for all terms")
+        """Check prerequisites for all courses in and after the specified term."""
+        debug_print(f"\n🔍 Validating prerequisites from {start_term} onward")
         term_order = list(self.schedule.keys())
-        
-        # Always start from the first term
-        for term_idx in range(len(term_order)):
+
+        try:
+            start_idx = term_order.index(start_term)
+        except ValueError:
+            start_idx = 0
+
+        for term_idx in range(start_idx, len(term_order)):
             term = term_order[term_idx]
             debug_print(f"\n🔍 Checking all courses in {term}")
             if isinstance(self.schedule[term], dict):
@@ -535,19 +565,73 @@ class ScheduleEditor:
                     continue
                 score_by_course_id[cid] = score_by_course_id.get(cid, 0) + 1
 
+            # Match subject names/codes so interests like "linguistics" can surface
+            # courses from the corresponding department even if descriptions are sparse.
+            subject_rows = [
+                row
+                for row in self._subject_rows
+                if interest in str(row.get("name") or "").lower()
+                or interest in str(row.get("code") or "").lower()
+            ]
+
+            subject_ids = [row.get("id") for row in subject_rows if row.get("id") is not None]
+            if subject_ids:
+                try:
+                    subject_course_rows = (
+                        self.supabase.table("courses")
+                        .select("id")
+                        .in_("subject_id", subject_ids)
+                        .limit(300)
+                        .execute()
+                        .data
+                        or []
+                    )
+                except Exception:
+                    subject_course_rows = []
+
+                for row in subject_course_rows:
+                    cid = row.get("id")
+                    if cid is None:
+                        continue
+                    score_by_course_id[cid] = score_by_course_id.get(cid, 0) + 3
+
+            # Titles tend to be a better semantic signal than descriptions alone.
+            for title_field in ("title", "short_title"):
+                try:
+                    title_rows = (
+                        self.supabase.table("courses")
+                        .select("id")
+                        .ilike(title_field, f"%{interest}%")
+                        .limit(300)
+                        .execute()
+                        .data
+                        or []
+                    )
+                except Exception:
+                    title_rows = []
+
+                for row in title_rows:
+                    cid = row.get("id")
+                    if cid is None:
+                        continue
+                    score_by_course_id[cid] = score_by_course_id.get(cid, 0) + 2
+
         if not score_by_course_id:
             return []
 
         subject_id_to_code = {v: k for k, v in self._subject_code_to_id.items()}
-        sorted_course_ids = [cid for cid, _ in sorted(score_by_course_id.items(), key=lambda kv: kv[1], reverse=True)]
+        scored_course_ids = [
+            cid for cid, _ in sorted(score_by_course_id.items(), key=lambda kv: kv[1], reverse=True)
+        ]
 
         candidates: List[str] = []
         chunk_size = 200
-        for idx in range(0, len(sorted_course_ids), chunk_size):
-            chunk = sorted_course_ids[idx : idx + chunk_size]
+        seen_candidates: Set[str] = set()
+        for idx in range(0, len(scored_course_ids), chunk_size):
+            chunk = scored_course_ids[idx : idx + chunk_size]
             rows = (
                 self.supabase.table("courses")
-                .select("id,subject_id,catalog_number")
+                .select("id,subject_id,catalog_number,course_requisites")
                 .in_("id", chunk)
                 .execute()
                 .data
@@ -555,15 +639,33 @@ class ScheduleEditor:
             )
 
             row_by_id = {r.get("id"): r for r in rows}
+            ranked_rows = []
             for cid in chunk:
                 row = row_by_id.get(cid)
                 if not row:
                     continue
+                score = score_by_course_id.get(cid, 0)
+                has_requisites = bool(row.get("course_requisites"))
+                ranked_rows.append(
+                    (
+                        -score,
+                        has_requisites,
+                        self._catalog_number_sort_key(row.get("catalog_number")),
+                        cid,
+                        row,
+                    )
+                )
+
+            for _, _, _, _, row in sorted(ranked_rows):
                 subject_code = subject_id_to_code.get(row.get("subject_id"))
                 catalog = row.get("catalog_number")
                 if not subject_code or not catalog:
                     continue
-                candidates.append(f"{subject_code}|{catalog}")
+                candidate = f"{subject_code}|{catalog}"
+                if candidate in seen_candidates:
+                    continue
+                seen_candidates.add(candidate)
+                candidates.append(candidate)
 
         return candidates
 
@@ -611,7 +713,7 @@ class ScheduleEditor:
             return False, "I could not find matching course suggestions for those interests"
 
         original_schedule = {**self.schedule}
-        earliest_term = min(self.schedule.keys()) if self.schedule else None
+        earliest_term = self._first_term()
 
         for replacement in candidates:
             if replacement in used:
@@ -690,7 +792,7 @@ class ScheduleEditor:
         self.schedule = temp_schedule
         
         # Check prerequisites for all courses in and after both terms
-        earliest_term = min(from_term, to_term)
+        earliest_term = self._earlier_term(from_term, to_term)
         valid, message = self._validate_prerequisites_after_term(earliest_term)
         
         if not valid:
@@ -699,7 +801,7 @@ class ScheduleEditor:
             return False, message
             
         # Validate term schedule if destination is earliest quarter (has detailed info)
-        if to_term == min(self.schedule.keys()) and isinstance(temp_schedule[to_term], dict):
+        if to_term == self._first_term() and isinstance(temp_schedule[to_term], dict):
             if not self._validate_term_schedule(temp_schedule[to_term]):
                 # Restore original schedule
                 self.schedule = original_schedule
@@ -740,7 +842,7 @@ class ScheduleEditor:
         self.schedule = temp_schedule
         
         # Check prerequisites for all courses in and after both terms
-        earliest_term = min(term1, term2)
+        earliest_term = self._earlier_term(term1, term2)
         valid, message = self._validate_prerequisites_after_term(earliest_term)
         
         if not valid:

@@ -31,6 +31,8 @@ You are helping build a structured list of courses required for a major. Your ta
 
 2. For elective requirements with specific counts:
    - Do NOT come up with any course substitutions. Instead, assume every elective is 4 units. Add the elective title placeholder, proceeded by "RESOLVE:", to the list and then the number of the elective. For example, the Computer Science and Engineering requires 12 units of electives. Then we include "RESOLVE: Computer Science Elective #1", "RESOLVE: Computer Science Elective #2", "RESOLVE: Computer Science Elective #3". Even if it's just one particular elective, i.e. the Electrical and Computer Engineering Elective for Computer Science & Engineering, we'll still label it "RESOLVE: Electrical and Computer Engineering Elective #1". This does NOT apply to tech breadths.
+   - Make the placeholder name as specific as possible. Never output a bare label like "RESOLVE: Elective #1" if the JSON gives any departmental, track, or category context.
+   - If the local title is generic like "Electives", use nearby context from the parent heading/section/description to expand it, for example "RESOLVE: Civil Engineering Field Elective #1" or "RESOLVE: Linguistics Upper-Division Elective #1".
 
 3. For technical breadth requirements, ignore them. We will handle them separately.
 

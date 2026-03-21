@@ -296,7 +296,7 @@ def main():
         if _looks_like_ge_replace_request(question_text) and not parsed_interests:
             result = {
                 'success': False,
-                'message': 'I can help swap a GE. Tell me your interests first (for example: biology, psychology, music, policy), and optionally the GE course or term you want to replace.'
+                'message': 'I can help swap a GE. Tell me your interests first (for example: biology, psychology, linguistics), and optionally the GE course or term you want to replace.'
             }
             print(json.dumps(result))
             return
@@ -304,7 +304,7 @@ def main():
         if _looks_like_filler_replace_request(question_text) and not parsed_interests:
             result = {
                 'success': False,
-                'message': 'I can help replace a filler slot. Tell me your interests first (for example: robotics, policy, design), and optionally which filler course or term to update.'
+                'message': 'I can help replace a filler slot. Tell me your interests first (for example: linguistics, chemistry, musicology), and optionally which filler course or term to update.'
             }
             print(json.dumps(result))
             return
