@@ -483,40 +483,26 @@ export const getCoursesToSchedule = async (req, res) => {
 
     // Call scheduling controller
     try {
-      // Try different localhost variations
-      const endpoints = [
-        "http://127.0.0.1:3000/api/schedule",
-        "http://localhost:3000/api/schedule",
-        "http://[::1]:3000/api/schedule",
-      ];
+      const scheduleApiBaseUrl =
+        process.env.INTERNAL_API_BASE_URL ||
+        process.env.RENDER_EXTERNAL_URL ||
+        `http://127.0.0.1:${process.env.PORT || 3000}`;
+      const scheduleEndpoint = `${scheduleApiBaseUrl}/api/schedule`;
 
-      let schedulingResponse = null;
-      let lastError = null;
+      console.log(`Calling scheduling endpoint: ${scheduleEndpoint}`);
 
-      for (const endpoint of endpoints) {
-        try {
-          console.log(`Trying endpoint: ${endpoint}`);
-          schedulingResponse = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: req.headers.authorization, // Pass through the auth token
-            },
-            body: JSON.stringify(schedulingRequestBody),
-          });
-          if (schedulingResponse.ok) break;
-        } catch (error) {
-          console.log(`Failed to connect to ${endpoint}:`, error.message);
-          lastError = error;
-        }
-      }
+      const schedulingResponse = await fetch(scheduleEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: req.headers.authorization, // Pass through the auth token
+        },
+        body: JSON.stringify(schedulingRequestBody),
+      });
 
-      if (!schedulingResponse || !schedulingResponse.ok) {
-        throw (
-          lastError ||
-          new Error(
-            `Scheduling failed with status: ${schedulingResponse?.status}`,
-          )
+      if (!schedulingResponse.ok) {
+        throw new Error(
+          `Scheduling failed with status: ${schedulingResponse.status}`,
         );
       }
 
