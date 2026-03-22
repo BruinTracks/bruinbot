@@ -1098,7 +1098,7 @@ export const HomePage = () => {
                 </motion.button>
                 <motion.button
                   onClick={onSignOut}
-                  className={`${ACTION_BUTTON_CLASS} bg-red-600 text-white hover:bg-red-700`}
+                  className={`${ACTION_BUTTON_CLASS} cursor-pointer bg-red-600 text-white hover:bg-red-700`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

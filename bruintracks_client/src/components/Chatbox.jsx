@@ -2,6 +2,7 @@ import { Button } from './Button';
 import { motion } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../AuthContext';
+import { apiUrl } from '../api';
 
 export const Chatbox = () => {
   const { session } = useAuth();
@@ -58,7 +59,7 @@ export const Chatbox = () => {
       const storedSchedule = localStorage.getItem('scheduleData');
       const scheduleData = storedSchedule ? JSON.parse(storedSchedule).schedule.schedule : null;
 
-      const response = await fetch('http://localhost:3000/api/query', {
+      const response = await fetch(apiUrl('/api/query'), {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

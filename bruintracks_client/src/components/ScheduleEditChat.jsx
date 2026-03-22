@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useAuth } from '../AuthContext.jsx';
 import { motion } from 'framer-motion';
+import { apiUrl } from '../api';
 
 export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
   const { session } = useAuth();
@@ -51,7 +52,7 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
 
 
       // Send request to backend
-      const response = await fetch('http://localhost:3000/api/schedule/edit', {
+      const response = await fetch(apiUrl('/api/schedule/edit'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

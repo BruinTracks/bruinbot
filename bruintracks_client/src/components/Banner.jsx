@@ -83,7 +83,7 @@ export const Banner = () => {
               <h1 className="mt-10 text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Say no to
               </h1>
-              <div className="mt-4 flex min-h-[1.3em] items-end text-5xl font-bold tracking-tight text-cyan-300 sm:text-6xl lg:text-7xl">
+              <div className="mt-0 flex min-h-[1.3em] items-end text-5xl font-bold tracking-tight text-cyan-300 sm:text-6xl lg:text-7xl">
                 <span className="inline-block whitespace-nowrap">
                   {text}
                 </span>
@@ -137,24 +137,25 @@ export const Banner = () => {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
             className={`${PANEL_CLASS} relative flex h-full min-h-[640px] items-end justify-center overflow-hidden p-6 sm:p-8`}
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,_rgba(34,211,238,0.18),_transparent_26%),radial-gradient(circle_at_50%_58%,_rgba(59,130,246,0.10),_transparent_36%),linear-gradient(180deg,rgba(10,18,40,0.5),rgba(8,15,40,0.96))]" />
-            <div className="absolute left-6 top-6 right-6 flex items-center justify-between rounded-2xl border border-slate-700/70 bg-slate-950/70 px-4 py-3">
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300">
-                  Modern course planner
-                </p>
-                <p className="mt-1 text-sm text-slate-300">
-                  Built for students who want clarity, flexibility, and speed.
-                </p>
-              </div>
-              <div className="hidden min-w-[8.75rem] items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-1.5 text-center text-xs font-medium text-emerald-200 sm:inline-flex">
-                Planner ready
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,_rgba(34,211,238,0.18),_transparent_24%),radial-gradient(circle_at_50%_58%,_rgba(59,130,246,0.10),_transparent_36%),linear-gradient(180deg,rgba(10,18,40,0.46),rgba(8,15,40,0.96))]" />
             <div className="absolute left-1/2 top-[11rem] h-[18rem] w-[18rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.16),rgba(15,23,42,0.02)_60%,transparent_74%)] blur-[10px]" />
             <div className="absolute left-1/2 top-[10.3rem] h-[19rem] w-[19rem] -translate-x-1/2 rounded-full border border-cyan-400/10" />
             <div className="absolute left-1/2 top-[11.5rem] h-[15.5rem] w-[15.5rem] -translate-x-1/2 rounded-full border border-blue-400/10" />
-            <div className="relative z-10 mt-18 flex w-full max-w-[28rem] flex-col items-center">
+            <div className="relative z-10 flex h-full w-full flex-col">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                    Modern course planner
+                  </p>
+                  <p className="mt-1 max-w-xs text-sm text-slate-300">
+                    Built for students who want clarity, flexibility, and speed.
+                  </p>
+                </div>
+                <div className="hidden min-w-[8.75rem] items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-1.5 text-center text-xs font-medium text-emerald-200 sm:inline-flex">
+                  Planner ready
+                </div>
+              </div>
+              <div className="mt-12 flex w-full flex-1 flex-col items-center justify-end">
               <div className="relative w-full overflow-hidden rounded-[2rem] px-5 pb-2 pt-3">
                 <div className="absolute inset-x-12 top-6 h-20 rounded-full bg-cyan-400/6 blur-3xl" />
                 <div className="absolute inset-x-14 bottom-4 h-8 rounded-full bg-cyan-400/8 blur-2xl" />
@@ -173,6 +174,7 @@ export const Banner = () => {
                     {item}
                   </span>
                 ))}
+              </div>
               </div>
             </div>
           </motion.div>

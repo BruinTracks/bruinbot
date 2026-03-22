@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import { handleSignOut } from '../supabaseClient.js';
 import { useAuth } from '../AuthContext.jsx';
 import { supabase } from '../supabaseClient.js';
+import { apiUrl } from '../api.js';
 
 const classes = {
   'COM SCI': [
@@ -152,7 +153,7 @@ const Icebreaker = ({
   useEffect(() => {
     const fetchSchools = async () => {
       try {
-        const response = await fetch('http://localhost:3000/schools');
+        const response = await fetch(apiUrl('/schools'));
         if (!response.ok) {
           throw new Error('Failed to fetch schools');
         }
@@ -242,7 +243,7 @@ const MajorAutocomplete = ({ school, major, setMajor, setMajorName }) => {
     if (school === 'Letters & Sciences') {
       backendSchool = 'The College';
     }
-    fetch(`http://localhost:3000/schools`)
+    fetch(apiUrl('/schools'))
       .then(res => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -264,10 +265,10 @@ const MajorAutocomplete = ({ school, major, setMajor, setMajorName }) => {
 
   useEffect(() => {
     if (!schoolId) return;
-    fetch(`http://localhost:3000/majors?school_id=${schoolId}`)
+    fetch(apiUrl(`/majors?school_id=${schoolId}`))
       .then(res => res.json())
       .then(data => {
-        fetch('http://localhost:3000/majors/all')
+        fetch(apiUrl('/majors/all'))
           .then(res2 => res2.json())
           .then(allMajors => {
             const filtered = allMajors.filter(m => data.includes(m.full_name));
@@ -667,7 +668,7 @@ const InstructorAutocomplete = ({ selected, setSelected }) => {
     }
     try {
       const res = await fetch(
-        `http://localhost:3000/instructors/search?q=${encodeURIComponent(q)}`
+        apiUrl(`/instructors/search?q=${encodeURIComponent(q)}`)
       );
       const data = await res.json();
       setResults(data.filter(name => !selected.includes(name)));
@@ -796,7 +797,7 @@ const BuildingDropdown = ({ selected, setSelected }) => {
     }
     try {
       const res = await fetch(
-        `http://localhost:3000/courses/buildings/search?q=${encodeURIComponent(q)}`
+        apiUrl(`/courses/buildings/search?q=${encodeURIComponent(q)}`)
       );
       const data = await res.json();
       setResults(data.filter(name => !selected.includes(name)));
@@ -1156,7 +1157,7 @@ export const ClassSelect = ({
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/get_courses', {
+    fetch(apiUrl('/get_courses'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -1299,7 +1300,7 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       });
 
       // Call the get-courses-to-schedule endpoint (can take several minutes)
-      const response = await fetch('http://localhost:3000/courses/get-courses-to-schedule', {
+      const response = await fetch(apiUrl('/courses/get-courses-to-schedule'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1502,7 +1503,7 @@ const TranscriptStep = ({
         if (doubleMajorName) {
           majors.push(doubleMajorName);
         }
-        const response = await fetch('http://localhost:3000/courses/by-majors', {
+        const response = await fetch(apiUrl('/courses/by-majors'), {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -1832,7 +1833,7 @@ export const Form = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.12),_transparent_28%),radial-gradient(circle_at_85%_15%,_rgba(59,130,246,0.10),_transparent_24%)]" />
       <button
         onClick={onSignOut}
-        className="absolute right-6 top-5 z-50 rounded-xl border border-slate-600 bg-slate-900/85 px-4 py-2 text-white shadow hover:bg-slate-800"
+        className="absolute right-6 top-5 z-50 cursor-pointer rounded-xl border border-slate-600 bg-slate-900/85 px-4 py-2 text-white shadow hover:bg-slate-800"
       >
         Sign Out
       </button>
