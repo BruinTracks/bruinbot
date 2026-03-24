@@ -1346,6 +1346,16 @@ def build_schedule(start_y: int, start_q: str,
 def format_schedule(schedule: Dict[str, object]) -> Dict[str, object]:
     global GE_DISPLAY_BY_COURSE
 
+    def is_hidden_requirement_placeholder(course_key: str) -> bool:
+        if not isinstance(course_key, str):
+            return False
+
+        normalized = course_key.strip()
+        return bool(
+            re.search(r'(?:^| )Elective #\d+$', normalized) or
+            re.search(r'(?:^| )Technical Breadth #\d+$', normalized)
+        )
+
     def display_course(course_key: str) -> str:
         return GE_DISPLAY_BY_COURSE.get(course_key, course_key)
 
@@ -1384,13 +1394,19 @@ def format_schedule(schedule: Dict[str, object]) -> Dict[str, object]:
                 }
 
             for course, info in ent.items():
+                if is_hidden_requirement_placeholder(course):
+                    continue
                 term_d[display_course(course)] = {
                     'lecture': clean(info.get('lecture')),
                     'discussion': clean(info.get('discussion'))
                 }
             out[term] = term_d
         else:
-            out[term] = [display_course(course) for course in ent]
+            out[term] = [
+                display_course(course)
+                for course in ent
+                if not is_hidden_requirement_placeholder(course)
+            ]
     return out
 
 # ─────  CLI entrypoint ─────
