@@ -18,9 +18,9 @@ export const ScheduleEditChat = ({ scheduleData, onScheduleUpdate }) => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
   const examplePrompts = [
-    'Swap this Filler course for something related to art history.',
+    'Swap this Filler course for something related to dance.',
     'Move [Course Name] from Winter 2027 to Spring 2027.',
-    'Swap this GE for something related to psychology.',
+    'Swap this GE for something related to linguistics.',
   ];
 
   const scrollToBottom = () => {
