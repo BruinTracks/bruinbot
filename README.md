@@ -118,6 +118,8 @@ BruinTracks helps UCLA students create optimal course schedules by analyzing pre
    OPENAI_API_KEY=your_openai_api_key
    GOOGLE_CLIENT_ID=your_google_client_id
    GOOGLE_CLIENT_SECRET=your_google_client_secret
+   # Optional locally if your installed packages live in a non-default Python
+   PYTHON_BIN=python3
    ```
 
 4. **Set up the database**
@@ -140,9 +142,40 @@ BruinTracks helps UCLA students create optimal course schedules by analyzing pre
    npm run dev
    ```
 
+   If your backend uses a non-default Python installation locally, set
+   `PYTHON_BIN` in `bruintracks_server/.env`, for example:
+
+   ```env
+   PYTHON_BIN=/absolute/path/to/python3
+   ```
+
 6. **Open the application**
 
    Navigate to `http://localhost:5173` in your browser.
+
+## Deployment
+
+### Backend Deployment
+
+- The backend needs both Node and Python dependencies.
+- The scheduler process uses `PYTHON_BIN` when provided, otherwise it defaults to `python3`.
+- A Render blueprint is included in [render.yaml](/Users/ananyaanand/Desktop/bruintracksv1/render.yaml).
+
+For Render:
+
+```bash
+Build command: npm run render-build
+Start command: npm start
+```
+
+Set these environment variables in your host:
+
+```env
+SUPABASE_URL=your_supabase_url
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+OPENAI_API_KEY=your_openai_api_key
+PYTHON_BIN=python3
+```
 
 ## 📖 Usage
 

@@ -5,7 +5,7 @@ import '../App.css';
 import { motion, useDragControls } from 'framer-motion';
 import { Chatbox } from './Chatbox';
 import { handleSignOut } from '../supabaseClient.js';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext.jsx';
 import { supabase } from '../supabaseClient.js';
 import GoogleCalendarButton from './GoogleCalendarButton';
@@ -729,6 +729,7 @@ export const WeeklyCalendar = ({ courses }) => {
 
 export const HomePage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { session } = useAuth();
   const pageRef = useRef(null);
   const [scheduleData, setScheduleData] = useState(null);
@@ -752,6 +753,43 @@ export const HomePage = () => {
     setIsScheduleEditorOpen(true);
   };
 
+  const getStoredGenerationState = () => {
+    try {
+      const storedSchedule = localStorage.getItem('scheduleData');
+      if (!storedSchedule) {
+        return false;
+      }
+
+      const parsed = JSON.parse(storedSchedule);
+      const startedAt = Number(parsed.startedAt || 0);
+      const hasRecentAttempt =
+        startedAt > 0 && Date.now() - startedAt <= GENERATION_TIMEOUT_MS;
+
+      if (startedAt && !hasRecentAttempt) {
+        return false;
+      }
+
+      if (parsed?.isGenerating) {
+        return true;
+      }
+
+      // If the user is on the schedule page and a generation attempt was
+      // started recently but the result has not been written yet, keep showing
+      // the loading state instead of falling back to the welcome screen.
+      if (
+        location.pathname === '/schedule' &&
+        hasRecentAttempt &&
+        !parsed?.schedule?.schedule
+      ) {
+        return true;
+      }
+
+      return false;
+    } catch {
+      return false;
+    }
+  };
+
   const clearGeneratingState = () => {
     try {
       const storedSchedule = localStorage.getItem('scheduleData');
@@ -759,13 +797,19 @@ export const HomePage = () => {
         const parsed = JSON.parse(storedSchedule);
         localStorage.setItem(
           'scheduleData',
-          JSON.stringify({ ...parsed, isGenerating: false })
+          JSON.stringify({ ...parsed, isGenerating: false, startedAt: null })
         );
       } else {
-        localStorage.setItem('scheduleData', JSON.stringify({ isGenerating: false }));
+        localStorage.setItem(
+          'scheduleData',
+          JSON.stringify({ isGenerating: false, startedAt: null })
+        );
       }
     } catch {
-      localStorage.setItem('scheduleData', JSON.stringify({ isGenerating: false }));
+      localStorage.setItem(
+        'scheduleData',
+        JSON.stringify({ isGenerating: false, startedAt: null })
+      );
     }
     setIsGeneratingSchedule(false);
     setLoading(false);
@@ -773,12 +817,9 @@ export const HomePage = () => {
   };
 
   useEffect(() => {
-    // Helper function to convert quarter string to sortable number
     const quarterToSortValue = (quarterStr) => {
       const [quarter, yearStr] = quarterStr.split(' ');
       const year = parseInt(yearStr);
-      // Adjust year for Fall quarter since it comes before Winter/Spring of next year
-      // e.g., Fall 2024 should come before Winter 2025
       if (quarter === 'Fall') {
         return year * 10;
       } else if (quarter === 'Winter') {
@@ -798,82 +839,171 @@ export const HomePage = () => {
       return Object.fromEntries(sortedEntries);
     };
 
-    const loadScheduleData = async () => {
-      
-      // Check if we're generating a schedule
-      const storedSchedule = localStorage.getItem('scheduleData');
-      if (storedSchedule) {
-        try {
-          const data = JSON.parse(storedSchedule);
-          if (data.isGenerating) {
-            const startedAt = Number(data.startedAt || 0);
-            if (startedAt && Date.now() - startedAt > GENERATION_TIMEOUT_MS) {
-              localStorage.setItem(
-                'scheduleData',
-                JSON.stringify({ ...data, isGenerating: false })
-              );
-            } else {
-            setIsGeneratingSchedule(true);
-            setLoading(true);
-            return;
-            }
-          }
+    const cleanSchedule = (schedule, minCoursesPerTerm) => {
+      const cleanedSchedule = {};
 
-          // Prefer the latest generated schedule payload from localStorage.
-          const localSchedule = data?.schedule?.schedule;
-          if (localSchedule && typeof localSchedule === 'object') {
-            const cleanedLocalSchedule = {};
-            Object.entries(localSchedule).forEach(([quarter, courses]) => {
-              if (
-                !courses ||
-                (typeof courses !== 'object' && !Array.isArray(courses))
-              ) {
-                return;
-              }
-
-              if (Array.isArray(courses)) {
-                const validCourses = courses.filter(
-                  (course) =>
-                    course &&
-                    typeof course === 'string' &&
-                    course.trim() !== '' &&
-                    course !== 'FILLER'
-                );
-                while (validCourses.length < leastCoursesPerTerm) {
-                  validCourses.push('FILLER');
-                }
-                cleanedLocalSchedule[quarter] = validCourses;
-              } else {
-                cleanedLocalSchedule[quarter] = {};
-                Object.entries(courses).forEach(([courseId, courseData]) => {
-                  if (courseData && typeof courseData === 'object') {
-                    cleanedLocalSchedule[quarter][courseId] = courseData;
-                  }
-                });
-
-                while (
-                  Object.keys(cleanedLocalSchedule[quarter]).length <
-                  leastCoursesPerTerm
-                ) {
-                  const fillerId = `FILLER_${
-                    Object.keys(cleanedLocalSchedule[quarter]).length + 1
-                  }`;
-                  cleanedLocalSchedule[quarter][fillerId] = 'FILLER';
-                }
-              }
-            });
-
-            const sortedLocalSchedule = sortQuarters(cleanedLocalSchedule);
-            setScheduleData(sortedLocalSchedule);
-            setLoading(false);
-            setIsGeneratingSchedule(false);
-            return;
-          }
-        } catch {
-          setIsGeneratingSchedule(false);
+      Object.entries(schedule).forEach(([quarter, courses]) => {
+        if (!courses || (typeof courses !== 'object' && !Array.isArray(courses))) {
+          return;
         }
+
+        if (Array.isArray(courses)) {
+          const validCourses = courses.filter(
+            (course) =>
+              course &&
+              typeof course === 'string' &&
+              course.trim() !== '' &&
+              course !== 'FILLER'
+          );
+
+          while (validCourses.length < minCoursesPerTerm) {
+            validCourses.push('FILLER');
+          }
+
+          cleanedSchedule[quarter] = validCourses;
+          return;
+        }
+
+        cleanedSchedule[quarter] = {};
+        Object.entries(courses).forEach(([courseId, courseData]) => {
+          if (courseData && typeof courseData === 'object') {
+            cleanedSchedule[quarter][courseId] = courseData;
+          }
+        });
+
+        while (Object.keys(cleanedSchedule[quarter]).length < minCoursesPerTerm) {
+          const fillerId = `FILLER_${Object.keys(cleanedSchedule[quarter]).length + 1}`;
+          cleanedSchedule[quarter][fillerId] = 'FILLER';
+        }
+      });
+
+      return sortQuarters(cleanedSchedule);
+    };
+
+    const loadScheduleFromStorage = () => {
+      const storedSchedule = localStorage.getItem('scheduleData');
+      if (!storedSchedule) {
+        return { found: false, isGenerating: false, startedAt: 0 };
       }
-      
+
+      try {
+        const data = JSON.parse(storedSchedule);
+        const preferenceMinimum = data?.preferences?.least_courses_per_term;
+        const minimumCourses =
+          typeof preferenceMinimum === 'number'
+            ? preferenceMinimum
+            : leastCoursesPerTerm;
+
+        if (typeof preferenceMinimum === 'number' && preferenceMinimum !== leastCoursesPerTerm) {
+          setLeastCoursesPerTerm(preferenceMinimum);
+        }
+
+        if (data.isGenerating) {
+          const startedAt = Number(data.startedAt || 0);
+          if (startedAt && Date.now() - startedAt > GENERATION_TIMEOUT_MS) {
+            localStorage.setItem(
+              'scheduleData',
+              JSON.stringify({ ...data, isGenerating: false })
+            );
+            return { found: false, isGenerating: false, startedAt: 0 };
+          }
+
+          return { found: false, isGenerating: true, startedAt };
+        }
+
+        const localSchedule = data?.schedule?.schedule;
+        if (localSchedule && typeof localSchedule === 'object') {
+          const cleanedLocalSchedule = cleanSchedule(localSchedule, minimumCourses);
+          setScheduleData(cleanedLocalSchedule);
+          setIsGeneratingSchedule(false);
+          setLoading(false);
+          return { found: true, isGenerating: false, startedAt: 0 };
+        }
+      } catch {
+        setIsGeneratingSchedule(false);
+      }
+
+      return { found: false, isGenerating: false, startedAt: 0 };
+    };
+
+    const loadLatestScheduleFromDatabase = async (generationStartedAt = 0) => {
+      if (!session?.user?.id) {
+        return false;
+      }
+
+      try {
+        const { data, error } = await supabase
+          .from('schedules')
+          .select('*')
+          .eq('user_id', session.user.id)
+          .order('created_at', { ascending: false })
+          .limit(1)
+          .single();
+
+        if (error || !data?.schedule?.schedule) {
+          return false;
+        }
+
+        const createdAtMs = data.created_at ? new Date(data.created_at).getTime() : 0;
+        if (generationStartedAt && createdAtMs && createdAtMs + 1000 < generationStartedAt) {
+          return false;
+        }
+
+        if (
+          data.preferences &&
+          typeof data.preferences.least_courses_per_term === 'number'
+        ) {
+          setLeastCoursesPerTerm(data.preferences.least_courses_per_term);
+        }
+
+        const minimumCourses =
+          typeof data.preferences?.least_courses_per_term === 'number'
+            ? data.preferences.least_courses_per_term
+            : leastCoursesPerTerm;
+        const cleanedSchedule = cleanSchedule(data.schedule.schedule, minimumCourses);
+
+        setScheduleData(cleanedSchedule);
+        setIsGeneratingSchedule(false);
+        setLoading(false);
+
+        try {
+          const existing = JSON.parse(localStorage.getItem('scheduleData') || '{}');
+          localStorage.setItem(
+            'scheduleData',
+            JSON.stringify({
+              ...existing,
+              ...data,
+              isGenerating: false
+            })
+          );
+        } catch {
+          // If storage sync fails, keep the in-memory state update.
+        }
+
+        return true;
+      } catch {
+        return false;
+      }
+    };
+
+    const loadScheduleData = async () => {
+      const localResult = loadScheduleFromStorage();
+      if (localResult.found) {
+        return;
+      }
+
+      if (localResult.isGenerating) {
+        setIsGeneratingSchedule(true);
+        setLoading(true);
+
+        const foundInDatabase = await loadLatestScheduleFromDatabase(localResult.startedAt);
+        if (foundInDatabase) {
+          return;
+        }
+
+        return;
+      }
+
       if (!session?.user?.id) {
         setLoading(false);
         return;
@@ -899,7 +1029,6 @@ export const HomePage = () => {
           return;
         }
 
-        
         // Extract schedule data and note from the response
         const note = data.schedule?.note;
         const actualSchedule = data.schedule.schedule;
@@ -917,58 +1046,11 @@ export const HomePage = () => {
           setLeastCoursesPerTerm(data.preferences.least_courses_per_term);
         }
 
-        // Get the actual schedule object
-
-        // Validate and clean the schedule data
-        const cleanedSchedule = {};
-        Object.entries(actualSchedule).forEach(([quarter, courses]) => {
-          // Skip if courses is not an object or array
-          if (
-            !courses ||
-            (typeof courses !== 'object' && !Array.isArray(courses))
-          ) {
-            return;
-          }
-
-          // If it's an array, filter out invalid entries and FILLER
-          if (Array.isArray(courses)) {
-            const validCourses = courses.filter(
-              (course) =>
-                course &&
-                typeof course === 'string' &&
-                course.trim() !== '' &&
-                course !== 'FILLER'
-            );
-
-            // Add filler courses if needed
-            while (validCourses.length < leastCoursesPerTerm) {
-              validCourses.push('FILLER');
-            }
-
-            cleanedSchedule[quarter] = validCourses;
-          } else {
-            // If it's an object, keep only valid course data
-            cleanedSchedule[quarter] = {};
-            Object.entries(courses).forEach(([courseId, courseData]) => {
-              if (courseData && typeof courseData === 'object') {
-                cleanedSchedule[quarter][courseId] = courseData;
-              }
-            });
-
-            // Add filler courses if needed
-            while (
-              Object.keys(cleanedSchedule[quarter]).length < leastCoursesPerTerm
-            ) {
-              const fillerId = `FILLER_${
-                Object.keys(cleanedSchedule[quarter]).length + 1
-              }`;
-              cleanedSchedule[quarter][fillerId] = 'FILLER';
-            }
-          }
-        });
-
-        // Sort the quarters
-        const sortedSchedule = sortQuarters(cleanedSchedule);
+        const minimumCourses =
+          typeof data.preferences?.least_courses_per_term === 'number'
+            ? data.preferences.least_courses_per_term
+            : leastCoursesPerTerm;
+        const sortedSchedule = cleanSchedule(actualSchedule, minimumCourses);
         setScheduleData(sortedSchedule);
 
         if (note) {
@@ -983,6 +1065,38 @@ export const HomePage = () => {
     };
 
     loadScheduleData();
+
+    const pollForGeneratedSchedule = window.setInterval(async () => {
+      const localResult = loadScheduleFromStorage();
+      if (localResult.found) {
+        window.clearInterval(pollForGeneratedSchedule);
+        return;
+      }
+
+      if (localResult.isGenerating) {
+        setIsGeneratingSchedule(true);
+        setLoading(true);
+        const foundInDatabase = await loadLatestScheduleFromDatabase(localResult.startedAt);
+        if (foundInDatabase) {
+          window.clearInterval(pollForGeneratedSchedule);
+        }
+      }
+    }, 1000);
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        loadScheduleFromStorage();
+      }
+    };
+
+    window.addEventListener('storage', loadScheduleFromStorage);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      window.clearInterval(pollForGeneratedSchedule);
+      window.removeEventListener('storage', loadScheduleFromStorage);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, [session, leastCoursesPerTerm]);
 
   const onSignOut = () => {
@@ -990,12 +1104,14 @@ export const HomePage = () => {
     navigate("/");
   };
 
+  const hasStoredGeneratingState = getStoredGenerationState();
+
   if (loading || !scheduleData) {
     return (
       <div className="relative flex min-h-screen min-w-screen flex-col items-center justify-center overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.12),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.12),_transparent_30%)]" />
         <div className={`${PANEL_CLASS} relative mx-4 max-w-xl p-10 text-center`}>
-          {isGeneratingSchedule ? (
+          {isGeneratingSchedule || hasStoredGeneratingState ? (
             <>
               <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-400 mx-auto mb-4"></div>
               <h2 className="text-xl font-semibold text-slate-200">

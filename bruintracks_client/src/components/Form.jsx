@@ -58,6 +58,17 @@ const FORM_PANEL_CLASS =
   'rounded-[2rem] border border-slate-700/80 bg-slate-950/85 shadow-[0_30px_90px_rgba(2,8,23,0.5)] backdrop-blur-md';
 const FORM_SUBPANEL_CLASS =
   'rounded-2xl border border-slate-700/70 bg-slate-900/70 shadow-lg';
+const FALLBACK_SCHOOL_OPTIONS = [
+  'Letters & Sciences',
+  'Engineering',
+  'Arts and Architecture',
+  'Music',
+  'Nursing',
+  'Public Affairs',
+  'Public Health',
+  'Education & Information Studies',
+  'Theater, Film and Television'
+];
 
 const normalizeSchoolLabel = (schoolName) => {
   const value = String(schoolName || '').trim();
@@ -148,7 +159,7 @@ const Icebreaker = ({
   handleNextClick = () => {},
   validate = null
 }) => {
-  const [schoolOptions, setSchoolOptions] = useState([]);
+  const [schoolOptions, setSchoolOptions] = useState(FALLBACK_SCHOOL_OPTIONS);
 
   useEffect(() => {
     const fetchSchools = async () => {
@@ -161,17 +172,21 @@ const Icebreaker = ({
         const normalized = Array.from(
           new Set((data || []).map(normalizeSchoolLabel).filter(Boolean))
         );
-        setSchoolOptions(normalized);
-        if (!school && data.length > 0) {
-          setSchool(normalized[0]);
+        const nextOptions = normalized.length ? normalized : FALLBACK_SCHOOL_OPTIONS;
+        setSchoolOptions(nextOptions);
+        if (!school && nextOptions.length > 0) {
+          setSchool(nextOptions[0]);
         }
       } catch {
-        setSchoolOptions([]);
+        setSchoolOptions(FALLBACK_SCHOOL_OPTIONS);
+        if (!school) {
+          setSchool(FALLBACK_SCHOOL_OPTIONS[0]);
+        }
       }
     };
 
     fetchSchools();
-  }, [school, setSchool]);
+  }, [setSchool]);
 
   return (
     <FormModal handleClick={handleNextClick} validate={validate} handleBackClick={null}>
@@ -1364,8 +1379,29 @@ const SummaryView = ({ data = {}, handleBackClick = () => {}, setStep = () => {}
       // Keep user on schedule page once generation finishes
       navigate('/schedule', { replace: true });
     } catch {
-      // Clear isGenerating flag on error
-      localStorage.setItem('scheduleData', JSON.stringify({ isGenerating: false }));
+      // Preserve the attempt metadata so the schedule page does not bounce back
+      // to the welcome state if the request was interrupted mid-generation.
+      try {
+        const existing = JSON.parse(localStorage.getItem('scheduleData') || '{}');
+        localStorage.setItem(
+          'scheduleData',
+          JSON.stringify({
+            ...existing,
+            isGenerating: false,
+            generationError: true,
+            generationErrorAt: Date.now()
+          })
+        );
+      } catch {
+        localStorage.setItem(
+          'scheduleData',
+          JSON.stringify({
+            isGenerating: false,
+            generationError: true,
+            generationErrorAt: Date.now()
+          })
+        );
+      }
       // Keep user on schedule page even when generation fails
       navigate('/schedule', { replace: true });
     }

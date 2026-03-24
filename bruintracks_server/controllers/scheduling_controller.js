@@ -16,8 +16,11 @@ const __dirname = path.dirname(__filename);
 export const scheduleCourses = (req, res) => {
   // adjust the path if your get_courses.py lives elsewhere
   const scriptPath = path.join(__dirname, "..", "scheduler.py");
+  const pythonBin = process.env.PYTHON_BIN || "python3";
 
-  const py = spawn("python3", [scriptPath], {
+  console.log(`Using Python interpreter: ${pythonBin}`);
+
+  const py = spawn(pythonBin, [scriptPath], {
     stdio: ["pipe", "pipe", "inherit"],
   });
 

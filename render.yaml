@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bruintracks-server
+    runtime: node
+    rootDir: bruintracks_server
+    buildCommand: npm run render-build
+    startCommand: npm start
+    envVars:
+      - key: PYTHON_BIN
+        value: python3
