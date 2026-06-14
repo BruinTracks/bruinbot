@@ -1,15 +1,15 @@
-# BruinTracks (Formerly BruinBot) - AI-Powered Course Scheduling Platform
+# BruinBot - AI-Powered Course Scheduling Platform
 
 A comprehensive course scheduling and academic planning application for UCLA students, featuring AI-powered course recommendations, intelligent schedule optimization, and seamless Google Calendar integration.
 
 # Demo
 Click the image below to access our demo!
 
-[![Bruintracks Demo](https://i9.ytimg.com/vi_webp/ay24xvRFV3Q/mq2.webp?sqp=CODcg8YG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDkgVihyMA8=&rs=AOn4CLAIyE2ztuY0RPmiNYArUTzYc_RYTw)](https://youtu.be/ay24xvRFV3Q)
+[![BruinBot Demo](https://i9.ytimg.com/vi_webp/ay24xvRFV3Q/mq2.webp?sqp=CODcg8YG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDkgVihyMA8=&rs=AOn4CLAIyE2ztuY0RPmiNYArUTzYc_RYTw)](https://youtu.be/B-_TOL_51cg)
 
 ## 🎯 Overview
 
-BruinTracks helps UCLA students create optimal course schedules by analyzing prerequisites, course availability, and personal preferences. The platform uses advanced algorithms and AI to generate personalized academic plans while considering graduation timelines and course conflicts.
+BruinBot helps UCLA students create optimal course schedules by analyzing prerequisites, course availability, and personal preferences. The platform uses advanced algorithms and AI to generate personalized academic plans while considering graduation timelines and course conflicts.
 
 ## ✨ Key Features
 
@@ -83,34 +83,34 @@ BruinTracks helps UCLA students create optimal course schedules by analyzing pre
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/bruintracks.git
-   cd bruintracks
+   git clone https://github.com/yourusername/bruinbot.git
+   cd bruinbot
    ```
 
 2. **Install dependencies**
 
    ```bash
    # Install frontend dependencies
-   cd bruintracks_client
+   cd bruinbot_client
    npm install
 
    # Install backend dependencies
-   cd ../bruintracks_server
+   cd ../bruinbot_server
    npm install
    ```
 
 3. **Set up environment variables**
 
-   Create `.env` files in both `bruintracks_client` and `bruintracks_server` directories:
+   Create `.env` files in both `bruinbot_client` and `bruinbot_server` directories:
 
-   **bruintracks_client/.env:**
+   **bruinbot_client/.env:**
 
    ```env
    VITE_SUPABASE_URL=your_supabase_url
    VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
 
-   **bruintracks_server/.env:**
+   **bruinbot_server/.env:**
 
    ```env
    SUPABASE_URL=your_supabase_url
@@ -124,7 +124,7 @@ BruinTracks helps UCLA students create optimal course schedules by analyzing pre
 
 4. **Set up the database**
 
-   Run the SQL scripts in `bruintracks_server/tools/rpc_functions/` to create the necessary database functions:
+   Run the SQL scripts in `bruinbot_server/tools/rpc_functions/` to create the necessary database functions:
 
    ```sql
    -- Run each .sql file in the rpc_functions directory
@@ -134,16 +134,16 @@ BruinTracks helps UCLA students create optimal course schedules by analyzing pre
 
    ```bash
    # Start backend server
-   cd bruintracks_server
+   cd bruinbot_server
    npm run dev
 
    # Start frontend server (in a new terminal)
-   cd bruintracks_client
+   cd bruinbot_client
    npm run dev
    ```
 
    If your backend uses a non-default Python installation locally, set
-   `PYTHON_BIN` in `bruintracks_server/.env`, for example:
+   `PYTHON_BIN` in `bruinbot_server/.env`, for example:
 
    ```env
    PYTHON_BIN=/absolute/path/to/python3
@@ -159,7 +159,7 @@ BruinTracks helps UCLA students create optimal course schedules by analyzing pre
 
 - The backend needs both Node and Python dependencies.
 - The scheduler process uses `PYTHON_BIN` when provided, otherwise it defaults to `python3`.
-- A Render blueprint is included in [render.yaml](/Users/ananyaanand/Desktop/bruintracksv1/render.yaml).
+- A Render blueprint is included in [render.yaml](render.yaml).
 
 For Render:
 
@@ -205,7 +205,7 @@ PYTHON_BIN=python3
 ### Frontend Architecture
 
 ```
-bruintracks_client/
+bruinbot_client/
 ├── src/
 │   ├── components/          # React components
 │   ├── hooks/              # Custom React hooks
@@ -216,7 +216,7 @@ bruintracks_client/
 ### Backend Architecture
 
 ```
-bruintracks_server/
+bruinbot_server/
 ├── controllers/            # Request handlers
 ├── routes/                # API route definitions
 ├── middleware/            # Authentication and validation

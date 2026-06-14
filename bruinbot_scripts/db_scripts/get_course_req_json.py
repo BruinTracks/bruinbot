@@ -19,8 +19,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 # Prefer the server .env used by the running app. Keep existing shell env vars unchanged.
 for env_file in [
-    PROJECT_ROOT / "bruintracks_server" / ".env",
-    PROJECT_ROOT / "bruintracks_client" / ".env",
+    PROJECT_ROOT / "bruinbot_server" / ".env",
+    PROJECT_ROOT / "bruinbot_client" / ".env",
     Path(__file__).with_name(".env"),
 ]:
     if env_file.exists():
@@ -34,7 +34,7 @@ if not SUPABASE_URL or not SUPABASE_KEY:
 TARGET_TABLE = os.environ.get("MAJOR_REQUISITES_TABLE", "major_requisites")
 CATALOG_YEAR = os.environ.get("UCLA_CATALOG_YEAR", "2024")
 FAILED_LOG_PATH = os.environ.get("FAILED_MAJORS_LOG", "failed_majors.json")
-DUMP_DIR = os.environ.get("MAJOR_JSON_DUMP_DIR", "bruintracks_server/data/majors")
+DUMP_DIR = os.environ.get("MAJOR_JSON_DUMP_DIR", "bruinbot_server/data/majors")
 PRUNE_UNSUPPORTED_MAJORS = os.environ.get("PRUNE_UNSUPPORTED_MAJORS", "1") == "1"
 
 MAJOR_NAME_ALIASES = {
@@ -331,6 +331,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 

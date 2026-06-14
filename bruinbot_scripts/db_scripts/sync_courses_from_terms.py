@@ -12,11 +12,11 @@ from httpx import ReadTimeout, RemoteProtocolError
 from supabase import Client, create_client
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_CSV_DIR = PROJECT_ROOT / "bruintracks_server" / "courses"
+DEFAULT_CSV_DIR = PROJECT_ROOT / "bruinbot_server" / "courses"
 
 for env_file in [
-    PROJECT_ROOT / "bruintracks_server" / ".env",
-    PROJECT_ROOT / "bruintracks_client" / ".env",
+    PROJECT_ROOT / "bruinbot_server" / ".env",
+    PROJECT_ROOT / "bruinbot_client" / ".env",
     Path(__file__).with_name(".env"),
 ]:
     if env_file.exists():

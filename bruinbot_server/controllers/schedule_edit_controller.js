@@ -37,7 +37,7 @@ export const handleScheduleEdit = async (req, res) => {
     __dirname,
     "..",
     "..",
-    "bruintracks_scripts",
+    "bruinbot_scripts",
     "scheduler",
     "schedule_assistant.py",
   );

@@ -38,7 +38,7 @@ function runPythonScript(scriptPath, args = []) {
 }
 
 export async function buildSchedule(params) {
-    const scriptPath = path.join(__dirname, '../../bruintracks_scripts/scheduler/scheduler.py');
+    const scriptPath = path.join(__dirname, '../../bruinbot_scripts/scheduler/scheduler.py');
     
     // Set environment variables from params
     process.env.SUPABASE_URL = params.supabaseUrl;
@@ -57,7 +57,7 @@ export async function buildSchedule(params) {
 }
 
 export async function getElectiveOptions(params) {
-    const scriptPath = path.join(__dirname, '../../bruintracks_scripts/scheduler/get_elective_options.py');
+    const scriptPath = path.join(__dirname, '../../bruinbot_scripts/scheduler/get_elective_options.py');
     
     // Set environment variables from params
     process.env.SUPABASE_URL = params.supabaseUrl;

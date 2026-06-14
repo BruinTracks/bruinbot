@@ -520,7 +520,7 @@ def load_ge_rows_from_csv(sub2id: Dict[str, int]) -> List[Dict[str, Any]]:
     csv_path = os.path.join(
         os.path.dirname(__file__),
         "..",
-        "bruintracks_scripts",
+        "bruinbot_scripts",
         "ge_courses",
         "ucla_ge_courses.csv",
     )

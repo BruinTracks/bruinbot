@@ -9,8 +9,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 # Prefer shared runtime envs first, then local fallback.
 for env_file in [
-    PROJECT_ROOT / "bruintracks_server" / ".env",
-    PROJECT_ROOT / "bruintracks_client" / ".env",
+    PROJECT_ROOT / "bruinbot_server" / ".env",
+    PROJECT_ROOT / "bruinbot_client" / ".env",
     Path(__file__).with_name(".env"),
 ]:
     if env_file.exists():
@@ -154,5 +154,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 

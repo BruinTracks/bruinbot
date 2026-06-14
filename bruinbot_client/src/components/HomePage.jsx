@@ -1135,7 +1135,7 @@ export const HomePage = () => {
                 BruinBot Home
               </p>
               <h2 className="mb-3 mt-2 text-3xl font-semibold text-white">
-                Welcome to bruinbot
+                Welcome to BruinBot
               </h2>
               <p className="mb-8 text-slate-300">
                 Generate your personalized course schedule to help plan your academic journey

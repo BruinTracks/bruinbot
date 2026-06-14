@@ -71,7 +71,7 @@ async function getTechBreadthRecommendations(
     const pythonProcess = spawn("python3", [
       path.join(
         process.cwd(),
-        "../bruintracks_scripts/scheduler/tech_breadth_optimizer.py",
+        "../bruinbot_scripts/scheduler/tech_breadth_optimizer.py",
       ),
     ]);
 
